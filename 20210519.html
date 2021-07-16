@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com"/>
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Redis 的集群容错与故障转移 | 
+        
+        U+2647&#39;s blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="Redis 的集群容错与故障转移">
+    <meta name="keywords" content="java,U+2647,Redis">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        <!-- highlight 代码高亮 -->
+        
+            <style id="highlight_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("highlight_css","/css/highlight-styles/googlecode.css?psPj0oLv8UYArA4bjklUGQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(https://s3.ax1x.com/2021/01/15/s06OXD.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="U+2647&#39;s blog">
+    <meta name="msapplication-starturl" content="https://zdran.com/20210519.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="U+2647&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="cjZqB5nJc_iCpbllUCFCsJfhsLKhkKeU2DeYvh56fcE" />
+    <meta name="baidu-site-verification" content="j93yLiKLFj" />
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://zdran.com/20210519.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Redis 的集群容错与故障转移 | U+2647&#39;s blog">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="Redis 的集群容错与故障转移">
+    <meta property="og:article:tag" content="Redis"> 
+
+    
+        <meta property="article:published_time" content="Wed May 19 2021 16:47:43 GMT+0800">
+        <meta property="article:modified_time" content="Fri Jul 16 2021 19:56:18 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://zdran.com/20210519.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://zdran.com/20210519.html",
+    "headline": "Redis 的集群容错与故障转移",
+    "datePublished": "Wed May 19 2021 16:47:43 GMT+0800",
+    "dateModified": "Fri Jul 16 2021 19:56:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "U+2647",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "evolving code monkey"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "U+2647&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Redisjava,U+2647",
+    "description": "Redis 的集群容错与故障转移",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?b376fd998e9dfd55d67208bc0b8bf335';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle" style="background-color: rgba(255,251,251,0.7)">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon" style="background-color: rgba(255, 251, 251, 0.7); display: initial;">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-Redis-%E6%9C%8D%E5%8A%A1%E6%A8%A1%E5%BC%8F"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. Redis 服务模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%8D%95%E6%9C%BA%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 单机模式下的备份与恢复</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-RDB-%E5%A4%87%E4%BB%BD"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">2.1 RDB 备份</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-AOF-%E5%A4%87%E4%BB%BD"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.2 AOF 备份</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">2.3 数据恢复</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-%E4%B8%BB%E4%BB%8E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 主从模式下的故障转移</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">3.1 主从复制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-%E9%83%A8%E5%88%86%E9%87%8D%E5%90%8C%E6%AD%A5"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">3.2 部分重同步</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-1-%E5%A4%8D%E5%88%B6%E5%81%8F%E7%A7%BB%E9%87%8F"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">3.2.1 复制偏移量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-2-%E5%A4%8D%E5%88%B6%E7%A7%AF%E5%8E%8B%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">3.2.2 复制积压缓冲区</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-3-%E6%9C%8D%E5%8A%A1%E5%99%A8ID"><span class="post-toc-number">3.2.3.</span> <span class="post-toc-text">3.2.3 服务器ID</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-%E5%93%A8%E5%85%B5"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.2 哨兵</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-leader-%E9%80%89%E4%B8%BE"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">3.3 leader 选举</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-%E8%BD%AC%E7%A7%BB%E8%BF%87%E7%A8%8B"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">3.4 转移过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-4-1-%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%8C%91%E9%80%89"><span class="post-toc-number">3.5.1.</span> <span class="post-toc-text">3.4.1 新服务器的挑选</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-4-2-%E8%AE%A9%E4%BB%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A4%8D%E5%88%B6%E6%96%B0%E7%9A%84%E4%B8%BB%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-number">3.5.2.</span> <span class="post-toc-text">3.4.2 让从服务器复制新的主服务器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-4-3-%E5%B0%86%E4%B8%8B%E7%BA%BF%E7%9A%84%E4%B8%BB%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%BB%8E%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-number">3.5.3.</span> <span class="post-toc-text">3.4.3 将下线的主服务器设置为从服务器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84%E6%95%85%E9%9A%9C%E8%BD%AC%E7%A7%BB"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 集群模式下的故障转移</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-1-%E6%95%85%E9%9A%9C%E6%A3%80%E6%B5%8B"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">4.1 故障检测</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-leader-%E9%80%89%E4%B8%BE"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">4.2 leader 选举</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-3-%E7%93%9C%E5%88%86%E9%97%AE%E9%A2%98"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">4.3 瓜分问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-2-%E8%BD%AC%E7%A7%BB%E8%BF%87%E7%A8%8B"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">4.2 转移过程</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-%E7%BB%93%E6%9D%9F"><span class="post-toc-number">5.</span> <span class="post-toc-text">5 结束</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+    var randomArr = 'https://tvax1.sinaimg.cn/large/005Kwq7yly1gmojceznzaj30p10fnjsb.jpg,https://tva2.sinaimg.cn/large/005Kwq7yly1gmojeo2aboj30p00fntag.jpg,https://tvax4.sinaimg.cn/large/005Kwq7yly1gmojeobxr8j30p00e2myu.jpg,https://tvax1.sinaimg.cn/large/005Kwq7yly1gmojeokniwj30p00fnq42.jpg,https://tva3.sinaimg.cn/large/005Kwq7yly1gmojeop2mwj30p00e43zi.jpg,https://tva3.sinaimg.cn/large/005Kwq7yly1gmojeouzbmj30p00fnmzg.jpg,https://tva4.sinaimg.cn/large/005Kwq7yly1gmojeoyks8j30h809pmy1.jpg,https://tvax3.sinaimg.cn/large/005Kwq7yly1gmojep2fsuj30p10g140v.jpg,https://tvax2.sinaimg.cn/large/005Kwq7yly1gmojepdqsxj30p00fogn1.jpg,https://tvax2.sinaimg.cn/large/005Kwq7yly1gmojepjecpj30p00fnjsb.jpg,https://tvax2.sinaimg.cn/large/005Kwq7yly1gmojepqyhyj30p10fnjsb.jpg,https://tvax4.sinaimg.cn/large/005Kwq7yly1gmojepux3lj30p00fnmyr.jpg,https://tva1.sinaimg.cn/large/005Kwq7yly1gmojeq5mc0j30pk0gimxs.jpg,https://tva1.sinaimg.cn/large/005Kwq7yly1gmojeqcxchj30p10fp76c.jpg,https://tva1.sinaimg.cn/large/005Kwq7yly1gmojeqtcukj30pr0it40e.jpg,https://tva4.sinaimg.cn/large/005Kwq7yly1gmojer230hj30q90fdwg0.jpg,https://tvax2.sinaimg.cn/large/005Kwq7yly1gmojer8ioqj30p30gddhf.jpg,https://tva1.sinaimg.cn/large/005Kwq7yly1gmojerbevej30ov0gkmyh.jpg,https://tvax1.sinaimg.cn/large/005Kwq7yly1gmojerg2v8j30pq0gp76h.jpg,https://tvax2.sinaimg.cn/large/005Kwq7yly1gmojern4zkj30px0ghgn3.jpg'.split(",");
+    $('.post_thumbnail-random').attr('data-original', randomArr[randomNum] );
+    $('.post_thumbnail-random').addClass('lazy');
+
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Redis 的集群容错与故障转移
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>U+2647</strong>
+        <span>5月 19, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-none-link" href="/tags/Redis/" rel="tag">Redis</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Redis 的集群容错与故障转移&url=https://zdran.com/20210519.html&pic=https://zdran.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Redis 的集群容错与故障转移&url=https://zdran.com/20210519.html&via=U+2647" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://zdran.com/20210519.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://zdran.com/20210519.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=U+2647&#39;s blog&title=Redis 的集群容错与故障转移&summary=evolving code monkey&pics=https://zdran.com/img/favicon.png&url=https://zdran.com/20210519.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="1-Redis-服务模式"><a href="#1-Redis-服务模式" class="headerlink" title="1. Redis 服务模式"></a>1. Redis 服务模式</h2><p>Redis 的服务模式主要有三种，分别是单机模式、主从模式、集群模式。在不同的模式下当机器发生故障时，Redis 应对故障的方法也是不一样的。其中单机模式下主要是通过备份与恢复解决故障。而主从模式下则是通过哨兵在从节点中重新选举主节点替换故障节点的工作来实现的，集群模式下也是通过类似于主从模式的方式重新选举新的主节点来实现的。区别则是在集群模式下不需要哨兵来主持选举了。</p>
+<h2 id="2-单机模式下的备份与恢复"><a href="#2-单机模式下的备份与恢复" class="headerlink" title="2. 单机模式下的备份与恢复"></a>2. 单机模式下的备份与恢复</h2><p>Redis 支持两种备份方式，分别是 RDB 备份和 AOF 备份。</p>
+<h3 id="2-1-RDB-备份"><a href="#2-1-RDB-备份" class="headerlink" title="2.1 RDB 备份"></a>2.1 RDB 备份</h3><p>RDB 持久化支持手动执行，也可以通过配置定期执行。RDB 备份是将某个时间点的 Redis 数据保存到一个 RDB 的文件中，这个文件保存了当前时间点 Redis 数据库中的数据。当 Redis 服务启动时，可以指定载入 RDB 文件，恢复 Redis。</p>
+<p>有两个命令可以生成 RDB 文件，分别是 SAVE 和 BGSAVE。其中 SAVE 命令将会阻塞 Redis 服务器，即执行 SAVE 命令期间，Redis 服务将拒绝所有的命令请求。只有在执行结束后，才能正常使用。</p>
+<p>而 BGSAVE 则是通过子进程执行的，所以不会阻塞 Redis 服务。而且我们可以手动是的设置自动执行 BGSAVE，可以设置每个多少时间，或者执行多少次写操作就执行一次 BGSAVE。</p>
+<h3 id="2-2-AOF-备份"><a href="#2-2-AOF-备份" class="headerlink" title="2.2 AOF 备份"></a>2.2 AOF 备份</h3><p>AOF 与 RDB 备份方式的区别是，RDB 文件保存的是 Redis 服务器里具体的数据，而 AOF 备份则保存的是 Redis 的命令。当 Redis 的 AOF 功能是打开的时候，每次 Redis 执行完一个<strong>写命令</strong>后，就会将命令写到 aof_buf 缓冲区的末尾（类似于 Java 的 writer 方法）。每次当 Redis 执行时间事件结束后，都会根据配置决定将 aof_buf 缓冲区的内容刷新到磁盘中去（类似于 Java 的 flush 方法）。</p>
+<h3 id="2-3-数据恢复"><a href="#2-3-数据恢复" class="headerlink" title="2.3 数据恢复"></a>2.3 数据恢复</h3><p>当 Redis 服务器启动时可以指定加载 RDB 文件 或者是 AOF 文件。Redis 服务器会优先载入 AOF 文件，如果 AOF 功能没有启动的话，才会自动载入 RDB 文件。</p>
+<h2 id="3-主从模式下的故障转移"><a href="#3-主从模式下的故障转移" class="headerlink" title="3. 主从模式下的故障转移"></a>3. 主从模式下的故障转移</h2><p>Redis 的 SLAVEOF 命令可以让一个 Redis 服务器去复制另外一个 Redis 服务器。这种模式称为<strong>主从模式</strong>，或者叫<strong>主从复制</strong>。被复制的服务器称为主服务器。复制主服务器的服务器称为从服务器。主从服务器将保存相同的数据。在主服务器宕机的情况下，可以将从服务器变更为主服务器继续执行命令，而且数据不会丢失。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gqtr4mmi6qj30pn0eyaal.jpg" alt="image-20210524194117194"></p>
+<h3 id="3-1-主从复制"><a href="#3-1-主从复制" class="headerlink" title="3.1 主从复制"></a>3.1 主从复制</h3><p>主从复制有两种情况，一种是第一次开始复制，被称为同步（sync），另外一个是命令传播（command propagate）。</p>
+<p><strong>同步</strong>是指当执行 slaveof 命令时，从服务器需要同步主服务器的数据，从服务器需要通过 sync 命令来实现。从服务器收到 slaveof 命令后，会向主服务器发送 sync 命令，主服务器收到 sync 命令后，会执行 BGSAVE 命令。在生成文件期间收到的写命令都会保存到缓冲区。之后会将生成后的 RDB 文件发送给从服务器，从服务器加载 RDB 文件，更新数据库的数据。然后主服务器会将缓冲区的命令发送给从服务器。从服务器同步缓冲区的数据。</p>
+<p><strong>命令传播</strong>是指在执行完同步过程后，主从服务器的状态是一致的，但是如果主服务器再次收到写命令后，主从服务器的状态又会出现不一致，这个时候主服务器就会把写命令发送给从服务器，用来保证主从服务器的数据一致。</p>
+<h3 id="3-2-部分重同步"><a href="#3-2-部分重同步" class="headerlink" title="3.2 部分重同步"></a>3.2 部分重同步</h3><p>有两种情况下需要执行同步操作，一种是初次收到 slaveof 命令需要执行的同步操作，另外一种情况是在主从服务器断连后重新连接需要执行的同步操作。在旧版的 Redis 服务器中，断连后会执行同步操作，但是会执行全量的同步。即重新生成新的 RDB 文件。这样就会同步大量不需要同步的数据，更好的一种做法是同步断连期间的数据。所以在新版（v2.8+）的 Redis 数据库中支持了<strong>部分同步的功能</strong>。</p>
+<p>新版的 psync 命令支持<strong>全量重同步</strong>和<strong>部分重同步</strong>两种方式，其中全量重同步是用在初次复制的情况下的，而部分重同步则是在出现断连后重新复制的情况下，当从服务器重新连接主服务器后，主服务器会将断连期间执行的写命令重新发送给从服务器。</p>
+<p>部分重同步的实现主要靠三个部分：</p>
+<ul>
+<li>主服务器的复制偏移量和从服务器的复制偏移量</li>
+<li>主服务器的复制积压缓冲区</li>
+<li>服务器的运行ID</li>
+</ul>
+<p>依靠这三个部分，Redis 实现了部分重同步的功能。</p>
+<h4 id="3-2-1-复制偏移量"><a href="#3-2-1-复制偏移量" class="headerlink" title="3.2.1 复制偏移量"></a>3.2.1 复制偏移量</h4><p>需要执行复制的主从服务器会分别维护一个复制偏移量，主服务器每次向从服务器传播 N 个字节时就会在复制偏移量上加 N。而从服务每次收到N个字节后也会将自己的复制偏移量加上 N 。如果主从服务器的状态一致，那么复制偏移量总是相等的。如果出现断线，那么复制偏移量就会出现不相等的情况。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gqux0k8eukj31580hmabr.jpg" alt="image-20210525195028251"></p>
+<h4 id="3-2-2-复制积压缓冲区"><a href="#3-2-2-复制积压缓冲区" class="headerlink" title="3.2.2 复制积压缓冲区"></a>3.2.2 复制积压缓冲区</h4><p>复制积压缓冲区是主服务器维护的一个先进先出的队列。当主服务器执行命令传播时，不仅仅是将数据发送给从服务，而且也会将数据发送到复制积压缓冲区，而且复制积压缓冲区会为每个字节保留对应的复制偏移量，</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gqvuwi2qldj30uo062wfz.jpg" alt="image-20210526152257709"></p>
+<p>当从服务器重连之后，从服务器将自己的复制偏移量发送给主服务器，如果从服务器发送过来的复制偏移量在复制缓冲区内，那么主服务器就会执行<strong>部分重同步</strong>，如果不在复制积压缓冲区，则会执行<strong>全量重同步</strong>。</p>
+<h4 id="3-2-3-服务器ID"><a href="#3-2-3-服务器ID" class="headerlink" title="3.2.3 服务器ID"></a>3.2.3 服务器ID</h4><p>每个从服务器都会记录主服务器的服务器ID，当断线重连后，从服务器会将自己保存的服务器ID发送给主服务器，如果主服务器发现与当前的服务器ID不一致，则会直接执行<strong>全量重同步</strong>，如果一致则会使用复制积压缓冲区尝试执行<strong>部分重同步</strong>，尝试失败则会执行<strong>全量重同步</strong>。</p>
+<h3 id="3-2-哨兵"><a href="#3-2-哨兵" class="headerlink" title="3.2 哨兵"></a>3.2 哨兵</h3><p>哨兵（Sentinel）是 Redis 高可用的解决方案：由一个或多个哨兵实例组成的哨兵系统可以监控任意多个 Redis 实例。并且在监控到主服务器出现宕机、下线等情况可以直接将当前主服务器的某个从服务器自动的升级为主服务器，由新的主服务器继续处理请求。</p>
+<h3 id="3-3-leader-选举"><a href="#3-3-leader-选举" class="headerlink" title="3.3 leader 选举"></a>3.3 leader 选举</h3><p>当监控到主服务器发生下线情况后，监控这个主服务的多个哨兵实例会选举出一个 leader 哨兵，由这个 leader 实例负责进行后续的故障转移流程。</p>
+<p>每个哨兵实例都会保存一个被称为纪元（epoch）的属性，每进行一次选举，不论是否成功，都会自增一次。这个纪元参数实际上就是一个计数器，并不是什么特别的属性。在一个配置纪元里，每个哨兵都有一次机会将某个哨兵设置为局部领头 leader，一旦选定，在当前纪元里不可更改。</p>
+<p>每个监控到主服务器发生<strong>客观下线</strong>的哨兵，都会要求其他哨兵将自己设置为局部领头 leader。如果其他服务器还没有设置过局部领头 leader，那么就会同意这次请求。否则就会拒绝。</p>
+<p>以 三个哨兵节点为例。A、B、C 三个哨兵节点同时监控一个主服务器，B 节点发现主服务器下线，首先会将自己的current_epoch +1 ,然后将局部领头 leader 设置为自己，再向 A、C 两个节点发送选举命令<code>SENTINEL is-master-down-by-addr</code>，并携带 current_epoch，和自己的 runid（即服务器ID），希望A，C 节点可以选举自己为局部领头 leader 。</p>
+<p>A、C节点收到请求后，首先判断请求携带的 epoch是否大于自己当前的 epoch ，如果大于自己的 epoch，说明当前节点还没有选择局部领头 leader。此时就会将自己的 epoch 更新为请求中的 epoch，并将自己的 leader_runid 设置成 B，然后返回 leader_runid = B 的结果。说明 A、C 节点选择了 B 节点作为局部领头 leader。</p>
+<p>如果请求中的 epoch 不大于自己的 epoch，比如此时有一个 D 节点也发现主服务器下线，并且发送命令<code>SENTINEL is-master-down-by-addr</code>给到 A、C。因为 A、C 当前的 epoch 已经是 1 ，则会拒绝当前请求（返回 leader_runid=B的结果）。相当于告诉 D 节点，已经选举 B 节点为局部领头 leader。</p>
+<p>命令<code>SENTINEL is-master-down-by-addr</code>收到的响应不仅仅会携带 leader_runid，还会携带 leader_epoch。B 节点收到响应后，首先会判断 leader_epoch 是否跟当前的 epoch一致，如果一致则判断 leader_runid 是否跟当前的 runid 一致，如果一致则说明目标哨兵已经将当前节点设置为局部领头 leader。完整过程见下图：</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1grehwxxcxvj61p00rktbn02.jpg" alt="image-20210611181918412"></p>
+<p>如果某个哨兵被半数以上的哨兵选举为局部领头leader，那么这个哨兵将成为领头 leader，即上图中的 B 哨兵。如果在一段时间内没有一个哨兵超过半数，则会再次发起重新选举。</p>
+<p>后续的转移过程将由领头leader执行。</p>
+<h3 id="3-4-转移过程"><a href="#3-4-转移过程" class="headerlink" title="3.4 转移过程"></a>3.4 转移过程</h3><p>转移过程主要有三步：</p>
+<ol>
+<li>在从服务中挑选出一个合适的从服务器，并将它设置为主服务器。</li>
+<li>让所有的从服务器复制新的主服务器</li>
+<li>将已下线的主服务器设置为新的主服务器的从服务器</li>
+</ol>
+<h4 id="3-4-1-新服务器的挑选"><a href="#3-4-1-新服务器的挑选" class="headerlink" title="3.4.1 新服务器的挑选"></a>3.4.1 新服务器的挑选</h4><p>哨兵并不是在从服务器中随机挑选一个从服务器，而是经过一系列的过滤，然后再根据优先级，选出最高的从服务器。</p>
+<p>首先，哨兵获取到已下线的主服务器的所有从服务器的列表，然后依次过滤</p>
+<ol>
+<li>过滤掉所有下线，或者断线的的从服务器，保证列表里的服务器都是在线的。</li>
+<li>过滤掉最近 5 秒内没有回复过领头哨兵 INFO 命令的服务器，保证列表里的服务器通信都是正常的。</li>
+<li>过滤掉与下线的主服务器连接断开超过 <code>down-after-milliseconds*10</code>毫秒的服务器，保证列表里的服务器断开时间不长，数据较新。</li>
+</ol>
+<p>然后根据从服务器的优先级进行排序，如果有相同的优先级，则根据复制偏移量进行排序，复制偏移量大的在前，如果复制偏移量相同，则根据 runid 进行排序，runid 小的在前。</p>
+<p>所以最后选出的新服务器就是，优先级最高，复制偏移量最大，runid 最小的从服务。</p>
+<h4 id="3-4-2-让从服务器复制新的主服务器"><a href="#3-4-2-让从服务器复制新的主服务器" class="headerlink" title="3.4.2 让从服务器复制新的主服务器"></a>3.4.2 让从服务器复制新的主服务器</h4><p>首先会向上面选择出来的从服务器发送 <code>SLAVEOF no one</code>命令，停止复制动作，然后向其他的从服务器发送 <code>SLAVEOF ip port</code>命令，让所有的从服务器复制新的主服务器。</p>
+<h4 id="3-4-3-将下线的主服务器设置为从服务器"><a href="#3-4-3-将下线的主服务器设置为从服务器" class="headerlink" title="3.4.3 将下线的主服务器设置为从服务器"></a>3.4.3 将下线的主服务器设置为从服务器</h4><p>因为旧的主服务器已经下线了，所以这里的设置是保存在哨兵的实例里的，当监听到就的主服务器从新上线后，哨兵就会发送 SLAVEOF  命令，让它成为新的主服务器的从服务器。</p>
+<h2 id="4-集群模式下的故障转移"><a href="#4-集群模式下的故障转移" class="headerlink" title="4. 集群模式下的故障转移"></a>4. 集群模式下的故障转移</h2><p>一个 Redis 集群是由多个 Redis 节点构成的，节点间可以相互通信。而每个节点又可以是多个 redis 服务器构成的主从模式。比如，我们可以将 九个节点，三三的构成主从模式（一主两从），然后将三个主节点构成集群（三主六从）。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gsivicqrkcj30zg0ogq4c.jpg" alt="image-20210716163216688"></p>
+<p>详细的过程可以参考 <a href="https://zdran.com/20201219.html">Redis 集群内的数据同步</a>。下面主要介绍下，在集群模式下是如何进行故障转移的。</p>
+<h3 id="4-1-故障检测"><a href="#4-1-故障检测" class="headerlink" title="4.1 故障检测"></a>4.1 故障检测</h3><p>集群中的每个节点都会保存一份集群里所有节点的状态表。类似于下面这种。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>角色</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1000</td>
+<td>主节点</td>
+<td>在线</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>从节点</td>
+<td>在线</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>主节点</td>
+<td>在线</td>
+</tr>
+<tr>
+<td>2001</td>
+<td>从节点</td>
+<td>在线</td>
+</tr>
+<tr>
+<td>3000</td>
+<td>主节点</td>
+<td>在线</td>
+</tr>
+<tr>
+<td>3001</td>
+<td>从节点</td>
+<td>在线</td>
+</tr>
+</tbody></table>
+<p>集群中的每个节点都会定期的向其他节点发送 <strong>PING</strong> 消息，以此来检测对方是否下线。如果再规定的时间内没有收到 <strong>PONG</strong> 消息的响应，就会将该节点标记为 <strong>疑似下线（PFAIL）</strong>。比如，1000 向 2000 发送 <strong>PING</strong> 消息，如果在一定时间内没有收到 <strong>PONG</strong> 消息的响应，就会修改自己维护的状态表，将 2000 标记为 <strong>疑似下线（PFAIL）</strong>。</p>
+<p>集群中的各个节点会通过消息，来 <strong>交换</strong> 自己维护的节点状态表。比如某个节点是在线、下线还是疑似下线。注意是 <strong>交换</strong>，而不是 <strong>同步</strong>。如果某个节点收到了其他节点发来的疑似下线状态，会创建一份<strong>下线报告</strong>保存下来。</p>
+<p>比如，1000 收到了 2000 发来的消息，2000 标记了 3000 是 疑似下线状态，那么。1000 就会创建一份下线报告保存到自己的状态表里。这时 <strong>1000</strong> 的状态表结构如下：</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>角色</th>
+<th>状态</th>
+<th>下线报告</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1000</td>
+<td>主节点</td>
+<td>在线</td>
+<td></td>
+</tr>
+<tr>
+<td>1001</td>
+<td>从节点</td>
+<td>在线</td>
+<td></td>
+</tr>
+<tr>
+<td>2000</td>
+<td>主节点</td>
+<td>在线</td>
+<td></td>
+</tr>
+<tr>
+<td>2001</td>
+<td>从节点</td>
+<td>在线</td>
+<td></td>
+</tr>
+<tr>
+<td>3000</td>
+<td>主节点</td>
+<td>在线</td>
+<td>[2000上报3000下线]</td>
+</tr>
+<tr>
+<td>3001</td>
+<td>从节点</td>
+<td>在线</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>如果集群里半数以上的主节点，都将某个主节点标记为疑似下线，那么这个主节点将被标记为<strong>下线（FAIL）</strong>状态，将主节点标记为下线状态的节点将会向集群广播一条消息，所有收到消息的节点，都会将节点标记为下线状态。</p>
+<p>比如上面的例子，如果 1000 也将 3000 标记为疑似下线状态，并且收到了 2000 的下线报告，那么 1000 就会将 3000 标记为下线，并广播 3000 下线的消息，其他节点收到消息后，也会将 3000 标记为下线。</p>
+<h3 id="4-2-leader-选举"><a href="#4-2-leader-选举" class="headerlink" title="4.2 leader 选举"></a>4.2 leader 选举</h3><p>当从节点发现自己复制的主节点进入下线状态后，就会触发进入选举过程，redis 集群将会在下线的主节点的从节点中选出一个节点作为新的主节点。</p>
+<p>选举过程与上面的哨兵选举过程非常类似。都是基于 Raft 算法做的。</p>
+<p>首先，集群有一个<strong>配置纪元</strong> 的计数器。初始值为0，每进行一次故障转移就会自增+1。集群中只有主节点有投票的权利，且每个主节点在一次故障转移期间只有一次投票的机会。</p>
+<p>当集群中的从节点发现自己复制的主节点下线后，就会广播一条消息，要求所有收到这条消息且具有投票权利的节点向自己投票。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gsj0ak1m63j31e60rm0uz.jpg" alt="image-20210716191749393"></p>
+<p>如果主节点还没有投票，则会返回 ACK 消息，表示支持该从节点成为主节点。如果某个从节点收到的票数超过主节点个数的一半，那么这个从节点将成为新的主节点。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gsj0c63liqj61e40rqwhb02.jpg" alt="image-20210716191922349"></p>
+<h3 id="4-3-瓜分问题"><a href="#4-3-瓜分问题" class="headerlink" title="4.3 瓜分问题"></a>4.3 瓜分问题</h3><p>如果集群中除下线节点外剩余的节点刚好能够被从节点瓜分，在极端情况下就会出现所有从节点的票数都不会超过一半，就会造成本次选举失败，然后配置纪元+1，进行重新选举。比如上图中的例子，如果两个从节点同时发起投票，那么就有可能每个从节点都收到一票，导致本次选举失败。</p>
+<p>redis集群为例尽量避免出现这种情况做了一下优化，在发现主节点下线后，从节点并不会立即发送消息，而是延迟一定的时间再发送选举消息，这个时间是随机的。计算公式如下：</p>
+<pre><code>DELAY = 500 milliseconds 
+        + random delay between 0 and 500 milliseconds 
+        + SLAVE_RANK * 1000 milliseconds</code></pre><p>500ms 加上一个随机时间，SLAVE_RANK 是复制偏移量的差值，即与主节点的数据差距越小的从节点，等待的时间就会越小，越有可能成为新的主节点。</p>
+<h3 id="4-2-转移过程"><a href="#4-2-转移过程" class="headerlink" title="4.2 转移过程"></a>4.2 转移过程</h3><p>新选举出的主节点会首先会执行<code>SLAVEOF no one</code>，停止对旧主节点的复制动作。然后会将旧主节点的槽位指派给自己。最后向集群发送广播消息，让集群中的其他节点知道新的主节点已经接管所有的槽位，旧主节点已经完成下线动作。</p>
+<p>这样就完成了整个的故障转移过程，新的主节点将开始接受与自己负责的槽位有关的数据。</p>
+<h2 id="5-结束"><a href="#5-结束" class="headerlink" title="5 结束"></a>5 结束</h2><p>Redis 的三种工作方式对于服务的可用性是不断提高的，最基本的单机模式采用的是RDB和AOF 的备份方式。这种模式下一旦服务宕机，Redis 服务将立即不可用，不过可以手动的通过备份文件恢复。需要人工操作。</p>
+<p>而主从模式下，加入了哨兵机制进行监控，当主节点发生宕机后可以进行故障转移，可以 Redis 服务依然可以使用。缺点是依然只有一个节点处理命令，无法应对高并发的大量请求。</p>
+<p>集群模式是可用性最高的一种工作模式，而且集群模式下可以在集群内部进行故障转移动作，不需要引入哨兵。是目前常用的一种模式。</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://zdran.com/20210519.html">https://zdran.com/20210519.html</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '07532e6021e94ce04ea5',
+            clientSecret: '511fa8b9dbc91a4520694798eb668931598eb678',
+            repo: 'zdran.github.io',
+            owner: 'zdRan',
+            admin: ['zdRan'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/201210317.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="U+2647's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        cm.zdran@foxmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: cm.zdran@foxmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/03/">三月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/01/">一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/03/">三月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/02/">二月 2019<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/01/">一月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/12/">十二月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/11/">十一月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">十月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/09/">九月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Debug/">Debug<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DesignPattern/">DesignPattern<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Dubbo/">Dubbo<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/Flutter/">Flutter<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Java/">Java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/LeetCode/">LeetCode<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Notes/">Notes<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Redis/">Redis<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/SpringBoot/">SpringBoot<span class="sidebar_archives-count">18</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">cloud</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">61</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/zdRan" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;U+2647's blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+                <div class="footer-develop-div">Hosted by <a href="https://pages.coding.me" target="_blank" class="footer-develop-a">Coding Pages</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('
+<link rel="stylesheet" href="/css/uc.css">
+');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import highlight.js -->
+
+    
+        <script>lsloader.load("highlight_js","/js/highlight.pack.js?acYmXTaIUms2RHozguiBzg==", true)</script>
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            <!-- 加载 highlight 代码高亮-->
+            hljs.initHighlightingOnLoad();
+        
+    
+
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
