@@ -1,0 +1,301 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,面,试">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-35.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>面试总结-Java-2年</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        面试总结-Java-2年
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">面</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">试</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="0-背景介绍"><a href="#0-背景介绍" class="headerlink" title="0. 背景介绍"></a>0. 背景介绍</h2><p>主语言 Java，框架 Spring Boot，对微服务有简单的了解和应用。2年工作经验。</p>
+<p>2019 年 8 月，开始着手看新工作机会，可能这个时间段并不是一个很好的时间，机会并不是很多，但是还是收到了一些大厂小厂的面试邀请。面试了大概3个周左右，包括小米、京东、滴滴、新浪、摩拜、猫眼等一些公司，还包括其他一些上市的、没上市的、不需要融资的公司，以及一些国企、央企等。总之有大厂，有小厂，可以说是很全面了。最后进了猫眼娱乐。通过这次面试也充分认识到了自己的一些不足。下面对这些做一个总结。</p>
+<h2 id="1-公司划分"><a href="#1-公司划分" class="headerlink" title="1. 公司划分"></a>1. 公司划分</h2><p>我对面试的这些公司做了一个简单的划分，大概分了 3 个梯队。</p>
+<h3 id="第一梯队"><a href="#第一梯队" class="headerlink" title="第一梯队"></a>第一梯队</h3><p>一线大厂。比如 BAT、华为、小米、京东、滴滴。</p>
+<p>大厂的面试看中的主要是算法、JVM、源码等，感觉看中的更加是你的内功，对你做过的项目<strong>相对而言</strong>不是特别重视。所以面试这些公司的时候一定要准备些算法的知识。<strong>手写算法！！</strong></p>
+<h3 id="第二梯队"><a href="#第二梯队" class="headerlink" title="第二梯队"></a>第二梯队</h3><p>上市公司或者融资情况比较好的 C 轮、D 轮的公司。比如猫眼、新浪等。</p>
+<p>这些公司面试主要看中的一个是对常用框架的的理解，比如 Spring 全家桶，另一个比较看中的是高并发、多线程的问题。所以如果面试这些公司的时候，数据库的事务，索引、锁、以及 Java 的多线程、锁、concurrent 包一定要有所准备。</p>
+<h3 id="第三梯队"><a href="#第三梯队" class="headerlink" title="第三梯队"></a>第三梯队</h3><p>国企、央企、以及非互联网行业的大规模的公司。比如一些中xx院xx所、一些教育行业的公司等。国企公司十有八九是猎头给你推的(PS:如果你在猎聘网上有简历的话)。</p>
+<p>由于是国企的性质，所以笔试题一定要刷，特别是一些 Java 基础中细节的问题，比如 String 的不可变属性，Integer 的缓存、final 与 finally的区别、finally 中的 return执行顺序等等等等，各种语法上的细节一定要有所准备。另一个方面是 SQL 语句，笔试题里一定少不了写SQL。最好网上找几套面试题做做。<strong>相对而言</strong>，面试就不是特别重要了。</p>
+<h3 id="第四梯队"><a href="#第四梯队" class="headerlink" title="第四梯队"></a>第四梯队</h3><p>天使轮、A轮、B轮等部分创业公司。</p>
+<p>这部分公司内容就比较杂了，面试的范围主要看面试官的水平。差一点的可能会让你先做笔试题（参考第三梯队），好点的会问一些 JDK 源码、问一些 MySQL 的事务隔离级别。再好一点的，可能会问一些 Servlet、Spring、Spring Boot源码的东西。甚至会让你手写 SQL。这部分公司，怎么说呢，随缘吧，感觉你怎么准备都应付不全。只能说兵来将挡，水来土掩。</p>
+<h2 id="面试题目细节"><a href="#面试题目细节" class="headerlink" title="面试题目细节"></a>面试题目细节</h2><p>面试题目细节分几个方面，由于每次面试结束后也没有做总结(PS:缺点！！)，现在只能靠回忆，所以部分内容可能不是特别全面。</p>
+<h3 id="1-JDK-相关"><a href="#1-JDK-相关" class="headerlink" title="1. JDK 相关"></a>1. JDK 相关</h3><p><strong>关键字:String、Integer、HashMap、HashTable、ConCurrentHashMap</strong></p>
+<p>比如:</p>
+<pre><code>String a = &quot;hello&quot;;
+String b = &quot;world&quot;;
+String c = a + b;
+String d = &quot;helloworld&quot;;
+
+String a1 = new String(&quot;hello&quot;)
+String b1 = new String(&quot;world&quot;)
+String c1 = a1 + b1;
+String d1 = new String(&quot;helloworld&quot;)
+</code></pre>
+<p>哪个跟哪个相等？为什么？在内存中的存储方式有是什么样的？基本上是一套组合拳。</p>
+<p>再比如，</p>
+<p>HashMap、HashTable的区别是什么？你可能会说一个线程安全，一个线程不安全，<br>然后会问你 HashMap 为什么不安全？ HashTable 与 ConCurrentHashMap 有什么区别？又是一套组合拳。</p>
+<p>这里推荐一篇美团技术团队的博客 <a target="_blank" rel="noopener" href="https://tech.meituan.com/2018/11/15/java-lock.html">Java 8系列之重新认识HashMap</a></p>
+<h3 id="2-JVM-相关"><a href="#2-JVM-相关" class="headerlink" title="2. JVM 相关"></a>2. JVM 相关</h3><p><strong>关键字:Java 运行时内存划分、Java 内存模型（JMM）、垃圾回收（GC、CMS）、Java类加载过程</strong></p>
+<p>推荐一本书吧，经典的 《深入理解 Java 虚拟机 第二版》 周志明的。不用从头看完，拔苗助长下，重点看这几章，先把面试过了再说。</p>
+<p>PS:给自己的博客打个广告 </p>
+<ul>
+<li><a href="https://zdran.com/20190322.html">JVM 读书笔记(一) 内存划分</a></li>
+</ul>
+<h3 id="3-Thread-相关"><a href="#3-Thread-相关" class="headerlink" title="3. Thread 相关"></a>3. Thread 相关</h3><p><strong>关键字: 线程池、ThreadLocal、volatile、sleep、wait、各种锁（自旋锁、偏向锁、轻量锁）</strong></p>
+<p>推荐一篇美团技术团队的博客 <a target="_blank" rel="noopener" href="https://tech.meituan.com/2018/11/15/java-lock.html">不可不说的Java“锁”事</a>，详细说明了 Java 中的各种锁，质量没的说！</p>
+<p>线程池和 ThreadLocal 是最常被问到的，多看看博客，即便是生产环境没用过，到时候被问到也要有话可说。</p>
+<h3 id="4-算法-相关"><a href="#4-算法-相关" class="headerlink" title="4. 算法 相关"></a>4. 算法 相关</h3><p><strong>关键字: 链表（双指针法）、树（二叉查找树、B树、B+树、红黑树）、字符串相关（匹配子串，split实现）</strong></p>
+<p>比如：</p>
+<ol>
+<li>链表翻转</li>
+<li>获取单链表的第 N 个元素</li>
+<li>获取单链表的倒数第 N 个元素</li>
+<li>在一个二叉查找树中查询某个元素的前一个元素</li>
+<li>求一棵二叉树的高度。</li>
+<li>判断一个数组是否符合二叉查找树的中序遍历结果</li>
+<li>给你一个 List 构造一个树形结构</li>
+<li>字符串的 split 方法的实现</li>
+<li>字符串子串匹配算法</li>
+<li>以及各种常见的排序、查找算法</li>
+</ol>
+<p><strong>手写！！！ 大厂必考题！！</strong></p>
+<h3 id="5-MySQL-相关"><a href="#5-MySQL-相关" class="headerlink" title="5. MySQL 相关"></a>5. MySQL 相关</h3><p><strong>关键字: 索引存储结构、聚簇索引、事务隔离级别、以及使用索引的场景，创建索引时需要考虑的条件</strong>。</p>
+<p>推荐一篇美团技术团队的博客 <a target="_blank" rel="noopener" href="https://tech.meituan.com/2014/08/20/innodb-lock.html">Innodb中的事务隔离级别和锁的关系</a> ，深入浅出的讲解了事物的隔离级别，个人感觉质量非常高。</p>
+<h3 id="6-Spring-相关"><a href="#6-Spring-相关" class="headerlink" title="6. Spring 相关"></a>6. Spring 相关</h3><p><strong>关键字: IoC、AOP、SpringBoot启动过程、Spring处理 HTTP 请求的过程、Spring Boot 与 Spring MVC 的区别</strong>。</p>
+<p>面试的时候可能会先让你说一下 IoC、AOP然后，有关 IoC 的可能会问 Autowired、 Resource 注解的区别、依赖注入的方式，依赖冲突的解决办法等。AOP 可能会问实现方式，以及实现原理，基本上会问到 <strong>动态代理</strong> 的内容</p>
+<p>Spring 相关的，可能会问到 Spring Boot 的启动过程、处理 Http 请求的过程（甚至包括 DNS 解析的部分）比如，会问，我从浏览器发起一个 http 请求到接收到响应，中间发生了什么？</p>
+<p>再深入一点会问到，Spring 是怎么把 Http 的数据流绑定到具体的 Java bean 上的？</p>
+<h3 id="7-SQL-相关"><a href="#7-SQL-相关" class="headerlink" title="7. SQL 相关"></a>7. SQL 相关</h3><p>面试的套路基本上都是给你一个或者两个表结构，然后让写个查询语句。</p>
+<p>基本的CURD就不说了，重点关注 group by、order by 以及关联查询、组合查询、分页。面试的时候一定会遇到 SQL 题的。</p>
+<p>PS:给自己的博客打个广告 </p>
+<ul>
+<li><a href="https://zdran.com/20190417.html">SQL 性能优化的几条建议</a></li>
+<li><a href="https://zdran.com/20180529.html">MySQL 学习笔记</a></li>
+</ul>
+<h3 id="开放题"><a href="#开放题" class="headerlink" title="开放题"></a>开放题</h3><p>开放题大部分都集中在大数据量的问题上，比如:</p>
+<ol>
+<li><p>我有一个文件，文件里面有几百万甚至上千万的有序记录（总之，内存一次是加载不全的），你要如何快速的查询到某个具体的记录?</p>
+</li>
+<li><p>当你的订单量超过百万级别甚至是千万级别，你如何存到数据库里? 这时候你可能会说，分库分表，然后下一个问题就是如何分，分完之后如何查。</p>
+</li>
+<li><p>我开了 10 个线程来处理数据库里的订单信息，如何保证同一个订单只能被处理一次？如果在处理途中又有新的订单进来，怎么保证新的订单也会被处理？</p>
+</li>
+</ol>
+<p>这些题的答案基本上都不是唯一的，每个人都有每个人的理解，因为技术栈的不一样，所以想到的解决方案也不一样。感觉主要还是看面试者解决问题的思路。</p>
+<p>这部分其实我也没有什么特别好的办法准备，不过也不要担心，当问到这个问题时，你可能没有最好的思路，但是你至少可以保证有一个能解决问题的思路，先不要关心数据量的问题，先说出来一个解决方案，然后再一点点思考怎么优化，面试官也可能会引导你去优化。</p>
+<p>个人感觉，这类题的解答套路无非是时间不够，空间来凑，线程来凑。</p>
+<p>时间不够，那就考虑下把某些数据存起来，节省查询时间。或者开多个线程来处理。往这个方向上思考，思路一般不会错。</p>
+<h3 id="框架图"><a href="#框架图" class="headerlink" title="框架图"></a>框架图</h3><p>项目整体框架图，或者叫架构图，一般大点的公司都会要求你说一下，或者画一下，画的时候会要求你简单说一下，某个功能的调用关系，某个模块做了什么，你负责了哪个模块，哪个功能，怎么做的？</p>
+<p>所以面试前最好准备下项目架构图，自己先画一下，调整下模块的布局，尽量画的清楚（是清楚，不是美观！）些，一般架构图大致分三层，上层是入口，中层是业务逻辑层，下层是数据层，两侧可能还会有管理模块，定时模块，监控模块，数据分析模块等。一边画一边介绍每个模块的作用，功能。最后再说一下某个具体的功能是怎么调用的</p>
+<p>所以这部分面试的准备就是再次熟悉下自己做过的项目，不要去研究代码细节，从大局入手，整体架构，模块，技术栈，依赖关系，调用关系。然后再仔细的熟悉下自己做的功能，最好自己跟自己讲几遍。</p>
+<h2 id="为什么离职？"><a href="#为什么离职？" class="headerlink" title="为什么离职？"></a>为什么离职？</h2><p>这是每个公司面试都少不了的问题，所以面试之前一定要根据具体的公司，岗位的工作内容来回答。</p>
+<p>比如：小公司到大公司。</p>
+<p>现在的公司业务量少，所以想到大公司接触一些流量比较大的项目</p>
+<p>比如：A行业到B行业</p>
+<p>我对现在的工作内容不是特别感兴趣，一直在做xxx，所以想换一个我喜欢的行业。我对 B 行业比较感兴趣，刚好看到 xx 公司的招聘信息，就投了简历来试试。</p>
+<p>PS：<strong>一定要简单了解下 B 行业，因为，下一个问题有可能是，谈谈你对 B 行业的了解 :)</strong></p>
+<p>比如：大公司到小公司</p>
+<p>我在现在的公司一直在负责 xxx 的 A 模块，但是对 xxx 的整体架构，业务逻辑都没有机会了解，所以想换个工作机会能够接触到 xxx 的完整的业务逻辑。</p>
+<p>总之一句话，见机行事！哪怕你仅仅是因为薪资不满意离职的，也要尽量想一个靠谱点的离职原因。</p>
+<h2 id="为什么选择我们公司的这个职位？"><a href="#为什么选择我们公司的这个职位？" class="headerlink" title="为什么选择我们公司的这个职位？"></a>为什么选择我们公司的这个职位？</h2><p>这个问题一般是 HR 来问的，如果能面试到这里，说明已经成功了一大半了。</p>
+<p>回答这个问题，一般从 3 个方面吧，行业、公司、技术匹配程度</p>
+<p>我对这个行业比较感兴趣，而且贵公司在这个行业比较领先的。</p>
+<p>如果这个公司是小公司，那就从技术匹配程度上说。我看了贵公司的招聘信息，觉得自己的技术方向与招聘的技术要求比较匹配，而且对贵公司(或者这个行业)比较感兴趣，所以就投了一下简历。</p>
+<p>PS:<strong>面试前一定要了解下要面试的公司，行业。知己知彼嘛</strong></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>大厂面试败在了手写算法上，对 Spring 全家桶的源码也不够了解。很是遗憾。争取在这两年内把这方面的技术提升上来。最后决定入职猫眼娱乐，估计以后能省点看电影的钱，哈哈~~</p>
+<p>最后，祝大家都能找到满意的工作！！</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

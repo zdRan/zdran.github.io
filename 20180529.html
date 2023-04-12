@@ -1,0 +1,431 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,MySQL,学习笔记">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-6.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>MySQL 学习笔记</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        MySQL 学习笔记
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">MySQL</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">学习笔记</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="1-定义"><a href="#1-定义" class="headerlink" title="1 定义"></a>1 定义</h2><p>数据库中的表：一行叫一条记录。每一列叫一个属性，或一个字段。<br>主键：表中的某个特殊字段，具有唯一的确定的值，可以根据该字段唯一的确定一条记录<br>外键：表中的某个字段的值为另一张表（也可以是自身）中的某个字段的值。</p>
+<h2 id="2-MySQL-的数据类型"><a href="#2-MySQL-的数据类型" class="headerlink" title="2 MySQL 的数据类型"></a>2 MySQL 的数据类型</h2><h3 id="2-1-数值"><a href="#2-1-数值" class="headerlink" title="2.1 数值"></a>2.1 数值</h3><ol>
+<li>TINYINT 小整型</li>
+<li>INT&#x2F;INTEGER 整型</li>
+<li>BIGINT 长整型</li>
+<li>FLOAT 小数</li>
+<li>DOUBLIE 双精度小数</li>
+</ol>
+<h3 id="2-2-日期"><a href="#2-2-日期" class="headerlink" title="2.2 日期"></a>2.2 日期</h3><ol>
+<li>DATE  YYYY-MM-DD</li>
+<li>TIME  HH:MM:SS</li>
+<li>YEAT  YYYY</li>
+<li>DATETIME 混合</li>
+<li>TIMESTAMP 高精度</li>
+</ol>
+<h3 id="2-3-字符串"><a href="#2-3-字符串" class="headerlink" title="2.3 字符串"></a>2.3 字符串</h3><ol>
+<li>CHAR 定长字符串</li>
+<li>VARCHAR 不定长</li>
+<li>BLOB 二进制文件</li>
+<li>LONGBLOB 长二进制文件</li>
+<li>TEXT 长文本数据</li>
+<li>LONGTEXT 长文本数据<br><strong>注：以上仅总结了常用类型，并不是所有类型</strong></li>
+</ol>
+<h2 id="3-SQL语句"><a href="#3-SQL语句" class="headerlink" title="3 SQL语句"></a>3 SQL语句</h2><h3 id="3-1-数据库的创建"><a href="#3-1-数据库的创建" class="headerlink" title="3.1 数据库的创建"></a>3.1 数据库的创建</h3><pre><code>CREATE DATABASE 数据库名 [参数]
+</code></pre>
+<p>例如创建一个名为test的数据库，设置字符集为utf-8</p>
+<pre><code>CREATE DATABASE test CHARACTER SET utf8;
+</code></pre>
+<p>出现下面的内容即说明创建成功。</p>
+<pre><code>Query OK, 0 rows affected (0.00 sec)
+</code></pre>
+<p>你可以使用下面的语句查看新创建的数据库</p>
+<pre><code>SHOW DATABASES;
+</code></pre>
+<p>选择需要操作的数据库</p>
+<pre><code>USE test;
+</code></pre>
+<p>执行完上面的语句后出现Database changed，<br>你所有的操作都将在test数据库中进行。</p>
+<h3 id="3-2-创建表"><a href="#3-2-创建表" class="headerlink" title="3.2 创建表"></a>3.2 创建表</h3><pre><code>CREATE TABLE 表名 (
+    列名 列数据属性 [约束]，
+    列名 列数据属性，
+    ... ...
+);
+</code></pre>
+<p>例如创建一个users表id是主键，自增长。<br>PRIMARY KEY：约束 主键约束<br>AUTO_INCREMENT：约束 自增长</p>
+<pre><code>CREATE TABLE users(
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+account VARCHAR(50),
+pwd VARCHAR(50),
+);
+</code></pre>
+<h3 id="3-3-插入数据"><a href="#3-3-插入数据" class="headerlink" title="3.3 插入数据"></a>3.3 插入数据</h3><pre><code>INSERT INTO 表名 VALUES (值1, 值2,...,NULL，...);
+</code></pre>
+<p>这种插入方式一定要将所有的值都写上，如果为空的话写NULL。值与列要一一对应<br><strong>主键如果设置为自增的话写NULL</strong></p>
+<p>也可以指定所要插入数据的列，向下面这样。</p>
+<pre><code>INSERT INTO 表名 (列1, 列2,...) VALUES (值1, 值2,....);
+</code></pre>
+<p>按回车后出现</p>
+<pre><code>Query Ok, 1 row affected (0.05 sec) 
+</code></pre>
+<p>说明成功。否则请检查SQL语句。</p>
+<p>例如向刚刚创建的users表中插入一条数据</p>
+<pre><code>INSERT INTO users VALUES(NULL,&#39;admin&#39;,&#39;admin&#39;);
+</code></pre>
+<p>第一列是id，主键自增，不需要插入。</p>
+<h3 id="3-4-查询数据"><a href="#3-4-查询数据" class="headerlink" title="3.4 查询数据"></a>3.4 查询数据</h3><pre><code>SELECT * FROM 表名 [WHERE 条件]  [参数];
+</code></pre>
+<p>例如查询users表里的所有数据的 account 列。</p>
+<pre><code>SELECT account FROM users;
+</code></pre>
+<h4 id="3-4-1-WHERE-查询"><a href="#3-4-1-WHERE-查询" class="headerlink" title="3.4.1 WHERE 查询"></a>3.4.1 WHERE 查询</h4><p>可以给FROM后面的表起一个别名。例如:</p>
+<pre><code>SELECT tn.id,tn.account FROM tablename AS tn
+WHERE tn.id = 1;
+</code></pre>
+<h4 id="3-4-2-WHERE-后的条件语句"><a href="#3-4-2-WHERE-后的条件语句" class="headerlink" title="3.4.2 WHERE 后的条件语句"></a>3.4.2 WHERE 后的条件语句</h4><pre><code>WHERE后面可以写多种条件语句。
+1. 关系语句: =,&gt;,&lt;,!=,&gt;=,&lt;=
+2. 逻辑语句: AND,OR,NOT
+3. IS NULL: 是否为空
+4. BETWEEN:在两者之间 
+    WHERE u.id BETWEEN 11 AND 15;
+    id 在11-15之间。
+5. IN:在..之中
+    WHERE u.account IN (值1,值2,...);
+    查询 account 在(值1,值2,...)之中的数据
+5. LIKE:模糊匹配 
+    WHERE  u.id LIKE &#39;通配符&#39;;
+    
+    通配符
+    &#39;%&#39;:替代零个或多个字符
+    &#39;_&#39;:替代一个字符
+        WHERE u.account LIKE &#39;%A%&#39;;查询account字段中含有&#39;A&#39;的数据。
+
+ 	[charlist]:字符列中的任何单一字符 
+        WHERE u.account LIKE &#39;[ASD]%&#39;; 查询以A S D 开头的数据。
+    [!charlist]:不在字符列中的任何单一字符
+        WHERE u.account LIKE &#39;[!ASD]%&#39;; 查询不以A S D 开头的数据 
+</code></pre>
+<h4 id="3-4-3-聚合函数"><a href="#3-4-3-聚合函数" class="headerlink" title="3.4.3 聚合函数"></a>3.4.3 聚合函数</h4><pre><code>SELECT AVG(列名) FROM 表名
+</code></pre>
+<pre><code>1. AVG(列名):返回某一列的平均值
+2. COUNT(列名):返回匹配指定条件的行数
+3. FIRST(列名):返回指定的字段中第一个记录的值。
+4. LAST(列名):返回指定的字段中最后一个记录的值。
+5. MAX(列名):返回一列中的最大值。NULL 值不包括在计算中。 
+6. MIN(列名):返回一列中的最小值。NULL 值不包括在计算中。
+7. SUM(列名):返回数值列的总数（总额）。
+8. UCASE(列名):把字段的值转换为大写。
+9. LCASE(列名):把字段的值转换为小写。 
+</code></pre>
+<pre><code>10. MID(列名,开始位置，截取长度):用于从文本字段中提取字符。
+SELECT MID(account,1,3) as uname FROM users;
+</code></pre>
+<pre><code>11. LEN(列名):返回文本字段中值的长度。
+12. ROUND(列名,小数位数):用于把数值字段舍入为指定的小数位数。
+13. CURDATE():返回当前日期。YYYY-MM-DD。
+14. CURTIME():返回当前时间。HH:MM:SS。
+15. NOW():返回当前时间。YYYY-MM-DD HH:MM:SS。
+16. YEAR(d)，MONTH(d),DAY(d):分别返回参数的年，月，日。
+17. ADDDATE(d,n):在d的时间上加n天。
+18. SUBDATE(d,n):在d的时间上减n天。
+</code></pre>
+<pre><code>19. DATE_FORMAT(d,f):格式化时间d。
+%a 缩写星期名
+%b 缩写月名
+%c 月，数值
+%D 带有英文前缀的月中的天
+%d 月的天，数值(00-31)
+%e 月的天，数值(0-31)
+%f 微秒
+%H 小时 (00-23)
+%h 小时 (01-12)
+%I(大写的i) 小时 (01-12)
+%i 分钟，数值(00-59)
+%j 年的天 (001-366)
+%k 小时 (0-23)
+%l(小写的L) 小时 (1-12)
+%M 月名
+%m 月，数值(00-12)
+%p AM 或 PM
+%r 时间，12-小时（hh:mm:ss AM 或 PM）
+%S 秒(00-59)
+%s 秒(00-59)
+%T 时间, 24-小时 (hh:mm:ss)
+%U 周 (00-53) 星期日是一周的第一天
+%u 周 (00-53) 星期一是一周的第一天
+%V 周 (01-53) 星期日是一周的第一天，与 %X 使用
+%v 周 (01-53) 星期一是一周的第一天，与 %x 使用
+%W 星期名
+%w 周的天 （0=星期日, 6=星期六）
+%X 年，其中的星期日是周的第一天，4 位，与 %V 使用
+%x 年，其中的星期一是周的第一天，4 位，与 %v 使用
+%Y 年，4 位
+%y 年，2 位
+</code></pre>
+<h4 id="3-4-4-分组查询"><a href="#3-4-4-分组查询" class="headerlink" title="3.4.4 分组查询"></a>3.4.4 分组查询</h4><p>GROUP BY 语句用于结合聚合函数，根据一个或多个列对结果集进行分组。</p>
+<pre><code>SELECT 列名, 聚合函数
+FROM 表名
+WHERE 条件
+GROUP BY 列名
+</code></pre>
+<p>例如根据用户表中的role属性分组统计每组的人数</p>
+<pre><code>SELECT role, COUNT(id)
+FROM users
+GROUP BY role;
+</code></pre>
+<h4 id="3-4-5-分组过滤"><a href="#3-4-5-分组过滤" class="headerlink" title="3.4.5 分组过滤"></a>3.4.5 分组过滤</h4><p>在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。<br>例如根据用户表中的role属性分组统计每组的人数，查找人数大于10的role</p>
+<pre><code>SELECT role, COUNT(id)
+FROM users
+GROUP BY role
+HAVING COUNT(id)&gt;10;
+</code></pre>
+<h4 id="3-4-6-结果排序"><a href="#3-4-6-结果排序" class="headerlink" title="3.4.6 结果排序"></a>3.4.6 结果排序</h4><p>ORDER BY 语句用于根据指定的列对结果集进行排序。<br>默认为升序，降序使用关键字DESC。<br>例如根据用户表中的role属性分组统计每组的人数，按照人数降序排列</p>
+<pre><code>SELECT role, COUNT(id) count
+FROM users
+GROUP BY role
+ORDER BY count DESC;
+</code></pre>
+<h3 id="3-5-更新数据"><a href="#3-5-更新数据" class="headerlink" title="3.5 更新数据"></a>3.5 更新数据</h3><pre><code>UPDATE 表名 SET 列名 = 新值 WHERE 条件
+</code></pre>
+<p>WHERE的修改条件是可选的，不写的话修改表的所有数据</p>
+<p>例如修改users表里的数据，将admin用户的密码改为root</p>
+<pre><code>UPDATE users SET pwd = &#39;root&#39; WHERE account = &#39;admin&#39;;
+</code></pre>
+<h3 id="3-6-删除数据"><a href="#3-6-删除数据" class="headerlink" title="3.6 删除数据"></a>3.6 删除数据</h3><pre><code>DELETE FROM 表名 WHERE 条件
+</code></pre>
+<p>WHERE的修改条件是可选的，不写的话删除表的所有数据</p>
+<h2 id="4-表属性的修改"><a href="#4-表属性的修改" class="headerlink" title="4 表属性的修改"></a>4 表属性的修改</h2><h3 id="4-1-表重命名"><a href="#4-1-表重命名" class="headerlink" title="4.1 表重命名"></a>4.1 表重命名</h3><pre><code>ALTER TABLE 表名 RENAME 新表名;
+</code></pre>
+<h3 id="4-2-添加新的一列"><a href="#4-2-添加新的一列" class="headerlink" title="4.2 添加新的一列"></a>4.2 添加新的一列</h3><pre><code>ALTER TABLE 表名 ADD 列名 列数据类型 [AFTER 插入位置]
+</code></pre>
+<p>例如在users表的pwd字段后面添加一个role字段类型是INTEGER</p>
+<pre><code>ALTER TABLE users ADD role INTEGER AFTER pwd;
+</code></pre>
+<h3 id="4-3-修改列"><a href="#4-3-修改列" class="headerlink" title="4.3 修改列"></a>4.3 修改列</h3><pre><code>ALTER TABLE 表名 CHANGE 列名称 新列名称 新数据类型;
+</code></pre>
+<p>例如修改users表里的pwd字段改为password，类型是varchar(20)</p>
+<pre><code>ALTER TABLE users CHANGE pwd password varchar(20);
+</code></pre>
+<h2 id="5-完整性约束"><a href="#5-完整性约束" class="headerlink" title="5 完整性约束"></a>5 完整性约束</h2><pre><code>约束：对表中的列添加的一些限制条件。只有满足这些条件时才能数据才能插入。
+</code></pre>
+<h3 id="5-1-实体完整性"><a href="#5-1-实体完整性" class="headerlink" title="5.1 实体完整性"></a>5.1 实体完整性</h3><pre><code>主键不能为空
+</code></pre>
+<h3 id="5-2-参照完整性"><a href="#5-2-参照完整性" class="headerlink" title="5.2 参照完整性"></a>5.2 参照完整性</h3><pre><code>外键的值必须是某张表中存在的值，可以为空
+</code></pre>
+<h3 id="5-3-用户自定义完整性"><a href="#5-3-用户自定义完整性" class="headerlink" title="5.3 用户自定义完整性"></a>5.3 用户自定义完整性</h3><pre><code>唯一性约束，某一列虽然不为主键，但是依然不能重复。
+</code></pre>
+<h3 id="5-4-添加约束"><a href="#5-4-添加约束" class="headerlink" title="5.4 添加约束"></a>5.4 添加约束</h3><pre><code>ALTER TABLE 表名
+    ADD CONSTRAINT 约束名 约束类型(列名);
+</code></pre>
+<p>例如，给users表的role列添加外键约束，引用自roles表的id列</p>
+<pre><code>ALTER TABLE users
+    ADD CONSTRAINT uq_phone FOREIGN KEY (`role`) 
+    REFERENCES `roles` (`id`);
+</code></pre>
+<h3 id="5-5-常见约束类型"><a href="#5-5-常见约束类型" class="headerlink" title="5.5 常见约束类型"></a>5.5 常见约束类型</h3><pre><code>1. PRIMARY KEY: 主键 
+2. CHECK:限制列中的值的范围。MySQL好像不支持
+3. UNIQUE:唯一性约束
+4. NOT NULL：非空约束
+5. FOREIGN KEY:外键约束
+</code></pre>
+<h2 id="6-范式"><a href="#6-范式" class="headerlink" title="6 范式"></a>6 范式</h2><p>函数依赖:如果A依赖B，那么当确定A值后，B值也就确定了。<br>例如，在一张表中由于主键是唯一确定且不重复的。所以，当主键的值确定了，那么其他列的值也就确定了。我们便说，其他列都依赖主键。</p>
+<p>完全函数依赖：如果B函数依赖于A，并且对于A的任何一个真子集A1,都有 B不依赖与A1,称A对B完全函数依赖。</p>
+<p>部分函数依赖：如果B函数依赖于A，但是B不完全函数依赖于A，称B对A部分函数依赖。<br>例如，在一张表中，有两列，一列是用户名，而另一列里某些行里记录的是用户的id，而某些行里在这一列里记录的是用户所在部门的id，那么用户名列便部分函数依赖于id列，因为存在某些行依赖于id列的子集(记录是部门id的行)。</p>
+<p>传递函数依赖：如果A函数依赖于B，B函数依赖于C，则称A传递函数依赖于C。</p>
+<h3 id="6-1-1NF-第一范式"><a href="#6-1-1NF-第一范式" class="headerlink" title="6.1 1NF(第一范式)"></a>6.1 1NF(第一范式)</h3><p>确保列不可分，即每一列只描述一个属性，即达到1NF</p>
+<h3 id="6-2-2NF-第二范式"><a href="#6-2-2NF-第二范式" class="headerlink" title="6.2 2NF(第二范式)"></a>6.2 2NF(第二范式)</h3><p>在1NF的基础上消除部分函数依赖即达到2NF。即每一个非主属性(非主键列)完全函数依赖于主键。<br>例如，可以将上面部分函数依赖的例子中的表，改成两张表，一张用户表，一张部门表，所有的用户名列都完全依赖于主键。便达到2NF。</p>
+<h3 id="6-3-3NF-第三范式"><a href="#6-3-3NF-第三范式" class="headerlink" title="6.3 3NF(第三范式)"></a>6.3 3NF(第三范式)</h3><p>在2NF的基础上消除传递函数依赖便达到3NF。即每一个非主属性(非主键列)即不部分依赖于主键，也不传递依赖于主键。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

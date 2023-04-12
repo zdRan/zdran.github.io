@@ -1,0 +1,329 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Python,爬虫,自如网">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-23.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Python 爬虫实战(一) 爬取自如网租房信息</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Python 爬虫实战(一) 爬取自如网租房信息
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Python</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">爬虫</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">自如网</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="免责声明：本文仅供学习交流，如出现任何法律问题本人概不负责！"><a href="#免责声明：本文仅供学习交流，如出现任何法律问题本人概不负责！" class="headerlink" title="免责声明：本文仅供学习交流，如出现任何法律问题本人概不负责！"></a><strong>免责声明：本文仅供学习交流，如出现任何法律问题本人概不负责！</strong></h2><h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>与自如网奋战了 2 个周，终于有点结果了。</p>
+<h2 id="1-隐藏的价格信息"><a href="#1-隐藏的价格信息" class="headerlink" title="1. 隐藏的价格信息"></a>1. 隐藏的价格信息</h2><p>打开自如网（<code>http://www.ziroom.com/z/nl/z2.html?qwd=</code>），直接 F12 看了一下房屋列表的源码：</p>
+<pre><code>  &lt;div class=&quot;priceDetail&quot;&gt; 
+   &lt;p value=&quot;&quot; class=&quot;price&quot;&gt; 
+   &lt;span class=&quot;gray-6&quot;&gt; (每月) &lt;span class=&quot;hui_icon&quot;&gt;&lt;img width=&quot;60&quot; height=&quot;18&quot; 
+    src=&quot;//static8.ziroom.com/phoenix/pc/images/201810/img_label5.png&quot; /&gt;&lt;/span&gt; &lt;/span&gt; &lt;/p&gt;
+    &lt;p class=&quot;more&quot;&gt;
+    &lt;a href=&quot;//www.ziroom.com/z/vr/62035032.html&quot; target=&quot;_blank&quot;&gt;查看更多&lt;/a&gt;&lt;/p&gt; 
+  &lt;/div&gt;
+</code></pre>
+<p>找到了房屋详情的地址(<code>www.ziroom.com/z/vr/62035032.html</code>)，但是价格信息没有找到，没办法，到详情里找一下，发现价格信息的源码如下：</p>
+<pre><code>  &lt;span class=&quot;price&quot;&gt; &lt;b&gt;&lt;/b&gt; 
+  &lt;span class=&quot;room_price&quot; id=&quot;room_price&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;gray-6&quot;&gt;/月(季付)&lt;/span&gt; &lt;/span&gt; 
+</code></pre>
+<p>源码里竟然没有价格信息，然后在审查元素，发现价格信息应该是动态加载的。而且用的还是背景图数字。</p>
+<p><img src="/images/20190420-1.jpg"></p>
+<p>打开这个图片的连接看一下(<code>http://static8.ziroom.com/phoenix/pc/images/price/81c4fe87c108f9515c4ee4bafff68529s.png</code>)</p>
+<p><img src="/images/20190420-2.jpg"></p>
+<p>不错，已经找到了价格的初始信息，下面打算提取图片中的数字，然后根据 html 里的偏移量计算出真正的价格。</p>
+<h2 id="2-图片反-OCR-识别"><a href="#2-图片反-OCR-识别" class="headerlink" title="2. 图片反 OCR 识别"></a>2. 图片反 OCR 识别</h2><p>图片信息提取，首先想到的 就是 OCR 识别，而且都是很标准的数字，本来以为难度级别属于 hello world 级别的，但是万万没想到低估了自如网的反爬虫工作</p>
+<p>使用 OCR 识别，一顿操作猛如虎，发现竟然识别不了，直到我把图片转换成纯黑白的，然后才发现了问题。</p>
+<pre><code>    url = &#39;http://static8.ziroom.com/phoenix/pc/images/price/9bbd4bf71c11e7c8149485d9f1ec5adbs.png&#39;
+    response = requests.get(url)
+    im = Image.open(io.BytesIO(response.content))
+    im = im.convert(&#39;1&#39;)
+    im.show()
+</code></pre>
+<p>发现图片竟然是下面这种镂空的，难怪 OCR 识别不出来</p>
+<p><img src="/images/20190420-3.jpg"></p>
+<p>这就有点尴尬了，看到这种图片首先想到的就是 TensorFlow 搞一波图像识别，不过，一个小小的爬虫而已不至于用这么先进的武器吧（其实是我不会而已！^_-），然后又找了几张这种数字图片，对比之下发现，所有的图片，只要数字相同，镂空的规律是一样的，换句话说，所有图片中的数字 1 都是一种镂空的规律！！！ </p>
+<p>这就有点意思了，首先想到的就是把图片转成矩阵，然后把矩阵和具体的数字做好映射，持久化下来，之后再次请求到图片，拿图片里的矩阵与持久化后的矩阵做对比，这样就能够解析出图片里的数字了。</p>
+<pre><code>def analyze_img():
+    url = &#39;http://static8.ziroom.com/phoenix/pc/images/price/9bbd4bf71c11e7c8149485d9f1ec5adbs.png&#39;
+    response = requests.get(url)
+    im = Image.open(io.BytesIO(response.content))
+    im = im.convert(&#39;1&#39;)
+    im.show()
+    num = [0,1,4,8,9,3,6,2,7,5]
+    num_dict = &#123;&#125;
+    for i in range(10):
+        data = im.crop((i*30,0,(i+1)*30,30)).getdata()
+        data = np.matrix(data,dtype=&#39;int&#39;)/255
+        num_dict[num[i]] =data
+
+    fp = open(&#39;num_dict.num&#39;, &#39;wb&#39;)
+    pickle.dump(num_dict, fp, protocol=-1)
+    fp.close()
+    return num_dict
+</code></pre>
+<p>嗯，买迈进了一小步。不太明白为什么这个图片在镂空的时候没有加一些随机的元素。如果说是由于随机之后出现极端的情况导致不容易被人眼识别，但是可以随机出一个或者两个具体的位置，随机的镂空，这样既不会出现不容易被人眼识别的情况，也能很好的防止上面这种爬虫的出现。</p>
+<p>总之，不管自如网是出于什么考虑，背景图片的数字提取是解决了。下面，就需要找一下这张图片是怎么跟房屋信息绑定的。</p>
+<h2 id="3-动态加载的图片"><a href="#3-动态加载的图片" class="headerlink" title="3. 动态加载的图片"></a>3. 动态加载的图片</h2><p>在 F12 的 网络请求里确实找到了这张图片的请求信息，但是发现，图片的名称是随机串。而且同一个房屋信息，每次请求时的图片名称都不一样，这说明，后台是随机生成的这张图片，没有跟房屋绑定。</p>
+<p><img src="/images/20190420-4.jpg"></p>
+<p>所以需要找一下，这张图片的请求是从什么地方发起的，请求的 URL 又是从什么地方获取的。</p>
+<p>在 F12 里找到了这张图片的请求位置，但是对比 html 源码发现，并没有这个请求，这说明这个元素是通过 js 动态加载的。</p>
+<p><img src="/images/20190420-5.jpg"></p>
+<p><img src="/images/20190420-6.jpg"></p>
+<p>下面就需要找一下，到底是哪个 js 加载的这些信息。重新看了一下，房屋详情页面的源码，发现源码底部，有这样一段 js 的引用。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+   var ZRCONFIG = &#123;
+    &quot;URL_GET_LOGIN_STATE&quot;:&quot;/user/check-login?url=&quot;,
+    &quot;URL_GET_LOGIN_STATE&quot;:&quot;/user/check-login?url=&quot;,
+    &quot;URL_GET_DETAIL_STEWARD&quot;:&quot;/detail/steward?resblock_id=&quot;,
+    &quot;URL_GET_DETAIL_INFO&quot;:&quot;/detail/info?&quot;,
+    &quot;PAGE&quot;:&quot;detail&quot;
+  &#125;;
+&lt;/script&gt;      
+&lt;script  type=&quot;text/javascript&quot; src=&quot;//static8.ziroom.com/fecommon/library/jquery/jquery-1.8.3.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//static9.ziroom.com/phoenix/pc/js/2017/common.min.js?1555741850&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//static8.ziroom.com/phoenix/pc/js/detail.min.js?1555741850&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;//api.map.baidu.com/api?v=2.0&amp;ak=CB9b776692623d30a148b5c5dc2b75a6&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;//static8.ziroom.com/phoenix/pc/js/mappage.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>看命名也可以猜到 ‘datail.min.js’ 里应该有玄机。请求下这个 js 的源码看一下。终于找到了。</p>
+<pre><code>$.ajax(&#123;
+    type: &quot;GET&quot;,
+    url: ZRCONFIG.URL_GET_DETAIL_INFO 
+    + &quot;id=&quot; + $(&quot;#room_id&quot;).val() 
+    + &quot;&amp;house_id=&quot; + $(&quot;#house_id&quot;).val(),
+    success: function(data) &#123;
+        if (data.code == &quot;200&quot;) &#123;
+            var dataObj = data.data;
+            var priceTableList = dataObj.payment;
+            var listArr = [];
+            var trClass = &quot;&quot;;
+            var listStr = &quot;&quot;;
+            var priceStyle = &quot;&lt;style&gt;.room_price i.num&#123;background-image:url(&quot; + dataObj.price[0] + &quot;);&#125;&quot; 
+            + &quot;body.ratio2 .price i.num&#123;background-image:url(&quot; + dataObj.price[1] 
+            + &quot;);&#125;.pay_price i.num,.text_r i.num&#123;background-image:url(&quot; + priceTableList[0].rent[0] + &quot;);&#125;&quot; 
+            + &quot;body.ratio2 .pay_price i.num,body.ratio2 .text_r i.num&#123;background-image:url(&quot; 
+            + priceTableList[0].rent[1] + &quot;);background-size:auto 14px;&#125;&lt;style&gt;&quot;;
+            $(&quot;head&quot;).append(priceStyle);
+            var priceListHtml = &quot;&quot;;
+            for (var j = 0; j &lt; dataObj.price[2].length; j++) &#123;
+                priceListHtml += &#39;&lt;i class=&quot;num&quot; style=&quot;background-position:-&#39; 
+                + (dataObj.price[2][j] * offset_unit) 
+                + &#39;px&quot;&gt;&lt;/i&gt;&#39;
+            &#125;
+... ... (省略其他代码)
+</code></pre>
+<p>发现这个 js 发起了一个 ajax 请求，请求成功后，不仅设置了图片背景，而且还设置了切图的偏移量。</p>
+<p>终于看到希望了，我们可以直接请求这个 ajax 的地址，不仅能拿到图片，还能拿到价格信息对应图片上的数字的位置。</p>
+<p>ajax 的请求地址是 <code> url: ZRCONFIG.URL_GET_DETAIL_INFO + &quot;id=&quot; + $(&quot;#room_id&quot;).val() + &quot;&amp;house_id=&quot; + $(&quot;#house_id&quot;).val()</code></p>
+<p>其中 ZRCONFIG.URL_GET_DETAIL_INF 值在 房屋详情里的 js 里定义的 ，值为 <code>/detail/info?</code></p>
+<p>room_id 和 house_id 在房屋详情的页面里也能找到:</p>
+<pre><code>&lt;input type=&quot;hidden&quot; value=&quot;7e9285535a7687bf2e71be617cd07466&quot; id=&quot;hide_key&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;&quot; id=&quot;user_sex&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;&quot; id=&quot;user_uid&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;62035032&quot; id=&quot;room_id&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;60321330&quot; id=&quot;house_id&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;110000&quot; id=&quot;current_city_code&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;&quot; id=&quot;ly_name&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;&quot; id=&quot;ly_phone&quot; /&gt;
+&lt;input type=&quot;hidden&quot; value=&quot;1&quot; id=&quot;house_type&quot; /&gt;
+&lt;input type=&quot;hidden&quot; id=&quot;resblock_id&quot; value=&quot;1111027374437&quot;/&gt;
+</code></pre>
+<p>拼接后的最终的 URL 地址是 <code>/detail/info?id=62035032&amp;house_id=60321330</code></p>
+<p>然后拼接上自如网的前缀，就是最终的请求地址，<code>http://www.ziroom.com/detail/info?id=62035032&amp;house_id=60321330</code></p>
+<p>请求一下，终于解决了，价格信息的问题。</p>
+<p><img src="/images/20190420-7.jpg"></p>
+<h2 id="4-完整思路及代码"><a href="#4-完整思路及代码" class="headerlink" title="4. 完整思路及代码"></a>4. 完整思路及代码</h2><p>下面的问题就简单了，循环分页，筛选出每页里的房屋详情 URL ，然后根据详情里的信息去请求价格信息，最后可以把房屋信息写到 Excel里。就结束了</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning/blob/master/python/ziroom/ziroom.py">完整代码在这里</a></p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

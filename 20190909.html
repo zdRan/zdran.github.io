@@ -1,0 +1,880 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Spring Boot,Guava">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-25.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(十四) 整合 Guava</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(十四) 整合 Guava
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Guava</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h2 id="0-Guava"><a href="#0-Guava" class="headerlink" title="0. Guava"></a>0. Guava</h2><p><a target="_blank" rel="noopener" href="https://github.com/google/guava"><strong>Guava</strong></a> 工程包含了若干被Google的 Java项目广泛依赖的核心库。或者说是 Google 工程师的瑞士军刀。Guava 里包含了集合 [collections] 、缓存 [caching] 、原生类型支持 [primitives support] 、并发库 [concurrency libraries] 、通用注解 [common annotations] 、字符串处理 [string processing] 、I&#x2F;O 等等。 所有这些工具每天都在被Google的工程师应用在产品服务中。</p>
+<p>想要使用 Guava 首先需要添加依赖。</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+    &lt;artifactId&gt;guava&lt;/artifactId&gt;
+    &lt;version&gt;28.1-jre&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="1-Optional"><a href="#1-Optional" class="headerlink" title="1. Optional"></a>1. Optional</h2><p>Guava 用 Optional表示可能为 null 的 T 类型引用。一个 Optional 实例可能包含非 null 的引用（我们称之为引用存在），也可能什么也不包括（称之为引用缺失）。它从不说包含的是 null 值，而是用存在或缺失来表示。但 Optional 从不会包含 null 值引用。</p>
+<h3 id="1-1-简单使用"><a href="#1-1-简单使用" class="headerlink" title="1.1 简单使用"></a>1.1 简单使用</h3><p>当某个方法有可能返回 null 值时候，我们可以返回一个 Optional 的泛型对象。代码如下：</p>
+<pre><code>    /**
+     * 使用 empty 代替 null
+     *
+     * @param num
+     * @return
+     */
+    private Optional&lt;Integer&gt; getNum(int num) &#123;
+        if (num &gt; 0) &#123;
+            return Optional.of(num);
+        &#125; else &#123;
+            //使用 empty 代替 null
+            return Optional.empty();
+        &#125;
+    &#125;
+
+    public void testGetNum() &#123;
+        Optional&lt;Integer&gt; num = this.getNum(5);
+        if (num.isPresent()) &#123;
+            System.out.println(num.get());
+        &#125;
+        //也可以使用 ifPresent 方法
+        num.ifPresent(new Consumer&lt;Integer&gt;() &#123;
+            @Override
+            public void accept(Integer integer) &#123;
+                System.out.println(integer);
+            &#125;
+        &#125;);
+    &#125; 
+</code></pre>
+<p>使用 <code>Optional.of()</code> 来创建一个可用对象，使用 <code>Optional.empty();</code> 来创建一个不可引用的对象。用来替代之前直接返回 null 的情况。</p>
+<p>使用 Optional 时，可以通过<code>Optional.isPresent()</code>方法，或者是<code>Optional.ifPresent()</code>方法来使用。</p>
+<h3 id="1-2-使用-filter-方法"><a href="#1-2-使用-filter-方法" class="headerlink" title="1.2 使用 filter 方法"></a>1.2 使用 filter 方法</h3><p>可以使用 filter 方法 对返回结果做二次判断。</p>
+<ol>
+<li>使用<code>Predicates.in()</code> 方法，判断返回结果是否在集合内。</li>
+</ol>
+<pre><code>    public static void testIn()&#123;
+        List&lt;AccountInfo&gt; data = new ArrayList&lt;&gt;();
+        
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setName(&quot;aaa&quot;);
+        accountInfo.setBalance(123);
+        data.add(accountInfo);
+
+        AccountInfo accountInfo2 = new AccountInfo();
+        accountInfo2.setName(&quot;aaa&quot;);
+        accountInfo2.setBalance(123);
+        
+        System.out.println(&quot;equals：&quot;+accountInfo.equals(accountInfo2));
+
+        Optional&lt;AccountInfo&gt; optional = Optional.of(accountInfo2);
+        //通过 调用对象的 equals 方法来判断是否存在
+        optional.filter(Predicates.in(data)).ifPresent(new Consumer&lt;AccountInfo&gt;() &#123;
+            @Override
+            public void accept(AccountInfo accountInfo) &#123;
+                System.out.println(&quot;1：&quot;+accountInfo.toString());
+            &#125;
+        &#125;);
+    &#125;
+</code></pre>
+<p>in 方法调用的是对象的 equals 方法，所以如果对象的 equals 方法返回 true，那么就会访问到该对象，否则就访问不到。</p>
+<p>Predicates 类还有一些其他方法，用于过滤 Optional 对象。可以参考 Predicates 的API。</p>
+<h2 id="2-Preconditions"><a href="#2-Preconditions" class="headerlink" title="2. Preconditions"></a>2. Preconditions</h2><p>Guava 在 Preconditions 类中提供了若干前置条件判断的实用方法。这些方法让调用的前置条件判断更简单。</p>
+<pre><code>    /**
+     * 检查参数是否为 true
+     * @param attr
+     */
+    private static void testAttrs(boolean attr)&#123;
+        Preconditions.checkArgument(attr,&quot;参数错误&quot;);
+    &#125;
+
+    /**
+     * 检查参数是否为 null
+     * @param accountInfo
+     */
+    private static void testAttr2(AccountInfo accountInfo) &#123;
+        Preconditions.checkNotNull(accountInfo, &quot;参数不能为 null&quot;);
+    &#125;
+
+    /**
+     * 检查索引是否越界
+     * @param index
+     * @param size
+     */
+    private static void testAttr3(int index, int size) &#123;
+        Preconditions.checkElementIndex(index, size);
+    &#125;
+
+    /**
+     * 检查区间是否越界
+     * @param start
+     * @param end
+     * @param size
+     */
+    private static void testAttr4(int start,int end, int size) &#123;
+        Preconditions.checkPositionIndexes(start,end, size);
+    &#125;
+    public static void main(String[] args) &#123;
+        //testAttrs(Boolean.FALSE);
+        //testAttr2(null);
+        //testAttr3(3, 2);
+        testAttr4(2, 4, 3);
+    &#125;
+</code></pre>
+<p>Guava 建议直接静态导入，就不用 Preconditions.checkArgument(), 来调用了，直接使用 checkArgument(),比较简洁。</p>
+<h2 id="3-Ordering"><a href="#3-Ordering" class="headerlink" title="3. Ordering"></a>3. Ordering</h2><p>排序器[Ordering]是 Guava 流畅风格比较器[Comparator]的实现，它可以用来为构建复杂的比较器，以完成集<br>合排序的功能。</p>
+<p>Guava 提供了 3 中常见的比较器。</p>
+<ul>
+<li>Ordering.natural()</li>
+</ul>
+<p>默认比较器，针对可比较对象。</p>
+<ul>
+<li>Ordering.usingToString()</li>
+</ul>
+<p>使用字符串的字典顺序排序。</p>
+<ul>
+<li>Ordering.arbitrary()</li>
+</ul>
+<p>插入顺序的倒序。</p>
+<p>还可以根据 Comparator 生成 <code>Ordering.from(Comparator)</code>。</p>
+<p>或者自定义比较器：</p>
+<pre><code>    private static void lengthOrdering(List&lt;String&gt; list) &#123;
+        Ordering&lt;String&gt; lengthOrdering = new Ordering&lt;String&gt;() &#123;
+            @Override
+            public int compare(@Nullable String left, @Nullable String right) &#123;
+                return left.length() - right.length();
+            &#125;
+        &#125;;
+        list.sort(lengthOrdering);
+        //倒序
+        list.sort(lengthOrdering.reverse());
+
+    &#125;
+</code></pre>
+<p>如果要根据对象的某个具体的属性排序，可以使用 onResultOf 方法。</p>
+<pre><code>   private static void lengthOrdering2(List&lt;AccountInfo&gt; list) &#123;
+        Ordering&lt;AccountInfo&gt; lengthOrdering = Ordering.natural().nullsFirst().onResultOf(new Function&lt;AccountInfo, Integer&gt;() &#123;
+            @Nullable
+            @Override
+            public Integer apply(@Nullable AccountInfo accountInfo) &#123;
+                return accountInfo.getBalance();
+            &#125;
+        &#125;);
+        list.sort(lengthOrdering);
+        //倒序
+        list.sort(lengthOrdering.reverse());
+    &#125;
+</code></pre>
+<p><strong>注意：这里跟平常的链式调用的不同是，执行顺序是从后往前执行！！！</strong>比如上面的例子。</p>
+<pre><code>Ordering.natural().nullsFirst().onResultOf()
+</code></pre>
+<p>首先执行 onResultOf 获取所有对象的 balance 值，然后将 null 值排在最前，然后再按照数字顺序排序。</p>
+<p>Ordering 还提供了一些集合遍历、迭代的方法。比如：</p>
+<ul>
+<li>greatestOf(Iterableiterable, int k)</li>
+</ul>
+<p>获取最大的 k 个元素</p>
+<ul>
+<li>min(Iterable)</li>
+</ul>
+<p>获取最小的一个元素</p>
+<ul>
+<li>isOrdered(Iterable)</li>
+</ul>
+<p>判断对象是否按照给定的排序器排序</p>
+<h2 id="4-Collections"><a href="#4-Collections" class="headerlink" title="4. Collections"></a>4. Collections</h2><h3 id="4-1-不可变集合"><a href="#4-1-不可变集合" class="headerlink" title="4.1 不可变集合"></a>4.1 不可变集合</h3><p>创建对象的不可变拷贝是一项很好的防御性编程技巧。Guava 为所有 JDK 标准集合类型和 Guava 新集合类型都提供了简单易用的不可变版本。</p>
+<p>使用方式：</p>
+<pre><code>    public static void testImmutable()&#123;
+        ImmutableSet&lt;String&gt; immutableSet = ImmutableSet.&lt;String&gt;builder().add(&quot;c&quot;)
+                .add(&quot;b&quot;).build();
+
+        for (String s : immutableSet) &#123;
+            System.out.print(s + &quot;,&quot;);
+        &#125;
+    &#125;
+</code></pre>
+<p>Guava 还提供了有序的不可变集合。</p>
+<pre><code>    private static void testSort()&#123;
+        ImmutableSortedSet&lt;String&gt; immutableSortedSet = ImmutableSortedSet.of(&quot;c&quot;, &quot;a&quot;, &quot;b&quot;);
+        for (String s:immutableSortedSet) &#123;
+            System.out.print(s + &quot;,&quot;);
+        &#125;
+    &#125;
+</code></pre>
+<h3 id="4-2-新集合类型"><a href="#4-2-新集合类型" class="headerlink" title="4.2 新集合类型"></a>4.2 新集合类型</h3><ul>
+<li>Multiset</li>
+</ul>
+<p>Guava 提供了一个新集合类型 Multiset ，它可以多次添加相等的元素。你可以将 Multiset 类比成 Map&lt;E, Integer&gt;，键为元素，值为计数的一个 Map 集合。添加相同元素会增加计数，删除元素会减少计数。</p>
+<pre><code>    private static void testMultiset()&#123;
+        Multiset&lt;String&gt; multiset = HashMultiset.create();
+        multiset.add(&quot;a&quot;);
+        multiset.add(&quot;a&quot;);
+        multiset.add(&quot;b&quot;);
+        multiset.add(&quot;c&quot;);
+        multiset.setCount(&quot;b&quot;, 3);
+
+        System.out.println(multiset.contains(&quot;a&quot;));
+        System.out.println(multiset.count(&quot;a&quot;));
+        System.out.println(multiset.remove(&quot;b&quot;));
+        System.out.println(multiset.count(&quot;b&quot;));
+        System.out.println(multiset.size());
+    &#125;
+</code></pre>
+<p>当然，Guava 还提供了 TreeMultiset、LinkedHashMultiset、ConcurrentHashMultiset、ImmutableMultiset<br>的实现，需要注意的是，这些类都提供了 create 方法，所以尽量不要使用 new 来创建对象。更贴心的是，Guava 还提供了一个 SortedMultiset ,默认排序。</p>
+<pre><code>    private static void testSortMultiset()&#123;
+        SortedMultiset&lt;Integer&gt; multiset = TreeMultiset.create();
+        multiset.addAll(Lists.newArrayList(3, 2, 5, 6, 9, 2, 5, 6, 8));
+        for (int num:multiset) &#123;
+            System.out.print(num + &quot;,&quot;);
+        &#125;
+    &#125;
+</code></pre>
+<ul>
+<li>Multimap</li>
+</ul>
+<p>Guava 的 Multimap 可以很容易地把一个键映射到多个值。换句话说，Multimap 是把键映射到任意多个值的一般方式。你可以将 Multimap 类比成 Map&lt;K, List&gt; 或 Map&lt;K, Set&gt;。</p>
+<pre><code>    private static void testMultimap()&#123;
+        Multimap&lt;String, Integer&gt; multimap = ArrayListMultimap.create();
+        multimap.put(&quot;a&quot;, 1);
+        multimap.put(&quot;a&quot;, 2);
+        multimap.put(&quot;a&quot;, 3);
+        multimap.put(&quot;a&quot;, 4);
+
+        System.out.println(multimap.containsKey(&quot;a&quot;));
+        System.out.println(multimap.containsEntry(&quot;a&quot;, 1));
+        System.out.println(multimap.containsEntry(&quot;a&quot;, 0));
+        System.out.println(multimap.remove(&quot;a&quot;, 3));
+
+        System.out.println(Arrays.deepToString(multimap.get(&quot;a&quot;).toArray()));
+
+    &#125;
+</code></pre>
+<p>Multimap 还提供了若干个视图</p>
+<ul>
+<li>multimap.asMap()</li>
+</ul>
+<p>返回一个 Map&lt;K,Collection&gt;形式的视图。</p>
+<ul>
+<li>multimap.entries()</li>
+</ul>
+<p>返回一个 Collection&lt;Map.Entry&lt;K, V&gt;&gt; 包含所有的键值对。</p>
+<ul>
+<li>multimap.keySet()</li>
+</ul>
+<p>返回一个 Set<K> 集合，包含所有<strong>不重复</strong>的键</p>
+<ul>
+<li>multimap.keys()</li>
+</ul>
+<p>返回一个 Multiset<K> 包含所有的 key。</p>
+<ul>
+<li>multimap.values()</li>
+</ul>
+<p>返回一个 Collection<V> 包含所有的 value</p>
+<p>Multimap 的具体实现类包括 ArrayListMultimap、HashMultimap、TreeMultimap、ImmutableListMultimap 等。</p>
+<ul>
+<li>BiMap</li>
+</ul>
+<p>BiMap 是一个特殊的 Map ，可以用 inverse()反转 BiMap&lt;K, V&gt;的键值映射。所以，在插入值时需要注意，保证值时唯一的。强制将某个值插入到 BiMap 中，会更新该值对应的 key。</p>
+<pre><code>    private static void testBiMap()&#123;
+        BiMap&lt;String, Integer&gt; biMap = HashBiMap.create();
+        biMap.put(&quot;a&quot;, 1);
+        biMap.put(&quot;b&quot;, 2);
+        System.out.println(biMap.inverse().get(2));
+        biMap.forcePut(&quot;c&quot;, 2);
+        System.out.println(biMap.inverse().get(2));
+
+    &#125;
+</code></pre>
+<p>BiMap 的常见实现类 HashBiMap、ImmutableBiMap、EnumBiMap、EnumHashBiMap。</p>
+<ul>
+<li>other<br>还有一些不常用到的集合类，比如</li>
+</ul>
+<ol>
+<li>Table: 集合，可以根据行和列来存储和检索具体的值。</li>
+<li>ClassToInstanceMap: 是一个类型 Map，它的键是类型，而值是符合键所指类型的对象。</li>
+<li>RangeSet: 描述了一组不相连的区间。当把一个区间添加到可变的RangeSet时，所有相连的区间会被合并</li>
+<li>RangeMap: 将一个区间映射到一个对应的 value 上</li>
+</ol>
+<h2 id="5-collection-utilities"><a href="#5-collection-utilities" class="headerlink" title="5. collection utilities"></a>5. collection utilities</h2><p>Guava 提供了大量的集合工具。包括 Lists、Maps、Sets 等等。</p>
+<h3 id="5-1-静态工厂方法。"><a href="#5-1-静态工厂方法。" class="headerlink" title="5.1 静态工厂方法。"></a>5.1 静态工厂方法。</h3><p>Guava 提供了能够推断范型的静态工厂方法。</p>
+<pre><code>     private static void testUtil1()&#123;
+        List&lt;AccountInfo&gt; accountInfoList = Lists.newArrayList();
+        List&lt;AccountInfo&gt; accountInfoList2 = Lists.newArrayListWithCapacity(3);
+        List&lt;AccountInfo&gt; accountInfoList3 = Lists.newArrayListWithExpectedSize(3);
+        List&lt;AccountInfo&gt; accountInfoList4 = Lists.newArrayList(new AccountInfo());
+    &#125;
+</code></pre>
+<h3 id="5-2-Iterables"><a href="#5-2-Iterables" class="headerlink" title="5.2 Iterables"></a>5.2 Iterables</h3><p>Iterables 提供了一些集合操作的方法。</p>
+<pre><code>    private static void testUtil1()&#123;
+        List&lt;AccountInfo&gt; accountInfoList = Lists.newArrayList();
+        List&lt;AccountInfo&gt; accountInfoList2 = Lists.newArrayListWithCapacity(3);
+        List&lt;AccountInfo&gt; accountInfoList3 = Lists.newArrayListWithExpectedSize(3);
+        List&lt;AccountInfo&gt; accountInfoList4 = Lists.newArrayList(new AccountInfo());
+
+        Iterable&lt;Integer&gt; concatenated = Iterables.concat(Ints.asList(1, 2, 3),
+                Ints.asList(3, 4, 5));
+
+        System.out.println(Iterables.frequency(concatenated, 3));
+        System.out.println(Iterables.getFirst(concatenated, 0));
+        
+    &#125;
+</code></pre>
+<ul>
+<li>concat(Iterable<Iterable>)</li>
+</ul>
+<p>串联多个 iterables 的懒视图</p>
+<ul>
+<li>frequency(Iterable, Object)</li>
+</ul>
+<p>返回对象在 iterable 中出现的次数</p>
+<ul>
+<li>partition(Iterable, int)</li>
+</ul>
+<p>把 iterable 按指定大小分割，得到的子集都不能进行修改操作</p>
+<ul>
+<li>getFirst(Iterable, T default)</li>
+</ul>
+<p>返回 iterable 的第一个元素，若 iterable 为空则返回默认值</p>
+<ul>
+<li>getLast(Iterable)</li>
+</ul>
+<p>返回 iterable 的最后一个元素，若 iterable 为空则抛出NoSuchElementException</p>
+<ul>
+<li>elementsEqual(Iterable, Iterable)</li>
+</ul>
+<p>如果两个 iterable 中的所有元素相等且顺序一致，返回 true</p>
+<ul>
+<li>unmodifiableIterable(Iterable)</li>
+</ul>
+<p>返回 iterable 的不可变视图</p>
+<ul>
+<li>limit(Iterable, int)</li>
+</ul>
+<p>限制 iterable 的元素个数限制给定值</p>
+<ul>
+<li>getOnlyElement(Iterable)</li>
+</ul>
+<p>获取 iterable 中唯一的元素，如果 iterable 为空或有多个元素，则快速失败</p>
+<h3 id="5-2-Sets"><a href="#5-2-Sets" class="headerlink" title="5.2 Sets"></a>5.2 Sets</h3><p>Guava 提供了很多标准的集合运算的方法。比如集合间的交集、并集、补集等</p>
+<ul>
+<li>Sets.union()</li>
+</ul>
+<p>返回两个集合的并集，并去除重复元素</p>
+<ul>
+<li>Sets.intersection()</li>
+</ul>
+<p>返回两个集合的交集</p>
+<ul>
+<li>Sets.difference(set1,set2)</li>
+</ul>
+<p>返回 set1 中，不存在在 set2 中的元素,或者说是 set2 在 set1 中的绝对补集</p>
+<pre><code>    private static void testSets() &#123;
+        Set&lt;Integer&gt; set = Sets.union(Sets.newHashSet(1, 2, 3), Sets.newHashSet(3, 4, 5));
+        System.out.println(Arrays.deepToString(set.toArray()));
+
+        Set&lt;Integer&gt; set2 = Sets.intersection(Sets.newHashSet(1, 2, 3), Sets.newHashSet(3, 4, 5));
+        System.out.println(Arrays.deepToString(set2.toArray()));
+
+        Set&lt;Integer&gt; set3 = Sets.difference(Sets.newHashSet(1, 2, 3), Sets.newHashSet(1,2));
+        System.out.println(Arrays.deepToString(set3.toArray()));
+    &#125;
+</code></pre>
+<h3 id="5-3-Maps"><a href="#5-3-Maps" class="headerlink" title="5.3 Maps"></a>5.3 Maps</h3><p>Maps 里有两个比较有意思的方法。</p>
+<ul>
+<li>Maps.filterKeys() &#x2F; Maps.filterEntries</li>
+</ul>
+<p>根据给定的规则过滤键值对</p>
+<ul>
+<li>Maps.difference</li>
+</ul>
+<p>用来比较两个 Map 以获取所有不同点。</p>
+<ul>
+<li>Maps.uniqueIndex</li>
+</ul>
+<p>这个方法可以将一个 Iterable 对象 转成 Map 集合。</p>
+<p><strong>PS: 有点没看懂这个方法，有了解的朋友可以留言</strong></p>
+<pre><code>    private static void testMaps() &#123;
+        Map&lt;String, Integer&gt; hashMap = Maps.newHashMap();
+        hashMap.put(&quot;a&quot;, 1);
+        hashMap.put(&quot;bb&quot;, 2);
+        hashMap.put(&quot;ccc&quot;, 3);
+
+        Map&lt;String, Integer&gt; hashMap1 = Maps.filterKeys(hashMap, new Predicate&lt;String&gt;() &#123;
+            @Override
+            public boolean apply(@Nullable String input) &#123;
+                return input.length() &gt; 2;
+            &#125;
+        &#125;);
+
+        System.out.println(Arrays.deepToString(hashMap1.entrySet().toArray()));
+
+        Map&lt;String, Integer&gt; hashMap2 = Maps.filterEntries(hashMap, new Predicate&lt;Map.Entry&lt;String, Integer&gt;&gt;() &#123;
+            @Override
+            public boolean apply(Map.@Nullable Entry&lt;String, Integer&gt; input) &#123;
+                return input.getValue() &gt; 2;
+            &#125;
+        &#125;);
+        System.out.println(Arrays.deepToString(hashMap2.entrySet().toArray()));
+
+
+        Map&lt;Integer, String&gt; hashMap3 = Maps.uniqueIndex(Lists.newArrayList(&quot;sss&quot;, &quot;ss&quot;, &quot;ssss&quot;),
+                new Function&lt;String, Integer&gt;() &#123;
+                    @Nullable
+                    @Override
+                    public Integer apply(@Nullable String input) &#123;
+                        return input.length();
+                    &#125;
+                &#125;);
+        System.out.println(Arrays.deepToString(hashMap3.entrySet().toArray()));
+
+        Map&lt;String, Integer&gt; left = ImmutableMap.of(&quot;a&quot;, 1, &quot;b&quot;, 2, &quot;c&quot;, 3);
+        Map&lt;String, Integer&gt; right = ImmutableMap.of(&quot;a&quot;, 1, &quot;b&quot;, 2, &quot;c&quot;, 3);
+        MapDifference&lt;String, Integer&gt; diff = Maps.difference(left, right);
+
+        diff.entriesInCommon(); // &#123;&quot;b&quot; =&gt; 2&#125;
+        diff.entriesInCommon(); // &#123;&quot;b&quot; =&gt; 2&#125;
+        diff.entriesOnlyOnLeft(); // &#123;&quot;a&quot; =&gt; 1&#125;
+        diff.entriesOnlyOnRight(); // &#123;&quot;d&quot; =&gt; 5&#125;MapDifference
+    &#125;
+</code></pre>
+<h3 id="5-3-Forwarding"><a href="#5-3-Forwarding" class="headerlink" title="5.3 Forwarding"></a>5.3 Forwarding</h3><p>针对所有类型的集合接口，Guava 都提供了 Forwarding 抽象类以简化装饰者模式的使用</p>
+<pre><code>    private static void testForwarding()&#123;
+        ForwardingList&lt;String&gt; forwardingList = new ForwardingList&lt;String&gt;() &#123;
+            final List&lt;String&gt; delegate = new ArrayList&lt;&gt;(); // backing list
+            @Override
+            protected List&lt;String&gt; delegate() &#123;
+                return delegate;
+            &#125;
+
+            @Override
+            public void add(int index, String element) &#123;
+                System.out.println(&quot;add:&quot; + element);
+                super.add(index, element);
+            &#125;
+
+            @Override
+            public String get(int index) &#123;
+                System.out.println(&quot;get:&quot; + index);
+                return super.get(index);
+            &#125;
+        &#125;;
+
+        forwardingList.add(0,&quot;aaa&quot;);
+        System.out.println(forwardingList.get(0));
+    &#125;
+</code></pre>
+<p>类似于我们对 List 做了一层装饰（或者说说封装），在执行 List 的相关方法时，可以做一些其他的处理。</p>
+<p>当然也可以通过一个类，来实现 Forwarding 的相关接口，比如：</p>
+<pre><code>    class AddLoggingList&lt;E&gt; extends ForwardingList&lt;E&gt; &#123;
+        final List&lt;E&gt; delegate; // backing list
+        @Override protected List&lt;E&gt; delegate() &#123;
+            return delegate;
+        &#125;
+        @Override public void add(int index, E elem) &#123;
+            log(index, elem);
+            super.add(index, elem);
+        &#125;
+        @Override public boolean add(E elem) &#123;
+            return standardAdd(elem); // 用add(int, E)实现
+        &#125;
+        @Override public boolean addAll(Collection&lt;? extends E&gt; c) &#123;
+            return standardAddAll(c); // 用add实现
+        &#125;
+    &#125;
+</code></pre>
+<p>上面的 AddLoggingList 在使用时与普通的 ArrayList 并没有什么区别，唯一的区别是，使用 AddLoggingList 时，添加元素会打印出相应的 log。</p>
+<h2 id="6-Caches"><a href="#6-Caches" class="headerlink" title="6. Caches"></a>6. Caches</h2><p>通常来说，Guava Cache 适用于：</p>
+<ul>
+<li>你愿意消耗一些内存空间来提升速度。</li>
+<li>你预料到某些键会被查询一次以上。</li>
+<li>缓存中存放的数据总量不会超出内存容量。</li>
+</ul>
+<p>如果你的场景符合上述的每一条，Guava Cache 就适合你。</p>
+<h3 id="6-1-LoadingCache"><a href="#6-1-LoadingCache" class="headerlink" title="6.1 LoadingCache"></a>6.1 LoadingCache</h3><pre><code>    private static LoadingCache&lt;String, AccountInfo&gt; loadingCache = CacheBuilder.newBuilder()
+            //最大缓存数量
+            .maximumSize(10).build(new CacheLoader&lt;String, AccountInfo&gt;() &#123;
+                @Override
+                public AccountInfo load(String key) throws Exception &#123;
+                    System.out.println(&quot;load 方法执行：&quot; + key);
+                    AccountInfo accountInfo = new AccountInfo();
+                    accountInfo.setName(key);
+                    return accountInfo;
+                &#125;
+            &#125;);
+    private static void testCaches() throws ExecutionException &#123;
+        //如果缓存中没有该值，就会添加新值
+        loadingCache.get(&quot;aaa&quot;).setBalance(123);
+        System.out.println(loadingCache.get(&quot;aaa&quot;));
+    &#125;
+</code></pre>
+<p>可以通过 Builder 来创建一个缓存对象(或者叫本地缓存池)。可以设定缓存对象的一些基本参数，比如最大数量等。</p>
+<p>load 方法用来加载需要缓存的对象。这些对象可以是手动创建的，也可以是从DB、Redis等其他外部存储加载进来的。</p>
+<p>可以直接使用 get() 方法获取 LoadingCache 中的对象。<strong>注意：这里如果在缓存中没有找到对应的值，通过 load 方法创建一个新的值添加到缓存中，并返回该值。</strong></p>
+<p>如果我们不希望 使用默认的 load 方法创建对象。也可以在使用 get 方法时传入一个 Call 对象，用来创建需要缓存的值。</p>
+<pre><code>    private static void testCaches() throws ExecutionException &#123;
+        //如果缓存中没有该值，就会添加新值
+        loadingCache.get(&quot;aaa&quot;).setBalance(123);
+        System.out.println(loadingCache.get(&quot;aaa&quot;));
+        //如果没有值，就会执行 call 方法，创建对应的值，并返回
+        AccountInfo accountInfo = loadingCache.get(&quot;bbb&quot;, new Callable&lt;AccountInfo&gt;() &#123;
+            @Override
+            public AccountInfo call() throws Exception &#123;
+                AccountInfo accountInfo = new AccountInfo();
+                accountInfo.setName(&quot;bbb&quot;);
+                accountInfo.setPwd(&quot;call-add&quot;);
+                return accountInfo;
+            &#125;
+        &#125;);
+        System.out.println(accountInfo.toString());
+    &#125;
+</code></pre>
+<p>如果你执行了上面的代码，就会发现，获取 “aaa” 时，调用了 load 方法，而获取 “bbb” 时，则没有执行 load 方法。</p>
+<p>也可以直接向缓存中插入值。</p>
+<pre><code>    loadingCache.put(&quot;ccc&quot;,accountInfo);
+    System.out.println(loadingCache.get(&quot;ccc&quot;));
+</code></pre>
+<p>不过，尽量优先使用 Cache.get(K, Callable) 方法</p>
+<h3 id="6-2-Eviction"><a href="#6-2-Eviction" class="headerlink" title="6.2 Eviction"></a>6.2 Eviction</h3><p>Guava Cache 提供了三种基本的缓存回收方式：基于容量回收、定时回收和基于引用回收。</p>
+<ul>
+<li>基于容量回收</li>
+</ul>
+<p>我们可以指定缓存的容量，通过 maximumSize() 方法，当超过容量时，缓存将尝试回收最近没有使用或总体上很少使用的缓存项</p>
+<pre><code>    private static LoadingCache&lt;String, AccountInfo&gt; loadingCache = CacheBuilder.newBuilder()
+            //最大缓存数量
+            .maximumSize(10).build(new CacheLoader&lt;String, AccountInfo&gt;() &#123;
+                @Override
+                public AccountInfo load(String key) throws Exception &#123;
+                    System.out.println(&quot;load 方法执行：&quot; + key);
+                    AccountInfo accountInfo = new AccountInfo();
+                    accountInfo.setName(key);
+                    return accountInfo;
+                &#125;
+            &#125;);
+</code></pre>
+<p>另外，Guava 缓存还提供了一种根据“权重(weights)” 来删除缓存的方式。你可以使用 CacheBuilder.weigher(Weigher)指定一个权重函数，并且用 CacheBuilder.maximumWeight(long)指定最大总重。</p>
+<p><strong>注意：maximumWeight() 方法与 maximumSize() 方法不能同时使用</strong></p>
+<pre><code>    private static void testEviction() throws ExecutionException &#123;
+        LoadingCache&lt;String, AccountInfo&gt; cache = CacheBuilder.newBuilder()
+                //最大缓存数量
+                //.maximumSize(10)
+                //最大权重
+                .maximumWeight(10L)
+                .weigher(new Weigher&lt;String, AccountInfo&gt;() &#123;
+                    @Override
+                    public int weigh(String key, AccountInfo value) &#123;
+                        return value.getBalance();
+                    &#125;
+                &#125;)
+                .build(new CacheLoader&lt;String, AccountInfo&gt;() &#123;
+                    @Override
+                    public AccountInfo load(String key) throws Exception &#123;
+                        AccountInfo accountInfo = new AccountInfo();
+                        accountInfo.setName(key);
+                        return accountInfo;
+                    &#125;
+                &#125;);
+        for (int i = 0; i &lt; 12; i++) &#123;
+            AccountInfo accountInfo = new AccountInfo();
+            accountInfo.setName(&quot;aaa&quot; + i);
+            accountInfo.setBalance(i);
+            cache.put(accountInfo.getName(), accountInfo);
+        &#125;
+        System.out.println(cache.asMap().size());
+        System.out.println(Arrays.deepToString(cache.asMap().entrySet().toArray()));
+    &#125;
+</code></pre>
+<ul>
+<li>定时回收</li>
+</ul>
+<p>CacheBuilder 提供两种定时回收的方法：</p>
+<ol>
+<li>expireAfterAccess(long, TimeUnit)：缓存项在给定时间内没有被读&#x2F;写访问，则回收。请注意这种缓存的回收顺序和基于大小回收一样。</li>
+<li>expireAfterWrite(long, TimeUnit)：缓存项在给定时间内没有被写访问（创建或覆盖），则回收。如果认为缓存数据总是在固定时候后变得陈旧不可用，这种回收方式是可取的。</li>
+</ol>
+<ul>
+<li>基于引用的回收</li>
+</ul>
+<p>通过使用弱引用的键、或弱引用的值、或软引用的值，Guava Cache 可以把缓存设置为允许垃圾回收：</p>
+<ol>
+<li>CacheBuilder.weakKeys()：使用弱引用存储键。当键没有其它（强或软）引用时，缓存项可以被垃圾回收。因为垃圾回收仅依赖恒等式（&#x3D;&#x3D;），使用弱引用键的缓存用&#x3D;&#x3D;而不是 equals 比较键。</li>
+<li>CacheBuilder.weakValues()：使用弱引用存储值。当值没有其它（强或软）引用时，缓存项可以被垃圾回收。因为垃圾回收仅依赖恒等式（&#x3D;&#x3D;），使用弱引用值的缓存用&#x3D;&#x3D;而不是 equals 比较值。</li>
+<li>CacheBuilder.softValues()：使用软引用存储值。软引用只有在响应内存需要时，才按照全局最近最少使用的顺序回收。考虑到使用软引用的性能影响，我们通常建议使用更有性能预测性的缓存大小限定（见上文，基于容量回收）。使用软引用值的缓存同样用&#x3D;&#x3D;而不是 equals 比较值。<br>显</li>
+</ol>
+<ul>
+<li>显式清除</li>
+</ul>
+<p>任何时候，你都可以显式地清除缓存项，而不是等到它被回收：</p>
+<ol>
+<li>个别清除：Cache.invalidate(key)</li>
+<li>批量清除：Cache.invalidateAll(keys)</li>
+<li>清除所有缓存项：Cache.invalidateAll()</li>
+</ol>
+<p><strong>注意：这里的清除缓存并不一定会删除元素，准确的说法是将缓存置为无效。如果你调用 Cache.asMap 方法，你会发现，里面的元素并没有少。但是当调用 invalidate() 方法之后，再次调用 get() 方法，会重新执行 load 方法，说明原来的数据已经是无效的了</strong></p>
+<h2 id="7-Strings"><a href="#7-Strings" class="headerlink" title="7. Strings"></a>7. Strings</h2><h3 id="7-1-Joiner"><a href="#7-1-Joiner" class="headerlink" title="7.1 Joiner"></a>7.1 Joiner</h3><p>用分隔符把字符串序列连接起来也可能会遇上不必要的麻烦。如果字符串序列中含有 null，那连接操作会更难。Fluent 风格的 Joiner 让连接字符串更简单。</p>
+<pre><code>    private static void testJoiner()&#123;
+        //使用 &#39;-&#39; 链接，遇到 null 值用 &#39;#&#39; 代替
+        Joiner joiner = Joiner.on(&quot;-&quot;).useForNull(&quot;#&quot;);
+        System.out.println(joiner.join(&quot;aaa&quot;,&quot;bbb&quot;,null,&quot;&quot;,&quot;ccc&quot;));
+        //忽略空值
+        joiner = Joiner.on(&quot;-&quot;).skipNulls();
+        //将拼接好的 String append 到 StringBuilder 之后
+        StringBuilder sb = Joiner.on(&quot;-&quot;).appendTo(new StringBuilder(&quot;sss&quot;), &quot;aaa&quot;,&quot;bbb&quot;);
+        System.out.println(sb.toString());
+    &#125;
+</code></pre>
+<h3 id="7-2-Splitter"><a href="#7-2-Splitter" class="headerlink" title="7.2 Splitter"></a>7.2 Splitter</h3><p>非常友好的 String 拆分器。</p>
+<pre><code>    private static void testSplitter()&#123;
+        //使用 ; 分隔，并且忽略结果集中的空字符串，移除结果中的开头和结尾的空白字符
+        Splitter splitter = Splitter.on(&#39;;&#39;).omitEmptyStrings().trimResults();
+
+        Iterable&lt;String&gt; arr = splitter.split(&quot;a;aa ;  a ;;;&quot;);
+        for (String str : arr) &#123;
+            System.out.print(str+&quot;,&quot;);
+        &#125;
+        System.out.println();
+        //按照固定长度拆分
+        arr = Splitter.fixedLength(3).split(&quot;aaabbbcccdd&quot;);
+        for (String str : arr) &#123;
+            System.out.print(str+&quot;,&quot;);
+        &#125;
+        System.out.println();
+    &#125;
+</code></pre>
+<h3 id="7-3-CharMatcher"><a href="#7-3-CharMatcher" class="headerlink" title="7.3 CharMatcher"></a>7.3 CharMatcher</h3><p>CharMatcher 实例代表着某一类字符，如数字或空白字符。使用 CharMatcher 的好处更在于它提供了一系列方法，让你对字符作特定类型的操作：修剪[trim]、折叠[collapse]、移除[remove]、保留[retain]等等。</p>
+<pre><code>    private static void testCharMatcher()&#123;
+        //去掉控制字符（回车、换行、tab等）
+        String noControl = CharMatcher.javaIsoControl().removeFrom(&quot;aa\tbb\ncc\\d\\.&quot;);
+        System.out.println(noControl);
+
+        String theDigits = CharMatcher.inRange(&#39;0&#39;, &#39;9&#39;).retainFrom(&quot;1a2b3c4d&quot;);
+        System.out.println(theDigits);
+
+        //去除两端的空格，并把中间的连续空格替换成 &#39;-&#39;
+        String spaced = CharMatcher.whitespace().trimAndCollapseFrom(&quot;aaaa   bbb cc  &quot;, &#39;-&#39;);
+        System.out.println(spaced);
+
+        //用*号替换所有数字
+        String noDigits = CharMatcher.inRange(&#39;0&#39;, &#39;9&#39;).replaceFrom(&quot;1a2b3c4d&quot;, &quot;*&quot;);
+        System.out.println(noDigits);
+
+        String lowerAndDigit = CharMatcher.inRange(&#39;0&#39;, &#39;9&#39;).or(CharMatcher.javaLowerCase()).retainFrom(&quot;1Aa2Bb3Cc&quot;);
+        System.out.println(lowerAndDigit);
+
+    &#125;
+</code></pre>
+<h2 id="8-参考"><a href="#8-参考" class="headerlink" title="8. 参考"></a>8. 参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/google-guava-official-tutorial/">Google Guava 官方教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/google/guava/wiki">Guava wiki</a></li>
+</ul>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,270 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,MySQL,事务">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-22.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>面试笔记（一）事务连环炮</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        面试笔记（一）事务连环炮
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">MySQL</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">事务</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="1-熟悉-MySQL-的事务么？"><a href="#1-熟悉-MySQL-的事务么？" class="headerlink" title="1. 熟悉 MySQL 的事务么？"></a>1. 熟悉 MySQL 的事务么？</h2><p>在 MySQL 中只有使用 Innodb 引擎才支持事务，事务用于维护数据的完整性。</p>
+<p>事务有四个特性：原子性、一致性、隔离性、持久性</p>
+<ul>
+<li>原子性：在同一个事务里的 SQL 要么都被执行，要么都不执行，如果某个SQL执行失败会触发回滚操作。</li>
+<li>一致性：在事务开始之前和事务结束以后，数据库的完整性没有被破坏。</li>
+<li>隔离性：数据库允许多个并发事务同时对其数据进行读写和修改的能力。数据库支持对不同事务的操作进行隔离，避免干扰</li>
+<li>持久性：事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。</li>
+</ul>
+<h2 id="2-事务的隔离级别有哪些？"><a href="#2-事务的隔离级别有哪些？" class="headerlink" title="2. 事务的隔离级别有哪些？"></a>2. 事务的隔离级别有哪些？</h2><p>事务的隔离级别有 4 个等级，分别是：读未提交（Read uncommitted）、读已提交（read committed）、可重复读（repeatable read）、串行化（Serializable）</p>
+<h3 id="2-1-读未提交（Read-uncommitted）"><a href="#2-1-读未提交（Read-uncommitted）" class="headerlink" title="2.1 读未提交（Read uncommitted）"></a>2.1 读未提交（Read uncommitted）</h3><p>一般不会使用，这种情况下会出现<strong>脏读</strong>现象，即 A、B 两个事务同时执行，A事务读到的数据可能是 B 事务没有提交的数据（脏数据）。</p>
+<h3 id="2-2-读已提交（read-committed）"><a href="#2-2-读已提交（read-committed）" class="headerlink" title="2.2 读已提交（read committed）"></a>2.2 读已提交（read committed）</h3><p>Innodb 为了解决 脏读现象，支持了对数据表和数据行进行加锁，即 B 事务更新数据时，不允许 A 事务进行更新操作。<br>这种情况下保证了 A 事务读到的数据都是 B 事务提交的数据，即 <strong>读已提交（read committed）</strong>。在这种情况下会出现另外一个问题，如果 A 需要读取两次数据，第一次读取后，数据被 B 事务更新了，A事务就会出现第一次和第二次读取的数据不一致，这种现象被称为<strong>不可重复读</strong>。</p>
+<h3 id="2-3-可重复读（repeatable-read）"><a href="#2-3-可重复读（repeatable-read）" class="headerlink" title="2.3 可重复读（repeatable read）"></a>2.3 可重复读（repeatable read）</h3><p>在<strong>读已提交（read committed）</strong> 的情况下仅仅是对 update 加了写锁，可以对 select 加读锁，即 A 事务读取的时候不允许 B 事务读取，这样就可以解决<strong>不可重复读</strong> 的问题（不过由于性能问题，Innodb没有采用这种方式）</p>
+<p>在<strong>可重复读（repeatable read）</strong>这种隔离级别下，解决了两次读取不一致的情况。但会带来新的问题，当 A 事务在两次读取的时候，B 事务进行了 insert&#x2F;delete 操作，A 事务第二次会读取出来数据条数，就会出现不一致的情况，这种情况称为<strong>幻读</strong>。</p>
+<h3 id="2-4-串行化（Serializable）"><a href="#2-4-串行化（Serializable）" class="headerlink" title="2.4 串行化（Serializable）"></a>2.4 串行化（Serializable）</h3><p>为了解决<strong>幻读</strong>问题，需要对读锁、写锁互斥，即加上读锁后，不允许加写锁。这种情况下就不会出现幻读现象。<br>（不过由于性能问题，Innodb并没有采用这种形式）。</p>
+<h2 id="3-Innodb-是如何解决不可重复读和幻读问题的？"><a href="#3-Innodb-是如何解决不可重复读和幻读问题的？" class="headerlink" title="3. Innodb 是如何解决不可重复读和幻读问题的？"></a>3. Innodb 是如何解决不可重复读和幻读问题的？</h2><p>是通过 MVCC（多版本并发控制）来解决的。在 InnoDB 引擎中，每一条记录会自动增加两个字段，记录了这条数据在何时被创建，另一个字段记录了这条数据在何时被删除。实际存储的并不是时间，而是事务版本号，意味着，某条记录在第几个（版本号）事务里被创建，在第几个（版本号）事务里被删除。</p>
+<p>我们再看一下<strong>不可重复读</strong>的问题，主要原因是，在一个事务读取两次期间，另外一个事务更新了数据。如果加上了 MVCC，</p>
+<p>在<strong>可重复读（RR）</strong>隔离级别下：</p>
+<ul>
+<li>INSERT：保存当前事务版本号为创建版本号</li>
+<li>DELETE：保存当前事务版本号为删除版本号</li>
+<li>SELECT：读取创建版本号小于当前事务版本号，并且删除版本号为空或者大于当前事务版本号的数据，</li>
+<li>UPDATE：<strong>插入一条新记录</strong>，保存当前事务版本号为创建版本号，并且保存当前事务版本号为原记录的删除版本号。</li>
+</ul>
+<p>我们以一条记录为例，这条记录一共有两个字段，姓名和余额，第三个字段是自动添加的创建版本号，第四个是删除版本号。</p>
+<p>事务1创建了一条记录，事务2 将进行两次查询，在第一次查询后，事务3更新了这条记录，事务2查询到的仍然是原始数据。更新后的数据与新创建的数据创建版本号均大于 2，所以 在执行 SELECT 时是无法查到的。这样就解决了<strong>不可重复读</strong>和<strong>幻读</strong>问题。</p>
+<p><img src="/./images/20200107-1.png" alt="事务并发"></p>
+<h2 id="4-数据库行锁"><a href="#4-数据库行锁" class="headerlink" title="4. 数据库行锁"></a>4. 数据库行锁</h2><p>通过 MVCC 虽然解决了不可重复读和幻读的问题，但是读取的数据并不是实时的数据。例如在上面的例子中，事务2 第二次读取的数据并不是最新的数据（事务3更新后的数据，事务4新增的数据都没有读到）。</p>
+<p>在某些场景下，有时候需要读取实时的数据。比如常见的 SELECT FOR UPDATE，事务2 如果第二次执行的是 UPDATE 操作，将会覆盖事务3的更新。这个时候就需要地读取到最新的数据。 </p>
+<p>Innodb 通过对数据行进行加锁，当事务2第一次读取时对数据行加锁，事务3将无法再次进行更新。这样就避免数据覆盖更新的问题。</p>
+<h2 id="5-Next-Key-锁"><a href="#5-Next-Key-锁" class="headerlink" title="5. Next-Key 锁"></a>5. Next-Key 锁</h2><p>虽然数据库行锁，解决就覆盖更新的问题，但是并没有解决幻读的问题，事务2对张三的数据加了行锁，但是并不能阻止事务4插入数据，所以在第二次执行更新（UPDATE）操作的时候依然会操作到新增的数据。</p>
+<p>为了解决这个问题 Innodb 使用了一种被称为 Next-Key 的锁，这种锁是行锁和间隙锁（GAP）的合并。之所以被称为间隙锁，是由于在 Innodb 中，聚族索引将数据分为了不同的区间，以 id &#x3D; 102,id &#x3D; 112 两条数据为例，则会将数据分为 </p>
+<ul>
+<li>(negative infinity,102]</li>
+<li>(102,112]</li>
+<li>(112,positive infinity)</li>
+</ul>
+<p>GAP 锁是加在区间上的一种锁，当执行 UPDATE 的数据 ID &#x3D; 105 时，Innodb 会对 (102,112] 区间进行加锁操作，这样就避免了数据的新增操作。如果使用的不是索引字段，则会对全表加GAP锁。</p>
+<p>行锁防止了其他事物的修改和删除，GAP锁防止了数据的新增。行锁和GAP锁组成的 Next-Key 锁共同解决了在RR级别的幻读问题。</p>
+<h2 id="6-分布式事务"><a href="#6-分布式事务" class="headerlink" title="6. 分布式事务"></a>6. 分布式事务</h2><p>分布式事务是指，事务操作的数据分布在不同的多个数据库实例上，仍然需要保证分布式事务的ACID特性。</p>
+<p>在同一个数据库实例中，为了保证事务的ACID特性可以通过加锁来解决问题，但是在分布式事务中，由于数据不在同一个数据库实例中，所以没办法通过简单的加锁来解决。</p>
+<h2 id="7-CAP原则"><a href="#7-CAP原则" class="headerlink" title="7. CAP原则"></a>7. CAP原则</h2><p>CAP原则又称CAP定理。在分布式事务中，事务的一致性（Consistency）、可用性（Availability）、分区容错性（Partition tolerance），这三个要素只能存在同时存在两个。</p>
+<ul>
+<li>一致性（C）: 在分布式系统中的所有数据备份，在同一时刻是否是同样的值。</li>
+<li>可用性（A）: 在集群中一部分节点故障后，集群整体是否还能响应客户端的读写请求</li>
+<li>分区容错性（P）: 多个数据库实例的数据当发生不一致的情况下，需要考虑应对的办法</li>
+</ul>
+<p>一般情况下，分区容错性（P）是必须要考虑的。而如果要保证一致性，当需要对一个节点的数据库实例进行操作时，必须对另外的数据库实例进行加锁处理，等待数据同步后释放，在这期间是不具备可用性（A）的。如果要保证可用性（A），势必不能对数据库实例进行加锁，那么一致性（C）将无法保证。</p>
+<p>所以，CAP原则说，这三个要素只能同时存在两个。</p>
+<p>由于CAP原则的存在，业界主流的做法是<strong>放弃实时一致性，保证事务的最终一致性</strong>。就是说，在分布式事务中，不保证事务执行时数据立即生效，而是保证数据最终是一致的。遵守CAP的AP原则。通过技术手段来达到数据在事务执行之后是一致的。</p>
+<h2 id="7-两阶段提交"><a href="#7-两阶段提交" class="headerlink" title="7. 两阶段提交"></a>7. 两阶段提交</h2><p>两阶段提交（Two-phase Commit，2PC），通过引入全局事务管理器来协调参与事务的数据库实例的行为，并最终决定是否要真正执行事务。</p>
+<p>两阶段提交分为两个阶段，准备阶段和提交阶段。</p>
+<p>在准备阶段，全局事务管理器向所有参与事务的节点发起请求执行事务，并返回事务是否执行成。</p>
+<p>在提交阶段，如果全局事务管理器收到的响应均为执行成功，则通知所有节点提交事务。否则通知所有节点回滚事务。<br><strong>需要注意的是，在准备阶段，参与者执行了事务，但是还未提交。只有在提交阶段才会提交或者回滚事务</strong></p>
+<p>两阶段提交存在下面几个问题：</p>
+<ul>
+<li>同步阻塞，所有参与事务的节点都需要同步阻塞等待响应，无法进行其他操作。</li>
+<li>全局事务管理器的单点问题，一旦全局事务管理器发生故障，尤其是在第二阶段，所有节点将会一直同步阻塞等待全局事务管理器的响应。</li>
+<li>数据一致性问题，如果在准备阶段，所有事务执行成功，而在提交阶段部分节点没有收到请求，则会导致只有部分节点提交了事务，导致数据不一致。</li>
+<li>太过保守,任意节点失败都会导致事务失败。没有容错机制。</li>
+</ul>
+<h2 id="8-基于MQ实现的最终一致性"><a href="#8-基于MQ实现的最终一致性" class="headerlink" title="8. 基于MQ实现的最终一致性"></a>8. 基于MQ实现的最终一致性</h2><p>由于舍弃了数据的实时一致性，可以将事务的操作保存到MQ中，然后通过MQ发送到其他节点上。首先在事务开始阶段发送预备消息，然后执行本地事务，本地事务执行成功后，再次发送确认消息，如果确认消息发送失败，MQ则需要定期扫描MQ上的预备消息，回调事务节点，如果事务节点执行失败，则回滚事务消息。如果执行成功，则向其他节点请求执行事务。</p>
+<p><img src="/./images/20200107-2.png" alt="基于MQ的事务最终一致性"></p>
+<p>基于MQ消息的分布式事务最大的问题是实现难度比较大，目前主流MQ并不支持。</p>
+<h2 id="9-基于本地事件表实现的最终一致性"><a href="#9-基于本地事件表实现的最终一致性" class="headerlink" title="9. 基于本地事件表实现的最终一致性"></a>9. 基于本地事件表实现的最终一致性</h2><p>基于本地事件表的实现是通过在本地保存一份事件表，记录事务需要执行的操作，通过程序向其他节点同步事务的执行，其他节点同样保存事件表。并记录事务的执行状态。</p>
+<p>本地事务执行成功后，将保存事务的操作到事件表。然后将事件表的数据发送到MQ，通过MQ发送到其他数据库实例上，其他数据库实例中事务执行成功后，将结果写入到本地事件表。</p>
+<p>基于本地事件表的方法的缺点是事件表与业务表在同一个库中，耦合性比较大。而且需要对事物进行定制化的封装，一旦封装不友好，则会与业务代码造成耦合。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

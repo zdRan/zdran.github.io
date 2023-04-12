@@ -1,0 +1,413 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Dubbo,RPC,Git,RPC 原理">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-29.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Dubbo 学习笔记(零) 自己实现一个 RPC 框架</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Dubbo 学习笔记(零) 自己实现一个 RPC 框架
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Dubbo</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RPC</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Git</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RPC 原理</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Dubbo 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20181102.html">Dubbo 学习笔记(零) 自己实现一个 RPC 框架</a></li>
+<li><a href="https://zdran.com/20181113.html">Dubbo 学习笔记(一) Hello,Dubbo</a></li>
+<li><a href="https://zdran.com/20181216.html">Dubbo 学习笔记(二) Spring Boot 整合 Dubbo</a></li>
+<li><a href="https://zdran.com/20190212.html">Dubbo 学习笔记(三) Spring Boot 整合 Dubbo(官方版)</a></li>
+</ul>
+<hr>
+<h2 id="0-什么是-RPC-框架"><a href="#0-什么是-RPC-框架" class="headerlink" title="0. 什么是 RPC 框架"></a>0. 什么是 RPC 框架</h2><p>RPC(Remote Procedure Call) 是一种进程间的通信方式。允许像调用本地服务一样调用远程服务。</p>
+<p>简单点说，它是一种通信方式，它的功能就是让你像调用本地服务（函数、方法）一样，调用远程服务（函数，方法）。</p>
+<p>比如说，我在服务端有一个接口 （MyService.sayHello()）。传统的调用方式是，我们暴露一个 Controller 并绑定到对应的 url地址上，然后通过 http 请求，将参数发送给远程服务器，服务器执行结束后，将结果响应给客户端。</p>
+<p>而 RPC 调用方式是，我在客户端导入 MyService 的接口，直接用 MyService.sayHello() 去调用。注意：客户端并没有直接的创建该接口的具体实现对象。而是通过 RPC 的通信方式去来与服务端交互。</p>
+<h2 id="1-RPC-框架的基本原理"><a href="#1-RPC-框架的基本原理" class="headerlink" title="1. RPC 框架的基本原理"></a>1. RPC 框架的基本原理</h2><p>RPC 框架的基本原理是通过 Socket 和对象序列化来实现的。</p>
+<p>首先，客户端和服务端通过 Socket 来建立通信，客户端将需要调用的接口 序列化后发送给服务端。</p>
+<p>服务端收到数据后将接口反序列化，通过反射的方式执行该接口。然后将执行结果序列化后发送给客户端。</p>
+<p>客户端收到数据后，将结果反序列化，得到接口的执行结果。</p>
+<p>下面实现了一个最简单、最基础的 RPC 框架</p>
+<h2 id="2-定义服务"><a href="#2-定义服务" class="headerlink" title="2. 定义服务"></a>2. 定义服务</h2><p>我们先定义一个服务端的 Service，</p>
+<pre><code>public interface MyService &#123;
+    String sayHello(String name);
+&#125;
+
+实现类：
+
+public class MyServiceImpl implements MyService &#123;
+    @Override
+    public String sayHello(String name) &#123;
+        return &quot;hello,&quot; + name;
+    &#125;
+&#125;
+</code></pre>
+<p>这个接口就是我们服务端提供的服务。</p>
+<h2 id="3-RPC-框架的服务端实现"><a href="#3-RPC-框架的服务端实现" class="headerlink" title="3. RPC 框架的服务端实现"></a>3. RPC 框架的服务端实现</h2><p>先在服务端实现 Socket 持续监听客户端发来的数据，收到数据后让 ProducerAgent 去处理。</p>
+<pre><code>public class RpcProducer &#123;
+    private static Executor executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+
+    public static void produce(String host, int port) throws Exception &#123;
+        ServerSocket serverSocket = new ServerSocket();
+        serverSocket.bind(new InetSocketAddress(host, port));
+        try &#123;
+            while (true) &#123;
+                executor.execute(new ProducerAgent(serverSocket.accept()));
+            &#125;
+        &#125; finally &#123;
+            serverSocket.close();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>ProducerAgent 的实现：</p>
+<pre><code>public class ProducerAgent implements Runnable &#123;
+    Socket client = null;
+
+    public ProducerAgent(Socket accept) &#123;
+        client = accept;
+    &#125;
+
+    @Override
+    public void run() &#123;
+        ObjectInputStream inputStream = null;
+        ObjectOutputStream outputStream = null;
+        try &#123;
+
+            inputStream = new ObjectInputStream(client.getInputStream());
+
+            String interfaceName = inputStream.readUTF();
+            Class&lt;?&gt; service = Class.forName(interfaceName);
+            String methodName = inputStream.readUTF();
+            Class&lt;?&gt;[] paramTypes = (Class&lt;?&gt;[]) inputStream.readObject();
+            Object[] args = (Object[]) inputStream.readObject();
+
+            Method method = service.getMethod(methodName, paramTypes);
+            Object result = method.invoke(service.newInstance(), args);
+            outputStream = new ObjectOutputStream(client.getOutputStream());
+            outputStream.writeObject(result);
+        &#125; catch (Exception e) &#123;
+            e.printStackTrace();
+        &#125;finally &#123;
+            //省略部分代码
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>我们依次读取接口的名称、方法名称、参数类型、参数。然后通过反射的机制执行方法，最后将结果序列化后写入到客户端。</p>
+<h2 id="4-RPC-框架的客户端实现"><a href="#4-RPC-框架的客户端实现" class="headerlink" title="4. RPC 框架的客户端实现"></a>4. RPC 框架的客户端实现</h2><pre><code>public class LocalAgent&lt;T&gt; &#123;
+    public T importer(final Class&lt;?&gt; serviceClass, final InetSocketAddress addr) &#123;
+        return (T) Proxy.newProxyInstance(serviceClass.getClassLoader(),
+                new Class&lt;?&gt;[]&#123;serviceClass.getInterfaces()[0]&#125;,
+                new InvocationHandler() &#123;
+                    @Override
+                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable &#123;
+                        ObjectOutputStream outputStream = null;
+                        ObjectInputStream inputStream = null;
+                        Socket socket = null;
+                        try &#123;
+                            socket = new Socket();
+                            socket.connect(addr);
+                            outputStream = new ObjectOutputStream(socket.getOutputStream());
+
+                            outputStream.writeUTF(serviceClass.getName());
+                            outputStream.writeUTF(method.getName());
+                            outputStream.writeObject(method.getParameterTypes());
+                            outputStream.writeObject(args);
+
+                            inputStream = new ObjectInputStream(socket.getInputStream());
+                            return inputStream.readObject();
+                        &#125; finally &#123;
+                            //省略部分代码
+                        &#125;
+                    &#125;
+                &#125;);
+    &#125;
+&#125;
+</code></pre>
+<p>客户端做的事情是与服务端建立 Socket 通信，然后依次写入 接口名、方法名、参数类型、参数。注意：<strong>写入顺序一定要与服务端的读取顺序一致</strong>。</p>
+<p>然后接收服务端的执行结果，反序列化为实际类型。</p>
+<h2 id="5-使用-RPC-框架"><a href="#5-使用-RPC-框架" class="headerlink" title="5. 使用 RPC 框架"></a>5. 使用 RPC 框架</h2><p>RPC 框架的客户端和服务端的基本功能已经实现，下面我们使用刚刚实现的 RPC 框架 来调用一下 <code>MyService.sayHello(String name)</code> 这个接口</p>
+<p>首先我们使用一个线程来启动服务端：</p>
+<pre><code>    private static void startProduct() &#123;
+        //通过一个线程启动服务端
+        String host = &quot;localhost&quot;;
+        int port = 8878;
+
+        new Thread(new Runnable() &#123;
+            @Override
+            public void run() &#123;
+                try &#123;
+                    System.out.println(&quot;服务端启动........&quot;);
+                    RpcProducer.produce(host, port);
+                &#125; catch (Exception e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;).start();
+    &#125;
+</code></pre>
+<p>下面我们使用 刚刚实现的 RPC 框架来调用服务端的接口</p>
+<pre><code>    private static void client() &#123;
+        LocalAgent&lt;MyService&gt; serviceLocalAgent = new LocalAgent&lt;&gt;();
+        MyService myService = serviceLocalAgent.importer(MyServiceImpl.class,
+                new InetSocketAddress(&quot;localhost&quot;,8878));
+
+        System.out.println(myService.sayHello(&quot;RPC&quot;));
+    &#125;
+</code></pre>
+<p>在客户端，我们传了一个服务端实现类的类型、一个服务端的地址，然后就可以调用服务端的接口了。注意：<strong>我们并没有在客户端创建 接口的具体实现对象</strong>，而仅仅是把需要调用的 Class 通过 Socket 发送给了服务端。</p>
+<h2 id="6-添加注册中心"><a href="#6-添加注册中心" class="headerlink" title="6. 添加注册中心"></a>6. 添加注册中心</h2><p>考虑一下上面的代码，我们服务端的地址是写死在客户端和服务端的代码里的，如果服务比较多，而且每个服务的地址都不一样，直接写死是很难维护的，所以我们需要一个注册中心来管理每个服务的地址。</p>
+<p>下面是一个最简单的注册中心：</p>
+<pre><code>public class RegistrationCenter &#123;
+
+    private Map&lt;String, InetSocketAddress&gt; serviceMap = new HashMap&lt;&gt;();
+
+    public void register(String serviceName, String host, int port) &#123;
+        serviceMap.put(serviceName, new InetSocketAddress(host, port));
+    &#125;
+
+    public InetSocketAddress getService(String serviceName) &#123;
+        return serviceMap.get(serviceName);
+    &#125;
+&#125;
+</code></pre>
+<p>注册中心维护服务名称与服务地址的映射。</p>
+<p>我们修改一下服务端的启动代码，当服务启动之后，向注册中心注册服务。</p>
+<pre><code>    private static void startProduct(RegistrationCenter center) &#123;
+        //通过一个线程启动服务端
+        String host = &quot;localhost&quot;;
+        int port = 8878;
+
+        new Thread(new Runnable() &#123;
+            @Override
+            public void run() &#123;
+                try &#123;
+                    System.out.println(&quot;服务端启动........&quot;);
+                    RpcProducer.produce(host, port);
+                &#125; catch (Exception e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+        &#125;).start();
+        //向注册中心注册服务
+        center.register(&quot;MyService.sayHello&quot;, host, port);
+    &#125;
+</code></pre>
+<p>修改一下客户端的调用方式,调用服务时，根据服务名从注册中心获取服务地址。：</p>
+<pre><code>    private static void client(RegistrationCenter center) &#123;
+        LocalAgent&lt;MyService&gt; serviceLocalAgent = new LocalAgent&lt;&gt;();
+        MyService myService = serviceLocalAgent.importer(MyServiceImpl.class,
+                center.getService(&quot;MyService.sayHello&quot;));
+
+        System.out.println(myService.sayHello(&quot;RPC&quot;));
+    &#125;
+</code></pre>
+<h2 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. 总结</h2><p>这就是 RPC 框架的基本原理，通过 Socket 建立通信，通过序列化与反序列实现数据传输，使用反射执行具体的服务。</p>
+<p>假设你对 RPC 还是没有什么概念，也没关系，但是你需要记住下面三个概念：</p>
+<ol>
+<li><p>生产者：或者说是服务端，更具体点就是上面的<code>ProducerAgent</code>类，</p>
+<p> 负责解析消费者发送的参数，通过反射调用对应的服务，将结果序列化后发送给消费者。</p>
+</li>
+<li><p>消费者：就是我们的客户端，对应<code>LocalAgent</code>类</p>
+<p> 负责将需要调用的服务信息发送给生产者，将结果反序列化后获得实际的执行结果。</p>
+</li>
+<li><p>注册中心：提供服务的注册和发现的功能。对应<code>RegistrationCenter</code>类</p>
+<p> 责管理服务与地址的映射。</p>
+</li>
+</ol>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

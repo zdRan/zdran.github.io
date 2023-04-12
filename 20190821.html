@@ -1,0 +1,425 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Java,Thrift,RPC">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-12.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Thrift 学习笔记</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Thrift 学习笔记
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Java</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Thrift</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RPC</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="1-Thrift-简介"><a href="#1-Thrift-简介" class="headerlink" title="1. Thrift 简介"></a>1. Thrift 简介</h2><p>Thrift 是有 Facebook 开源的一套 RPC 框架， 支持多种语言，它是通过自身的 中间语言（IDL），并借助代码生成引擎来生成各种主流语言的代码模板</p>
+<h2 id="2-IDL-语言"><a href="#2-IDL-语言" class="headerlink" title="2. IDL 语言"></a>2. IDL 语言</h2><p>Thrift 采用IDL（Interface Definition Language）来定义通用的服务接口，然后通过Thrift提供的编译器，可以将服务接口编译成不同语言编写的代码，通过这个方式来实现跨语言的功能。</p>
+<p>IDL 中有基本类型、结构体类型、容器类型、枚举类型、异常类型、服务类型等六种类型。熟悉了这些常用类型后基本上可以应付日常开发。</p>
+<h3 id="2-1-基本类型："><a href="#2-1-基本类型：" class="headerlink" title="2.1 基本类型："></a>2.1 基本类型：</h3><ul>
+<li>bool: 布尔值</li>
+<li>byte: 8位有符号整数</li>
+<li>i16: 16位有符号整数</li>
+<li>i32: 32位有符号整数</li>
+<li>i64: 64位有符号整数</li>
+<li>double: 64位浮点数</li>
+<li>string: UTF-8编码的字符串</li>
+<li>binary: 二进制串</li>
+</ul>
+<h3 id="2-2-struct（结构体）："><a href="#2-2-struct（结构体）：" class="headerlink" title="2.2 struct（结构体）："></a>2.2 struct（结构体）：</h3><p>类似于 C 语言中的结构体。在 Java 中就是 POJO，struct 类型有以下几个要求：</p>
+<ol>
+<li>struct不能继承，但是可以嵌套，不能嵌套自己。</li>
+<li>其成员都是有明确类型</li>
+<li>成员是被正整数编号过的，其中的编号使不能重复的，这个是为了在传输过程中编码使用。</li>
+<li>成员分割符可以是逗号（,）或是分号（;），而且可以混用</li>
+<li>字段会有optional和required之分和protobuf一样，但是如果不指定则为无类型–可以不填充该值，但是在序列化传输的时候也会序列化进去，optional是不填充则部序列化，required是必须填充也必须序列化。</li>
+<li>每个字段可以设置默认值</li>
+<li>同一文件可以定义多个struct，也可以定义在不同的文件，进行include引入。</li>
+</ol>
+<p>例如：</p>
+<pre><code>struct User&#123;
+  1: required string name, //改字段必须填写
+  2: optional i32 age = 0; //默认值
+  3: bool gender //默认字段类型为optional
+&#125;
+</code></pre>
+<h3 id="2-3-Container-容器"><a href="#2-3-Container-容器" class="headerlink" title="2.3 Container (容器)"></a>2.3 Container (容器)</h3><ul>
+<li>list<t>: 元素类型为t的有序表，容许元素重复。对应 Java 的 ArrayList</li>
+<li>set<t>: 元素类型为t的无序表，不容许元素重复。对应 Java 的 HashSet</li>
+<li>map&lt;t, t&gt;: 键类型为t，值类型为t的kv对，键不容许重复。对应 Java 的 HashMap</li>
+</ul>
+<p>例如：</p>
+<pre><code>struct Test &#123;
+  1: map&lt;string, User&gt; usermap,
+  2: set&lt;i32&gt; intset,
+  3: list&lt;double&gt; doublelist
+&#125;
+</code></pre>
+<h3 id="2-4-enum-枚举"><a href="#2-4-enum-枚举" class="headerlink" title="2.4 enum (枚举):"></a>2.4 enum (枚举):</h3><p>Thrift不支持枚举类嵌套，枚举常量必须是32位的正整数。</p>
+<p>例如：</p>
+<pre><code>enum HttpStatus &#123;
+  OK = 200,
+  NOTFOUND=404
+&#125;
+</code></pre>
+<h3 id="2-5-Exception-异常"><a href="#2-5-Exception-异常" class="headerlink" title="2.5 Exception (异常):"></a>2.5 Exception (异常):</h3><p>异常在语法和功能上类似于结构体，不过使用的关键字是 exception。对应 Java 的 Exception</p>
+<p>例如：</p>
+<pre><code>exception MyException &#123;
+    1: i32 errorCode,
+    2: string message
+&#125;
+</code></pre>
+<h3 id="2-6-Service-服务定义类型"><a href="#2-6-Service-服务定义类型" class="headerlink" title="2.6 Service (服务定义类型):"></a>2.6 Service (服务定义类型):</h3><p>即我们需要提供的服务接口。</p>
+<p>例如：</p>
+<pre><code>service HelloService &#123;
+    i32 sayInt(1:i32 param)
+    string sayString(1:string param)
+    bool sayBoolean(1:bool param)
+    void sayVoid()
+&#125;
+</code></pre>
+<h3 id="2-7-常量类型"><a href="#2-7-常量类型" class="headerlink" title="2.7 常量类型"></a>2.7 常量类型</h3><p>在 Java 中我们可能还会经常用到常量类型，在 IDL 中 常亮类型可以使用 const 关键字。</p>
+<p>例如：</p>
+<pre><code>const i32 const_int = 1;
+</code></pre>
+<h3 id="2-8-Namespace-名字空间"><a href="#2-8-Namespace-名字空间" class="headerlink" title="2.8 Namespace (名字空间)"></a>2.8 Namespace (名字空间)</h3><p>IDL 中的命名空间即是 Java 中的包名</p>
+<p>例如：</p>
+<pre><code>namespace java com.example.test
+
+会被转换成：
+
+package com.example.test
+</code></pre>
+<h3 id="2-9-注释"><a href="#2-9-注释" class="headerlink" title="2.9 注释"></a>2.9 注释</h3><p>IDL 支持 单行注释和多行注释</p>
+<pre><code>/** 
+ * 这里是多行注释
+ * 
+ */
+
+// 这里是单行注释
+</code></pre>
+<h3 id="2-10-Include（导入）"><a href="#2-10-Include（导入）" class="headerlink" title="2.10 Include（导入）"></a>2.10 Include（导入）</h3><p>类似于 Java 中的 import 在本文件中引入其他文件中定义的内容。</p>
+<p><strong>注意：</strong>thrift文件名要用双引号包含，末尾没有逗号或者分号。</p>
+<p>例如：</p>
+<pre><code>include &quot;test.thrift&quot;   
+...
+struct HelloTest &#123;
+    1: in32 uid;
+     ...
+&#125;
+</code></pre>
+<h2 id="3-Java-版的-Hello-World"><a href="#3-Java-版的-Hello-World" class="headerlink" title="3. Java 版的 Hello World"></a>3. Java 版的 Hello World</h2><h3 id="3-1-安装"><a href="#3-1-安装" class="headerlink" title="3.1 安装"></a>3.1 安装</h3><p>由于 Thrift 需要使用代码生成引擎来将 Thrift 代码转换成其他语言（Java）的代码，所以需要在本地安装一下 Thrift</p>
+<p><strong>注意：本地安装的 Thrift 版本最好和生产环境保持一致。不然很可能会出现一些问题</strong></p>
+<p>使用以下命令安装：</p>
+<pre><code>brew install thrift
+</code></pre>
+<p>本人使用的是 Mac OS ，你和可以去 <a target="_blank" rel="noopener" href="http://thrift.apache.org/docs/install/">Thrift 官网</a>，下载对应的安装包进行安装。</p>
+<p>最终，如果你在命令行下执行下面的命令，出现 Thrift 版本号，就说明安装成功了。</p>
+<pre><code>&gt; thrift -version
+Thrift version 0.12.0
+</code></pre>
+<p>IDEA 默认是不支持 Thrift 所以需要安装 <code>Thrift Support</code> 插件。</p>
+<h3 id="3-2-配置"><a href="#3-2-配置" class="headerlink" title="3.2 配置"></a>3.2 配置</h3><p>安装好插件，重启后就能在 <code>File -&gt; new -&gt; Project...</code> 菜单下 看到 Thrift 工程了。</p>
+<p><img src="/images/thrift-001.png" alt="创建项目"></p>
+<p>创建完成 Thrift 项目后，还需要配置一下 Thrift 代码生成引擎相关的东西。</p>
+<p>打开菜单 <code>File - &gt; Project Structure... -&gt; Project Settings -&gt; Facets </code>,选择 Thrift</p>
+<p><img src="/images/thrift-002.png" alt="配置 thrift 代码生成引擎"></p>
+<p>然后会让你代码输出的位置。</p>
+<p><img src="/images/thrift-003.png" alt="代码输出位置"></p>
+<h3 id="3-3-创建-Thrift-文件"><a href="#3-3-创建-Thrift-文件" class="headerlink" title="3.3 创建 Thrift 文件"></a>3.3 创建 Thrift 文件</h3><p>新建 <code>HelloService.thrift</code>,在菜单中可能找不到创建 thrift 文件的菜单，直接新建 File 然后以 thrift 作为文件后缀就可以。</p>
+<p>内容如下：</p>
+<pre><code>namespace java com.zdran.test.thrift
+service ThriftHelloService&#123;
+    string sayHello(1:string userName)
+&#125;
+</code></pre>
+<p>在这个接口文件中我们定义了一个 sayHello 的接口，它接收一个 String 类型的参数，并返回一个 String 类型的值。</p>
+<p>现在我需要编译该 thrift 文件，然后就会自动生成我们需要的代码。</p>
+<p>我们可以直接在控制台执行以下命令。</p>
+<pre><code>thrift -gen java HelloService.thrift
+</code></pre>
+<p>然后就能在<code>gen-java</code>目录中看到生成后的 java 文件了。</p>
+<p>还有一种办法，就是将 thrift 编译器添加到右键菜单里，直接在 IDEA 里编译。</p>
+<p>打开 <code>Preferences...</code> 菜单，设置好你的 Thrift 的安装目录，然后勾选上下面的这个选项，就可以在 IDEA 里直接编译 thrift 文件了。</p>
+<p><img src="/images/trhift-005.png"></p>
+<p><strong>注意：thrift 文件 必须要在 src 目录下，或者手动设置的 source 目录（IDEA显示蓝色的文件夹）下才会有 Recompile 菜单</strong></p>
+<p>PS: 搞了半天，最后可以编译了，结果报错：</p>
+<pre><code>Error:Internal error: (java.util.concurrent.ExecutionException) com.intellij.util.xmlb.XmlSerializationException: Cannot deserialize class com.intellij.plugins.thrift.config.ThriftCompilerOptions
+java.util.concurrent.ExecutionException: com.intellij.util.xmlb.XmlSerializationException: Cannot deserialize class com.intellij.plugins.thrift.config.ThriftCompilerOptions
+    
+    ... ... 
+</code></pre>
+<p>也不知道是 IDEA 的问题，还是插件的问题，网上搜了一下啊，貌似没有遇到这个问题的，有时间再研究吧，直接在控制台编译好，然后我们再新建一个 Maven 项目。并添加 thrift 依赖</p>
+<pre><code>    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.thrift&lt;/groupId&gt;
+            &lt;artifactId&gt;libthrift&lt;/artifactId&gt;
+            &lt;version&gt;0.12.0&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+</code></pre>
+<p>然后把上面生成的 java 文件复制到 对应的包下面。</p>
+<p>然后我再创建一个实现类<code>ThriftHelloServiceImpl.java</code>，来实现我们定义好的接口。内容如下：</p>
+<pre><code>package com.test.thrift;
+import org.apache.thrift.TException;
+
+public class ThriftHelloServiceImpl implements ThriftHelloService.Iface &#123;
+    @Override
+    public String sayHello(String userName) throws TException &#123;
+
+        return &quot;hello &quot;+ userName;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="3-4-创建服务端和客户端类"><a href="#3-4-创建服务端和客户端类" class="headerlink" title="3.4 创建服务端和客户端类"></a>3.4 创建服务端和客户端类</h3><p>我们这里采用 Main 方法的形式来进行客户端与服务端的通信，即启动两个 Main 方法，分别表示服务端与客户端。</p>
+<p>首先创建服务端的 Main 方法，代码如下：</p>
+<pre><code>public class ServiceMain &#123;
+    public static void main(String[] args) throws Exception &#123;
+        ServerSocket serverSocket = new ServerSocket(9090);
+        TServerSocket serverTransport = new TServerSocket(serverSocket);
+        ThriftHelloService.Processor processor =
+                new ThriftHelloService.Processor&lt;ThriftHelloService.Iface&gt;(new ThriftHelloServiceImpl());
+
+        TBinaryProtocol.Factory protocolFactory = new TBinaryProtocol.Factory();
+        TSimpleServer.Args tArgs = new TSimpleServer.Args(serverTransport);
+        tArgs.processor(processor);
+        tArgs.protocolFactory(protocolFactory);
+
+        TServer tServer = new TSimpleServer(tArgs);
+        System.out.println(&quot;启动 Thrift 服务端&quot;);
+        tServer.serve();
+    &#125;
+&#125;
+</code></pre>
+<p>然后再创建客户端的 Main 方法,代码如下：</p>
+<pre><code>public class ClientMain &#123;
+    public static void main(String[] args) &#123;
+        TTransport transport = null;
+        try &#123;
+            transport = new TSocket(&quot;127.0.0.1&quot;, 9090, 6000);
+            TProtocol protocol = new TBinaryProtocol(transport);
+            ThriftHelloService.Client client = new ThriftHelloService.Client(protocol);
+            transport.open();
+
+            String result = client.sayHello(&quot;thrift-1&quot;);
+            System.out.println(result);
+        &#125; catch (TException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            if (null != transport) &#123;
+                transport.close();
+            &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>然后启动服务端的 Main 方法，再启动客户端的 Main 方法，会看到 hello thrift-1，说明 RPC 通信成功了。</p>
+<h2 id="4-关于-Thrift-生成好的-Java-代码"><a href="#4-关于-Thrift-生成好的-Java-代码" class="headerlink" title="4. 关于 Thrift 生成好的 Java 代码"></a>4. 关于 Thrift 生成好的 Java 代码</h2><p>可能你会很奇怪，我们仅仅在 .thrift 文件中定义了一个接口，但是在生成后的 .java 文件中，却生成了大量的代码。</p>
+<p>其实我们没必要太过关注生成后的代码，主要关注下面几个东西就可以了。</p>
+<p>服务端关注以下两个接口类：</p>
+<ul>
+<li>ThriftHelloService.Iface</li>
+</ul>
+<p>这个是服务端提供同步调用的接口。就是说，你实现的这个接口下面的方法，都会采用同步的方式调用。</p>
+<ul>
+<li>ThriftHelloService.AsyncIface</li>
+</ul>
+<p>同样，如果客户端和服务端需要采用异步的方式通信，服务端就需要实现 AsyncIface 下的接口。</p>
+<p>同样，消费端也有两个 Client 一个是同步调用的，一个是异步调用的。</p>
+<ul>
+<li><p>ThriftHelloService.Client<br>执行同步调用。</p>
+</li>
+<li><p>ThriftHelloService.AsyncClient<br>执行异步调用。</p>
+</li>
+</ul>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

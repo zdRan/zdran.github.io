@@ -1,0 +1,691 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Git,Git笔记,版本回退,版本库,工作区,暂存区,分支,Github">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-19.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Git 学习笔记</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Git 学习笔记
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Git</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Git笔记</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">版本回退</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">版本库</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">工作区</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">暂存区</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">分支</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Github</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <p><strong>环境声明：本人用的是ubuntu14.04的系统，所以本文内容均基于该平台</strong><br>本文是学习<a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程 廖雪峰</a> 时的一些笔记。想深学习的可以查看原文。</p>
+<h1 id="Git-基础"><a href="#Git-基础" class="headerlink" title="Git 基础"></a>Git 基础</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>网上有很多关于git的起源，简介，用途，这里就不多数了（或许是我不知道。。。）</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>sudo apt-get install git-core
+</code></pre>
+<h2 id="用户配置"><a href="#用户配置" class="headerlink" title="用户配置"></a>用户配置</h2><p>git是分布式版本控制系统，所以每次提交时需要一个用户名，让人知道是谁提交的。<br>还需要提供一个邮箱，出了问题让别人能够联系到你。</p>
+<pre><code>git config --global user.name &quot;zdran&quot;
+git config --global user.email &quot;cm.zdran@foxmail.com&quot;
+</code></pre>
+<p><strong>需要注意的是，config –global 参数是指在本台计算机中的所有仓库都使用该配置当然你也可以给每个仓库都配置一个name和email</strong></p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p><strong>创建一个新的文件夹，虽然也可以用不空的文件，但是出了问题不要找我</strong><br><strong>路径不要出现空格，中文，特殊字符</strong></p>
+<pre><code>mkdir learnGit
+cd learnGit
+git init
+</code></pre>
+<p>看到下面的显示说明你成功了</p>
+<pre><code>Initialized empty Git repository in /home/woody/Documents/learnGit/.git/
+</code></pre>
+<p>需要注意的是，成功后会多出一个.git的文件夹，在没有必须打开的情况下<br><strong>强烈不建议打开这个文件夹</strong></p>
+<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><p><strong>友情提示：创建的文件尽量使用utf-8的编码，Windows下的同学尽量不要使用记事本编辑，推荐sublime</strong><br>在当前文件夹下创建一个readme.txt文件，随便写点东西比如</p>
+<pre><code>hello git
+</code></pre>
+<p>然后保存</p>
+<p>使用下面的命令可以查看当前仓库的状态</p>
+<pre><code>git status
+</code></pre>
+<p>显示结果：</p>
+<pre><code>On branch master
+
+Initial commit
+
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        readme.txt
+
+        nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<p>意思就是说，你修改了一个文件，但是还没有提交。<br>使用下面的命令添加到仓库</p>
+<pre><code>git add readme.txt
+</code></pre>
+<p>注意这仅仅是添加到仓库了，告诉git，这个文件是需要版本控制的。但是还没有提交。<br>使用下面的命令提交到仓库</p>
+<pre><code>git commit -m &quot;创建readme.txt文件&quot;
+</code></pre>
+<p>-m 的参数是对这次提交的一次说明<br>显示结果：</p>
+<pre><code>[master (root-commit) 3eb5f77] 创建readme.txt文件
+ 1 file changed, 1 insertion(+)
+  create mode 100644 readme.txt
+</code></pre>
+<p><strong>注意：虽然-m参数是可选的额，但是强烈建议你添加上，因为默认的配置是不添加-m参数是没有办法提交的</strong></p>
+<h2 id="时光倒流-版本回退"><a href="#时光倒流-版本回退" class="headerlink" title="时光倒流(版本回退)"></a>时光倒流(版本回退)</h2><p>我想大部分同学使用git的最初的动力就是因为这个功能吧。</p>
+<p>现在我们对readme文件进行修改，再随便添加些东西，然后readme内容就变成下面这样</p>
+<pre><code>hello git
+hello git 2.0
+</code></pre>
+<p>然后再次add commit。</p>
+<p>现在我们的仓库里有两个版本了，我们可以用下面的命令查看git的提交历史</p>
+<pre><code>git log
+</code></pre>
+<p>显示结果</p>
+<pre><code>commit b5934a2d9f80d257ca50b9b80a4b31d5bb9fe03c
+Author: = &lt;woody@gmail.com&gt;
+Date:   Sun Jan 22 16:27:59 2017 +0800
+
+    第二次提交
+
+commit 3eb5f7721cb86c617faf0d2ad13a5cee9d1a3764
+Author: = &lt;woody@gmail.com&gt;
+Date:   Sun Jan 22 16:16:10 2017 +0800
+
+创建readme.txt文件
+</code></pre>
+<p><strong>注意：commit字段是自动生成的，所以你的结果一定与我的不一样，以你的为准</strong></p>
+<p>好了，下面下面我们将readme.txt回退到最开始创建的状态。git使用HEAD表示当前的版本，就是最新的版本。<br>上一个版本是HEAD^,再上一个版本是HEAD^^,上一百个版本是HEAD～100(当然你也可以打100个^)。<br>使用下面的命令回退到指定版本</p>
+<pre><code>git reset --hard HEAD^
+HEAD is now at 3eb5f77 创建readme.txt文件
+</code></pre>
+<p>看看内容改了没有。<br>现在我们再查看下log，结果如下：</p>
+<pre><code>commit 3eb5f7721cb86c617faf0d2ad13a5cee9d1a3764
+Author: = &lt;coder.0012ff7c@gmail.com&gt;
+Date:   Sun Jan 22 16:16:10 2017 +0800
+
+    创建readme.txt文件
+</code></pre>
+<p>好了，时光倒流成功！但是悲哀的发现我们回不到未来了。还是有办法的，–hard 参数支持commit值。<br>就是说你可以在–hard后面跟一个commit值，就能跳到那个版本。<br>执行下面的代码</p>
+<pre><code>git reset --hard b5934a
+HEAD is now at b5934a2 第二次提交
+</code></pre>
+<p>不用将所有的字符都写上，只要能区分出不同就好，git会自动去匹配</p>
+<p>但是万一找不到commit值呢，没关系。使用下面的命令可以查看所有的历史</p>
+<pre><code>git reflog
+</code></pre>
+<p>显示结果：</p>
+<pre><code>b5934a2 HEAD@&#123;0&#125;: reset: moving to b5934a
+3eb5f77 HEAD@&#123;1&#125;: reset: moving to HEAD^
+b5934a2 HEAD@&#123;2&#125;: commit: 第二次提交
+3eb5f77 HEAD@&#123;3&#125;: commit (initial): 创建readme.txt文件
+</code></pre>
+<p>最前面那串字符就是。好了。搞定！</p>
+<h2 id="工作区，暂存区，版本库"><a href="#工作区，暂存区，版本库" class="headerlink" title="工作区，暂存区，版本库"></a>工作区，暂存区，版本库</h2><p>工作区：就是指当前的目录，比如我们创建的learnGit目录<br>暂存区：通过git add 命令将文件添加到暂存区。<br>版本库：就是指创建仓库时自动生成的那个.git目录，也是强烈建议不要乱动的目录。<br>git中的文件必须先添加到暂存区，然后才能添加到版本库。</p>
+<p>重新创建一个文件Hello.java，随便写点内容比如</p>
+<pre><code>hello java
+</code></pre>
+<p>然后再修改下readme文件，添加一行</p>
+<pre><code>添加 hello.java 文件 
+</code></pre>
+<p>然后查看下仓库状态</p>
+<pre><code>git status
+</code></pre>
+<p>显示结果：</p>
+<pre><code>On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+      modified:   readme.txt
+
+      Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+      Hello.java
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>说明readme.txt被修改了，而hello.java还没有被添加到仓库。<br>然后我们将这两个文件添加到暂存区</p>
+<pre><code>git add readme.txt
+git add Hello.java
+</code></pre>
+<p>你也可以使用下面的命令将当前文件夹下的所有文件都添加到暂存区<br>    git add –all</p>
+<p>再查看下状态显示结果：</p>
+<pre><code>On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+      new file:   Hello.java
+      modified:   readme.txt
+</code></pre>
+<p>然后再用commit命令添加到版本库<br>    git commit -m “添加Hello.java文件”<br>再查看下状态显示结果为</p>
+<pre><code>On branch master
+nothing to commit, working tree clean
+</code></pre>
+<h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><h3 id="仅仅是修改了工作区，并没有add到暂存区"><a href="#仅仅是修改了工作区，并没有add到暂存区" class="headerlink" title="仅仅是修改了工作区，并没有add到暂存区"></a>仅仅是修改了工作区，并没有add到暂存区</h3><p>我们对Hello.java做一些修改，如下：</p>
+<pre><code>public class Hello&#123;
+    public static void main(String[] args)&#123;
+ 
+    &#125;
+&#125;
+</code></pre>
+<p>如果这个时候我们需要回到上一个版本，当然，你可以手动的修改Hello.java文件。<br>但是要是万一你哪里再记错了，就尴尬了。<br>查看一下状态</p>
+<pre><code>git status
+</code></pre>
+<pre><code>On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    modified:   Hello.java
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>git告诉你说，使用 git checkout – <file>… 可以放弃当前工作区的修改。试一下，</p>
+<pre><code>git checkout Hello.java 
+</code></pre>
+<p>查看下Hello.java 文件，是不是恢复了。</p>
+<h3 id="不仅仅修改了工作区，而且还add到了暂存区。"><a href="#不仅仅修改了工作区，而且还add到了暂存区。" class="headerlink" title="不仅仅修改了工作区，而且还add到了暂存区。"></a>不仅仅修改了工作区，而且还add到了暂存区。</h3><p>我们对Hello.java再次做一些修改，如下：</p>
+<pre><code>public class Hello&#123;
+    public static void main(String[] args)&#123;
+ 
+    &#125;
+&#125;
+</code></pre>
+<p>然后add到暂存区</p>
+<pre><code>git add Hello.java
+</code></pre>
+<p>查看一下状态</p>
+<pre><code>On branch master
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+    modified:   Hello.java
+</code></pre>
+<p>git告诉你说，使用 git reset HEAD <file>… 可以撤销缓存。然后我们尝试一下</p>
+<pre><code>git reset HEAD Hello.java
+</code></pre>
+<p>运行结果</p>
+<pre><code>Unstaged changes after reset:
+M	Hello.java
+</code></pre>
+<p>查看一下状态</p>
+<pre><code>On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    modified:   Hello.java
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>是不是又回到第一种的状态了。</p>
+<h3 id="不仅仅修改了工作区，还add到了暂存区，而且手贱的我还commit到了版本库。"><a href="#不仅仅修改了工作区，还add到了暂存区，而且手贱的我还commit到了版本库。" class="headerlink" title="不仅仅修改了工作区，还add到了暂存区，而且手贱的我还commit到了版本库。"></a>不仅仅修改了工作区，还add到了暂存区，而且手贱的我还commit到了版本库。</h3><p>如果你目前还没有推送到远程仓库，还有的救，还记得上面说的时光倒流么。不记得的可以翻一翻。</p>
+<pre><code>git reset --hard HEAD^
+</code></pre>
+<p>这样就回到了第二种情况。</p>
+<h2 id="文件删除"><a href="#文件删除" class="headerlink" title="文件删除"></a>文件删除</h2><p>在仓库里新建一个文件，然后添加到版本库</p>
+<pre><code>git add test.txt
+git commit -m &quot;add test.txt&quot;
+</code></pre>
+<p>然后我们将这个文件删除掉。</p>
+<pre><code>rm test.txt
+</code></pre>
+<p>查看一下状态</p>
+<pre><code>On branch master
+Changes not staged for commit:
+  (use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    deleted:    test.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>git 检测到有文件被删除了，git告诉你有两种方式<br>    1. git rm <file>… ：从版本库删除文件，并重新commit<br>    2. 撤销删除操作，test.txt将被恢复。</p>
+<p>使用下面的命令从版本库删除文件。</p>
+<pre><code>git rm test.txt
+git commit -m &quot;remove test.txt&quot;
+</code></pre>
+<p>小结：通过以上的学习我们已经可以熟练的操作本地的git仓库了。</p>
+<hr>
+<h1 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库"></a>Git远程仓库</h1><h2 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h2><p>git是分布式版本控制系统。分布式，即最开始仅有一个仓库作为服务器，然后其他人从这个仓库克隆出代码，提交到这个仓库，<br>每个克隆的仓库都可以是一个服务器，各个仓库之间没有主次之分。</p>
+<p>要学习远程仓库，首先得有个远程仓库，由于搭建远程git仓库有(本)点(人)复(不)杂(会)。这里使用github作为远程仓库</p>
+<p>由于之前写过类似的，这里不再赘述。</p>
+<p><strong>需要注意的是，在创建仓库是使用learnGit作为仓库名</strong></p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/u013451048/article/details/52399278">在github创建远程仓库</a></p>
+<p>你只需做到使用下面的命令测试成功就好</p>
+<pre><code>ssh -v git@github.com 
+</code></pre>
+<h2 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h2><p>将本地仓库与远程仓库关联，在本地仓库目录下执行下面的命令。</p>
+<pre><code>git remote add origin git@github.com:coderRan/learnGit.git
+</code></pre>
+<p><strong>注意：<a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a>:coderRan&#x2F;learnGit.git一定是你自己的创建的仓库，不要复制我的，<br>因为这是我的仓库，关联不会出问题，推送的时候你是推送不上去的，因为我的github没有添加你的ssh key</strong></p>
+<p>现在仅仅是关联起来了，还没有将代码推送到远程仓库，执行下面的命令</p>
+<pre><code>git push -u origin master
+</code></pre>
+<p><strong>要是没有出现下面的结果请看0x03</strong></p>
+<p>上传文件是需要时间的，所以要耐心等待一下。执行结果</p>
+<pre><code>Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (16/16), 1.29 KiB | 0 bytes/s, done.
+Total 16 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:coderRan/learnGit.git
+ * [new branch]      master -&gt; master
+Branch master set up to track remote branch master from origin.
+</code></pre>
+<p>去你刚才创建的仓库看一下，应该上传上去了。</p>
+<p>第一次推送有点麻烦，因为git需要将本地仓库的分支与远程仓库的分支进行关联。以后推送的话可以使用下面的命令</p>
+<pre><code>git push origin master
+</code></pre>
+<h2 id="SSH警告"><a href="#SSH警告" class="headerlink" title="SSH警告"></a>SSH警告</h2><p>在第一次使用 push 或者 clone 这个命令时，会弹出一个警告</p>
+<pre><code>The authenticity of host &#39;github.com (xx.xx.xx.xx)&#39; can&#39;t be established.
+RSA key fingerprint is xx.xx.xx.xx.xx.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre>
+<p>这个是SSH链接需要你确认ssh key。<br>输入yes，结果</p>
+<pre><code>Warning: Permanently added &#39;github.com&#39; (RSA) to the list of known hosts.
+</code></pre>
+<p>这些警告只出现在第一次提交时，以后就不会出来了。</p>
+<h2 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h2><p>新建一个 目录<br>    mkdir newGit<br>    cd newGit<br>然后从我们刚刚新建的仓库克隆一个</p>
+<pre><code>git clone git@github.com:coderRan/learnGit.git
+</code></pre>
+<p>执行结果：</p>
+<pre><code>Cloning into &#39;learnGit&#39;...
+remote: Counting objects: 16, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 16 (delta 1), reused 16 (delta 1), pack-reused 0
+Receiving objects: 100% (16/16), done.
+Resolving deltas: 100% (1/1), done.
+</code></pre>
+<hr>
+<h1 id="Git-分支"><a href="#Git-分支" class="headerlink" title="Git 分支"></a>Git 分支</h1><h2 id="分支简介"><a href="#分支简介" class="headerlink" title="分支简介"></a>分支简介</h2><p>分支是什么呢？<br>你可以理解成树枝。<br>分支可以用来干什么呢？<br>使用分支意味着你可以把你的工作从开发主线上分离开来,以免影响开发主线。</p>
+<p>假如，你开发了一个支付宝，然后想添加一个扫福的功能，你总不能直接在你的版本库里乱改吧，这个版本正常用着呢，万一改错，不能用了就麻烦了。话说不是有clone么，克隆一份就好了，再怎么改也不会出问题，但是，你在开发过程中，完成一部分工作后总得提交到远程仓库吧。(有人说，不用提交啊，自己在本地仓库搞就好了。注意，协同作业)</p>
+<p>这个时候就用到分支了。把仓库看成一棵树，随着一次次的commit，这棵树越长越高，分支就向树枝一样。在分支上可以随便撒野，不会搞坏主分支。你可以把你的修改先提交到自己创建的分支上，等你把这个扫福的功能开发完了，还能合并到主分支上。</p>
+<h2 id="分支的创建"><a href="#分支的创建" class="headerlink" title="分支的创建"></a>分支的创建</h2><p>在我们创建好仓库后，版本库的状态是下面这样的，其中的[A],[B],[C] 代表一个commit</p>
+<pre><code>  HEAD-&gt;master--&gt;|
+                 |
+    [A]--&gt;[B]--&gt;[C] 
+</code></pre>
+<p>其中 master 代表的是主分支，而HEAD代表的是当前分支，由于只有一个分支所以HEAD指向的是 master<br>我们使用下面的命令创建一个分支，然后切换到新建的分支。</p>
+<pre><code>git branch mybranch
+git checkout mybranch
+</code></pre>
+<p>你也可以使用一条命令，创建并切换</p>
+<pre><code>git checkout -b mybranch
+</code></pre>
+<p>查看下分支</p>
+<pre><code>git branch
+  master
+* mybranch
+</code></pre>
+<p>现在git仓库的状态是下面这样的</p>
+<pre><code>    master--&gt;|
+             |
+[A]--&gt;[B]--&gt;[C] 
+             |
+             |&lt;--mybranch&lt;--HEAD
+</code></pre>
+<p>然后我们再次对Hello.java文件做一下修改</p>
+<pre><code>public class Hello&#123;
+    public static void main(String[] args)&#123;
+
+    &#125;
+    public void addBranch()&#123;
+
+    &#125;
+&#125;    
+</code></pre>
+<p>然后commit到版本库</p>
+<h2 id="分支的合并"><a href="#分支的合并" class="headerlink" title="分支的合并"></a>分支的合并</h2><p>现在git仓库的状态是下面这样的</p>
+<pre><code>    master--&gt;|
+             |
+[A]--&gt;[B]--&gt;[C]~~&gt;[D] 
+                   |
+                   |&lt;--mybranch&lt;--HEAD
+</code></pre>
+<p>然后切换到 master 分支</p>
+<pre><code>git checkout master
+</code></pre>
+<p>现在git仓库的状态是下面这样的</p>
+<pre><code> HEAD--&gt;master--&gt;|
+                 |
+    [A]--&gt;[B]--&gt;[C]~~&gt;[D] 
+                       |
+                       |&lt;--mybranch
+</code></pre>
+<p>合并到 master 分支 </p>
+<pre><code>git merge mybranch 
+</code></pre>
+<p>执行结果</p>
+<pre><code>Updating 28c1cc8..11d62a7
+Fast-forward
+ Hello.java | 3 +++
+ 1 files changed, 3 insertions(+)
+</code></pre>
+<p>现在git仓库的状态是下面这样的</p>
+<pre><code>   HEAD--&gt;master--&gt;|
+                   |
+[A]--&gt;[B]--&gt;[C]~~&gt;[D] 
+                   |
+                   |&lt;--mybranch
+</code></pre>
+<h2 id="分支的删除"><a href="#分支的删除" class="headerlink" title="分支的删除"></a>分支的删除</h2><pre><code>git branch -d mybranch
+</code></pre>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p>快速合并的速度确实很快，但是前提是两个分支没有冲突。</p>
+<p>重新创建新的分支</p>
+<pre><code>git checkout -b newbranch
+</code></pre>
+<p>修改 readme.txt 文件</p>
+<pre><code>hello git
+  hello git 2.0
+  添加 hello.java 文件
+  在 newbranch 分支上做的修改    
+</code></pre>
+<p>提交</p>
+<pre><code>git add readme.txt 
+git commit -m &quot;newbranch 修改&quot;
+
+[newbranch b8ac4ad] newbranch 修改
+ 1 file changed, 1 insertion(+)
+</code></pre>
+<p>切换到 master 分支 </p>
+<pre><code>git checkout master
+</code></pre>
+<p>打开 readme.txt 文件，发现并没有改变，因为我们的修改不是在master分支上的。</p>
+<p>添加一行</p>
+<pre><code>hello git
+  hello git 2.0
+  添加 hello.java 文件
+  在 master 分支上做的修改
+</code></pre>
+<p>提交</p>
+<pre><code>git add readme.txt 
+git commit -m &quot;master 修改&quot;
+
+[master 80c56bf] master 修改
+ 1 file changed, 1 insertion(+)
+</code></pre>
+<p>现在 两个分支上对一个文件的同一个地方（同一行）做了不同的修改，是没办法快速合并的。</p>
+<p>合并下试试</p>
+<pre><code>git merge newbranch
+
+git merge newbranch 
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+</code></pre>
+<p>果然，git说， readme.txt 文件冲突了，修复后重新提交。<br>使用 git status 看看状态</p>
+<pre><code>git status
+
+On branch master
+Your branch is ahead of &#39;origin/master&#39; by 3 commits.
+  (use &quot;git push&quot; to publish your local commits)
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+    both modified:   readme.txt
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre>
+<p>git说 对 readme.txt 共同的两个修改</p>
+<p>我们直接打开 readme.txt 文件看看</p>
+<pre><code>hello git
+hello git 2.0
+添加 hello.java 文件
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+在 master 分支上做的修改
+=======
+在 newbranch 分支进行修改
+  &gt;&gt;&gt;&gt;&gt;&gt;&gt; newbranch
+</code></pre>
+<p>其中 &lt;&lt;&lt;,&#x3D;&#x3D;&#x3D;,&gt;&gt;&gt;是分割线。<br>我们修改一下</p>
+<pre><code>hello git
+hello git 2.0
+添加 hello.java 文件
+修复了冲突
+</code></pre>
+<p>然后提交<br>    git add readme.txt<br>    git commit -m “修复了冲突”</p>
+<pre><code>[master 9f1e5f5] 修复了冲突
+</code></pre>
+<p>好了，解决。现在git已经将两个分支自动合并了。你可以使用 </p>
+<pre><code>git log --graph
+</code></pre>
+<p>查看分支图</p>
+<p>然后删除 newbranch 分支</p>
+<pre><code>git branch -d newbranch 
+Deleted branch newbranch (was b8ac4ad).
+</code></pre>
+<h2 id="合并的方式选择"><a href="#合并的方式选择" class="headerlink" title="合并的方式选择"></a>合并的方式选择</h2><p>从上面我们知道，分支的合并有两种方式，一种是 快速合并，一种是解决冲突的合并。</p>
+<p>两种合并的区别是</p>
+<pre><code>快速合并要保证没有冲突，合并完删除分支后，会丢掉分支信息。
+冲突合并会保留分支信息，Git会在merge时生成一个新的commit。
+</code></pre>
+<p>可以使用<code>--no-ff</code>参数强制禁用快速合并</p>
+<pre><code>git merge --no-ff -m &quot;禁用快速合并&quot; newbranch
+</code></pre>
+<p>因为需要重新生成一个 commit 所以需要添加<code>-m</code>参数。</p>
+<h1 id="Git-tag"><a href="#Git-tag" class="headerlink" title="Git tag"></a>Git tag</h1><p>有时我们需要定位到某个版本，但是目前我们只能通过那个长长的commit号来确定。<br>为了更好的定位，我们可以给commit 打个tag。</p>
+<h2 id="默认在最新的commit上打tag"><a href="#默认在最新的commit上打tag" class="headerlink" title="默认在最新的commit上打tag"></a>默认在最新的commit上打tag</h2><pre><code>git tag v1.0
+</code></pre>
+<h2 id="对任意commit打tag"><a href="#对任意commit打tag" class="headerlink" title="对任意commit打tag"></a>对任意commit打tag</h2><p>找到commit号(还记得怎么看commitid号么？)</p>
+<pre><code>git tag v0.9 &lt;commitid&gt;
+</code></pre>
+<h2 id="查看tag"><a href="#查看tag" class="headerlink" title="查看tag"></a>查看tag</h2><p>需要注意的是，tag是按字母排序的额，不是按时间排序的</p>
+<pre><code>git tag
+</code></pre>
+<h2 id="查看tag信息"><a href="#查看tag信息" class="headerlink" title="查看tag信息"></a>查看tag信息</h2><pre><code>git show &lt;tagname&gt;
+</code></pre>
+<h2 id="删除tag"><a href="#删除tag" class="headerlink" title="删除tag"></a>删除tag</h2><pre><code>git tag -d &lt;tagname&gt;
+</code></pre>
+<h2 id="操作远程仓库的tag"><a href="#操作远程仓库的tag" class="headerlink" title="操作远程仓库的tag"></a>操作远程仓库的tag</h2><p>因为tag默认是存储到本地的，所以需要手动将tag推送到远程仓库</p>
+<pre><code>git push origin &lt;tagname&gt;
+</code></pre>
+<p>如果tag比较多，可以一次将所有tag都推送到远程仓库</p>
+<pre><code>git push origin --tags
+</code></pre>
+<p>如果你已经将tag推送到远程仓库了，再想删除就有点麻烦了。<br>首先需要删除本地的tag</p>
+<pre><code>git tag -d &lt;tagname&gt;
+</code></pre>
+<p>然后再删除远程仓库的tag</p>
+<pre><code>git push origin :refs/tags/&lt;tagname&gt;
+</code></pre>
+<hr>
+<p>好了，有了这些基本上可以应付工作中的需要了。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

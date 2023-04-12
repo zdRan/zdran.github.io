@@ -1,0 +1,582 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Spring Boot,Filter,XSS,RequestBody,jsoup,POST,参数拦截,参数修改">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-34.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 使用 Jsoup 拦截XSS</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 使用 Jsoup 拦截XSS
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Filter</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">XSS</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RequestBody</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">jsoup</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">POST</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">参数拦截</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">参数修改</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>使用 Spring Boot 的 Filter 对参数拦截，使用 Jsoup 对 参数中的 XSS进行过滤</p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>Spring Boot 2.0 </li>
+<li>Jsoup (可选)</li>
+</ul>
+<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><p>Spring Boot 的 Filter 拦截到前端的参数后进行过滤（看着是不是很简单？？）。 </p>
+<p>说白了就是两个功能：参数拦截、脚本过滤。</p>
+<h3 id="参数拦截"><a href="#参数拦截" class="headerlink" title="参数拦截"></a>参数拦截</h3><p>想要过滤XSS首先要能拦截到前端的参数。</p>
+<p>先写个Filter:</p>
+<pre><code>import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+  
+public class XSSEscapeFilter implements Filter &#123;  
+   
+  
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException &#123;
+       
+    &#125;  
+  
+    @Override
+    public void destroy() &#123;
+       
+    &#125;  
+  
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException &#123;
+        //后面会有 XssHttpServletRequestWrapper 的代码。这个类是自己定义的
+        chain.doFilter(new XssHttpServletRequestWrapper((HttpServletRequest) request), response);
+    &#125;
+&#125;
+</code></pre>
+<p>这个Filter 是可以拦截到请求的，但是呢，如果想要对参数进行修改就需要重新定义 HttpServletRequestWrapper，只有用自定义的HttpServletRequestWrapper 才能对参数进行修改。</p>
+<p>下面定义 XssHttpServletRequestWrapper：</p>
+<pre><code>
+import org.apache.commons.lang3.StringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.safety.Whitelist;
+
+import javax.servlet.ReadListener;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+/**
+ * 实现XSS过滤
+ * Create by zdRan on 2018/5/8
+ *
+ * @author cm.zdran@gmail.com
+ */
+public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper &#123;
+    private HttpServletRequest orgRequest = null;
+
+    public XssHttpServletRequestWrapper(HttpServletRequest request) &#123;
+        super(request);
+        orgRequest = request;
+
+    &#125;
+
+    @Override
+    public String getParameter(String name) &#123;
+           // 对参数进行修改
+        return name;
+    &#125;
+
+    @Override
+    public Map getParameterMap() &#123;
+           // 对参数进行修改
+        return super.getParameterMap();;
+    &#125;
+
+    @Override
+    public String[] getParameterValues(String name) &#123;
+        String[] arr = super.getParameterValues(name);
+        // 对参数进行修改
+        return arr;
+    &#125;
+
+    @Override
+    public String getHeader(String name) &#123;
+        //对参数进行修改
+        return super.getHeader(name);;
+    &#125;
+
+    /**
+     * 获取最原始的request
+     *
+     * @return
+     */
+    public HttpServletRequest getOrgRequest() &#123;
+        return orgRequest;
+    &#125;
+
+    /**
+     * 获取最原始的request的静态方法
+     *
+     * @return
+     */
+    public static HttpServletRequest getOrgRequest(HttpServletRequest req) &#123;
+        if (req instanceof XssHttpServletRequestWrapper) &#123;
+            return ((XssHttpServletRequestWrapper) req).getOrgRequest();
+        &#125;
+
+        return req;
+    &#125;
+</code></pre>
+<p>这样就能对参数进行修改了，但是，目前的情况还不能处理POST请求，或者 RequestBody 注解。</p>
+<p>当使用 RequestBody 注解时，你会发现，重写的这几个方法都没有走，说明我们没有重写全方法。</p>
+<p>找了一些资料发现：<strong>RequestBody注解读取参数的方法是getInputStream()</strong> 。</p>
+<p>我们重写一下这个方法：</p>
+<pre><code> @Override
+    public ServletInputStream getInputStream() throws IOException &#123;
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(orgRequest.getInputStream()));
+        String line = br.readLine();
+        String result = &quot;&quot;;
+        if (line != null) &#123;
+            //对参数进行处理
+        &#125;
+
+        return new WrappedServletInputStream(new ByteArrayInputStream(result.getBytes()));
+    &#125;
+</code></pre>
+<p>然后启动这个 Filter</p>
+<pre><code>
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import javax.servlet.DispatcherType;
+
+/**
+ * Create by zdRan on 2018/5/8
+ *
+ * @author cm.zdran@gmail.com
+ */
+@Configuration
+public class XssFilterConfiguration &#123;
+    /**
+     * xss过滤拦截器
+     */
+    @Bean
+    public FilterRegistrationBean xssFilterRegistrationBean() &#123;
+        FilterRegistrationBean initXssFilterBean = new FilterRegistrationBean();
+        initXssFilterBean.setFilter(new XSSEscapeFilter());
+        initXssFilterBean.setOrder(1);
+        initXssFilterBean.setEnabled(true);
+        initXssFilterBean.addUrlPatterns(&quot;/*&quot;);
+        initXssFilterBean.setDispatcherTypes(DispatcherType.REQUEST);
+        return initXssFilterBean;
+    &#125;
+&#125;
+</code></pre>
+<p>到这里基本上就拦截到参数了，你可以自己定义对参数的修改规则。也可以使用jsoup对XSS进行过滤</p>
+<h3 id="脚本过滤"><a href="#脚本过滤" class="headerlink" title="脚本过滤"></a>脚本过滤</h3><p>使用 jsoup 对参数中的 标签进行过滤<br>添加依赖</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.jsoup&lt;/groupId&gt;
+    &lt;artifactId&gt;jsoup&lt;/artifactId&gt;
+    &lt;version&gt;1.11.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>完整的 XssHttpServletRequestWrapper 代码：</p>
+<pre><code>import org.apache.commons.lang3.StringUtils;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.safety.Whitelist;
+
+import javax.servlet.ReadListener;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+/**
+ * 实现XSS过滤
+ * Create by zdRan on 2018/5/8
+ *
+ * @author cm.zdran@gmail.com
+ */
+public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper &#123;
+    private HttpServletRequest orgRequest = null;
+    /**
+    * 配置可以通过过滤的白名单
+    * /
+    private static final Whitelist whitelist = new Whitelist();
+    /**
+     * 配置过滤化参数,不对代码进行格式化
+     */
+    private static final Document.OutputSettings outputSettings = new Document.OutputSettings().prettyPrint(false);
+
+    public XssHttpServletRequestWrapper(HttpServletRequest request) &#123;
+        super(request);
+        orgRequest = request;
+
+    &#125;
+
+    @Override
+    public ServletInputStream getInputStream() throws IOException &#123;
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(orgRequest.getInputStream()));
+        String line = br.readLine();
+        String result = &quot;&quot;;
+        if (line != null) &#123;
+            result += clean(line);
+        &#125;
+
+        return new WrappedServletInputStream(new ByteArrayInputStream(result.getBytes()));
+    &#125;
+
+    /**
+     * 覆盖getParameter方法，将参数名和参数值都做xss过滤。&lt;br/&gt;
+     * 如果需要获得原始的值，则通过super.getParameterValues(name)来获取&lt;br/&gt;
+     * getParameterNames,getParameterValues和getParameterMap也可能需要覆盖
+     */
+    @Override
+    public String getParameter(String name) &#123;
+        if ((&quot;content&quot;.equals(name) || name.endsWith(&quot;WithHtml&quot;))) &#123;
+            return super.getParameter(name);
+        &#125;
+        name = clean(name);
+        String value = super.getParameter(name);
+        if (StringUtils.isNotBlank(value)) &#123;
+            value = clean(value);
+        &#125;
+        return value;
+    &#125;
+
+    @Override
+    public Map getParameterMap() &#123;
+        Map map = super.getParameterMap();
+        // 返回值Map
+        Map&lt;String, String&gt; returnMap = new HashMap&lt;String, String&gt;();
+        Iterator entries = map.entrySet().iterator();
+        Map.Entry entry;
+        String name = &quot;&quot;;
+        String value = &quot;&quot;;
+        while (entries.hasNext()) &#123;
+            entry = (Map.Entry) entries.next();
+            name = (String) entry.getKey();
+            Object valueObj = entry.getValue();
+            if (null == valueObj) &#123;
+                value = &quot;&quot;;
+            &#125; else if (valueObj instanceof String[]) &#123;
+                String[] values = (String[]) valueObj;
+                for (int i = 0; i &lt; values.length; i++) &#123;
+                    value = values[i] + &quot;,&quot;;
+                &#125;
+                value = value.substring(0, value.length() - 1);
+            &#125; else &#123;
+                value = valueObj.toString();
+            &#125;
+            returnMap.put(name, clean(value).trim());
+        &#125;
+        return returnMap;
+    &#125;
+
+    @Override
+    public String[] getParameterValues(String name) &#123;
+        String[] arr = super.getParameterValues(name);
+        if (arr != null) &#123;
+            for (int i = 0; i &lt; arr.length; i++) &#123;
+                arr[i] = clean(arr[i]);
+            &#125;
+        &#125;
+        return arr;
+    &#125;
+
+
+    /**
+     * 覆盖getHeader方法，将参数名和参数值都做xss过滤。&lt;br/&gt;
+     * 如果需要获得原始的值，则通过super.getHeaders(name)来获取&lt;br/&gt;
+     * getHeaderNames 也可能需要覆盖
+     */
+    @Override
+    public String getHeader(String name) &#123;
+
+        name = clean(name);
+        String value = super.getHeader(name);
+        if (StringUtils.isNotBlank(value)) &#123;
+            value = clean(value);
+        &#125;
+        return value;
+    &#125;
+
+    /**
+     * 获取最原始的request
+     *
+     * @return
+     */
+    public HttpServletRequest getOrgRequest() &#123;
+        return orgRequest;
+    &#125;
+
+    /**
+     * 获取最原始的request的静态方法
+     *
+     * @return
+     */
+    public static HttpServletRequest getOrgRequest(HttpServletRequest req) &#123;
+        if (req instanceof XssHttpServletRequestWrapper) &#123;
+            return ((XssHttpServletRequestWrapper) req).getOrgRequest();
+        &#125;
+
+        return req;
+    &#125;
+
+    public String clean(String content) &#123;
+        String result = Jsoup.clean(content, &quot;&quot;, whitelist, outputSettings);
+        return result;
+    &#125;
+
+    private class WrappedServletInputStream extends ServletInputStream &#123;
+        public void setStream(InputStream stream) &#123;
+            this.stream = stream;
+        &#125;
+
+        private InputStream stream;
+
+        public WrappedServletInputStream(InputStream stream) &#123;
+            this.stream = stream;
+        &#125;
+
+        @Override
+        public int read() throws IOException &#123;
+            return stream.read();
+        &#125;
+
+        @Override
+        public boolean isFinished() &#123;
+            return true;
+        &#125;
+
+        @Override
+        public boolean isReady() &#123;
+            return true;
+        &#125;
+
+        @Override
+        public void setReadListener(ReadListener readListener) &#123;
+
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>好了。到这就算结束了，不过目前还有一个小问题。</p>
+<p>使用 Jsoup 是可以过滤掉所有的html标签，但是也有个问题，比如</p>
+<p>参数是: <code>&#123;&quot;name&quot;:&quot;&lt;html&quot;,&quot;passwd&quot;:&quot;12345&quot;&#125;,过滤后的结果是：&#123;&quot;name&quot;:&quot;</code></p>
+<p>因为没有找到<code>&lt;html&gt;</code>标签的结束位置，所以就会过滤掉后面所有的参数。</p>
+<p>这样就会导致 controller 获取参数的时候异常。</p>
+<p>但是这种 html 标签即便是返回给前端，浏览器也无法解析，因为标签是错误的。如果你真的需要过滤这种参数。</p>
+<p>可以尝试直接过滤特殊字符。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

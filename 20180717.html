@@ -1,0 +1,670 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,FindBugs">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-31.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>FindBugs 常见错误类型整理</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        FindBugs 常见错误类型整理
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">FindBugs</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="1-Dodgy-code-糟糕的代码"><a href="#1-Dodgy-code-糟糕的代码" class="headerlink" title="1.Dodgy code 糟糕的代码"></a>1.Dodgy code 糟糕的代码</h2><h3 id="1-1-Misuse-of-static-fields"><a href="#1-1-Misuse-of-static-fields" class="headerlink" title="1.1 Misuse of static fields"></a>1.1 Misuse of static fields</h3><p>滥用静态字段</p>
+<ul>
+<li>Write to static field from instance method</li>
+</ul>
+<pre><code>由于在方法内对静态属性进行赋值操作
+class A&#123;
+    private static int count;
+
+    public void init(int num)&#123;
+        count = num;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-2-Null-pointer-dereference"><a href="#1-2-Null-pointer-dereference" class="headerlink" title="1.2 Null pointer dereference"></a>1.2 Null pointer dereference</h3><p>引用null对象</p>
+<ul>
+<li>Load of known null value</li>
+</ul>
+<pre><code>引用了一个为 NULL 的对象
+
+class A&#123;
+    private static int count;
+
+    public void init(int num)&#123;
+        Integer num = null;
+        num.intValue();
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-3-Dead-local-store"><a href="#1-3-Dead-local-store" class="headerlink" title="1.3 Dead local store"></a>1.3 Dead local store</h3><p>本地变量存储了闲置不用的对象</p>
+<ul>
+<li>Dead store to local variable</li>
+</ul>
+<pre><code>对变量进行赋值，但是后面的代码没有用到这个变量
+class A&#123;
+    //第一种情况
+    public void init(int a)&#123;
+        int num = 3;
+        num = a;
+    &#125;
+    //第二种情况
+    public void init(int a)&#123;
+        int num = 3;
+        //...
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-4-Useless-code"><a href="#1-4-Useless-code" class="headerlink" title="1.4 Useless code"></a>1.4 Useless code</h3><p>无用的代码</p>
+<ul>
+<li>Useless object created</li>
+</ul>
+<pre><code>创建了无用的对象
+
+class A&#123;
+    public void init(int a)&#123;
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+    &#125;
+    
+&#125;
+</code></pre>
+<ul>
+<li>Useless non-empty void method</li>
+</ul>
+<pre><code>创建了无用的方法
+
+class A&#123;
+    public void init()&#123;
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.add(&quot;123&quot;);
+        list.add(&quot;234&quot;);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-5-RuntimeException-capture"><a href="#1-5-RuntimeException-capture" class="headerlink" title="1.5 RuntimeException capture"></a>1.5 RuntimeException capture</h3><p>（滥用）异常捕获</p>
+<ul>
+<li>Exception is caught when Exception is not thrown</li>
+</ul>
+<pre><code>在不会抛出异常的代码里尝试捕获异常
+
+class A&#123;
+    public void init()&#123;
+        try&#123;
+            List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        &#125;catch (Exception e) &#123;
+            
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-6-Bad-use-of-return-value-from-method"><a href="#1-6-Bad-use-of-return-value-from-method" class="headerlink" title="1.6 Bad use of return value from method"></a>1.6 Bad use of return value from method</h3><p>方法的返回值使用不当</p>
+<ul>
+<li>Return value of method without side effect is ignored</li>
+</ul>
+<pre><code>忽略没有副作用的方法的返回值
+
+class A&#123;
+    public void init()&#123;
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        list.size();
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-7-Redundant-comparison-to-null"><a href="#1-7-Redundant-comparison-to-null" class="headerlink" title="1.7 Redundant comparison to null"></a>1.7 Redundant comparison to null</h3><p>对 null 值的冗余校验</p>
+<ul>
+<li>Redundant nullcheck of value known to be non-null</li>
+</ul>
+<pre><code>对已知的非空对象进行null值校验
+
+class A&#123;
+    public void init()&#123;
+
+        if(getList() != null)&#123;
+
+        &#125;else&#123;
+
+        &#125;
+    &#125;
+
+    private List&lt;String&gt; getList()&#123;
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        return list
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>Redundant nullcheck of value known to be null</li>
+</ul>
+<pre><code>对已知的空对象进行null值校验
+
+class A&#123;
+    public void init()&#123;
+
+        if(getList() == null)&#123;
+
+        &#125;else&#123;
+
+        &#125;
+    &#125;
+
+    private List&lt;String&gt; getList()&#123;
+        return null
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-7-Suspicious-integer-expression"><a href="#1-7-Suspicious-integer-expression" class="headerlink" title="1.7 Suspicious integer expression"></a>1.7 Suspicious integer expression</h3><p>可疑的整数表达式</p>
+<ul>
+<li>Vacuous bit mask operation on integer value</li>
+</ul>
+<pre><code>整数值上的空位掩码操作
+
+class A&#123;
+    public void init(int num)&#123;
+        int a = num &amp; 0xFFFFFFFF;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-8-Duplicate-Branches"><a href="#1-8-Duplicate-Branches" class="headerlink" title="1.8 Duplicate Branches"></a>1.8 Duplicate Branches</h3><p>重复分支</p>
+<ul>
+<li>Method uses the same code for two branches</li>
+</ul>
+<pre><code>两个分支内的代码一样
+
+class A&#123;
+    public void init(int num)&#123;
+        if(num&gt;0)&#123;
+            num = 0;
+        &#125;else&#123;
+            num = 0;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-9-Dubious-method-invocation"><a href="#1-9-Dubious-method-invocation" class="headerlink" title="1.9 Dubious method invocation"></a>1.9 Dubious method invocation</h3><p>可疑的方法调用</p>
+<ul>
+<li>Code contains a hard coded reference to an absolute pathname</li>
+</ul>
+<pre><code>代码包含绝对路径的硬编码引用
+
+class A&#123;
+    public void init(int num)&#123;
+        File file = new File(&quot;D:\test\test.txt&quot;);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-10-Test-for-floating-point-equality"><a href="#1-10-Test-for-floating-point-equality" class="headerlink" title="1.10 Test for floating point equality"></a>1.10 Test for floating point equality</h3><p>比较两个浮点数是否相等</p>
+<ul>
+<li>Test for floating point equality</li>
+</ul>
+<pre><code>比较两个浮点数是否相等
+
+class A&#123;
+    public void init(double a,double b)&#123;
+        if (a == b)&#123;
+
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-11-Null-pointer-dereference"><a href="#1-11-Null-pointer-dereference" class="headerlink" title="1.11 Null pointer dereference"></a>1.11 Null pointer dereference</h3><p>引用空对象</p>
+<ul>
+<li>Load of known null value</li>
+</ul>
+<pre><code>引用已知为null的对象
+
+class A&#123;
+    public void init(List&lt;String&gt; list)&#123;
+        if (list == null)&#123;
+            System.out.print(list.toString());
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-12-Switch-case-falls-through"><a href="#1-12-Switch-case-falls-through" class="headerlink" title="1.12 Switch case falls through"></a>1.12 Switch case falls through</h3><p>switch 语句使用不当</p>
+<ul>
+<li>Switch statement found where default case is missing</li>
+</ul>
+<pre><code>switch 语句缺少 default 分支
+
+class A&#123;
+    public void init(int a)&#123;
+        switch a &#123;
+            case 1:
+                break;
+            case 2: 
+                break;
+            &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="2-Correctness-正确性"><a href="#2-Correctness-正确性" class="headerlink" title="2.Correctness 正确性"></a>2.Correctness 正确性</h2><h3 id="2-1-Null-pointer-dereference"><a href="#2-1-Null-pointer-dereference" class="headerlink" title="2.1 Null pointer dereference"></a>2.1 Null pointer dereference</h3><p>引用空指针</p>
+<ul>
+<li>Possible null pointer dereference</li>
+</ul>
+<pre><code>可能会抛出空指针异常
+
+class A&#123;
+    public void init(List&lt;String&gt; list)&#123;
+        System.out.print(list.size());
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>Possible null pointer dereference in method on exception path</li>
+</ul>
+<pre><code>引用了某个异常控制的对象。
+
+class A&#123;
+    public void init()&#123;
+        List&lt;String&gt; list = null；
+        try&#123;
+
+            list = new ArrayList&lt;&gt;();
+            
+        &#125;catch (Exception e) &#123;
+            
+        &#125;
+
+        System.out.print(list.size());
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>Method call passes null for non-null parameter</li>
+</ul>
+<pre><code>方法调用对非null参数传递null值
+
+class A&#123;
+    public void init(String str)&#123;
+        //compareTo方法要求参数不能为null，否则会抛出NullPointerException
+        &quot;abc&quot;.compareTo(str)
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>Null value is guaranteed to be dereferenced</li>
+</ul>
+<pre><code>保证不能引用空值
+
+class A&#123;
+    public void init(boolean flag)&#123;
+        List&lt;String&gt; list = null;
+        if(flag)&#123;
+            list.add(&quot;abc&quot;);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-2-Useless-x2F-non-informative-string-generated"><a href="#2-2-Useless-x2F-non-informative-string-generated" class="headerlink" title="2.2 Useless&#x2F;non-informative string generated"></a>2.2 Useless&#x2F;non-informative string generated</h3><p>生成了无用&#x2F;非信息的字符串</p>
+<ul>
+<li>Invocation of toString on an array</li>
+</ul>
+<pre><code>无效的 toString 方法
+
+class A&#123;
+    public void init(int[] arr)&#123;
+        //会打印出 arr 的哈希值，而不是数组的的内容
+        System.out.print(arr);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-3-Bad-use-of-return-value-from-method"><a href="#2-3-Bad-use-of-return-value-from-method" class="headerlink" title="2.3 Bad use of return value from method"></a>2.3 Bad use of return value from method</h3><p>方法的返回值使用不当</p>
+<ul>
+<li>Method ignores return value</li>
+</ul>
+<pre><code>该方法的返回值应该进行检查
+
+class A&#123;
+    public void init(int[] arr)&#123;
+        String dateString = getHeaderField(name);
+        dateString.trim();
+    &#125;
+&#125;
+
+PS：这种警告通常出现在调用一个不可变对象的方法，认为它更新了对象的值。
+
+程序员似乎以为trim（）方法将更新dateString引用的字符串。
+
+但由于字符串是不可改变的，trim（）函数返回一个新字符串值，在这里它是被忽略了。
+
+该代码应更正：
+
+String dateString = getHeaderField(name);
+dateString = dateString.trim();
+</code></pre>
+<h3 id="2-4-Format-string-problem"><a href="#2-4-Format-string-problem" class="headerlink" title="2.4 Format string problem"></a>2.4 Format string problem</h3><p>字符串格式化问题</p>
+<ul>
+<li>More arguments are passed than are actually used in the format string</li>
+</ul>
+<pre><code>传递的参数多于格式字符串中实际使用的参数
+
+class A&#123;
+    public void init(String num1,String num2)&#123;
+        //错误，这种写法不会格式化字符串
+        String dateString = String.format(&quot;num1: &#123;&#125;,num2：&#123;&#125;&quot;, num1,num2)
+        String dateString2 = String.format(&quot;num1: &#123;0&#125;,num2：&#123;1&#125;&quot;, num1,num2)
+        //正确的写法
+        String dateString3 = String.format(&quot;num1: %s,num2：%s&quot;, num1,num2)
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-5-Comparing-incompatible-types-for-equality"><a href="#2-5-Comparing-incompatible-types-for-equality" class="headerlink" title="2.5 Comparing incompatible types for equality"></a>2.5 Comparing incompatible types for equality</h3><p>比较不兼容的类型是否相等</p>
+<ul>
+<li>Call to equals() comparing different types</li>
+</ul>
+<pre><code>调用equals（）比较不同的类型
+
+class A&#123;
+    public void init(String str)&#123;
+        Integer num = new Integer()
+        if(str.equals(num))&#123;
+
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-6-Questionable-use-of-reference-equality-rather-than-calling-equals"><a href="#2-6-Questionable-use-of-reference-equality-rather-than-calling-equals" class="headerlink" title="2.6 Questionable use of reference equality rather than calling equals"></a>2.6 Questionable use of reference equality rather than calling equals</h3><p>对象的比较使用了 “&#x3D;&#x3D;” 而不是调用 equals 方法</p>
+<ul>
+<li>Suspicious reference comparison</li>
+</ul>
+<pre><code>可疑的比较
+
+class A&#123;
+    public void init(String str)&#123;
+        if(&quot;abc&quot; == str)&#123;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-7-Redundant-comparison-to-null"><a href="#2-7-Redundant-comparison-to-null" class="headerlink" title="2.7 Redundant comparison to null"></a>2.7 Redundant comparison to null</h3><p>与null值的冗余比较</p>
+<ul>
+<li>Nullcheck of value previously dereferenced</li>
+</ul>
+<pre><code>没有对参数进行空值校验
+
+class A&#123;
+    public void init(String str)&#123;
+        System.out.println(getStr().size())
+    &#125;
+    private List&lt;String&gt; getList()&#123;
+        return null;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="3-Bad-practice-不好的做法"><a href="#3-Bad-practice-不好的做法" class="headerlink" title="3.Bad practice 不好的做法"></a>3.Bad practice 不好的做法</h2><h3 id="3-1-Stream-not-closed-on-all-paths"><a href="#3-1-Stream-not-closed-on-all-paths" class="headerlink" title="3.1 Stream not closed on all paths"></a>3.1 Stream not closed on all paths</h3><p>IO流没有关闭</p>
+<ul>
+<li>Method may fail to close stream</li>
+</ul>
+<pre><code>方法体内没有对IO流进行关闭
+</code></pre>
+<h3 id="3-2-Dropped-or-ignored-exception"><a href="#3-2-Dropped-or-ignored-exception" class="headerlink" title="3.2 Dropped or ignored exception"></a>3.2 Dropped or ignored exception</h3><p>忽略了异常</p>
+<ul>
+<li>Method might ignore exception</li>
+</ul>
+<pre><code>方法忽略了异常
+
+class A&#123;
+    public void init()&#123;
+        try&#123;
+            
+        &#125;catch (Exception e) &#123;
+            //当抛出异常时什么都没有做
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="3-3-Bad-use-of-return-value-from-method"><a href="#3-3-Bad-use-of-return-value-from-method" class="headerlink" title="3.3 Bad use of return value from method"></a>3.3 Bad use of return value from method</h3><p>方法返回值使用不当（多为忽略了方法返回值）</p>
+<ul>
+<li>Method ignores exceptional return value</li>
+</ul>
+<pre><code>忽略了方法的异常返回值
+
+class A&#123;
+    public void init()&#123;
+        File file = new File(&quot;/aaa&quot;)
+        //文件mkdir可能返回false
+        file.getParentFile().mkdirs()
+    &#125;
+&#125;
+</code></pre>
+<h3 id="3-4-Incorrect-definition-of-Serializable-class"><a href="#3-4-Incorrect-definition-of-Serializable-class" class="headerlink" title="3.4 Incorrect definition of Serializable class"></a>3.4 Incorrect definition of Serializable class</h3><p>序列化的类定义不正确</p>
+<ul>
+<li>Non-transient non-serializable instance field in serializable class</li>
+</ul>
+<pre><code>可序列化的类中存在不可序列化的属性
+
+class A implements Serializable&#123;
+    //List对象不能直接序列化
+    private List&lt;String&gt; list;
+&#125;
+</code></pre>
+<h3 id="3-5-Checking-String-equality-using-x3D-x3D-or-x3D"><a href="#3-5-Checking-String-equality-using-x3D-x3D-or-x3D" class="headerlink" title="3.5 Checking String equality using &#x3D;&#x3D; or !&#x3D;"></a>3.5 Checking String equality using &#x3D;&#x3D; or !&#x3D;</h3><p>Stirng 对象的比较使用了 &#x3D;&#x3D; 或 !&#x3D;</p>
+<ul>
+<li>Comparison of String parameter using &#x3D;&#x3D; or !&#x3D;</li>
+</ul>
+<pre><code>Stirng 对象的比较使用了 == 或 !=
+
+String对象的比较应该使用 equals() 方法
+</code></pre>
+<h3 id="3-6-Confusing-method-name"><a href="#3-6-Confusing-method-name" class="headerlink" title="3.6 Confusing method name"></a>3.6 Confusing method name</h3><p>不规范的方法名</p>
+<ul>
+<li>Method names should start with a lower case letter</li>
+</ul>
+<pre><code>方法名应该以小写字母开头，符合驼峰式命名格式
+</code></pre>
+<h2 id="4-Malicious-code-vulnerability-恶意代码漏洞"><a href="#4-Malicious-code-vulnerability-恶意代码漏洞" class="headerlink" title="4 Malicious code vulnerability 恶意代码漏洞"></a>4 Malicious code vulnerability 恶意代码漏洞</h2><h3 id="4-1-Method-returning-array-may-expose-internal-representation"><a href="#4-1-Method-returning-array-may-expose-internal-representation" class="headerlink" title="4.1 Method returning array may expose internal representation"></a>4.1 Method returning array may expose internal representation</h3><p>返回数组的方法可以暴露内部表示</p>
+<ul>
+<li>May expose internal representation by returning reference to mutable object</li>
+</ul>
+<pre><code>可以通过返回的可变对象的引用来公开内部表示
+
+class A&#123;
+    private List&lt;String&gt; list = new ArrayList&lt;&gt;();
+    public List&lt;String&gt; getList()&#123;
+        return list;
+    &#125;
+&#125;
+</code></pre>
+<ul>
+<li>May expose internal representation by incorporating reference to mutable object</li>
+</ul>
+<pre><code>可以通过引用可变对象来公开内部表示
+
+class A&#123;
+    private List&lt;String&gt; list;
+    public void setList(List&lt;String&gt; list)&#123;
+        this.list = list;
+    &#125;
+&#125;
+</code></pre>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,571 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Spring Boot,MyBatis,Druid">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-13.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(三) 整合 MyBatis + Druid</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(三) 整合 MyBatis + Druid
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">MyBatis</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Druid</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h2 id="0-环境说明"><a href="#0-环境说明" class="headerlink" title="0. 环境说明"></a>0. 环境说明</h2><ul>
+<li>MyBatis Generator 1.3.6</li>
+<li>MySQL 5.7.17</li>
+<li>驱动:mysql-connector-java-5.1.2.jar</li>
+</ul>
+<h2 id="1-MyBatis-Generator"><a href="#1-MyBatis-Generator" class="headerlink" title="1. MyBatis Generator"></a>1. MyBatis Generator</h2><p><a target="_blank" rel="noopener" href="https://github.com/mybatis/generator">MyBatis Generator</a>是一款在使用mybatis框架时，自动生成model，dao和mapper的工具，很大程度上减少了业务开发人员的手动编码时间。</p>
+<p>我们将使用这个工具自动化的构建 MVC 框架中 M 层所需要的东西。</p>
+<h2 id="2-创建本地数据库"><a href="#2-创建本地数据库" class="headerlink" title="2. 创建本地数据库"></a>2. 创建本地数据库</h2><p>在本地的数据库中创建一张表</p>
+<pre><code># 创建数据库
+CREATE DATABASE LEARNING CHARACTER SET utf8;
+
+USE LEARNING;
+
+# 创建表结构
+CREATE TABLE ACCOUNT_INFO(
+    ACCOUNT_ID INTEGER PRIMARY KEY AUTO_INCREMENT,
+    NAME VARCHAR(50),
+    PWD VARCHAR(50),
+    BALANCE INTEGER
+);
+
+# 插入一条数据
+INSERT INTO ACCOUNT_INFO VALUES(NULL,&#39;root&#39;,&#39;root&#39;,100);
+</code></pre>
+<h2 id="3-使用MyBatis-Generator"><a href="#3-使用MyBatis-Generator" class="headerlink" title="3. 使用MyBatis Generator"></a>3. 使用MyBatis Generator</h2><p>下载地址：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/mybatis/generator/releases">mybatis-generator-core-1.3.6.zip</a></li>
+<li><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/connector/j/">mysql-connector-java-5.1.2.jar</a></li>
+</ul>
+<p><strong>如果你是Windows用户,下载mysql-connector的时候可以选择 Platform Independent 版本</strong></p>
+<p>将下载好的MySQL驱动jar包放到generator的lib目录下，</p>
+<p>确保<code>mybatis-generator-core-1.3.6.jar</code>和<code>mysql-connector-java-5.1.2.jar</code>在同一个目录下。</p>
+<p>准备一个 configuration.xml 的配置文件，内容如下：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE generatorConfiguration
+  PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;
+  &quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot;&gt;
+
+&lt;generatorConfiguration&gt;
+     &lt;!-- 配置驱动jar包路径.用了相对路径 --&gt;
+    &lt;classPathEntry location=&quot;mysql-connector-java-5.1.2.jar&quot; /&gt;
+
+    &lt;context id=&quot;DB2Tables&quot; targetRuntime=&quot;MyBatis3&quot;&gt;
+        &lt;!-- 为了防止生成的代码中有很多注释，比较难看，加入下面的配置控制 --&gt;
+        &lt;commentGenerator&gt;
+            &lt;property name=&quot;suppressDate&quot; value=&quot;true&quot; /&gt;
+            &lt;property name=&quot;suppressAllComments&quot; value=&quot;true&quot; /&gt;
+        &lt;/commentGenerator&gt;
+         &lt;!-- 数据库连接 --&gt;
+        &lt;jdbcConnection driverClass=&quot;com.mysql.jdbc.Driver&quot;
+            connectionURL=&quot;jdbc:mysql://localhost/LEARNING&quot; userId=&quot;root&quot;
+            password=&quot;********&quot;&gt;
+            &lt;property name=&quot;remarks&quot; value=&quot;true&quot; /&gt;
+        &lt;/jdbcConnection&gt;
+
+        &lt;javaTypeResolver&gt;
+            &lt;property name=&quot;forceBigDecimals&quot; value=&quot;false&quot; /&gt;
+        &lt;/javaTypeResolver&gt;
+        &lt;!-- 数据表对应的model 层  --&gt;
+        &lt;javaModelGenerator targetPackage=&quot;com.zdran.springboot.dao&quot;
+            targetProject=&quot;D:\bxwzh&quot;&gt;
+            &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot; /&gt;
+        &lt;/javaModelGenerator&gt;
+        &lt;!-- sql mapper 隐射配置文件 --&gt;
+        &lt;sqlMapGenerator targetPackage=&quot;com.zdran.springboot.mapping&quot;
+            targetProject=&quot;D:\bxwzh&quot;&gt;
+            &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot; /&gt;
+        &lt;/sqlMapGenerator&gt;
+        &lt;!-- 在ibatis2 中是dao层，但在mybatis3中，其实就是mapper接口 --&gt;
+        &lt;javaClientGenerator type=&quot;XMLMAPPER&quot;
+            targetPackage=&quot;com.zdran.springboot.mapper&quot; targetProject=&quot;D:\bxwzh&quot;&gt;
+            &lt;property name=&quot;enableSubPackages&quot; value=&quot;true&quot; /&gt;
+        &lt;/javaClientGenerator&gt;
+
+    &lt;!-- 要对哪些数据表进行生成操作，必须要有一个. --&gt;
+    &lt;table tableName=&quot;ACCOUNT_INFO&quot; domainObjectName=&quot;AccountInfo&quot;&gt;&lt;/table&gt;
+    &lt;/context&gt;
+&lt;/generatorConfiguration&gt;
+</code></pre>
+<p><strong>注意：数据库的密码需要换成你自己的。targetProject&#x3D;”D:\bxwzh，这个目录尽量是空文件夹</strong></p>
+<p>在 generator 的lib目录下执行下面的命令：</p>
+<pre><code>java -jar mybatis-generator-core-1.3.6.jar -configfile configuration.xml  -overwrite
+
+出现：MyBatis Generator finished successfully. 就说明成功了。
+</code></pre>
+<p>我们直接将com目录拷贝到项目目录下面去</p>
+<p>在resources 新建 mybaits 目录，然后将 mapping 文件夹移动到 mybaits 下</p>
+<p>现在我们的项目结构是下面这样的：</p>
+<div align="center">
+    ![项目结构](/images/3001.jpg)
+</div>
+
+<p>添加 mybaits依赖：</p>
+<pre><code>&lt;!--springBoot和mybatis继承--&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;1.3.2&lt;/version&gt;
+    &lt;!-- 移除 logging --&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+&lt;!-- mysql 驱动--&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+    &lt;version&gt;5.1.2&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="4-添加MyBatis的配置"><a href="#4-添加MyBatis的配置" class="headerlink" title="4. 添加MyBatis的配置"></a>4. 添加MyBatis的配置</h2><p>在配置文件里添加下面的配置：</p>
+<pre><code>mybatis:
+  mapperLocations: classpath:mybatis/mapping/*.xml
+  typeAliasesPackage: com.zdran.springboot.dao
+
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://localhost:3306/LEARNING
+        username: root
+        password: ********
+        driver-class-name: com.mysql.jdbc.Driver
+</code></pre>
+<h2 id="5-测试一下"><a href="#5-测试一下" class="headerlink" title="5. 测试一下"></a>5. 测试一下</h2><p>在 SpringbootApplication 类上面添加包的扫描路径</p>
+<pre><code>
+/**
+ * 启动程序
+ * Create by zdRan on 2018/6/28
+ *
+ * @author cm.zdran@gmail.com
+ */
+@SpringBootApplication
+@MapperScan(basePackages = &quot;com.zdran.springboot.mapper&quot;)
+public class SpringbootApplication &#123;
+
+    public static void main(String[] args) &#123;
+        SpringApplication.run(SpringbootApplication.class, args);
+    &#125;
+&#125;
+</code></pre>
+<p>下面我们实现一个根据姓名查询账号信息的接口。创建对应的controller、service等</p>
+<p>Service 层的实现：</p>
+<pre><code>/**
+ * Create by ranzd on 2018/7/2
+ *
+ * @author cm.zdran@gmail.com
+ */
+@Service
+public class AccountServiceImpl implements AccountService &#123;
+    @Autowired
+    AccountInfoMapper accountInfoMapper;
+
+    @Override
+    public AccountInfo queryByName(String name) &#123;
+        AccountInfoExample example = new AccountInfoExample();
+        example.createCriteria().andNameEqualTo(name);
+        List&lt;AccountInfo&gt; accountInfoList = accountInfoMapper.selectByExample(example);
+        if (accountInfoList != null &amp;&amp; accountInfoList.size() != 0) &#123;
+            return accountInfoList.get(0);
+        &#125;
+        return null;
+    &#125;
+&#125;
+</code></pre>
+<p>Controller层的实现：</p>
+<pre><code>/**
+ * Create by ranzd on 2018/7/3
+ *
+ * @author cm.zdran@gmail.com
+ */
+@RestController
+@RequestMapping(&quot;/account&quot;)
+public class AccountController &#123;
+    private Logger logger = LoggerFactory.getLogger(AccountController.class);
+
+    @Autowired
+    AccountService accountService;
+
+    @GetMapping(&quot;/get/&#123;name&#125;&quot;)
+    public AccountInfo getAccountByName(@PathVariable String name) &#123;
+        logger.info(&quot;根据姓名获取账号信息。入参：name：&#123;&#125;&quot;, name);
+        AccountInfo accountInfo = accountService.queryByName(name);
+        if (accountInfo == null) &#123;
+            logger.info(&quot;根据姓名获取账号信息。获取失败&quot;);
+        &#125;
+        logger.info(&quot;根据姓名获取账号信息。出参：accountInfo：&#123;&#125;&quot;, accountInfo.toString());
+        return accountInfo;
+    &#125;
+&#125;
+</code></pre>
+<p>运行一下，访问 <code>http://localhost:9090/learning/account/get/root</code></p>
+<p><strong>url最后的 root 用户名</strong></p>
+<h2 id="5-集成-druid"><a href="#5-集成-druid" class="headerlink" title="5. 集成 druid"></a>5. 集成 druid</h2><p>上面的配置方法是最简单的配置方法。还有一种常常用于生产环境的配置方法。</p>
+<p>添加 druid 依赖</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+    &lt;artifactId&gt;druid&lt;/artifactId&gt;
+    &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>添加druid配置</p>
+<pre><code>
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/LEARNING
+        username: root
+        password: ********
+        driver-class-name: com.mysql.jdbc.Driver
+        initialSize: 5
+        minIdle: 5
+        maxActive: 10
+        maxWait: 10000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        testOnBorrow: false
+        testOnReturn: false
+        testWhileIdle: true
+        keepAlive: true
+        removeAbandoned: true
+        removeAbandonedTimeout: 80
+        logAbandoned: true
+        poolPreparedStatements: true
+        maxPoolPreparedStatementPerConnectionSize: 20
+        filters: stat,slf4j,wall
+</code></pre>
+<p>添加依赖，方便使用 ConfigurationProperties 注解，来读取yml里的配置信息</p>
+<pre><code>&lt;!-- 为了方便使用@ConfigurationProperties注解 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;
+    &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>创建 druid 配置文件读取类</p>
+<pre><code>/**
+ * Create by ranzd on 2018/7/3
+ *
+ * @author cm.zdran@gmail.com
+ */
+@Configuration
+@ConfigurationProperties(prefix = &quot;spring.datasource&quot;)
+public class DruidDataSourceProperties &#123;
+
+    private String driverClassName;
+    private String url;
+    private String username;
+    private String password;
+
+    private int initialSize;
+    private int minIdle;
+    private int maxActive;
+    private long maxWait;
+    private long timeBetweenEvictionRunsMillis;
+    private long minEvictableIdleTimeMillis;
+    private boolean testOnBorrow;
+    private boolean testOnReturn;
+    private boolean testWhileIdle;
+    private boolean keepAlive;
+    private boolean removeAbandoned;
+    private int removeAbandonedTimeout;
+    private boolean logAbandoned;
+    private boolean poolPreparedStatements;
+    private int maxPoolPreparedStatementPerConnectionSize;
+    private String filters;
+
+    //省略了所有属性的 get 、set方法
+&#125;
+</code></pre>
+<p><strong>上面的代码省略了所有属性的 get 、set方法，你的本地代码一定要有get、set方法</strong></p>
+<p>删除 yml 里的 mybaits 配置：</p>
+<pre><code>mybatis:
+  mapperLocations: classpath:mybatis/mapping/*.xml
+  typeAliasesPackage: com.zdran.springboot.dao
+</code></pre>
+<p>删除 SpringbootApplication 类上面的 MapperScan 注解</p>
+<pre><code>@MapperScan(basePackages = &quot;com.zdran.springboot.mapper&quot;)
+</code></pre>
+<p>创建 mybaits 的配置类：</p>
+<pre><code>/**
+ * Create by ranzd on 2018/7/3
+ *
+ * @author cm.zdran@gmail.com
+ */
+@Configuration
+@EnableTransactionManagement
+@MapperScan(
+        basePackages = &quot;com.zdran.springboot.mapper&quot;, 
+        sqlSessionFactoryRef = &quot;learningSqlSessionFactory&quot;)
+public class MyBatisConfig &#123;
+    private Logger logger = LoggerFactory.getLogger(MyBatisConfig.class);
+
+    @Autowired
+    DruidDataSourceProperties druidDataSourceProperties;
+
+    @Bean(name = &quot;learningSqlSessionFactory&quot;)
+    @Primary
+    public SqlSessionFactory learningSqlSessionFactory() throws Exception &#123;
+        final SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+        sessionFactory.setDataSource(getDruidDataSource());
+        sessionFactory.setTypeAliasesPackage(&quot;com.zdran.springboot.dao&quot;);
+        sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
+                .getResources(&quot;classpath:/mybatis/mapping/*.xml&quot;));
+        return sessionFactory.getObject();
+    &#125;
+
+    @Bean(name = &quot;learningDataSource&quot;)
+    public DataSource getDruidDataSource() &#123;
+        DruidDataSource druidDataSource = new DruidDataSource();
+        druidDataSource.setDriverClassName(druidDataSourceProperties.getDriverClassName());
+        druidDataSource.setUrl(druidDataSourceProperties.getUrl());
+        druidDataSource.setUsername(druidDataSourceProperties.getUsername());
+        druidDataSource.setPassword(druidDataSourceProperties.getPassword());
+        druidDataSource.setInitialSize(druidDataSourceProperties.getInitialSize());
+        druidDataSource.setMinIdle(druidDataSourceProperties.getMinIdle());
+        druidDataSource.setMaxActive(druidDataSourceProperties.getMaxActive());
+        druidDataSource.setMaxWait(druidDataSourceProperties.getMaxWait());
+        druidDataSource.setTimeBetweenEvictionRunsMillis(
+            druidDataSourceProperties.getTimeBetweenEvictionRunsMillis());
+        druidDataSource.setMinEvictableIdleTimeMillis(
+            druidDataSourceProperties.getMinEvictableIdleTimeMillis());
+        druidDataSource.setTestOnBorrow(druidDataSourceProperties.isTestOnBorrow());
+        druidDataSource.setTestOnReturn(druidDataSourceProperties.isTestOnReturn());
+        druidDataSource.setTestWhileIdle(druidDataSourceProperties.isTestWhileIdle());
+        druidDataSource.setKeepAlive(druidDataSourceProperties.isKeepAlive());
+        druidDataSource.setRemoveAbandoned(druidDataSourceProperties.isRemoveAbandoned());
+        druidDataSource.setRemoveAbandonedTimeout(
+            druidDataSourceProperties.getRemoveAbandonedTimeout());
+        druidDataSource.setLogAbandoned(druidDataSourceProperties.isLogAbandoned());
+
+        druidDataSource.setPoolPreparedStatements(
+            druidDataSourceProperties.isPoolPreparedStatements());
+        druidDataSource.setMaxPoolPreparedStatementPerConnectionSize(
+            druidDataSourceProperties.getMaxPoolPreparedStatementPerConnectionSize());
+        try &#123;
+            druidDataSource.setFilters(druidDataSourceProperties.getFilters());
+            druidDataSource.init();
+        &#125; catch (SQLException e) &#123;
+            logger.error(&quot;数据源初始化失败&quot;, e);
+        &#125;
+        return druidDataSource;
+    &#125;
+&#125;
+</code></pre>
+<p>OK!重新启动测试一下刚才的接口。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,547 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Java,HashMap">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-28.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Java 源码重读系列之 HashMap</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Java 源码重读系列之 HashMap
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Java</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">HashMap</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="0-成员变量"><a href="#0-成员变量" class="headerlink" title="0. 成员变量"></a>0. 成员变量</h2><p>首先我们先看一下 HashMap 有哪些成员变量</p>
+<pre><code>    /**
+     * 默认的初始大小，16，值必须是 2 的幂值
+     */
+    static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4; // aka 16
+
+    /**
+     * 最大值，必须是 2 幂值且 小于等于 2 的30 次幂
+     */
+    static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;
+    /**
+     * 默认加载因子，0.75，就是map里的元素值超过 75% 就会触发扩容
+     */
+    static final float DEFAULT_LOAD_FACTOR = 0.75f;
+
+    //下面还有三个树化的参数
+    //如果哈希值相同的元素超过 8 个，则树化
+    static final int TREEIFY_THRESHOLD = 8;
+    //树的节点小于 6 个，则转成链表
+    static final int UNTREEIFY_THRESHOLD = 6;
+    //如果 map 的元素小于 64，即便是 哈希值相同的元素超过 8 个了，也不树化，会扩容
+    static final int MIN_TREEIFY_CAPACITY = 64;
+</code></pre>
+<p>下面还有一个 Node 类，这个类就是 HashMap 存储元素的容器，其实很简单</p>
+<pre><code>static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
+        final int hash;
+        final K key;
+        V value;
+        Node&lt;K,V&gt; next;
+
+        //... ... 
+
+&#125;
+</code></pre>
+<p>没有多少复杂的内容，类似于链表的Node节点，key、value、next，因为大量的地方都需要用到对象的 hash 值，所以又记录了下 key 的 hash 值。</p>
+<h2 id="1-hash"><a href="#1-hash" class="headerlink" title="1. hash()"></a>1. hash()</h2><p>继续往下看</p>
+<pre><code>    //求 key 的哈希值
+    static final int hash(Object key) &#123;
+        int h;
+        return (key == null) ? 0 : (h = key.hashCode()) ^ (h &gt;&gt;&gt; 16);
+    &#125;
+</code></pre>
+<p>也没什么好说的，就是通过对象的 hashCode 计算出一个 int 值。</p>
+<h2 id="2-comparableClassFor"><a href="#2-comparableClassFor" class="headerlink" title="2. comparableClassFor()"></a>2. comparableClassFor()</h2><p>下面有个 comparableClassFor 方法，这个方法的主要是判断入参 x 是否实现了 Comparable 接口。不过写的格式有点紧凑，我们需要展开以下。</p>
+<pre><code>    static Class&lt;?&gt; myComparableClassFor(Object x) &#123;
+        if (x instanceof Comparable) &#123;
+            Class&lt;?&gt; c = x.getClass();
+            // 获取 x 实现的所有接口
+            Type[] ts = c.getGenericInterfaces();
+            Type[] as;
+            Type t;
+            ParameterizedType p;
+            //如果 x  是 String 类型 直接返回
+            if (c == String.class) &#123;
+                return c;
+            &#125;
+            if (ts != null) &#123;
+                // 遍历实现的所有接口
+                for (int i = 0; i &lt; ts.length; ++i) &#123;
+                    t = ts[i];
+                    // 如果接口有泛型
+                    if (t instanceof ParameterizedType) &#123;
+                        p = (ParameterizedType) t;
+                        // 如果泛型对象是 Comparable
+                        if (p.getRawType() == Comparable.class) &#123;
+                            as = p.getActualTypeArguments();
+                            // 只有一个泛型参数，且参数类型是 x.class
+                            if (as != null &amp;&amp; as.length == 1 &amp;&amp; as[0] == c) &#123;
+                                return c;
+                            &#125;
+                        &#125;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+        return null;
+    &#125;
+</code></pre>
+<p>举个例子:</p>
+<pre><code>class MyTest implements Comparable&lt;MyTest&gt; &#123;&#125;
+
+会返回 MyTest.class
+
+class MyTest implements Comparable&lt;Integer&gt; &#123;&#125;
+
+会返回 null
+</code></pre>
+<p>这个方法就结束了，如果还是不能理解，可以将代码复制出来，打个断点跑一下。继续往下看。</p>
+<pre><code>
+    @SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;) // for cast to Comparable
+    static int compareComparables(Class&lt;?&gt; kc, Object k, Object x) &#123;
+        return (x == null || x.getClass() != kc ? 0 :
+                ((Comparable)k).compareTo(x));
+    &#125;
+</code></pre>
+<p>这个方法有意思，注释是说，如果 x 是 kc 的类型，返回 k.compareTo(x) （k 是筛选过的比较类）。如果你查找下这个方法的使用地方就会发现，kc 这个参数就是上面 comparableClassFor 返回的类型。</p>
+<p>这么一看是不是就清晰了？ comparableClassFor(x) 拿到类型，然后传入  compareComparables(kc,k,x) 去比较。</p>
+<h2 id="3-tableSizeFor"><a href="#3-tableSizeFor" class="headerlink" title="3. tableSizeFor()"></a>3. tableSizeFor()</h2><p>下面又是一个方法：</p>
+<pre><code>    static final int tableSizeFor(int cap) &#123;
+        int n = cap - 1;
+        n |= n &gt;&gt;&gt; 1;
+        n |= n &gt;&gt;&gt; 2;
+        n |= n &gt;&gt;&gt; 4;
+        n |= n &gt;&gt;&gt; 8;
+        n |= n &gt;&gt;&gt; 16;
+        return (n &lt; 0) ? 1 : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
+    &#125;
+</code></pre>
+<p>这个方法也很有意思，看着很复杂，其实功能很简单，返回第一个大于等于 cap 的 2 的幂值。还是那句话， main 方法试试就知道了。不多说。</p>
+<h2 id="4-table、threshold、loadFactor"><a href="#4-table、threshold、loadFactor" class="headerlink" title="4. table、threshold、loadFactor"></a>4. table、threshold、loadFactor</h2><p>再往下就是一些变量了。其中最核心的变量就是 table</p>
+<pre><code>    transient Node&lt;K,V&gt;[] table;
+</code></pre>
+<p>通过注释我们就可以知道这个是存储 HashMap 元素的数组，在第一次使用时被初始化，并且根据需要调整大小，长度适中是 2 的幂。</p>
+<p>table 数组就是存储 HashMap 元素的底层结构，具体怎么存储我们后面再看。不过需要注意的是这个变量使用了一个 transient 修饰符，这在我们平常的编码中是很少见到的。这个修饰符的作用是在序列化时跳过该属性。是跟 Serializable 相对应的。其实就是当一个 HashMap 对象被序列化到文件中时，其中的元素是没有写到文件里的。所以通过反序列化也是拿不到元素的。</p>
+<p>我们知道了它的功能，但是 HashMap 为什么要这么做呢？其实这个是跟 HashMap 的 put 方法有关系，我们稍后再说。继续往下看。</p>
+<p>下面还有一些其他的属性，其中有两个比较重要。</p>
+<pre><code>
+    int threshold;
+
+    final float loadFactor;
+</code></pre>
+<p>threshold 是下次扩容时 HashMap 的容量。 loadFactor 是加载因子，当 HashMap 的容量达到总容量的一定比例就会触发扩容。这两个字段都跟扩容有关，等看到扩容时再说。</p>
+<p>再往下就是几个构造方法了，前面三个构造方法都只是在确定 threshold、loadFactor 这两个属性的默认值。没有什么好说的</p>
+<p>threshold 如果初始化时没有传值就是 0 ，loadFactor 默认值是 DEFAULT_LOAD_FACTOR &#x3D; 0.75f。也就是说，如果 HashMap 的当前容量达到总容量的 75% 就会触发扩容。</p>
+<h2 id="5-putMapEntries"><a href="#5-putMapEntries" class="headerlink" title="5. putMapEntries()"></a>5. putMapEntries()</h2><p>后面还有一个构造方法是传入了一个 Map 集合，它会把入参中集合里的元素 put 到当前的 HashMap 集合中。</p>
+<pre><code>    public HashMap(Map&lt;? extends K, ? extends V&gt; m) &#123;
+        this.loadFactor = DEFAULT_LOAD_FACTOR;
+        putMapEntries(m, false);
+    &#125;
+</code></pre>
+<p>这个构造方法首先初始化了 loadFactor 属性，然后调了<code>putMapEntries</code> 方法，这个方法就在下面。同样格式有点乱，没关系，我们先调整下格式。</p>
+<pre><code>final void putMapEntries(Map&lt;? extends K, ? extends V&gt; m, boolean evict) &#123;
+        int s = m.size();
+        if (s &lt;= 0)&#123;
+            return;
+        &#125;
+        if (table == null) &#123;
+            float ft = ((float)s / loadFactor) + 1.0F;
+            int t;
+            if (ft &lt; (float)MAXIMUM_CAPACITY)&#123;
+                t = (int)ft;
+            &#125;else &#123;
+                t = MAXIMUM_CAPACITY
+            &#125;
+            if (t &gt; threshold)&#123;
+                threshold = tableSizeFor(t);
+            &#125;
+
+        &#125;
+        else if (s &gt; threshold)&#123;
+            resize();
+        &#125;
+
+
+        for (Map.Entry&lt;? extends K, ? extends V&gt; e : m.entrySet()) &#123;
+            K key = e.getKey();
+            V value = e.getValue();
+            putVal(hash(key), key, value, false, evict);
+        &#125;
+    &#125;
+</code></pre>
+<p>如果 map 里没有元素，直接结束。因为我们是构造方法进入到这个方法里的，所以 table 一定为 null，然后计算了一下 ft ，表示放入 m 个元素后，HashMap 的最大容量，（如果 s &#x3D; 75,那 ft &#x3D; 101）。</p>
+<p>然后计算了一下 t 就是 map 需要的最大容量。并且判断一下是否超限。然后判断了一下是否要更新 threshold ，因为我们是构造方法进来的，所以一定是需要更新的。更新结束后就是 for 循环依次调用 <code>putVal</code> 将元素放入到当前的 HashMap 里。</p>
+<h2 id="6-putVal"><a href="#6-putVal" class="headerlink" title="6. putVal()"></a>6. putVal()</h2><p>然后我们跳到 <code>putVal</code>  方法。这个方法的格式依然不太好阅读，我们需要修改下。</p>
+<pre><code>
+    final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) &#123;
+        HashMap.Node&lt;K, V&gt;[] tab;
+        HashMap.Node&lt;K, V&gt; p;
+        int n, i;
+
+        if ((tab = table) == null || (n = tab.length) == 0)
+            n = (tab = resize()).length;
+
+        if ((p = tab[i = (n - 1) &amp; hash]) == null)
+            tab[i] = newNode(hash, key, value, null);
+        else &#123;
+            HashMap.Node&lt;K, V&gt; e;
+            K k;
+            if (p.hash == hash) &#123;
+                k = p.key;
+                if (k == key || key != null &amp;&amp; key.equals(k)) &#123;
+                    e = p;
+                &#125;
+            &#125; else &#123;
+                if (p instanceof HashMap.TreeNode) &#123;
+                    e = ((HashMap.TreeNode&lt;K, V&gt;) p).putTreeVal(this, tab, hash, key, value);
+                &#125; else &#123;
+                    for (int binCount = 0; ; ++binCount) &#123;
+                        if ((e = p.next) == null) &#123;
+                            p.next = newNode(hash, key, value, null);
+                            if (binCount &gt;= TREEIFY_THRESHOLD - 1) &#123;
+                                treeifyBin(tab, hash);
+                            &#125;
+                            break;
+                        &#125;
+                        if (e.hash == hash &amp;&amp; ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+                            break;
+
+                        p = e;
+                    &#125;
+                &#125;
+            &#125;
+
+            if (e != null) &#123; // existing mapping for key
+                V oldValue = e.value;
+                if (!onlyIfAbsent || oldValue == null)
+                    e.value = value;
+                afterNodeAccess(e);
+                return oldValue;
+            &#125;
+        &#125;
+        ++modCount;
+        if (++size &gt; threshold)
+            resize();
+        afterNodeInsertion(evict);
+        return null;
+    &#125;
+</code></pre>
+<p>首先判断了 table 是否进行了初始化，没有的话进行 resize， 这个方法我们一会再看。它的作用就是返回一个 Node 数组，数组的长度就是 threshold。初始化好之后就是判断下这个数组的<code>(n - 1) &amp; hash</code> 位置是否有值，没有值的话直接创建一个 Node 存到数组里就结束了。其实 <code>(n - 1) &amp; hash</code> 相当于 <code>hash % (n-1)</code> 的作用，但是与操作的效率比取模的效率高。二者达到的效果是一样的。</p>
+<p>如果有值，并且 key 相等，说明是同一个元素，这个时候 e 就是 HashMap 里的元素，后面对 e 的判断就会直接返回 e 对应的 value。</p>
+<p>如果 key 不相等，说明发生了 hash 冲突。两个 hash 值不一样的元素应该存储到数组的同一个位置。这个时候判断了一下 Node 的类型。如果是 TreeNode 那么调用 <code>putTreeVal</code> 方法。</p>
+<p>如果不是，则依次遍历当前位置节点的 next 指针，直到为空，插入新节点。其实就是讲新节点挂到了已当前节点为表头的链表尾部。插入成功之后判断了一下链表的长度，如果需要则进行树化。将当前链表转成一个红黑树。这个主要是解决链表太长，查询效率低的问题。而且在遍历链表期间依然判断了 key 是否相等，相等则直接返回旧元素的 value。</p>
+<p>好像也不是很难，这个就是 HashMap 最核心的方法之一了。从这个方法中也可以知道，HashMap 的底层存储结构是一个数组。如果发生 hash 冲突后，会采用链表的方式存储，当链表长度过长时，会将链表转成红黑树结构，提高查询效率。</p>
+<h2 id="7-resize"><a href="#7-resize" class="headerlink" title="7. resize()"></a>7. resize()</h2><p>下面我们看一下<code>resize()</code> 方法</p>
+<pre><code>final HashMap.Node&lt;K, V&gt;[] resize() &#123;
+    HashMap.Node&lt;K, V&gt;[] oldTab = table;
+    int oldCap = (oldTab == null) ? 0 : oldTab.length;
+    int oldThr = threshold;
+    int newCap, newThr = 0;
+    if (oldCap &gt; 0) &#123;
+        if (oldCap &gt;= MAXIMUM_CAPACITY) &#123;
+            threshold = Integer.MAX_VALUE;
+            return oldTab;
+        &#125; else if ((newCap = oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY &amp;&amp; oldCap &gt;= DEFAULT_INITIAL_CAPACITY)
+            newThr = oldThr &lt;&lt; 1; // double threshold
+    &#125; else if (oldThr &gt; 0) // initial capacity was placed in threshold
+        newCap = oldThr;
+    else &#123;               // zero initial threshold signifies using defaults
+        newCap = DEFAULT_INITIAL_CAPACITY;
+        newThr = (int) (DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+    &#125;
+    if (newThr == 0) &#123;
+        float ft = (float) newCap * loadFactor;
+        newThr = (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; ft &lt; (float) MAXIMUM_CAPACITY ? (int) ft : Integer.MAX_VALUE);
+    &#125;
+    threshold = newThr;
+    @SuppressWarnings(&#123;&quot;rawtypes&quot;, &quot;unchecked&quot;&#125;)
+    HashMap.Node&lt;K, V&gt;[] newTab = (HashMap.Node&lt;K, V&gt;[]) new HashMap.Node[newCap];
+    table = newTab;
+    if (oldTab != null) &#123;
+        for (int j = 0; j &lt; oldCap; ++j) &#123;
+            HashMap.Node&lt;K, V&gt; e;
+            if ((e = oldTab[j]) != null) &#123;
+                oldTab[j] = null;
+                if (e.next == null)
+                    newTab[e.hash &amp; (newCap - 1)] = e;
+                else if (e instanceof HashMap.TreeNode)
+                    ((HashMap.TreeNode&lt;K, V&gt;) e).split(this, newTab, j, oldCap);
+                else &#123; // preserve order
+                    HashMap.Node&lt;K, V&gt; loHead = null, loTail = null;
+                    HashMap.Node&lt;K, V&gt; hiHead = null, hiTail = null;
+                    HashMap.Node&lt;K, V&gt; next;
+                    do &#123;
+                        next = e.next;
+                        if ((e.hash &amp; oldCap) == 0) &#123;
+                            if (loTail == null)
+                                loHead = e;
+                            else
+                                loTail.next = e;
+                            loTail = e;
+                        &#125; else &#123;
+                            if (hiTail == null)
+                                hiHead = e;
+                            else
+                                hiTail.next = e;
+                            hiTail = e;
+                        &#125;
+                    &#125; while ((e = next) != null);
+                    if (loTail != null) &#123;
+                        loTail.next = null;
+                        newTab[j] = loHead;
+                    &#125;
+                    if (hiTail != null) &#123;
+                        hiTail.next = null;
+                        newTab[j + oldCap] = hiHead;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    return newTab;
+&#125;
+</code></pre>
+<p><code>resize()</code> 方法的主要作用就是当 table 数组中的元素超过一定的数量后，对 table 数组进行扩容，以便减少 hash 碰撞发生的概率。<br>最前面一大串的 if 、else 判断主要是为了确定两个变量的值 newCap 和 newThr 。newCap 是指扩容后新的 table 数组的长度。newThr 是指新数组的元素超过多少时需要扩容。</p>
+<p>计算的方式分几种场景。第一种 <code>oldCap &gt; 0</code>: 这种是正常扩容，oldTable 已经有元素了，而且元素的数量也达到了扩容的数量。这时 newCap 和 newThr 是原来数值的 2 倍（<code>&lt;&lt;</code> 是右移操作）<br>而且判断了下是否超过了最大值。如果 oldCap 已经大于等于最大值了，那直接把下次扩容的阈值调整到最大就结束了，因为 table 数组已经无法扩容了。</p>
+<p><code>(newCap = oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY </code> 这一行代码很有意思它的执行逻辑是，先将 oldCap 右移一位后的数值赋值给 newCap，然后判断 newCap 是否超过了 MAXIMUM_CAPACITY 。有意思的点在于，它没有关注 newCap 的溢出情况！！这个其实也是 HashMap 的的容量永远都是 2 的整数次幂的原因。因为，把一个2 的整数次幂的数值右移一位后，依然是一个2 的整数次幂，而 MAXIMUM_CAPACITY 就是允许的最大的 2的整数次幂。因为之前已经判断过是否等于 MAXIMUM_CAPACITY 了。所以，oldCap 右移后，最大只能是等于 MAXIMUM_CAPACITY ，不会溢出。而且，当 newCap 等于 MAXIMUM_CAPACITY 是没有对 newThr 赋值的，对 newThr 赋值的逻辑是在下面的 <code>if (newThr == 0)</code> 的地方。</p>
+<p>第二个场景 <code>else if (oldThr &gt; 0) </code> 执行到这个 if 里的情况是，初始化的时候传了 initialCapacity 这个参数。还记得之前初始化时 threshold 的赋值逻辑么？ </p>
+<p><code>this.threshold = tableSizeFor(initialCapacity)</code></p>
+<p>当初始时传了 initialCapacity 参数，在第一次 put 操作时，就会触发首次扩容（或者说初始化 table 数组）。</p>
+<p>这里有个小知识点：我们在平时写代码使用到 HashMap 时，为了提高效率，不让 HashMap 触发扩容，都会指定 HashMap 的容量，比如：</p>
+<pre><code>Map&lt;String, String&gt; map = new HashMap&lt;&gt;(40);
+</code></pre>
+<p>这个时候我们往 Map 里放 5 个元素，应该是只扩容一次即初始化 table 那次。好像没有什么问题。这时因为在第一次初始化时 <code>tableSizeFor</code> 这个参数返回的是大于等于 initialCapacity 的最小的 2 的整数幂的值。比如你传 50，初始化的结果是 64 。而默认的 loadFactor 是 0.75，也就是在元素达到 48 时才会触发扩容。</p>
+<p>但是，如果你给的值是 48 以上的呢? 或者说恰好是 64 的时候。这个时候就会在插入第 49 个元素时再次触发一次扩容。所以，如果你明确的知道元素的容量的话，可以初始化 2 倍元素容量的 HashMap ，这样就不会触发两次扩容了。</p>
+<p>继续往下说，计算好 newCap 和 newThr 的值后，就创建了一个 newTab，然后就是遍历 oldTab 不断的将元素转移到 newTab 里去。</p>
+<p>首先将 oldTab 的引用置为 null，避免内存泄露。然后当前元素会有三种情况：<br>第一种 <code>e.next == null</code> 就是当前位置只有这一个元素，没有发生 hash 冲突。这种最简单，直接放到 newTab 里就可以了。<br>第二种 <code>e instanceof TreeNode</code>，就是发生了 hash 冲突，且已经把链表转成了红黑树的结构了（还记的 putVal 方法么？）。这种就需要按照红黑树的操作，把 e 这个节点从 oldTab 上摘下来，挂到 newTab 上去（有点复杂，已经超过了本文的内容。需要了解的可以搜一下红黑树）。<br>第三种，就是发生了 hash 冲突，但是存储结构还是链表的情况。这种情况如果按照正常的思路的话，无非就是遍历链表，依次将链表的元素放入到 newTab 就好了。但是这样就会有一个问题，就是链表上的元素依然有可能出现 hash 冲突，如果在遍历链表期间多个元素发生了 hash 冲突怎么办呢？</p>
+<p>很显然，从代码上来看，并没有按照我们的思路来。代码逻辑是根据元素的 hash 值将一个链表分成了两个链表。loHead 和 hiHead。等拆分完成后，直接将链表的表头保存到了 newTab 的两个元素里。是不是很神奇？？就好像是在说，扩容前发生了 hash 冲突的元素，那么扩容后也有可能发生 hash 冲突，并且这些元素一定应该放到 newTab[j] 或者是 newTab[j+oldCap] 这两个位置。事实就是这样！！</p>
+<p>其实，你可以写代验证下，扩容前发生 hash 冲突的元素，如果 <code>(e.hash &amp; oldCap) == 0</code> 那么它一定会落在 newTab[j]上，否则一定落在 newTab[j+oldCap] 上。数学就是这么完美~~</p>
+<p>好了，<code>resize()</code>方法到这里就结束了。我们回到 <code>putMapEntries()</code> 方法这里继续往下看。</p>
+<p>再往下，<code>szie()</code> 和 <code>isEmpty()</code> 都没有什么好说的，下面是 <code>get(Object key)</code> 方法，这个是 HashMap 最常用的方法之一。</p>
+<pre><code>    public V get(Object key) &#123;
+        Node&lt;K,V&gt; e;
+        return (e = getNode(hash(key), key)) == null ? null : e.value;
+    &#125;
+</code></pre>
+<p>好像也没有特别复杂，计算 key 的 hash 值，然后通过 <code>getNode</code> 方法获取 node 对象，找不到就返回 null，找到了就返回对应的 value。<code>getNode()</code>方法就在下面。</p>
+<h2 id="8-getNode"><a href="#8-getNode" class="headerlink" title="8. getNode()"></a>8. getNode()</h2><pre><code>    final Node&lt;K,V&gt; getNode(int hash, Object key) &#123;
+        Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; first, e; int n; K k;
+        if ((tab = table) != null &amp;&amp; (n = tab.length) &gt; 0 &amp;&amp;
+            (first = tab[(n - 1) &amp; hash]) != null) &#123;
+            if (first.hash == hash &amp;&amp; // always check first node
+                ((k = first.key) == key || (key != null &amp;&amp; key.equals(k))))
+                return first;
+            if ((e = first.next) != null) &#123;
+                if (first instanceof TreeNode)
+                    return ((TreeNode&lt;K,V&gt;)first).getTreeNode(hash, key);
+                do &#123;
+                    if (e.hash == hash &amp;&amp;
+                        ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+                        return e;
+                &#125; while ((e = e.next) != null);
+            &#125;
+        &#125;
+        return null;
+    &#125;
+</code></pre>
+<p>如果你对 <code>putVal()</code> 方法已经非常熟悉了，其实 <code>getNode()</code> 就非常清晰了。首先判断了 table 是否为空，不为空的话就通过 hash 找对应位置的元，如果对应的位置有值，就判断 key 是否相等。相等直接返回。</p>
+<p>如果不相等，则判断当前位置是否有其他元素，如果是 TreeNode 则从红黑树里找，如果是链表则遍历链表找。</p>
+<p>这里需要注意下，还记得之前我们说过 table 这个变量加了 <code>transient</code> 修饰符么，就是为了不让 table 元素进行序列化。其实是跟<code>hash(key)</code> 这个方法有关系。你可以翻看下<code>hash()</code> 这个方法，里面有这样一段 <code>h = key.hashCode()</code>。这里的 <code>hashCode()</code> 你找到它的定义会发现是下面这样的,</p>
+<pre><code> public native int hashCode();
+</code></pre>
+<p>这是一个本地方法。这个方法在不同的 JVM 上可能会有不同的实现，所以，就有可能出现，序列化前和序列化后的对象 hashCode() 方法返回的值不同。但是在序列化后，HashMap 保存在 table 中的位置没有变，就会出现找不到的情况，这就是 HashMap 中的一些元素不能序列化的原因。</p>
+<p>继续往下就没有什么好说的了，剩下的除了像 <code>clear()、remove()</code> 这种比较简单的方法外，就剩一个最复杂的<strong>treeify</strong>和<strong>untreeify</strong>。这个是 HashMap 里最复杂的部分，都是 <code>TreeNode</code> 里的方法，已经超出了本文的内容。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

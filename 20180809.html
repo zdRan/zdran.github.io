@@ -1,0 +1,406 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Spring Boot,Filter,Git,HttpServletRequestWrapper">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-25.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(八) 整合 Filter</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(八) 整合 Filter
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Filter</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Git</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">HttpServletRequestWrapper</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h1 id="Spring-Boot-学习笔记-八-整合-Filter"><a href="#Spring-Boot-学习笔记-八-整合-Filter" class="headerlink" title="Spring Boot 学习笔记(八) 整合 Filter"></a>Spring Boot 学习笔记(八) 整合 Filter</h1><h2 id="1-创建自定义的-Filter"><a href="#1-创建自定义的-Filter" class="headerlink" title="1. 创建自定义的 Filter"></a>1. 创建自定义的 Filter</h2><p>创建一个 <code>DemoFilter</code></p>
+<pre><code>package com.zdran.springboot.filter;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.*;
+import java.io.IOException;
+
+/**
+ * Create by ranzd on 2018/8/9
+ *
+ * @author cm.zdran@gmail.com
+ */
+public class DemoFilter implements Filter&#123;
+    private Logger logger = LoggerFactory.getLogger(DemoFilter.class);
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException &#123;
+        logger.info(&quot;初始化 DemoFilter &quot;);
+    &#125;
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
+            throws IOException, ServletException &#123;
+        logger.info(&quot;拦截到参数：&#123;&#125;&quot;, servletRequest.getParameterMap());
+        if (true) &#123;
+            filterChain.doFilter(servletRequest,servletResponse);
+        &#125;
+        logger.info(&quot;拦截到参数。请求被拦截&quot;);
+    &#125;
+
+    @Override
+    public void destroy() &#123;
+        logger.info(&quot;销毁 DemoFilter &quot;);
+    &#125;
+&#125;
+</code></pre>
+<p>核心的方法是 <code>doFilter</code>,可以在这个方法内对参数进行校验，通过<code>servletRequest</code>可以获取到请求中的参数。根据参数进行拦截。</p>
+<pre><code>filterChain.doFilter(servletRequest,servletResponse);
+</code></pre>
+<p>如果调用了这行代码说明不拦截这次请求，如果没有调用这行代码，这次请求请求将被拦截。</p>
+<h2 id="2-初始化-Filter"><a href="#2-初始化-Filter" class="headerlink" title="2. 初始化 Filter"></a>2. 初始化 Filter</h2><p>将这个Filter注入到容器中，创建 FilterConfig 类</p>
+<pre><code>@Configuration
+public class FilterConfig &#123;
+    private Logger logger = LoggerFactory.getLogger(FilterConfig.class);
+    @Bean
+    public FilterRegistrationBean xssFilterRegistrationBean() &#123;
+        logger.info(&quot;初始化 DemoFilter 过滤器 Bean&quot;);
+        FilterRegistrationBean&lt;Filter&gt; initXssFilterBean = new FilterRegistrationBean&lt;&gt;();
+        initXssFilterBean.setFilter(new DemoFilter());
+        initXssFilterBean.setOrder(1);
+        initXssFilterBean.setEnabled(true);
+        initXssFilterBean.addUrlPatterns(&quot;/*&quot;);
+        initXssFilterBean.setDispatcherTypes(DispatcherType.REQUEST);
+        return initXssFilterBean;
+    &#125;
+&#125;
+</code></pre>
+<p>setOrder方法可以对这个 Filter 设置一个优先级，这个值越小，越先被执行。尽量不要与其他的 Filter 冲突</p>
+<h2 id="3-HttpServletRequestWrapper-修改参数"><a href="#3-HttpServletRequestWrapper-修改参数" class="headerlink" title="3. HttpServletRequestWrapper 修改参数"></a>3. HttpServletRequestWrapper 修改参数</h2><p>有些时候我们可能需要对参数进行修改，比如XSS过滤，防SQL注入等。这个时候我们可以通过<code>HttpServletRequestWrapper</code> 来对参数进行修改。 创建 <code>DemoHttpServletRequestWrapper</code>。通过重写这个类的一些方法来对参数进行修改。</p>
+<pre><code>package com.zdran.springboot.filter;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.ReadListener;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+import javax.servlet.http.HttpSession;
+import java.io.*;
+import java.util.Map;
+
+/**
+ * Create by ranzd on 2018/8/9
+ *
+ * @author cm.zdran@gmail.com
+ */
+public class DemoHttpServletRequestWrapper extends HttpServletRequestWrapper &#123;
+
+    private Logger logger = LoggerFactory.getLogger(DemoHttpServletRequestWrapper.class);
+
+    public DemoHttpServletRequestWrapper(HttpServletRequest request) &#123;
+        super(request);
+    &#125;
+
+    @Override
+    public String getHeader(String name) &#123;
+        String value = super.getHeader(name);
+        logger.info(&quot;获取 Header 中的参数：&#123;&#125;&quot;, value);
+        return value;
+    &#125;
+
+    @Override
+    public String getParameter(String name) &#123;
+        String value = super.getParameter(name);
+        logger.info(&quot;获取 getParameter 中的参数：&#123;&#125;&quot;, value);
+        return value;
+    &#125;
+
+    @Override
+    public Map&lt;String, String[]&gt; getParameterMap() &#123;
+        Map&lt;String, String[]&gt; map = super.getParameterMap();
+        logger.info(&quot;获取 getParameterMap 中的参数：&#123;&#125;&quot;, map);
+        return map;
+    &#125;
+
+    @Override
+    public HttpSession getSession() &#123;
+        HttpSession session = super.getSession();
+        logger.info(&quot;获取 getCookies 中的cookie：&#123;&#125;&quot;, session);
+        return session;
+    &#125;
+
+    @Override
+    public Object getAttribute(String name) &#123;
+        Object obj = super.getAttribute(name);
+        logger.info(&quot;获取 getCookies 中的cookie：&#123;&#125;&quot;, obj);
+
+        return obj;
+    &#125;
+
+    @Override
+    public String[] getParameterValues(String name) &#123;
+        String[] value = super.getParameterValues(name);
+        logger.info(&quot;获取 getParameter 中的参数：&#123;&#125;&quot;, value);
+        return value;
+    &#125;
+
+    @Override
+    public ServletInputStream getInputStream() throws IOException &#123;
+        BufferedReader br = new BufferedReader(new InputStreamReader(super.getInputStream()));
+        StringBuilder resultBuilder = new StringBuilder();
+        String line;
+        while ((line = br.readLine()) != null) &#123;
+            resultBuilder.append(line);
+        &#125;
+        String result = resultBuilder.toString();
+        logger.info(&quot;获取 getInputStream 中的参数：&#123;&#125;&quot;, result);
+        return new WrappedServletInputStream(new ByteArrayInputStream(result.getBytes()));
+    &#125;
+
+    /**
+     * 读取 RequestBody 中的参数时需要重新再次写入到流中，
+     * 否则在 Controller 中会读取不到参数。
+     */
+    private class WrappedServletInputStream extends ServletInputStream &#123;
+        public void setStream(InputStream stream) &#123;
+            this.stream = stream;
+        &#125;
+
+        private InputStream stream;
+
+        public WrappedServletInputStream(InputStream stream) &#123;
+            this.stream = stream;
+        &#125;
+
+        @Override
+        public int read() throws IOException &#123;
+            return stream.read();
+        &#125;
+
+        @Override
+        public boolean isFinished() &#123;
+            return true;
+        &#125;
+
+        @Override
+        public boolean isReady() &#123;
+            return true;
+        &#125;
+
+        @Override
+        public void setReadListener(ReadListener readListener) &#123;
+
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p><strong>注意：</strong> 在读取 RequestBody中的参数的时候需要用 <code>getInputStream</code> 方法，而且读取结束后，必须再次向该流中写入，否则Controller将读取不到参数。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

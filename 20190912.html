@@ -1,0 +1,408 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,JVM,Java,垃圾收集(GC)">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-6.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>JVM 读书笔记(二) 垃圾收集</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        JVM 读书笔记(二) 垃圾收集
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">JVM</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Java</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">垃圾收集(GC)</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a href="https://zdran.com/20190322.html">JVM 读书笔记(一) 内存划分</a></li>
+<li><a href="https://zdran.com/20190912.html">JVM 读书笔记(二) 垃圾收集</a></li>
+</ul>
+<h2 id="0-引言"><a href="#0-引言" class="headerlink" title="0. 引言"></a>0. 引言</h2><p>Java 的垃圾回收主要是针对 JVM 中的栈区、堆区、常量区进行的一系列的操作，回收(格式化)掉已经不会被使用到的对象占用的内存，合理化的利用内存资源。</p>
+<h2 id="1-对象已死？"><a href="#1-对象已死？" class="headerlink" title="1. 对象已死？"></a>1. 对象已死？</h2><p>想要进行垃圾回收，首先要做的，就是如何判断对象是否已经不再被引用。目前有两种常见的算法。</p>
+<ul>
+<li>引用计数算法</li>
+<li>可达性分析算法</li>
+</ul>
+<p>引用计数算法比较简单。其实就是给对象中添加一个引用计数器，每当有一个地方引用它时，计数器值就加1；当引用失效时，计数器值就减1。如果在某个时间段计数值为 0 ，那说明该对象已经不再被引用，可以被回收。</p>
+<p>但是引用计数算法有一个非常致命的问题，就是它很难解决双向引用(循环引用)的问题。比如，</p>
+<pre><code>
+ObjA objA = new ObjA();
+ObjB objB = new ObjB();
+
+objA.next = objB;
+objB.next = objA;
+
+objA = null;
+objB = null;
+</code></pre>
+<p>这种情况下，objA 和 objB 对象的引用计数都不是 0，但是已经没办法使用 objA 和 objB 的对象了。因为出现循环引用，导致引用计数不为 0 ，无法被 GC。</p>
+<p>由于<strong>引用计数算法</strong>存在这样的问题，目前主流的 JVM 均没有采用这种方式，而是采用的是<strong>可达性分析算法</strong>。</p>
+<p><strong>可达性分析算法</strong>的核心思想是，通过一系列称之为“GC Roots”的对象作为起始节点，通过这些节点搜索所有可达的节点。当发现某些对象不可达，即说明此对象不可用。可以被回收。</p>
+<p>在 Java 中可以作为 GC Roots 的对象包括：</p>
+<ul>
+<li>虚拟机栈中引用的对象</li>
+<li>方法区中类静态属性引用的对象</li>
+<li>方法区中常量引用的对象</li>
+</ul>
+<h2 id="2-finalize-方法"><a href="#2-finalize-方法" class="headerlink" title="2. finalize() 方法"></a>2. finalize() 方法</h2><p>finalize() 方法是在对象被回收之前调用的方法。但是 finalize() 方法的调用具有不确定性。</p>
+<p>当进行完可达性分析之后，某个对象被标记为不可达时，会判断当前对象是否重写了 finalize() 方法，是否已经执行过对象的 finalize() 方法，如果没有覆盖，或者已经执行过，则不再执行，对象将被回收。</p>
+<p>如果有必要执行 finalize() 方法，则会将这个对象放到一个 F-Queue 的低优先级队列里等待执行。之后 GC 将对 F-Queue 中的对象再次进行可达性分析。</p>
+<p>所以，如果对象可以在 finalize() 方法中再次复活，即将自己的 this 指针，重新赋值到某个可达的对象的引用上。</p>
+<p>下面的代码演示了如何在 finalize() 方法中复活对象。（PS:虽然可以这样做，但是一直没有遇到过这样的场景）</p>
+<pre><code>public class MyGC &#123;
+    private static GCTest gcTest = null;
+
+    private static class GCTest&#123;
+        public String name;
+
+        public GCTest(String name) &#123;
+            this.name = name;
+        &#125;
+
+        @Override
+        protected void finalize() throws Throwable &#123;
+            super.finalize();
+            System.out.println(&quot;finalize 被执行&quot;);
+            //将自身的引用赋值到其他可达 GC Roots 上
+            gcTest = this;
+        &#125;
+    &#125;
+    public static void main(String[] args) &#123;
+        gcTest = new GCTest(&quot;myGc&quot;);
+        // GCTest 对象不可达
+        gcTest = null;
+        System.gc();
+
+        //等待 5s
+        try &#123;
+            Thread.sleep(5000);
+        &#125; catch (InterruptedException e) &#123;
+            e.printStackTrace();
+        &#125;
+        //对象可达
+        System.out.println(gcTest.name);
+    &#125;
+&#125;
+</code></pre>
+<p>我们定义了一个 MyGC 类，这个类有一个静态属性，类型是一个内部类（GCTest），GCTest 重写了 finalize() 方法，在 finalize() 方法中进行了自救，将自身的引用赋值到了 外部的属性上。所以在 main 方法中，即便是我们显示的将 gcTest 对象置为 null 但是还是可以引用得到。</p>
+<p>关于对象的引用，在 Java 1.2 之后，对象的引用分为四大类：</p>
+<ul>
+<li><p>强引用（Strong Reference）</p>
+<p>  类似”Object obj&#x3D;new Object()”这类的引用，只要强引用还存在，垃圾收集器永远不会回收掉被引用的对象。</p>
+</li>
+<li><p>软引用（Soft Reference）</p>
+<p>  对于软引用关联着的对象，在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之中进行第二次回收</p>
+</li>
+<li><p>弱引用（Weak Reference）</p>
+<p>  被弱引用关联的对象只能生存到下一次垃圾收集发生之前。当垃圾收集器工作时，无论当前内存是否足够，都会回收掉只被弱引用关联的对象</p>
+</li>
+<li><p>虚引用（Phantom Reference）</p>
+<p>  它是最弱的一种关系。一个对象是否有虚引用的存在，完全不会对其生存时间构成影响，也无法通过虚引用来取得一个对象实例。为一个对象设置虚引用关联的唯一目的就是能在这个对象被收集器回收时收到一个系统通知。</p>
+</li>
+</ul>
+<h2 id="3-垃圾收集算法"><a href="#3-垃圾收集算法" class="headerlink" title="3. 垃圾收集算法"></a>3. 垃圾收集算法</h2><p>常见的垃圾收集算法包括：</p>
+<ul>
+<li>标记-清除算法</li>
+<li>复制算法</li>
+<li>标记-整理算法</li>
+<li>分代收集算法</li>
+</ul>
+<p>JVM 的垃圾收集算法是使用了分代收集算法，复制算法、标记-整理算法。三种算法都有使用。使用分代收集算法，将 JVM 中的内存分为新生代和老年代，新生代采用复制算法收集，而老年代采用的是标记-整理算法。</p>
+<h3 id="3-1-标记-清除算法"><a href="#3-1-标记-清除算法" class="headerlink" title="3.1 标记-清除算法"></a>3.1 标记-清除算法</h3><p>标记-清除算法分为“标记”和“清除”两个阶段，首先通过可达性分析，标记出所有需要回收的对象，然后统一回收所有被标记的对象。</p>
+<p><img src="/images/%E6%A0%87%E8%AE%B0-%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95.png" alt="标记-清除算法"></p>
+<p>标记-清除算法有两个缺陷，一个是效率问题，标记和清除的过程效率都不高，另外一个就是，清除结束后会造成大量的碎片空间。有可能会造成在申请大块内存的时候因为没有足够的连续空间导致再次 GC。</p>
+<h3 id="3-2-复制算法"><a href="#3-2-复制算法" class="headerlink" title="3.2 复制算法"></a>3.2 复制算法</h3><p>为了解决碎片空间的问题，出现了“复制算法”。复制算法的原理是，将内存分成两块，每次申请内存时都使用其中的一块，当内存不够时，将这一块内存中所有存活的复制到另一块上。然后将然后再把已使用的内存整个清理掉。</p>
+<p><img src="/images/%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95.png" alt="复制算法"></p>
+<p>复制算法解决了空间碎片的问题。但是也带来了新的问题。因为每次在申请内存时，都只能使用一半的内存空间。内存利用率严重不足。</p>
+<p>JVM 中新生代采用的就是复制算法进行的GC。针对内存利用率不足的问题做了一些优化。</p>
+<p>IBM公司的专门研究表明，新生代中的对象 98% 是“朝生夕死”的，意思是说，在新生代中，经过一次 GC 之后能够存活下来的对象仅有 2% 左右。</p>
+<p>所以并不需要按照1:1的比例划分出两块内存空间。而是将内存划分出三块，一块较大的 Eden 区，和两块较小的 Survivor 区。其中 Eden 区占 80% 的内存，两块 Survivor 各占 10% 的内存。在创建新的对象时，只使用 Eden 区和其中的一块 Survivor 区，当进行 GC 时，把 Eden 区和 Survivor 区存活的对象全部复制到另一块 Survivor 区中，然后清理掉 Eden 区和刚刚用过的 Survivor 区。</p>
+<p>这种内存的划分方式就解决了内存利用率的问题，每次在创建对象时，可用的内存为 90%(80% + 10%) 当前内存容量。</p>
+<h3 id="3-3-标记-整理算法"><a href="#3-3-标记-整理算法" class="headerlink" title="3.3 标记-整理算法"></a>3.3 标记-整理算法</h3><p>复制算法在 GC 之后存活对象较少的情况下效率比较高，但如果存活对象比较多时，会执行较多的复制操作，效率就会下降。而老年代的对象在 GC 之后的存活率就比较高，所以就有人提出了“标记-整理算法”。</p>
+<p>标记-整理算法的“标记”过程与“标记-清除算法”的标记过程一致，但标记之后不会直接清理。而是将所有存活对象都移动到内存的一端。移动结束后直接清理掉剩余部分。</p>
+<p><img src="/images/%E6%A0%87%E8%AE%B0-%E6%95%B4%E7%90%86%E7%AE%97%E6%B3%95.png" alt="标记-整理算法"></p>
+<h3 id="3-4-分代收集算法"><a href="#3-4-分代收集算法" class="headerlink" title="3.4 分代收集算法"></a>3.4 分代收集算法</h3><p>分代收集是将内存划分成了新生代和老年代。分配的依据是对象的生存周期，或者说经历过的 GC 次数。对象创建时，一般在新生代申请内存，当经历一次 GC 之后如果对还存活，那么对象的年龄 +1。当年龄超过一定值(默认是 15，可以通过参数 -XX:MaxTenuringThreshold 来设定)后，如果对象还存活，那么该对象会进入老年代。</p>
+<h2 id="4-GC算法实现"><a href="#4-GC算法实现" class="headerlink" title="4. GC算法实现"></a>4. GC算法实现</h2><h3 id="4-1-OopMap"><a href="#4-1-OopMap" class="headerlink" title="4.1 OopMap"></a>4.1 OopMap</h3><p>在进行可达性分析时，我们需要分析内存中所有对象的引用关系，找到不可达的对象，并标记为可回收。而在程序的运行过程中，内存中对象的引用关系是在不断变化的，这就有可能在我们分析可达性的这段时间内，对象的引用关系发生变化。所以，为了准确的分析出对象的引用关系，JVM 不得不停止所有 Java 的执行线程（Sun 将这个过程称之为 “Stop The World”）。即使是在号称（几乎）不会发生 STW 的 CMS 收集器中，在枚举根节点时，也会发生停顿。</p>
+<p>在可达性分析时另外一个问题是，内存中的对象太多，如果要逐个检查对象的引用关系，会非常耗时。为了解决这个问题，在 HotSpot 虚拟机中，使用了一组 OopMap 的数据结构来记录对象内的偏移量上的类型，在 JIT 编译过程也会在特定位置记录下栈和寄存器中哪些位置是对象的引用。在发生 GC 时就可以直接扫描 OopMap 就可以直接得到对象的引用信息了。</p>
+<h3 id="4-2-Safepoint"><a href="#4-2-Safepoint" class="headerlink" title="4.2 Safepoint"></a>4.2 Safepoint</h3><p>其实就是使用 OopMap 把对象的引用关系保存了下来，但是这样就引发了另外一个问题。可能导致 OopMap 内容变化的指令非常多，我们不能为每个指令都创建一个 OopMap，这样 GC 的空间成本会提高。</p>
+<p>所以 JVM 做了一种改进，<strong>只在程序运行期间的某些特定的位置记录 OopMap</strong>，这些特定的位置被称为“安全点（Safepoint）”。这样就解决了 OopMap 随时变化的问题，JVM 不再实时的关注内存中引用关系的变化，而是在安全点处获取当前的内存引用关系。</p>
+<p>安全点的选定，即不能太少，导致 GC 等待时间太长，也不能太频繁，会导致频繁的 GC。最好是选定在某些执行时间比较长的指令处，比如方法调用、循环跳转、异常跳转等。</p>
+<p>由于安全点不能随意选定，所以带来的新的问题是，在 GC 发生时，如何让所有的线程都运行到安全点的位置。<br>有一种称为“主动式中断（Voluntary Suspension）”的方式，它的基本原理是，当 GC 发生时，设置一个标志。所有的线程当运行到安全点的位置时，访问这个标志，如果为真则自己中断挂起。目前绝大多数 JVM 都是采用的这种方式。</p>
+<p>还有另外一种几乎没有被采用过的“抢先式中断（Preemptive Suspension）”的方式。这种方式是，当 GC 发生时，中断所有线程，如果发现有线程不在安全点上，会再次恢复线程的运行，让它运行到安全点的位置再次中断。</p>
+<h3 id="4-3-Safe-Region"><a href="#4-3-Safe-Region" class="headerlink" title="4.3 Safe Region"></a>4.3 Safe Region</h3><p>使用安全点似乎已经解决了绝大部分问题，但是还有一个比较小的特例。比如，当某个线程处于 Sleep 或者 Blocked 状态时，不能够访问 GC 设置的标志，也没办法运行到安全点的位置（因为 Sleep 的线程无法运行）。而且，JVM 也不太可能等着这个线程恢复执行，运行到安全点的时候再次 GC。这种情况下当前 GC 就没办法执行。</p>
+<p>这种情况下就需要使用“安全区域（Safe Region）”来解决。安全区域是指在一段代码片段之中，引用关系不会发生变化，在这段区域内随时都可以进行 GC。当代码执行到安全区域后，会标识自己进入到了安全区域，这样在进行 GC 时，JVM 就不需要处理这些处于安全区域内的线程了。当线程将要离开安全区域时，会去判断是否已经完成 GC，如果没有完成就中断自己，直到收到可以离开安全区域的信号，才可以继续执行。</p>
+<h2 id="5-垃圾收集器"><a href="#5-垃圾收集器" class="headerlink" title="5. 垃圾收集器"></a>5. 垃圾收集器</h2><p>垃圾收集算法就像是 Java 中的接口一样，而垃圾收集器是接口的具体实现。所以，不同的厂商，不同版本的虚拟机实现的方式都有所不同。甚至是很大的差别。</p>
+<p>下图是常见的 HotSpot 虚拟机中的垃圾收集器。</p>
+<p><img src="/images/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.png" alt="垃圾收集器"></p>
+<p>其中，新生代有 Serial、ParNew、Parallel Scavenge，老年代包括 CMS、MSC、Parallel old，收集器之间的连线说明两者可以搭配使用。</p>
+<h3 id="5-1-Serial-收集器"><a href="#5-1-Serial-收集器" class="headerlink" title="5.1 Serial 收集器"></a>5.1 Serial 收集器</h3><p>Serial 是最基本，历史最悠久，也是最简单的一个收集器。它是一个单线程的收集器。当它开始进行垃圾回收时，必须暂停其他所有工作线程，直到收集结束。虽然在垃圾回收时会发生“Stop The World”导致用户体验不佳，但是 Serial 收集器还是有优点的，<strong>在单CPU环境下</strong> Serial 收集器由于没有线程操作的开销，只做垃圾收集，所以效率远高于其他收集器。</p>
+<h3 id="5-2-ParNew-收集器"><a href="#5-2-ParNew-收集器" class="headerlink" title="5.2 ParNew 收集器"></a>5.2 ParNew 收集器</h3><p>ParNew 收集器是 Serial 收集器的一个并行版本，与 Serial 的区别在于 STW 期间并行进行垃圾收集。它是大多数 Server 模式下新生代首选的收集器，一个比较重要的原因是，目前只有 ParNew 和 Serial 能与老年代的 CMS 收集器使用。也就是说如果老年代的收集器你选择了 CMS 新生代的收集器就只能从这两者中选择一个。</p>
+<p>需要注意的是，<strong>在单CPC环境中</strong>，由于 ParNew 收集器存在与线程交互的开销，所以效率一定没有 Serial 收集器高。<br>甚至在两个 CPU 的情况下都不能百分之百的保证可以高于 Serial。当然，随着 CPU 的数量增多， ParNew 收集器的性能会越来越好。</p>
+<h3 id="5-3-Parallel-Scavenge-收集器"><a href="#5-3-Parallel-Scavenge-收集器" class="headerlink" title="5.3 Parallel Scavenge 收集器"></a>5.3 Parallel Scavenge 收集器</h3><p>Parallel Scavenge 收集器是新生代的收集器，采用的是复制算法，并行收集。功能和 ParNew 很类似。其他收集器的关注点都是如何尽可能的缩短 STW 的时间，而 Parallel Scavenge 收集器的目标是控制 STW 占用时间的百分比。这个百分比称为吞吐量。其实就是 用户代码的执行时间与CPU的总执行时间的比值。比如，JVM 总共运行了 100 分钟，而 GC 用了 2 分钟，那么吞吐量就是 98%（ 98&#x2F;(98+2) ）。使用 Parallel Scavenge 收集器，你可以通过“-XX:GCTimeRatio“参数设置吞吐量的大小。</p>
+<p>GCTimeRatio 参数的值是一个（0，100）闭区间的整数值，含义是垃圾收集时间的占比。相当于吞吐量的倒数。默认值时 99，即最大允许 1%（ 1&#x2F;(1+99)，的时间用来做垃圾收集。</p>
+<p>还可以通过”-XX:MaxGCPauseMillis“ 参数设置每次 GC 的周期，收集器将<strong>尽可能的</strong>保证垃圾收集的时间不超过该值。不过，不要认为将该值设置的稍微小一点就能使得 GC 的时间更快。GC 的停顿时间是通过牺牲新生代的空间来换来的。新生代空间小了，有可能导致 GC 的次数增多，总体算下来吞吐量有可能不增反减。</p>
+<h3 id="5-4-Serial-Old-收集器"><a href="#5-4-Serial-Old-收集器" class="headerlink" title="5.4 Serial Old 收集器"></a>5.4 Serial Old 收集器</h3><p>Serial Old 收集器是 Serial 收集器的老年代版本，同样是单线程的，使用的是”标记-整理算法“。它的两个主要用途是，一个用于 Client 端。另一个是在 Server 端用于 CMS 收集器的后备预案（详见 CMS 收集器）。</p>
+<h3 id="5-5-Parallel-Old收集器"><a href="#5-5-Parallel-Old收集器" class="headerlink" title="5.5 Parallel Old收集器"></a>5.5 Parallel Old收集器</h3><p>同样，Parallel Old 是 Parallel Scavenge 收集器的老年代版本，使用多线程和“标记-整理”算法”。需要注意的是，如果老年代使用 Parallel Old 那么新生代就只能使用 Parallel Scavenge 与之配合。在某些吞吐量优先的场景下可以考虑这种组合。</p>
+<h3 id="5-6-CMS-收集器"><a href="#5-6-CMS-收集器" class="headerlink" title="5.6 CMS 收集器"></a>5.6 CMS 收集器</h3><p>重头戏来了。CMS（Concurrent Mark Sweep）收集器是一种以获取最短回收停顿时间为目标的收集器。它是一种多线程的”标记-清除算法“收集器。目前主流 Java 应用的服务器端使用的都是这种收集器，在尤其重视服务的相应速度的场景下可以考虑使用 CMS 收集器。</p>
+<p>CMS 的收集过程主要有下面四个步骤：</p>
+<ul>
+<li><p>初始标记（CMS initial mark）</p>
+<p>  初始标记主要是枚举根节点，这一步需要 STW。不过这一步仅仅标记 GC Roots，所以时间很短。</p>
+</li>
+<li><p>并发标记（CMS concurrent mark）</p>
+<p>  并发标记阶段主要进行可达性分析，这一步不需要 STW，所以 GC 线程是与用户线程并行的。</p>
+</li>
+<li><p>重新标记（CMS remark）</p>
+<p>  这已阶段主要是修正并发标记时对象的引用关系发生变化的部分。需要 STW，时间也比初始标记阶段长一点。幸运的是这一过程是多线程并行的。</p>
+</li>
+<li><p>并发清除（CMS concurrent sweep）</p>
+<p>  清除标记的对象，这一步也不需要 STW，GC 线程与用户线程是并行的。</p>
+</li>
+</ul>
+<p><img src="/images/CMS-%E6%94%B6%E9%9B%86%E5%99%A8.png" alt="CMS-收集器"></p>
+<p>CMS 收集器虽然通过并发的技术，降低了用户线程的停顿时间，但是也有一些不足。比如最明显的一个缺点就是，它使用的是”标记-清除算法“，如果你还记得这种算法，就应该知道，它有一个最明显的问题就是会产生大量的内存碎片。往往老年代明明有很大的空间，但是无法找到连续的空间分配对象，不得不提前触发 Full GC。</p>
+<p>为了解决这个问题， CMS 提供了 -XX:+UseCMSCompactAtFullCollection 开关参数（默认开启）用于开启内存碎片的整理过程，遗憾的是，这个整理过程依然需要 STW，内存碎片没有了，但是停顿时间也变长了。JVM 还提供了另外一个参数 -XX:CMSFullGCsBeforeCompaction 这个参数可以设置一个整数值，表示执行多少次 Full GC 后进行一次碎片整理，默认为 0 (表示每次 Full GC 时都会进行碎片整理)。</p>
+<p>由于 CMS 收集器是与用户线程并行的，所以带来的另一个问题就是占用了部分 CPU 的资源，导致应用程序变慢。目前，CMS 默认启动的回收线程数是（CPU数量+3）&#x2F;4，也就是说，如果你的 CPU 个数 小于 4，可能对用户线程影响较大。但是对于大型的 Java 应用程序部署的服务器，动辄十几甚至几十个 CPU 来说，这个问题带来的影响越来越小。</p>
+<p>CMS 最后一个问题出现在并发清理的过程。由于程序是一直在运行，所以在清理过程中也会产生垃圾。这部分垃圾出现在标记之后，所以没办法在这一次的 GC 过程中清理掉，只能留在下次 GC 时清理。</p>
+<p>由于在垃圾收集阶段，有用户线程在运行，所以不能等到老年代的内存被填满之后再进行 GC,需要剩余一部分空间用于在 GC 期间的对象创建。可以通过 -XX:CMSInitiatingOccupancyFraction 参数来设置一个百分比，当老年代的使用率达到多少时触发 GC，默认值是 92%，就是说当老年代的使用率超过这个值就会触发 GC。</p>
+<p>如果在 GC 期间，剩余的内存不足以满足用户线程的需要，那么就会发生“Concurrent Mode Failure”失败，这时 JVM 就会临时启用 Serial Old 收集器来做垃圾收集，同时，STW 的停顿时间也会变长。所以，如果 CMSInitiatingOccupancyFraction 参数设置的过高就会触发大量的”Concurrent Mode Failure“出现。</p>
+<h3 id="5-7-G1-收集器"><a href="#5-7-G1-收集器" class="headerlink" title="5.7 G1 收集器"></a>5.7 G1 收集器</h3><p>G1 收集器是面向服务端的一款垃圾收集器。其设计目标是为了取代 CMS 收集器的。G1 收集器有内存整理的过程，所以不会产生内存碎片，而且 STW 的停顿时间更加可控，G1 收集器添加了预测机制，用户可以指定停顿时间。</p>
+<h3 id="5-7-1-Region"><a href="#5-7-1-Region" class="headerlink" title="5.7.1 Region"></a>5.7.1 Region</h3><p>在传统的垃圾收集器中，新生代和老年代的内存是连续的。而在 G1 收集器虽然保留了新生代和老年代，但是他们的内存可以是不连续的。G1 收集器把内存划分为一个个的 Region，新生代和老年代由许多不连续的 Region 组成。</p>
+<p><img src="/images/G1%E5%86%85%E5%AD%98%E5%88%92%E5%88%86.png" alt="G1内存划分"></p>
+<center>图片来源:https://tech.meituan.com/2016/09/23/g1.html</center>
+
+<p>可以看到，虽然保留了新生代和老年代的概念，但是二者之间不再是物理隔离了。而是由不同的 Region 构成。在 G1 收集器之前的其他收集器都是在整个新生代，或者老年代范围内进行垃圾收集，G1 收集器则是在 Region 内进行。G1 收集器会维护一个优先列表，根据回收时间，优先回收价值最大的 Region。G1 收集器的内存碎片整理也是在两个不同的 Region 之间通过”复制“算法进行的。</p>
+<p>可以通过 -XX:G1HeapRegionSize设定一个 Region 的大小，取值范围从1M到32M，且是2的指数。</p>
+<h3 id="5-7-2-Remembered-Set"><a href="#5-7-2-Remembered-Set" class="headerlink" title="5.7.2 Remembered Set"></a>5.7.2 Remembered Set</h3><p>我们之前说过 GC 是发生在新生代或者是老年代的。但是在进行可达性分析时，我们似乎有意避开了一个特殊的情况。如果老年代的对象引用了新生代的对象，那么在进行 新生代的 GC 时，我们需要进行整个老年代的扫描，获取引用关系，停顿时间将大大提高。</p>
+<p>其实 JVM 并没有在新生代 GC 时扫描整个老年代。而是利用了空间换时间的办法。JVM 使用了一种叫卡表(Card Table)的数据结构来记录老年代对象到新生代的引用，当一个对象的引用关系发生改变时，首先去更新这张表（这个动作称为 Write Barrier 或者叫写屏障）。这样，在新生代进行 GC 时可以扫描这张表获取引用关系，而不必扫描整个老年代。</p>
+<p>同样的问题，在 G1 收集器里也会出现。如果出现跨 Region 之间的引用关系，就需要扫描所有的 Region 了。与卡表类似，在 G1 收集器里出现了 Remembered Set，它的主要功能就是解决跨 Region 的引用问题。在 G1 中每一个 Region 都有一个与之对应的 Remembered Set，在进行引用类型的写操作时，同样会产生写屏障，然后会检查是否属于两个不同的 Region，如果是的话，会将卡表里的信息同步到对应的 Remembered Set 中，同样在进行 GC 时，只要扫描 Remembered Set 就可以了。</p>
+<h3 id="5-7-3-GC-过程"><a href="#5-7-3-GC-过程" class="headerlink" title="5.7.3 GC 过程"></a>5.7.3 GC 过程</h3><p>G1 的收集过程与 CMS 很相似。主要分为 4 个步骤：</p>
+<ul>
+<li><p>初始标记（Initial Marking）</p>
+<p>  初始阶段标记 GC Roots 能直接关联到的对象。这一阶段需要停顿线程，但是耗时较短。</p>
+</li>
+<li><p>并发标记（Concurrent Marking）  </p>
+<p>  这一阶段是进行对象的可达性分析。耗时较长，但是可以与用户线程并行。</p>
+</li>
+<li><p>最终标记（Final Marking）</p>
+<p>  同样，这一阶段是为了修正在并发标记时用户线程变更的内容。其实是 JVM 把并发标记阶段的变更都记录在了 Remembered Set Logs 里，在这一阶段只要把 Remembered Set Logs 的数据合并到 Remembered Set 里就可以了。这一阶段需要停顿线程，但是可以并行标记。</p>
+</li>
+<li><p>筛选回收（Live Data Counting and Evacuation）</p>
+<p>  这一阶段首先对各个 Region 进行排序，然后根据设定的停顿时间来定制回收计划。最后进行垃圾回收。</p>
+</li>
+</ul>
+<p><img src="/images/G1%E6%94%B6%E9%9B%86%E5%99%A8.png" alt="G1收集器"></p>
+<h2 id="6-GC-日志"><a href="#6-GC-日志" class="headerlink" title="6. GC 日志"></a>6. GC 日志</h2><p>每一种 GC 收集器都有自己的日志格式，但是 JVM 的设计者为了方便阅读，将收集器的日志维持了一些共性。例如下面这段日志：</p>
+<pre><code>33.125:[GC[DefNew:3324K-＞152K（3712K），0.0025925 secs]3324K-＞152K（11904K），0.0031680 secs]
+100.667:[Full GC[Tenured:0 K-＞210K（10240K），0.0149142secs]4603K-＞210K（19456K），[Perm:2999K-＞2999K（21248K）]，0.0150007 secs][Times:user=0.01 sys=0.00，real=0.02 secs]
+</code></pre>
+<ol>
+<li><p>GC 与 Full GC</p>
+<p> Full GC 代表的是存在 STW ，GC 代表不存在 STW</p>
+</li>
+<li><p>DefNew、Tenured，Perm</p>
+<p> 表示 GC 发生的区域，与使用的 GC 收集器有关。Serial 收集器的新生代是”DefNew“，ParNew 收集器的新生代是”ParNew“，Parallel Scavenge 的新生代是”PSYoungGen“。同样，老年代也有不同的名字。</p>
+</li>
+<li><p>3324K-＞152K（11904K）</p>
+<p> 经过这次 GC 之后，该区域内存的变化，括号内的值是该区域的总内存大小。</p>
+</li>
+<li><p>0.0031680 secs</p>
+<p> 这次 GC 的耗时。</p>
+</li>
+</ol>
+<p>其实，有许多可视化的工具可以很好的分析 GC 日志，比如 GChisto、GC Easy等，大部分时间是不需要我们直接阅读 GC 日志的。</p>
+<h2 id="7-参考"><a href="#7-参考" class="headerlink" title="7. 参考"></a>7. 参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/24722612/">深入理解Java虚拟机（第2版）</a></li>
+<li><a target="_blank" rel="noopener" href="https://tech.meituan.com/2016/09/23/g1.html">Java Hotspot G1 GC的一些关键技术</a></li>
+</ul>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

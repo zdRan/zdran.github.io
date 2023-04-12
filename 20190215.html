@@ -1,0 +1,338 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Flutter,Container">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-26.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Flutter 学习笔记(二) Container 组件</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Flutter 学习笔记(二) Container 组件
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Flutter</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Container</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Flutter 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180625.html">Flutter 学习笔记(零) 搭建 Flutter 环境</a></li>
+<li><a href="https://zdran.com/20190214.html">Flutter 学习笔记(一) Text 组件</a></li>
+<li><a href="https://zdran.com/20190215.html">Flutter 学习笔记(二) Container 组件</a></li>
+</ul>
+<h2 id="1-Container-组件简介"><a href="#1-Container-组件简介" class="headerlink" title="1. Container 组件简介"></a>1. Container 组件简介</h2><pre><code>一个拥有绘制、定位、调整大小的 widget。是一个容器组件，内部可以包含其他的 widget
+</code></pre>
+<h2 id="2-Container-属性"><a href="#2-Container-属性" class="headerlink" title="2. Container 属性"></a>2. Container 属性</h2><h3 id="2-1-alignment-属性"><a href="#2-1-alignment-属性" class="headerlink" title="2.1 alignment 属性"></a>2.1 alignment 属性</h3><pre><code>容器内的组件在容器内的对齐方式。可选值有：
+</code></pre>
+<ul>
+<li><p>Alignment.topLeft、 Alignment.topCenter、 Alignment.topRight</p>
+<p>  顶部左对齐，居中，右对齐</p>
+</li>
+<li><p>Alignment.centerLeft、 Alignment.center Alignment.centerRight</p>
+<p>  中部左对齐，居中，右对齐</p>
+</li>
+<li><p>Alignment.bottomLeft、 Alignment.bottomCenter、 Alignment.bottomRight</p>
+<p>  底部左对齐，居中，右对齐</p>
+</li>
+</ul>
+<h3 id="2-2-constraints-属性"><a href="#2-2-constraints-属性" class="headerlink" title="2.2 constraints 属性"></a>2.2 constraints 属性</h3><pre><code>限制子节点的宽高。属性是一个 BoxConstraints 对象
+</code></pre>
+<h3 id="2-3-color-属性"><a href="#2-3-color-属性" class="headerlink" title="2.3 color 属性"></a>2.3 color 属性</h3><pre><code>设置容器的背景色
+</code></pre>
+<h3 id="2-4-decoration"><a href="#2-4-decoration" class="headerlink" title="2.4 decoration"></a>2.4 decoration</h3><pre><code>在子节点下方装饰。可以设置边框。设置背景色
+
+当设置边框后,子节点会自动调整位置。
+
+属性是一个 Decoration 对象.
+</code></pre>
+<p><strong>PS:这个属性跟 color 值冲突,必须有一个值为空</strong></p>
+<h3 id="2-5-foregroundDecoration"><a href="#2-5-foregroundDecoration" class="headerlink" title="2.5 foregroundDecoration"></a>2.5 foregroundDecoration</h3><pre><code>在子节点上方设置装饰,比如边框,背景色。
+
+当设置边框后,子节点不会调整位置,有可能会被边框覆盖。
+</code></pre>
+<h3 id="2-6-padding-与-margin"><a href="#2-6-padding-与-margin" class="headerlink" title="2.6 padding 与 margin"></a>2.6 padding 与 margin</h3><pre><code>内边距和外边距,参见 HTML 的盒子模型
+
+属性是一个 EdgeInsetsGeometry 对象
+</code></pre>
+<h2 id="3-Decoration"><a href="#3-Decoration" class="headerlink" title="3 Decoration"></a>3 Decoration</h2><pre><code>设置容器组件的装饰.因为这是一个抽象类,不能直接使用,可以使用它的子类 BoxDecoration
+</code></pre>
+<h3 id="3-1-color"><a href="#3-1-color" class="headerlink" title="3.1 color"></a>3.1 color</h3><pre><code>设置容器的背景色。所以这个属性与 Container 组件的 color 属性冲突.
+</code></pre>
+<h3 id="3-2-image"><a href="#3-2-image" class="headerlink" title="3.2 image"></a>3.2 image</h3><pre><code>设置字体颜设置背景图片
+</code></pre>
+<h3 id="3-3-border"><a href="#3-3-border" class="headerlink" title="3.3 border"></a>3.3 border</h3><pre><code>设置边框。属性是一个 Border 对象,可以设置上下左右四个方向的边框的宽度和颜色.
+</code></pre>
+<h3 id="3-4-gradient"><a href="#3-4-gradient" class="headerlink" title="3.4 gradient"></a>3.4 gradient</h3><pre><code>填充背景色时使用的渐变方式。有三个取值
+</code></pre>
+<ul>
+<li><p>LinearGradient</p>
+<p>  线性渐变,设置起始位置和渐变色集合</p>
+</li>
+<li><p>RadialGradient</p>
+<p>  放射见便,以中心为原点向外发散渐变,可以设置发散的半径</p>
+</li>
+<li><p>SweepGradient</p>
+<p> 扫描渐变,以水平x轴正向方向为起点,扫描到指定的角度。</p>
+<p> 可以设置起始角度,结束角度,中心点。</p>
+</li>
+</ul>
+<p><strong>PS: 角度的单位是弧度,不是度</strong><br><strong>PS: 这里有个小问题,设置的起始角度有可能不生效!!</strong><br><a target="_blank" rel="noopener" href="https://github.com/flutter/flutter/issues/23648">参考 GitHub 上的 issues</a></p>
+<h2 id="4-TextDemo-源码"><a href="#4-TextDemo-源码" class="headerlink" title="4 TextDemo 源码"></a>4 TextDemo 源码</h2><pre><code>import &#39;package:flutter/material.dart&#39;;
+import &#39;ContainerDemo.dart&#39;;
+void main() =&gt; runApp(ContainerDemo());
+
+class ContainerDemo extends StatelessWidget &#123;
+  @override
+  Widget build(BuildContext context) &#123;
+    var boxConstraints = BoxConstraints.expand(height: 311,width: 311);
+    var background = Paint();
+    background.color = Colors.green;
+    var edgeInset =EdgeInsets.only(left: 110,right: 100,bottom: 100,top: 200);
+    var gradColorList =List&lt;Color&gt;();
+    gradColorList.add(Colors.blueAccent);
+    gradColorList.add(Colors.orange);
+    gradColorList.add(Colors.white);
+    gradColorList.add(Colors.white);
+
+    var linear =LinearGradient(
+        colors: gradColorList,
+        begin: Alignment.bottomRight
+    );
+
+    var radial = RadialGradient(
+      colors: gradColorList,
+      radius: 2,
+
+    );
+    var sweep = SweepGradient(
+      colors: gradColorList,
+      //startAngle:,
+      endAngle:7,
+      center: Alignment.center
+    );
+
+    var decoraion = BoxDecoration(
+      color: Colors.pinkAccent,
+      border: Border(
+        top: BorderSide(width: 50,color: Colors.lightGreen),
+        right: BorderSide(width: 20,color: Colors.pink),
+        left: BorderSide(width: 30,color: Colors.teal),
+        bottom:BorderSide(width: 30,color: Colors.lightGreen),
+      ),
+      gradient: sweep
+      );
+
+    
+      return MaterialApp(
+        title: &#39;Container Demo&#39;,
+        home: Scaffold(
+          body: Center(
+            child: Container(
+              child: Text(&#39;hello Container&#39;,style: TextStyle(
+                fontSize: 22,
+                background: background
+                )),
+              constraints:boxConstraints,
+              //color: Colors.blueGrey,
+              //在子节点下方绘制,子节点会调整位置
+              decoration: decoraion,
+              //在子节点上方绘制,子节点不动,可能会被覆盖
+              //foregroundDecoration :decoraion,
+              padding: edgeInset,
+              //margin: edgeInset,
+              alignment: Alignment.bottomCenter,
+            ),
+          ),
+        ),
+      );
+  &#125;
+&#125;
+</code></pre>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

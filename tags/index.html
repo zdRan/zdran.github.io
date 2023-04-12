@@ -1,0 +1,161 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<div id = "tagcloud">
+    <a href="/tags/AOP/" style="font-size: 16px;">AOP</a> <a href="/tags/Android/" style="font-size: 19.8px;">Android</a> <a href="/tags/Aspect/" style="font-size: 16px;">Aspect</a> <a href="/tags/CSS/" style="font-size: 16px;">CSS</a> <a href="/tags/Container/" style="font-size: 16px;">Container</a> <a href="/tags/DesignPattern/" style="font-size: 23.6px;">DesignPattern</a> <a href="/tags/Druid/" style="font-size: 19.8px;">Druid</a> <a href="/tags/Dubbo/" style="font-size: 27.4px;">Dubbo</a> <a href="/tags/Feign/" style="font-size: 16px;">Feign</a> <a href="/tags/Filter/" style="font-size: 19.8px;">Filter</a> <a href="/tags/FindBugs/" style="font-size: 16px;">FindBugs</a> <a href="/tags/Flutter/" style="font-size: 23.6px;">Flutter</a> <a href="/tags/Git/" style="font-size: 23.6px;">Git</a> <a href="/tags/Github/" style="font-size: 19.8px;">Github</a> <a href="/tags/Gradle/" style="font-size: 16px;">Gradle</a> <a href="/tags/Guava/" style="font-size: 16px;">Guava</a> <a href="/tags/Hexo/" style="font-size: 16px;">Hexo</a> <a href="/tags/IDEA/" style="font-size: 19.8px;">IDEA</a> <a href="/tags/JVM/" style="font-size: 19.8px;">JVM</a> <a href="/tags/Java/" style="font-size: 23.6px;">Java</a> <a href="/tags/JedisCluster/" style="font-size: 16px;">JedisCluster</a> <a href="/tags/JedisMovedDataException/" style="font-size: 16px;">JedisMovedDataException</a> <a href="/tags/Jsoup/" style="font-size: 16px;">Jsoup</a> <a href="/tags/LeetCode/" style="font-size: 31.2px;">LeetCode</a> <a href="/tags/Log4j2/" style="font-size: 16px;">Log4j2</a> <a href="/tags/Markdown/" style="font-size: 16px;">Markdown</a> <a href="/tags/Maven/" style="font-size: 19.8px;">Maven</a> <a href="/tags/MyBatis/" style="font-size: 16px;">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 19.8px;">MySQL</a> <a href="/tags/Node/" style="font-size: 16px;">Node</a> <a href="/tags/PageHelper/" style="font-size: 16px;">PageHelper</a> <a href="/tags/Python/" style="font-size: 19.8px;">Python</a> <a href="/tags/RESTful/" style="font-size: 16px;">RESTful</a> <a href="/tags/RPC/" style="font-size: 19.8px;">RPC</a> <a href="/tags/Redis/" style="font-size: 23.6px;">Redis</a> <a href="/tags/SQL/" style="font-size: 16px;">SQL</a> <a href="/tags/Scheduled/" style="font-size: 16px;">Scheduled</a> <a href="/tags/Selenium/" style="font-size: 16px;">Selenium</a> <a href="/tags/SpringBoot/" style="font-size: 35px;">SpringBoot</a> <a href="/tags/SublimeText/" style="font-size: 16px;">SublimeText</a> <a href="/tags/Swagger2/" style="font-size: 16px;">Swagger2</a> <a href="/tags/Text/" style="font-size: 16px;">Text</a> <a href="/tags/ThreadPool/" style="font-size: 16px;">ThreadPool</a> <a href="/tags/Thrift/" style="font-size: 16px;">Thrift</a> <a href="/tags/Thymeleaf/" style="font-size: 16px;">Thymeleaf</a> <a href="/tags/Tomcat/" style="font-size: 16px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 16px;">Ubuntu</a> <a href="/tags/XSS/" style="font-size: 16px;">XSS</a> <a href="/tags/ZooKeeper/" style="font-size: 23.6px;">ZooKeeper</a> <a href="/tags/cron/" style="font-size: 16px;">cron</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 19.8px;">爬虫</a>
+</div> 
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

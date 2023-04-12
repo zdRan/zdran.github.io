@@ -1,0 +1,494 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,ThreadPool">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-15.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>面试笔记（二）线程池连环炮</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        面试笔记（二）线程池连环炮
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">ThreadPool</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="1-实现多线程有几种方式？有什么区别？"><a href="#1-实现多线程有几种方式？有什么区别？" class="headerlink" title="1. 实现多线程有几种方式？有什么区别？"></a>1. 实现多线程有几种方式？有什么区别？</h2><p>实现多线程有3种方式。</p>
+<p>###1.1 继承 Thread 类</p>
+<p>继承 Thread 类，重新 run() 方法。实现代码如下：</p>
+<pre><code>public class ExtendsThread extends Thread&#123;
+    @Override
+    public void run() &#123;
+        System.out.println(&quot;run ExtendsThread&quot;);
+    &#125;
+&#125;
+
+使用线程：
+
+public class LearningThread &#123;
+    public static void main(String[] args) &#123;
+        func1();
+    &#125;
+    public static void func1()&#123;
+        ExtendsThread extendsThread = new ExtendsThread();
+        System.out.println(&quot;run func1&quot;);
+        extendsThread.start();
+        System.out.println(&quot;run func1 end&quot;);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-2-实现-Runnable-接口"><a href="#1-2-实现-Runnable-接口" class="headerlink" title="1.2 实现 Runnable 接口"></a>1.2 实现 Runnable 接口</h3><p>实现 Runnable 接口，实现 run() 方法，通过 Thread 类来开启线程。代码如下：</p>
+<pre><code>public class ImplRunnable implements Runnable &#123;
+    @Override
+    public void run() &#123;
+        System.out.println(&quot;run ImplRunnable&quot;);
+    &#125;
+&#125;
+
+使用线程：
+
+public class LearningThread &#123;
+    public static void main(String[] args) &#123;
+        func2();
+    &#125;
+
+    public static void func2()&#123;
+        ImplRunnable implRunnable = new ImplRunnable();
+        System.out.println(&quot;run func2&quot;);
+        Thread thread = new Thread(implRunnable);
+        thread.start();
+        System.out.println(&quot;run func2 end&quot;);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="1-3-实现-Callable-接口"><a href="#1-3-实现-Callable-接口" class="headerlink" title="1.3 实现 Callable 接口"></a>1.3 实现 Callable 接口</h3><p>实现 Callable 接口，实现 call() 方法。代码如下：</p>
+<pre><code>public class ImplCallable implements Callable&lt;Integer&gt; &#123;
+    @Override
+    public Integer call() throws Exception &#123;
+        return 2020;
+    &#125;
+&#125;
+使用线程：
+
+public class LearningThread &#123;
+    public static void main(String[] args) &#123;
+        func3();
+    &#125;
+
+    public static void func3() throws ExecutionException, InterruptedException &#123;
+        Callable&lt;Integer&gt; integerCallable = new ImplCallable();
+        System.out.println(&quot;run func3&quot;);
+        FutureTask&lt;Integer&gt; futureTask = new FutureTask&lt;&gt;(integerCallable);
+        Thread thread = new Thread(futureTask);
+        thread.start();
+        System.out.println(&quot;run func3 end&quot;);
+        System.out.println(&quot;futureTask.get = &quot; + futureTask.get());
+    &#125;
+&#125;
+</code></pre>
+<p>这三种方式都可以实现多线程，第一种由于 Java 的单继承，不建议使用。至于实现 Runnable 接口，与实现 Callable 接口，的区别是，实现 Callable 接口后通过 futureTask.get() 方法可以获取线程内的执行结果。而 Runnable 是没有返回值的。</p>
+<h2 id="2-为什么要用线程池？"><a href="#2-为什么要用线程池？" class="headerlink" title="2. 为什么要用线程池？"></a>2. 为什么要用线程池？</h2><p>线程池主要是为了减少每次创建线程时的资源消耗，重复利用创建好的线程，提高资源利用率。使用线程池由于减少了线程创建的过程，在每次接到请求时可以及时响应，提高响应速度。通过线程池统一管理线程，方便线程的分配，调优和监控。</p>
+<h2 id="3-创建线程池的时候有哪些参数？"><a href="#3-创建线程池的时候有哪些参数？" class="headerlink" title="3. 创建线程池的时候有哪些参数？"></a>3. 创建线程池的时候有哪些参数？</h2><p>在 Java 源码中，创建线程池的构造方法最多有 7 个参数。</p>
+<pre><code>public ThreadPoolExecutor(int corePoolSize,
+                          int maximumPoolSize,
+                          long keepAliveTime,
+                          TimeUnit unit,
+                          BlockingQueue&lt;Runnable&gt; workQueue,
+                          ThreadFactory threadFactory,
+                          RejectedExecutionHandler handler)
+</code></pre>
+<ul>
+<li>corePoolSize: 核心线程数，线程池的工作线程数量。</li>
+<li>maximumPoolSize: 最大线程数，线程池中可以存活的最多的线程数量。当队列满了之后，会启用非核心线程，此时的线程池的大小变为最大线程数。</li>
+<li>keepAliveTime: 非核心线程如果没有任务的话，可以存活的时间。</li>
+<li>unit: 非核心线程存活时间的单位。</li>
+<li>workQueue: 工作队列。当线程池中的线程达到 corePoolSize ,如果再来任务，就会放到工作队列里。</li>
+<li>threadFactory: 线程工厂,线程池创建线程时使用的工厂。</li>
+<li>handler：拒绝策略。如果线程池的线程达到了 maximumPoolSize ,如果再来任务，则执行拒绝策略。</li>
+</ul>
+<h2 id="4-线程池是如何工作的？"><a href="#4-线程池是如何工作的？" class="headerlink" title="4. 线程池是如何工作的？"></a>4. 线程池是如何工作的？</h2><p>当有任务提交到线程池时，首先启动核心线程。随着任务的增加，当核心线程用完之后，再次提交的线程将会进入工作队列。当工作队列满了之后，如果再次提交到线程池任务，将会判断，核心线程数是否小于最大线程数，如果小于，将会启用非核心线程，当工作的线程达到最大线程数后，如果还继续提交任务到线程池，则会执行拒绝策略来拒绝任务。</p>
+<h2 id="5-常见的拒绝策略有哪些？"><a href="#5-常见的拒绝策略有哪些？" class="headerlink" title="5. 常见的拒绝策略有哪些？"></a>5. 常见的拒绝策略有哪些？</h2><p>JDK 自带了 4 种拒绝策略。</p>
+<h3 id="5-1-AbortPolicy"><a href="#5-1-AbortPolicy" class="headerlink" title="5.1 AbortPolicy"></a>5.1 AbortPolicy</h3><p>直接丢弃任务，抛出 RejectedExecutionException</p>
+<pre><code>public class ThreadPoolRunnable implements Runnable &#123;
+    private int number = 0;
+
+    public ThreadPoolRunnable(int number) &#123;
+        this.number = number;
+    &#125;
+
+    @Override
+    public void run() &#123;
+        System.out.println(&quot;run &quot;+Thread.currentThread().getName()+&quot;, number = &quot; + number);
+        try &#123;
+            Thread.sleep(3000);
+        &#125; catch (InterruptedException e) &#123;
+            e.printStackTrace();
+        &#125;
+    &#125;
+&#125;
+
+使用线程池：
+
+    public static void func4()&#123;
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,3,10,
+                TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(1), new ThreadPoolExecutor.AbortPolicy());
+
+        for (int i = 0; i &lt; 7; i++) &#123;
+            Runnable runnable = new ThreadPoolRunnable(i);
+            executor.execute(runnable);
+        &#125;
+        executor.shutdown();
+    &#125;
+
+执行结果：
+
+run pool-1-thread-1, number = 0
+run pool-1-thread-3, number = 3
+run pool-1-thread-2, number = 1
+Exception in thread &quot;main&quot; java.util.concurrent.RejectedExecutionException: Task com.learning.thread.ThreadPoolRunnable@1d44bcfa rejected from java.util.concurrent.ThreadPoolExecutor@266474c2[Running, pool size = 3, active threads = 3, queued tasks = 1, completed tasks = 0]
+    at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)
+    at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)
+    at java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)
+    at com.learning.thread.LearningThread.func4(LearningThread.java:45)
+    at com.learning.thread.LearningThread.main(LearningThread.java:11)
+run pool-1-thread-1, number = 2
+</code></pre>
+<p>由于最大线程数是 3 ,队列大小是 1，所以线程池最多可以同时存在 4 个线程，当提交第 5 任务时，主线程抛出异常。</p>
+<h3 id="5-2-CallerRunsPolicy"><a href="#5-2-CallerRunsPolicy" class="headerlink" title="5.2 CallerRunsPolicy"></a>5.2 CallerRunsPolicy</h3><p>调用启用线程池的线程进行处理，不过会阻塞主线程。</p>
+<pre><code>    public static void func4()&#123;
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,3,10,
+                TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(1), new ThreadPoolExecutor.CallerRunsPolicy());
+
+        for (int i = 0; i &lt; 7; i++) &#123;
+            Runnable runnable = new ThreadPoolRunnable(i);
+            executor.execute(runnable);
+        &#125;
+        executor.shutdown();
+    &#125;
+
+执行结果：
+
+run pool-1-thread-1, number = 0
+run main, number = 4
+run pool-1-thread-3, number = 3
+run pool-1-thread-2, number = 1
+run main, number = 5
+run pool-1-thread-3, number = 2
+run pool-1-thread-3, number = 6
+</code></pre>
+<p>可以看到 第 5 个任务，即 number &#x3D; 4，是在主线程中执行的，由于主线程被阻塞，导致第 6 个任务不能立即提交，当主线程执行结束后再提交时，线程池里已经有可用的线程了，所以第 6 个任务是线程池执行的。</p>
+<h3 id="5-3-DiscardPolicy"><a href="#5-3-DiscardPolicy" class="headerlink" title="5.3 DiscardPolicy"></a>5.3 DiscardPolicy</h3><p>直接拒绝任务，不抛出任何异常</p>
+<pre><code>    public static void func4()&#123;
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,3,10,
+                TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(1), new ThreadPoolExecutor.DiscardPolicy());
+
+        for (int i = 0; i &lt; 7; i++) &#123;
+            Runnable runnable = new ThreadPoolRunnable(i);
+            executor.execute(runnable);
+        &#125;
+        executor.shutdown();
+    &#125;
+
+执行结果：
+
+run pool-1-thread-2, number = 1
+run pool-1-thread-3, number = 3
+run pool-1-thread-1, number = 0
+run pool-1-thread-2, number = 2
+</code></pre>
+<h3 id="5-4-DiscardOldestPolicy"><a href="#5-4-DiscardOldestPolicy" class="headerlink" title="5.4 DiscardOldestPolicy"></a>5.4 DiscardOldestPolicy</h3><p>抛弃队列中最先加入的任务，然后将当前任务提交到线程池。</p>
+<pre><code>    public static void func4()&#123;
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2,3,10,
+                TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(1), new ThreadPoolExecutor.DiscardOldestPolicy());
+
+        for (int i = 0; i &lt; 7; i++) &#123;
+            Runnable runnable = new ThreadPoolRunnable(i);
+            executor.execute(runnable);
+        &#125;
+        executor.shutdown();
+    &#125;
+执行结果：
+
+run pool-1-thread-1, number = 0
+run pool-1-thread-3, number = 3
+run pool-1-thread-2, number = 1
+run pool-1-thread-1, number = 6
+</code></pre>
+<p>number 0、1，使用核心线程执行。</p>
+<p>number 2，放入队列。</p>
+<p>number 3，启用非核心线程执行。</p>
+<p>number 4，抛弃 number 2，将 number 4 放入队列</p>
+<p>number 5，抛弃 number 4，将 number 5 放入队列</p>
+<p>number 6，抛弃 number 5，将 number 6 放入队列</p>
+<p>执行 number 6</p>
+<h3 id="5-5-自定义拒绝策略"><a href="#5-5-自定义拒绝策略" class="headerlink" title="5.5 自定义拒绝策略"></a>5.5 自定义拒绝策略</h3><p>当然，如果上面的拒绝策略都不满足的话,我们也可以定义拒绝策略。</p>
+<pre><code>public class MyRejectedExecutionHandler implements RejectedExecutionHandler &#123;
+    @Override
+    public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) &#123;
+        System.out.println(executor.toString());
+    &#125;
+&#125;
+
+执行结果：
+
+run pool-1-thread-2, number = 1
+run pool-1-thread-3, number = 3
+run pool-1-thread-1, number = 0
+java.util.concurrent.ThreadPoolExecutor@1d44bcfa[Running, pool size = 3, active threads = 3, queued tasks = 1, completed tasks = 0]
+java.util.concurrent.ThreadPoolExecutor@1d44bcfa[Running, pool size = 3, active threads = 3, queued tasks = 1, completed tasks = 0]
+java.util.concurrent.ThreadPoolExecutor@1d44bcfa[Running, pool size = 3, active threads = 3, queued tasks = 1, completed tasks = 0]
+run pool-1-thread-2, number = 2
+</code></pre>
+<h2 id="6-常见的线程池有哪些？各自有什么特点？"><a href="#6-常见的线程池有哪些？各自有什么特点？" class="headerlink" title="6. 常见的线程池有哪些？各自有什么特点？"></a>6. 常见的线程池有哪些？各自有什么特点？</h2><p>JDK自带了几个常见的线程池。</p>
+<h3 id="6-1-FixedThreadPool"><a href="#6-1-FixedThreadPool" class="headerlink" title="6.1 FixedThreadPool"></a>6.1 FixedThreadPool</h3><p>FixedThreadPool 被称为可重用固定线程数的线程池。创建的源码如下：</p>
+<pre><code>    public static ExecutorService newFixedThreadPool(int nThreads) &#123;
+        return new ThreadPoolExecutor(nThreads, nThreads,
+                                      0L, TimeUnit.MILLISECONDS,
+                                      new LinkedBlockingQueue&lt;Runnable&gt;());
+    &#125;
+</code></pre>
+<p>可以看到 FixedThreadPool 的的核心线程数和最大线程数都是传入的参数。使用的队列是 LinkedBlockingQueue 。<br>由于 LinkedBlockingQueue 是一个无界队列（队列的容量为 Intger.MAX_VALUE），所以运行中的 FixedThreadPool 不会拒绝任务，所以当任务过多的时候可能会造成 OOM 。</p>
+<h3 id="6-2-SingleThreadExecutor"><a href="#6-2-SingleThreadExecutor" class="headerlink" title="6.2 SingleThreadExecutor"></a>6.2 SingleThreadExecutor</h3><p>SingleThreadExecutor 是只有一个线程的线程池。创建源码：</p>
+<pre><code>    public static ExecutorService newSingleThreadExecutor() &#123;
+        return new FinalizableDelegatedExecutorService
+            (new ThreadPoolExecutor(1, 1,
+                                    0L, TimeUnit.MILLISECONDS,
+                                    new LinkedBlockingQueue&lt;Runnable&gt;()));
+    &#125;
+</code></pre>
+<p>SingleThreadExecutor 的核心线程数和最大线程数都为 1，所以这个线程池只有一个线程。使用的队列也是 LinkedBlockingQueue ，所以当任务过多时也会存在 OOM 的问题。</p>
+<h3 id="6-3-CachedThreadPool"><a href="#6-3-CachedThreadPool" class="headerlink" title="6.3 CachedThreadPool"></a>6.3 CachedThreadPool</h3><p>CachedThreadPool 无固定大小的线程池，随着任务的不断提交，创建新的线程来执行。创建源码：</p>
+<pre><code>    public static ExecutorService newCachedThreadPool() &#123;
+        return new ThreadPoolExecutor(0, Integer.MAX_VALUE,
+                                      60L, TimeUnit.SECONDS,
+                                      new SynchronousQueue&lt;Runnable&gt;());
+    &#125;
+</code></pre>
+<p>CachedThreadPool 的核心线程数为 0 ，最大线程数是 Integer.MAX_VALUE，可见所有的线程都是非核心线程。如果线程池的线程 60 秒,没有执行任务则会被销毁。由于使用了 SynchronousQueue，所以当主线程通过 SynchronousQueue.offer(Runnable task) 提交任务到队列后会阻塞，如果线程池中有可用的线程，则会执行当前任务，如果没有则会创建一个新的线程来执任务。</p>
+<p>可见，如果任务太多的话，依然会造成 OOM ，与 LinkedBlockingQueue 不同的是，LinkedBlockingQueue 是由于任务对象太多，导致 OOM，ThreadPoolExecutor 则是由于 线程数太多导致 OOM 。</p>
+<h2 id="如何获取线程池中的返回结果？"><a href="#如何获取线程池中的返回结果？" class="headerlink" title="如何获取线程池中的返回结果？"></a>如何获取线程池中的返回结果？</h2><p>可以使用 <code>executor.submit(futureTask);</code>,提交一个 FutureTask。代码如下：</p>
+<pre><code>自定义的线程
+public class ThreadPoolCallable implements Callable&lt;Integer&gt; &#123;
+    @Override
+    public Integer call() throws Exception &#123;
+        Random random = new Random();
+        int number = random.nextInt(100);
+        System.out.println(Thread.currentThread().getName() + &quot;:&quot; + number);
+        return number;
+    &#125;
+&#125;
+
+使用：
+    public static void func5() throws ExecutionException, InterruptedException &#123;
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(2, 3, 10,
+                TimeUnit.SECONDS, new ArrayBlockingQueue&lt;&gt;(1), new ThreadPoolExecutor.CallerRunsPolicy());
+        int result = 0;
+        for (int i = 0; i &lt; 7; i++) &#123;
+            Callable&lt;Integer&gt; callable = new ThreadPoolCallable();
+            FutureTask&lt;Integer&gt; futureTask = new FutureTask&lt;&gt;(callable);
+            executor.submit(futureTask);
+            result += futureTask.get();
+        &#125;
+        executor.shutdown();
+
+        System.out.println(&quot;result = &quot; + result);
+    &#125;
+
+执行结果：
+
+pool-1-thread-1:41
+pool-1-thread-2:83
+pool-1-thread-1:15
+pool-1-thread-2:21
+pool-1-thread-1:26
+pool-1-thread-2:38
+pool-1-thread-1:98
+result = 322
+</code></pre>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

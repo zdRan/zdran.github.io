@@ -1,0 +1,311 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Design Pattern,设计模式,单例模式,Singleton Pattern">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-25.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>设计模式-单例模式（Singleton Pattern）</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        设计模式-单例模式（Singleton Pattern）
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Design Pattern</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">设计模式</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">单例模式</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Singleton Pattern</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <p><strong>注意：阅读本文时，强烈建议先阅读下 OneMall 项目的概要设计</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/OneMall">设计模式-OneMall 项目概要设计</a></li>
+<li><a href="https://zdran.com/20190509.html">设计模式-六大设计原则</a></li>
+<li><a href="https://zdran.com/20190818.html">设计模式-单例模式</a></li>
+</ul>
+<h2 id="1-需求"><a href="#1-需求" class="headerlink" title="1. 需求"></a>1. 需求</h2><p>由于我们需要对接各大商城的 API，所以我们需要在 <strong>Supplier</strong> 模块实现各大商城的 API client，提供一个 client 供其他模块来调用。每个商城的 API client 只需要一个就可以了。这个 client 就可以使用<strong>单例模式</strong>。</p>
+<h2 id="2-实现"><a href="#2-实现" class="headerlink" title="2. 实现"></a>2. 实现</h2><p>代码实现：</p>
+<pre><code>public class JdApiSingleton &#123;
+    private static final JdApiSingleton self = new JdApiSingleton();
+
+    private JdApiSingleton() &#123;
+    &#125;
+
+    public static JdApiSingleton getJdApi() &#123;
+        return self;
+    &#125;
+
+    /**
+     * 获取商品信息
+     *
+     * @param url   地址
+     * @param param 参数
+     * @return 商品实体
+     */
+    public static GoodsDTO getGoodsInfo(String url, Map&lt;String, Object&gt; param) &#123;
+        String result = HttpClientUtil.get(url, param);
+        return JSONObject.parseObject(result, GoodsDTO.class);
+    &#125;
+
+    /**
+     * 提交订单
+     *
+     * @param url   地址
+     * @param param 参数
+     * @return 订单信息
+     */
+    public static OrderDTO submitOrder(String url, Map&lt;String, Object&gt; param) &#123;
+        String result = HttpClientUtil.post(url, param);
+        return JSONObject.parseObject(result, OrderDTO.class);
+    &#125;
+&#125;
+</code></pre>
+<p><strong>单例模式</strong>比较简单，这里使用了”饿汉式”的设计，私有化构造方法，确保应用中只有一个实例，然后还有提供了其他各种 API，用于实现业务逻辑。</p>
+<h2 id="3-类图"><a href="#3-类图" class="headerlink" title="3. 类图"></a>3. 类图</h2><p><img src="/images/3_1_%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.png" alt="单例模式"></p>
+<p>单例模式的类图比较简单，只需要一个 Singleton 就可以实现单例模式。单例模式不仅仅只有一种实现方式，上面这种“饿汉式”式最简单的实现。有兴趣的可以说搜一下其他的实现方式，由于本文讨论的是设计模式，这里不再详细讨论别的实现方式。</p>
+<h2 id="4-扩展"><a href="#4-扩展" class="headerlink" title="4. 扩展"></a>4. 扩展</h2><p>在内存中产生一个实例很简单，但是，在有些情况下我们可能需要固定数量的实例，用来提高应用的性能。比如在多线程的情况下，我们可能需要为每个线程分配一个实例。这个时候我们就可以在内存中生成固定数量的实例，数量与线程池的大小保持一致。</p>
+<p>代码实现：</p>
+<pre><code>public class JdApiSingletonPool &#123;
+    //实例最大个数
+    private static final int MAX_NUM = 4;
+    private static final List&lt;JdApiSingletonPool&gt; pool = new ArrayList&lt;&gt;(MAX_NUM);
+
+    private JdApiSingletonPool() &#123;
+
+    &#125;
+
+    //初始化单例池
+    static &#123;
+        for (int i = 0; i &lt; MAX_NUM; i++) &#123;
+            pool.add(new JdApiSingletonPool());
+        &#125;
+    &#125;
+
+    /**
+     * 获取实例
+     *
+     * @param index 下标
+     * @return 如果下标越界返回 null
+     */
+    public static JdApiSingletonPool getJdApiSingleton(int index) &#123;
+        if (index &lt; 0 || index &gt;= MAX_NUM) &#123;
+            return null;
+        &#125;
+        return pool.get(index);
+    &#125;
+
+    // other api ...
+&#125;
+</code></pre>
+<p>我们通过初始化一个单例的集合来存储所有的单例。这样就能够保证内存中有固定数量的单例实例。</p>
+<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p><strong>单例模式(Singleton Pattern)：</strong> 确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例。</p>
+<p>这个定义有 3 个含义：</p>
+<ol>
+<li>只能有一个实例（私有化构造方法）</li>
+<li>自行实例化(自动初始化)</li>
+<li>向整个系统提供这个实例（提供 get 方法获取自动初始化的实例）</li>
+</ol>
+<p>单例模式的优点：</p>
+<ol>
+<li>只有一个实例，节省了内存开销。减少了对象的创建和销毁的时间。</li>
+<li>避免了对资源的多重占用。由于只有一个实例，在程序运行期间，只能有一个进程来操作这个实例。</li>
+<li>全局访问。单例模式要求向整个系统提供这个实例，所以可以用来共享某些资源。</li>
+</ol>
+<p>单例模式的缺点：</p>
+<ol>
+<li>没有接口，不易扩展。如果需要新增一些 API 就需要对单例模式进行修改</li>
+<li>与<strong>单一职责原则</strong>冲突。一个单例实例一般不会只实现一种业务逻辑。</li>
+</ol>
+<h2 id="6-使用实例"><a href="#6-使用实例" class="headerlink" title="6. 使用实例"></a>6. 使用实例</h2><ol>
+<li>Spring 容器中的 Java Bean 就是采用的单例模式。每个 Bean 都是单例的。</li>
+<li>Java 中的 JDBC 连接对象 也是采用的单例模式。每个 JDBC 连接 都是单例的。</li>
+</ol>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

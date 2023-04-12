@@ -1,0 +1,461 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,CSS,选择器,伪类,伪元素">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-8.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>CSS 学习笔记(一) 选择器</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        CSS 学习笔记(一) 选择器
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">CSS</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">选择器</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">伪类</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">伪元素</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="一、选择器"><a href="#一、选择器" class="headerlink" title="一、选择器"></a>一、选择器</h2><h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p>元素选择器是最基本的选择器。也是最简单的选择器。可以选择某个或者某些标签</p>
+<pre><code>h1, h2 &#123;
+    color: red; 
+    background: gray;
+&#125;
+</code></pre>
+<p>上面的 CSS 会将所有的 h1 和 h2 标签变成红色,背景变成灰色。</p>
+<h3 id="通配选择器"><a href="#通配选择器" class="headerlink" title="通配选择器"></a>通配选择器</h3><p>可以选择所有元素，或者说是整个文档</p>
+<pre><code>* &#123;color: red&#125;
+</code></pre>
+<p>上面的选择器可以让整个文档变成红色</p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>选择一类元素，必须在标签上指定 class 的属性值。</p>
+<pre><code>*.warning &#123;font-weight: bold&#125;
+</code></pre>
+<p>这段 CSS 会选中下面 html 代码中的 p 标签和 text 标签：</p>
+<pre><code>&lt;div&gt;
+    &lt;p class=&quot;warning&quot;&gt;被选中&lt;/p&gt;
+    &lt;text class=&quot;warning&quot;&gt;被选中&lt;/text&gt;
+&lt;/div&gt;
+</code></pre>
+<p>注意，这里的选择器前面包含了一个星号（<code>*</code>）这里的星号是通配符的含义，即任意元素的 class 属性中如果包含 warning 即会被选中。由于星号是通配符，所以也可省略掉，像下面这样：</p>
+<pre><code>.warning &#123;font-weight: bold&#125;
+</code></pre>
+<p>效果是一样的。</p>
+<p>你也可以指定某个特定的标签，例如：</p>
+<pre><code>p.warning &#123;font-weight: bold&#125;
+</code></pre>
+<p>这段 CSS 只会选中 p 标签，而不会选中 text 标签。不论 text 标签的 class 属性是否包含 warning </p>
+<h3 id="多类选择器"><a href="#多类选择器" class="headerlink" title="多类选择器"></a>多类选择器</h3><p>class 属性可以包含多个，如果需要选中某个含有两个 class 的标签，可以使用多类选择器。</p>
+<pre><code>.warning.uegent &#123;background: silver;&#125;
+</code></pre>
+<p>上面这段 CSS 会选中即含有 warning 又含有 uegent 的标签。即下面的 h3 标签。</p>
+<pre><code>&lt;div&gt;
+    &lt;h1 class = &quot;warning&quot;&gt;多类选择器&lt;/h1&gt;
+    &lt;h2 class = &quot;uegent&quot;&gt;多类选择器&lt;/h2&gt;
+    &lt;h3 class = &quot;warning uegent&quot;&gt;被选中&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+<p>这两个词的顺序无关紧要，也可以写成 <code>&lt;h3 class = &quot;uegent warning&quot;&gt;</code>。</p>
+<h3 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h3><p>选中某个id值得标签</p>
+<pre><code>#first-h1 &#123;color: red&#125;
+</code></pre>
+<p>上面这段 CSS 会选中 下面的 h1 标签</p>
+<pre><code>&lt;div&gt;
+    &lt;h1 id = &quot;first-h1&quot;&gt;被选中&lt;/h1&gt;
+    &lt;h2 class = &quot;uegent&quot;&gt;ID选择器&lt;/h2&gt;
+    &lt;h3 class = &quot;warning uegent&quot;&gt;ID选择器&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>注意：</strong> 在同一个 html 页面中所有元素的 id 是不可重复的，但是 class 是可以重复的。</p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p>如果希望选择有某个属性的元素，而不关心具体的属性值。可以使用属性选择器。</p>
+<h4 id="简单属性选择器"><a href="#简单属性选择器" class="headerlink" title="简单属性选择器"></a>简单属性选择器</h4><pre><code>h1[class] &#123;color: red&#125;
+</code></pre>
+<p>上面的选择器可以选择所有含有 class 的 h1 标签。即下面第二个 h1 标签</p>
+<pre><code>&lt;div&gt;
+    &lt;h1 id = &quot;first-h1&quot;&gt;简单属性选择器&lt;/h1&gt;
+    &lt;h1 class = &quot;warning uegent&quot;&gt;被选中&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre>
+<p>当然也可以使用通配符。下面的 CSS 会选中所有含有 class 属性的标签。</p>
+<pre><code>*[class] &#123;color: red&#125;
+</code></pre>
+<p>还可以使用多个属性。下面的 CSS 会选中所有含有 id 和 class 的标签。必须是同时含有两个属性</p>
+<pre><code>*[id][class] &#123;color: red&#125;
+</code></pre>
+<h4 id="属性值选择器"><a href="#属性值选择器" class="headerlink" title="属性值选择器"></a>属性值选择器</h4><p>可以根据某个属性的具体值来选择标签。</p>
+<pre><code>h1[id = &quot;first-h1&quot;] &#123;color: red&#125;
+</code></pre>
+<p>上面的 CSS 表示，选择 <code>id = first-h1</code> 的 h1 标签。即下面的第一个 h1 标签</p>
+<pre><code>&lt;div&gt;
+    &lt;h1 id = &quot;first-h1&quot;&gt;被选中&lt;/h1&gt;
+    &lt;h1 class = &quot;warning uegent&quot;&gt;简单属性选择器&lt;/h1&gt;
+&lt;/div&gt;
+</code></pre>
+<p>当然你也可以多个属性的值一起选择，比如:</p>
+<pre><code>a[id = &quot;first-link&quot;][href = &quot;http://zdran.com&quot;] &#123;color: red&#125;
+</code></pre>
+<p><strong>注意：</strong> CSS 里的值必须是完全匹配。比如：</p>
+<pre><code>*[class = &quot;uegent&quot;]
+</code></pre>
+<p>上面这段 CSS 只能选中 h2 标签，如果需要选择 h3 则需要写成：</p>
+<pre><code>*[class = &quot;warning uegent&quot;] &#123;color: red&#125;
+</code></pre>
+<p>属性的值必须是完全一样，才会选中标签</p>
+<pre><code>&lt;div&gt;
+    &lt;h1 id = &quot;first-h1&quot;&gt;属性值选择器&lt;/h1&gt;
+    &lt;h2 class = &quot;uegent&quot;&gt;第一次被选中&lt;/h2&gt;
+    &lt;h3 class = &quot;warning uegent&quot;&gt;第二次被选中&lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="部分属性值选择器"><a href="#部分属性值选择器" class="headerlink" title="部分属性值选择器"></a>部分属性值选择器</h4><p>上面提到的属性值选择器要求完全匹配，这里的部分属性值选择器要求部分值匹配即可。</p>
+<pre><code>p[class ~= &quot;uegent&quot;] &#123;color: red&#125;
+</code></pre>
+<p>这段 CSS 会选中下面的 html 代码中的第二个和第三个标签。因为这两个标签的 class 属性值中都含有”uegent”</p>
+<pre><code>&lt;div&gt;
+    &lt;p id = &quot;first-p&quot;&gt;部分属性值选择器&lt;/p&gt;
+    &lt;p class = &quot;uegent&quot;&gt;被选中&lt;/p&gt;
+    &lt;p class = &quot;warning uegent&quot;&gt;被选中&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="子串匹配选择器"><a href="#子串匹配选择器" class="headerlink" title="子串匹配选择器"></a>子串匹配选择器</h4><p>类似于正则表达式</p>
+<pre><code>*[class^=&quot;start&quot;]    // 选中 class 的值以 start 开头的标签
+*[class$=&quot;end&quot;]    // 选中 class 的值以 end 结尾的标签
+*[class*=&quot;mid&quot;]    // 选中 class 的值中包含 mid 的标签
+</code></pre>
+<h4 id="特定属性选择器"><a href="#特定属性选择器" class="headerlink" title="特定属性选择器"></a>特定属性选择器</h4><p>这个选择器应该是最常见的选择器。以下面的 CSS 为例：</p>
+<pre><code>*[lang|=&quot;en&quot;]
+</code></pre>
+<p>他会选中 lang 属性的值为 “en” 或者以 “en-“(注意：后面有个短线) 开头的元素。所以会选中下面的前两个 p 标签</p>
+<pre><code>&lt;div&gt;
+    &lt;p lang = &quot;en&quot;&gt;被选中&lt;/p&gt;
+    &lt;p lang = &quot;en-zh&quot;&gt; 被选中&lt;/p&gt;
+    &lt;p class = &quot;zh&quot;&gt;特定属性选择器&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>PS:如果你不理解文档树结构，建议先了解下文档树结构再往下看</strong></p>
+<h3 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h3><p>也称为包含选择器，或者上下文选择器，它可以选中某个标签下的某些标签。比如，选择 div 下的 p 标签，可以这样写：</p>
+<pre><code>div p &#123;color: red&#125;
+</code></pre>
+<p>上面的 CSS 会选中第一个 p 标签，而不会选中第二个 p 标签</p>
+<pre><code>&lt;div&gt;
+    &lt;p lang = &quot;en&quot;&gt;被选中&lt;/p&gt;
+&lt;/div&gt;
+&lt;p lang = &quot;en-zh&quot;&gt;后代选择器&lt;/p&gt;
+</code></pre>
+<p>当然并不局限于两个元素，也可以写成下面这样</p>
+<pre><code>html body div p span &#123;color: red&#125;
+</code></pre>
+<h3 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h3><p>选中某个元素的子元素，与后代选择器的区别是，后代选择器可以选中某个元素的子元素，某个元素的子元素的子元素（子孙元素），而子元素选择器只能选择某个元素的子元素。</p>
+<pre><code>div &gt; span &#123;color: red&#125;
+</code></pre>
+<p>上面的元素可以选中 div 下的 span 标签，即第一个 span 标签，第二个则无效，而使用后代选择器可以选中两个 span 标签。</p>
+<pre><code>&lt;div&gt;
+    &lt;span&gt;被选中&lt;/span&gt;
+    &lt;p&gt;子元素&lt;span&gt;不被选中&lt;/span&gt;选择器&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>子元素选择器只选择一级，而后代是所有的后代，以及后代的后代</p>
+<h3 id="相邻兄弟选择器"><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器</h3><p>选中紧接在一个元素后的元素。</p>
+<pre><code>div + p &#123;color: red&#125;
+</code></pre>
+<p>上面这段 CSS 可以选中第二个 p 标签，即 div 后的元素。</p>
+<pre><code>&lt;div&gt;
+    &lt;p lang = &quot;en&quot;&gt;后代选择器&lt;/p&gt;
+&lt;/div&gt;
+&lt;p lang = &quot;en-zh&quot;&gt;被选中&lt;/p&gt;
+&lt;div&gt;
+    &lt;p lang = &quot;en&quot;&gt;不被选中&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>相邻兄弟选择器可以和子元素选择器一起使用。例如：</p>
+<pre><code>html &gt; body &gt; div + p &#123;color: red&#125;
+</code></pre>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><h4 id="链接伪类"><a href="#链接伪类" class="headerlink" title="链接伪类"></a>链接伪类</h4><p>伪类选择器可以选择某些元素处于特定状态的元素。比如，可以为已经被点击过的 a 标签添加一个 CSS。</p>
+<pre><code>a:visited &#123;color: red&#125;
+</code></pre>
+<p>上面的 CSS 会应用到已经被访问过的 a 标签。对应的，还有一个，选择没有被点击的<strong>超链接</strong>。</p>
+<pre><code>a:link &#123;color: black&#125;
+</code></pre>
+<p>上面的 CSS 会应用到没有被点击过的<strong>超链接</strong>上。注意，上面的 CSS 只会选中带有 href 属性的 a 标签。</p>
+<pre><code>&lt;a href=&quot;http://zdran.com&quot;&gt;被选中&lt;/a&gt;
+&lt;a name =&quot;first&quot;&gt;不会被选中&lt;/a&gt;
+</code></pre>
+<p>当然也可以和其他选择器配合使用，比如:</p>
+<pre><code>#my_link:visited &#123;color:red&#125;
+</code></pre>
+<h4 id="动态伪类"><a href="#动态伪类" class="headerlink" title="动态伪类"></a>动态伪类</h4><pre><code>a:focues &#123;color: red&#125;
+</code></pre>
+<p>选中获取到输入焦点的 a 标签。</p>
+<pre><code>a:hover &#123;color: red&#125;
+</code></pre>
+<p>选中鼠标指针悬停的 a 标签</p>
+<pre><code>a:active &#123;color:red&#125;
+</code></pre>
+<p>选中鼠标点击的元素。<br><strong>PS</strong>有兴趣的同学可以试试将这几个伪类同时用到同一个 a 标签上，看看会发生什么神奇的效果。</p>
+<h4 id="结构伪类"><a href="#结构伪类" class="headerlink" title="结构伪类"></a>结构伪类</h4><pre><code>li:not(.first-item) &#123;color: red&#125;
+</code></pre>
+<p>如果 class 属性中含有 first-item 则不被选中。例如下面的第一个 li 标签将不被选中</p>
+<pre><code>&lt;ul&gt;
+    &lt;li class=&quot;first-item&quot;&gt;不被选中&lt;/li&gt;
+    &lt;li&gt;被选中&lt;/li&gt;
+    &lt;li&gt;被选中&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<pre><code>li:first-child &#123;color: red&#125;
+</code></pre>
+<p>选中第一个元素。</p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;被选中&lt;/li&gt;
+    &lt;li&gt;不被选中&lt;/li&gt;
+    &lt;li&gt;不被选中&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>同样还有选中最后一个元素的伪类</p>
+<pre><code>li:last-child &#123;color:red&#125;
+</code></pre>
+<p>还有一个可以根据一个参数来选择第几个元素。</p>
+<pre><code>ol :nth-child(2n) &#123;color: red&#125;
+</code></pre>
+<p>上面的 CSS 可以选中第 2n 个元素，即第2、4、6、8、10… 位置的元素。如果想选奇数位置的元素，可以设置为：</p>
+<pre><code>ol :nth-child(2n+1) &#123;color: red&#125;
+</code></pre>
+<p>如果想只选择第几个元素，可以直接写成具体的值，比如只选择第 5 个元素，可以设置为：</p>
+<pre><code>ol :nth-child(5) &#123;color: red&#125;
+</code></pre>
+<p>nth-child 可以接收一个 an+b 的参数，可以根据 a 和 b 的值计算具体的位置。</p>
+<h4 id="表单伪类"><a href="#表单伪类" class="headerlink" title="表单伪类"></a>表单伪类</h4><p>选中 任意被勾选&#x2F;选中的 radio(单选按钮),checkbox(复选框),或者option(select中的一项) </p>
+<pre><code>input:checked + label &#123;color: red&#125;
+</code></pre>
+<p>上面的 CSS 会选中下面被勾选的选项</p>
+<pre><code>&lt;div&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;label &gt;勾选后，被 CSS 选中&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<p>如果是 radio 可以这么写：</p>
+<pre><code>input[type=&quot;radio&quot;]:checked &#123;color:red&#125;
+</code></pre>
+<p>选中下面的一个勾选后的选项</p>
+<pre><code>&lt;div&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;my-input&quot; id=&quot;yes&quot;&gt;
+  &lt;label for=&quot;yes&quot;&gt;Yes&lt;/label&gt;
+
+  &lt;input type=&quot;radio&quot; name=&quot;my-input&quot; id=&quot;no&quot;&gt;
+  &lt;label for=&quot;no&quot;&gt;No&lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+<p>valid 可以选中校验结果正确的元素。比如：</p>
+<pre><code>input[type=email]:valid &#123;color:green&#125;
+</code></pre>
+<p>上面的 CSS 可以在输入框中输入正确的email的时候被选中。</p>
+<pre><code>&lt;input type=&quot;email&quot;/&gt;
+</code></pre>
+<p>当然，还可以选中校验结果不正确的元素。</p>
+<pre><code>input[type=email]:invalid  &#123;color: red&#125;
+</code></pre>
+<h3 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h3><p>伪元素选择器可以在文档中插入不存在的元素，从而达到某种效果。</p>
+<h4 id="设置首字母的样式。"><a href="#设置首字母的样式。" class="headerlink" title="设置首字母的样式。"></a>设置首字母的样式。</h4><pre><code>p:first-letter &#123;font-size: 5em&#125;
+</code></pre>
+<p>上面的 CSS 可以设置所有 p 标签的首字母的样式。当然也可以设置首行的样式。</p>
+<pre><code>p:first-line &#123;font-size: 5em&#125;
+</code></pre>
+<h4 id="在元素前后插入内容"><a href="#在元素前后插入内容" class="headerlink" title="在元素前后插入内容"></a>在元素前后插入内容</h4><pre><code>h1:before &#123;content: &quot;hello&quot;&#125;
+</code></pre>
+<p>在 h1 标签之前插入”hello” 字符串。同样，也可以在某个元素后插入内容。</p>
+<pre><code>h1:after &#123;content: &quot;hello&quot;&#125;
+</code></pre>
+<p>当然，伪类与伪元素不止上面说的这些，还有一些其他的选择器，如果需要了解更多，可以看一下参考文章里的博客</p>
+<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference#%E9%80%89%E6%8B%A9%E5%99%A8">MDN CSS 参考</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.alloyteam.com/2016/05/summary-of-pseudo-classes-and-pseudo-elements/">总结伪类与伪元素</a></li>
+<li><a target="_blank" rel="noopener" href="https://book.douban.com/subject/2308234/">《CSS 权威指南》第3版</a></li>
+</ul>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

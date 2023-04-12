@@ -1,0 +1,393 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Git,Spring Boot,Swagger2">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-11.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(七) 整合 Swagger2</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(七) 整合 Swagger2
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Git</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Swagger2</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h2 id="1-添加依赖"><a href="#1-添加依赖" class="headerlink" title="1. 添加依赖"></a>1. 添加依赖</h2><p>Swagger2 可以自动的根据代码生成接口文档。</p>
+<p>添加依赖：</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-thymeleaf&lt;/artifactId&gt;
+&lt;/dependency&gt;
+
+&lt;!-- swagger api 管理工具 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+    &lt;version&gt;2.8.0&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+    &lt;version&gt;2.8.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p><strong>注意需要添加：spring boot web 依赖</strong></p>
+<h2 id="2-添加Swagger配置"><a href="#2-添加Swagger配置" class="headerlink" title="2. 添加Swagger配置"></a>2. 添加Swagger配置</h2><p>修改 SpringbootApplication 启动类</p>
+<pre><code>@SpringBootApplication
+@EnableSwagger2
+@ComponentScan(&#123;&quot;com.zdran.springboot&quot;&#125;)
+public class SpringbootApplication &#123;
+
+    public static void main(String[] args) &#123;
+        SpringApplication.run(SpringbootApplication.class, args);
+    &#125;
+
+    @Bean
+    public Docket createRestApi() &#123;
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage(&quot;com.zdran.springboot.controller&quot;))
+                .paths(PathSelectors.any())
+                .build();
+    &#125;
+
+    private ApiInfo apiInfo() &#123;
+        return new ApiInfoBuilder()
+                .title(&quot;个人学习Spring Boot 的项目 APIs&quot;)
+                .description(&quot;学习Spring Boot 中的 restful APIs&quot;)
+                .termsOfServiceUrl(&quot;https://github.com/zdRan/learning&quot;)
+                .contact(new Contact(&quot;个人开源项目组&quot;, 
+                                    &quot;https://github.com/zdRan/learning&quot;, 
+                                    &quot;cm.zdran@gmail.com&quot;))
+                .version(&quot;1.0&quot;)
+                .build();
+    &#125;
+</code></pre>
+<p>默认访问地址是： <code>http://localhost:9090/learning/swagger-ui.html</code></p>
+<h2 id="3-Swagger-注解"><a href="#3-Swagger-注解" class="headerlink" title="3. Swagger 注解"></a>3. Swagger 注解</h2><p>Swagger 有很多自定义的注解可以很方便的对接口进行描述</p>
+<h3 id="3-1-Api"><a href="#3-1-Api" class="headerlink" title="3.1 @Api"></a>3.1 @Api</h3><p>用在一个Controller上，swagger会将这个controller下的接口归为一组展示。<br>常用属性：</p>
+<ol>
+<li>tags: 分组标签</li>
+<li>value: 如果tags没有定义，value将作为tags使用</li>
+<li>description： API的详细描述</li>
+</ol>
+<p>个人建议的写法：</p>
+<pre><code>@Api(tags = &quot;AccountController&quot;,description = &quot;账户信息相关接口&quot;)
+public class AccountController &#123;
+    //... ...
+&#125;
+</code></pre>
+<h3 id="3-2-ApiOperation"><a href="#3-2-ApiOperation" class="headerlink" title="3.2 @ApiOperation"></a>3.2 @ApiOperation</h3><p>用在方法上。对该方法的描述信息</p>
+<p>常用属性：</p>
+<ol>
+<li>value: 对方法的简单描述，长度为120个字母，60个汉字。</li>
+<li>notes: 对操作的详细说明。</li>
+<li>httpMethod: 请求方式，可选值有”GET”, “HEAD”, “POST”, “PUT”, “DELETE”, “OPTIONS” and “PATCH”。</li>
+<li>code http 状态码，默认为200</li>
+</ol>
+<p>个人建议的写法：</p>
+<pre><code>@ApiOperation(value = &quot;获取账号信息&quot;,
+        notes = &quot;根据传入的参数 name 查询账号信息。&quot;,
+        httpMethod= &quot;GET&quot;)
+@GetMapping(&quot;/get/&#123;name&#125;&quot;)
+public AccountInfo getAccountByName(@PathVariable String name)&#123;
+    //... ...
+&#125;
+</code></pre>
+<h3 id="3-3-ApiImplicitParams-与-ApiImplicitParam"><a href="#3-3-ApiImplicitParams-与-ApiImplicitParam" class="headerlink" title="3.3 @ApiImplicitParams 与 @ApiImplicitParam"></a>3.3 @ApiImplicitParams 与 @ApiImplicitParam</h3><p>用在方法上。对参数列表的说明，这两个注解时连用的。ApiImplicitParams 内部有多个 ApiImplicitParam，每个 ApiImplicitParam 对应一个参数，常用属性：</p>
+<ol>
+<li>name: 参数名称</li>
+<li>value: 参数描述</li>
+<li>paramType: 参数的传入（请求）类型，可选的值有path, query, body, header or form</li>
+<li>dataType: 参数类型。可以为类名，也可以为基本类型（String，int、boolean等）</li>
+<li>required: 是否是必填字段。</li>
+</ol>
+<p>个人建议的写法：</p>
+<pre><code>    @ApiImplicitParams(&#123;
+            @ApiImplicitParam(
+                    name = &quot;name&quot;,
+                    value = &quot;用户名&quot;,
+                    paramType = &quot;path&quot;,
+                    dataType = &quot;String&quot;,
+                    required = true
+            )
+    &#125;)
+    @GetMapping(&quot;/get/&#123;name&#125;&quot;)
+    public AccountInfo getAccountByName(@PathVariable String name)&#123;
+        //... ...
+    &#125;
+</code></pre>
+<h3 id="3-4-ApiResponses-与-ApiResponse"><a href="#3-4-ApiResponses-与-ApiResponse" class="headerlink" title="3.4 @ApiResponses 与 ApiResponse"></a>3.4 @ApiResponses 与 ApiResponse</h3><p>用在方法上，对方法的返回值（响应结果）进行说明。ApiResponses内部有多个ApiResponse。<br>ApiResponse 常用属性：</p>
+<ol>
+<li>code:http状态码</li>
+<li>message：对应状态码的描述</li>
+<li>response：返回值。如果是类名的话，需要类的全路径</li>
+<li>responseContainer：如果返回类型为容器类型，可以设置相应的值。有效值为 “List”, “Set” or “Map”</li>
+</ol>
+<p>个人建议的写法：</p>
+<pre><code>    @ApiResponses(&#123;
+            @ApiResponse(
+                    code = 200,
+                    message = &quot;成功&quot;,
+                    response = com.zdran.springboot.dao.AccountInfo.class
+            ),
+            @ApiResponse(
+                    code = 404,
+                    message = &quot;网络异常&quot;,
+                    response = Exception.class
+            )
+    &#125;)
+    @GetMapping(&quot;/get/&#123;name&#125;&quot;)
+    public AccountInfo getAccountByName(@PathVariable String name)&#123;
+        //... ...
+    &#125;
+</code></pre>
+<p>一般 404 的 response 值应该是自定义的异常返回对象。</p>
+<h3 id="3-4-ApiModel-与-ApiModelProperty"><a href="#3-4-ApiModel-与-ApiModelProperty" class="headerlink" title="3.4 @ApiModel 与 @ApiModelProperty"></a>3.4 @ApiModel 与 @ApiModelProperty</h3><p>这两个注解是用在实体类上面的，对实体类和参数进行说明。</p>
+<p>ApiModel: 用在类上面，对类进行说明，有两个属性</p>
+<ol>
+<li>value: 类的别名，默认是类名</li>
+<li>description： 类的详细描述</li>
+</ol>
+<p>ApiModelProperty: 用在类的属性上，对属性进行说明。 常用属性：</p>
+<ol>
+<li>value: 属性的描述</li>
+<li>example: 属性的示例值</li>
+</ol>
+<p>个人建议的写法：</p>
+<pre><code>@ApiModel(
+        value = &quot;AccountInfo&quot;,
+        description = &quot;用户信息实体类&quot;
+)
+public class AccountInfo &#123;
+
+    @ApiModelProperty(
+            value = &quot;账户id&quot;,
+            example = &quot;123455&quot;,
+            dataType = &quot;Integer&quot;
+    )
+    private Integer accountId;
+
+    @ApiModelProperty(
+            value = &quot;用户名&quot;,
+            example = &quot;zdran&quot;,
+            dataType = &quot;String&quot;
+    )
+    private String name;
+</code></pre>
+<p>配置这些基本上就可以了，再多的话，代码入侵就有点多了。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

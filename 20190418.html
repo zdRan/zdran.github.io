@@ -1,0 +1,425 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Spring Boot,AOP,Aspect,Pointcut,Before,After,AfterReturning,AfterThrowing,Around">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-25.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(十三) 整合 AOP</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(十三) 整合 AOP
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">AOP</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Aspect</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Pointcut</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Before</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">After</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">AfterReturning</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">AfterThrowing</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Around</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>AOP 全称 Aspect Oriented Programming ，即面向切面编程。通俗来说，我们可以在一个方法执行之前做一些操作，比如修改一下参数，在一个方法之后做一些操作，比如修改一下返回值。我们可以把这些要做的操作，放到一个类，或者是方法中，这个类或者方法，可以称作一个切面。</p>
+<p>面向切面编程:即我们需要针对这些切面编程。编程的关注点不在于方法的逻辑而在于方法的执行前，执行后的逻辑。</p>
+<p>一个切面大体包括两个部分，切点和在切点处要做的操作（官方叫：通知。一直没有理解这个叫法的含义 ^_^）。</p>
+<p>切点可以以是一个或者一些具体的方法。</p>
+<p>在切点处的操作又分为下面几种情况：</p>
+<ul>
+<li>方法执行前的操作(前置通知)</li>
+<li>方法执行后的操作（后置通知）</li>
+<li>方法抛出异常后 catche 块中的操作（异常通知）</li>
+<li>方法抛出异常后 finally 块中的操作（后置最终通知）</li>
+<li>完全控制方法的操作（环绕通知）</li>
+</ul>
+<h2 id="1-创建一个传统的-Service-服务"><a href="#1-创建一个传统的-Service-服务" class="headerlink" title="1. 创建一个传统的 Service 服务"></a>1. 创建一个传统的 Service 服务</h2><p>创建一个 AopService 接口,实现类的接口如下：</p>
+<pre><code>@Service
+public class AopServiceImpl implements AopService &#123;
+    @Override
+    public AccountInfo aopHello(AccountInfo accountInfo) &#123;
+        accountInfo.setPwd(&quot;123&quot;);
+        return accountInfo;
+    &#125;
+&#125;
+</code></pre>
+<p>为了方便测试，我们为这个 Service 创建一个 Controller，代码如下：</p>
+<pre><code>@RestController
+public class AopController &#123;
+    private static Logger logger = LoggerFactory.getLogger(AopController.class);
+
+    @Autowired
+    private AopService aopService;
+
+    @GetMapping(&quot;/helloAop/&#123;name&#125;&quot;)
+    public AccountInfo helloAop(@PathVariable(&quot;name&quot;) String name) &#123;
+        logger.info(&quot;AOP 接口入参：&#123;&#125;&quot;, name);
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setName(name);
+
+        accountInfo = aopService.aopHello(accountInfo);
+
+        logger.info(&quot;AOP 接口出参：&#123;&#125;&quot;, accountInfo);
+        return accountInfo;
+    &#125;
+&#125;
+</code></pre>
+<p>下面我们会为 aopHello 这个方法添加切面。对方法的执行前，执行后做一些处理。</p>
+<h2 id="2-创建一个切面"><a href="#2-创建一个切面" class="headerlink" title="2. 创建一个切面"></a>2. 创建一个切面</h2><p>首先需要添加 AOP 的依赖：</p>
+<pre><code>&lt;!-- 引入 aop 支持 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>然后创建一个切面。新建 AopAspect 类，代码如下：</p>
+<pre><code>import org.aspectj.lang.annotation.*;
+
+@Aspect
+@Component
+public class AopAspect &#123;
+    private static Logger logger = LoggerFactory.getLogger(AopAspect.class);
+&#125;
+</code></pre>
+<p>好了，这个切面是创建好了，现在我们还没有为其指定具体的切点以及切点处的操作</p>
+<h2 id="3-指定切点"><a href="#3-指定切点" class="headerlink" title="3. 指定切点"></a>3. 指定切点</h2><p>我们把这个切点指定到上面创建的 AopServiceImpl 的 aopHello 方法上：</p>
+<pre><code>    /**
+     * 类 AopServiceImpl 下的 aopHello 方法为切入点
+     */
+    @Pointcut(&quot;execution(public * com.zdran.springboot.service.impl.AopServiceImpl.aopHello(..))&quot;)
+    public void pointCut() &#123;&#125;
+</code></pre>
+<p>切点表达式。切点表达式可以清晰的表示一个或者一些方法。</p>
+<p>格式: execution([可见性] 返回类型 [声明类型].方法名(参数) [异常])</p>
+<p>支持以下通配符：</p>
+<ul>
+<li>‘*’ 匹配任意字符</li>
+<li>‘+’ 匹配一个或多个字符。一般用于表示某个类的所有子类</li>
+<li>‘..’：一般用于匹配多个包，多个参数</li>
+</ul>
+<p>现在我们为这个切面指定了切点。下面我们定义一些在这个切点处的操作。</p>
+<h2 id="4-前置通知"><a href="#4-前置通知" class="headerlink" title="4. 前置通知"></a>4. 前置通知</h2><p>我们在这个方法执行前做一些操作，国际惯例，先打印个 hello aop</p>
+<pre><code>    /**
+     * 在方法执行之前执行
+     *
+     * @param joinPoint
+     */
+    @Before(value = &quot;pointCut()&quot;)
+    public void doBefore(JoinPoint joinPoint) &#123;
+        logger.info(&quot;doBefore run: hello aop&quot;);
+    &#125;
+</code></pre>
+<p>你也可以将 Before 注解里的 value 值换成 execution 表达式。 意思是这个操作指定在某个切点上。</p>
+<p>代码里的这种做法是把切点抽出来了，你可以理解为把这个切点定义成了一个变量，而不是每次使用的时候直接使用字符串了。</p>
+<p>下面我们对请求参数进行修改。</p>
+<pre><code>    /**
+     * 在方法执行之前执行
+     *
+     * @param joinPoint
+     */
+    @Before(value = &quot;pointCut()&quot;)
+    public void doBefore(JoinPoint joinPoint) &#123;
+        logger.info(&quot;doBefore run&quot;);
+        AccountInfo accountInfo = (AccountInfo) joinPoint.getArgs()[0];
+        logger.info(&quot;AOP:&#123;&#125;&quot;, accountInfo.toString());
+        accountInfo.setName(&quot;aop&quot;);
+    &#125;
+</code></pre>
+<p>joinPoint.getArgs() 返回的是一个数组，我们取第一个参数，强转成 AccountInfo 类型，并且修改参数值。</p>
+<p>可以访问我们之前写的 Controller 测试一下。</p>
+<h2 id="5-后置通知"><a href="#5-后置通知" class="headerlink" title="5. 后置通知"></a>5. 后置通知</h2><p>后置通知是指在方法执行后做的一些操作，代码如下：</p>
+<pre><code>
+    /**
+     * 在方法之后执行，可以对方法返回值进行修改
+     *
+     * @param point
+     * @param returnValue
+     */
+    @AfterReturning(value = &quot;pointCut()&quot;, returning = &quot;returnValue&quot;)
+    public void doAfterReturning(JoinPoint point, AccountInfo returnValue) &#123;
+        logger.info(&quot;doAfterReturning:&#123;&#125;&quot;, returnValue);
+        returnValue.setPwd(&quot;doAfterReturning&quot;);
+    &#125;
+</code></pre>
+<p>AfterReturning 注解的 returning 属性不是必须的，如果你不需要对方法的返回值进行操作，的话，可以不要这个属性。</p>
+<p>同样的，方法签名里的第二个参数也不是必须的。但是，方法签名里的第二个参数，是与 returning 属性绑定的，所以属性的值和参数名称必须保持一致。</p>
+<p>方法中的第二个参数就是返回值，我们可以直接修改。</p>
+<h2 id="6-后置最终通知"><a href="#6-后置最终通知" class="headerlink" title="6. 后置最终通知"></a>6. 后置最终通知</h2><p>这个通知是在 <strong>方法之外</strong> 的 finally 块中的操作，所以这个操作的执行顺序是在 AfterReturning 之后执行的。</p>
+<pre><code>    /**
+     * 在方法执行之后执行
+     *
+     * @param joinPoint
+     */
+    @After(value = &quot;pointCut()&quot;)
+    public void doAfter(JoinPoint joinPoint) &#123;
+        logger.info(&quot;doAfter run&quot;);
+    &#125;
+</code></pre>
+<p>与 AfterReturning 的最大区别可能就是这个通知不能修改返回值。</p>
+<h2 id="6-异常通知"><a href="#6-异常通知" class="headerlink" title="6. 异常通知"></a>6. 异常通知</h2><p>异常通知，是指当在执行方法时，抛出异常后的操作，或者说是 <strong>方法之外</strong> 的 catche 块中的操作。代码如下：</p>
+<pre><code>    /**
+     * 在方法抛出异常时执行,执行顺序在 After 之后
+     *
+     * @param ex
+     */
+    @AfterThrowing(value = &quot;pointCut()&quot;, throwing = &quot;ex&quot;)
+    public void doAfterThrowing(Throwable ex) &#123;
+        logger.info(&quot;doAfterThrowing run&quot;);
+        logger.error(&quot;doAfterThrowing:&quot;, ex);
+    &#125;
+</code></pre>
+<p>需要注意的是，这个注解的方法是在 After 之后执行的。异常通知不能对返回值做任何操作。</p>
+<p>##7. 环绕通知</p>
+<p>环绕通知相比于上面几个通知是最强大的一个通知。它不仅可以修改参数，修改返回值，还可以决定要不要调用切点处的方法。</p>
+<p>需要注意的是，这个环绕通知是在 前置通知之前执行的。</p>
+<pre><code>    /**
+     * 环绕通知
+     *
+     * @param joinPoint
+     */
+    @Around(value = &quot;pointCut()&quot;)
+    public AccountInfo doAround(ProceedingJoinPoint joinPoint) &#123;
+        logger.info(&quot;doAround run&quot;);
+        AccountInfo accountInfo = (AccountInfo) joinPoint.getArgs()[0];
+        //在方法被执行前，修改参数
+        accountInfo.setBalance(123);
+        try &#123;
+            //执行的实际方法
+            joinPoint.proceed();
+        &#125; catch (Throwable throwable) &#123;
+            return null;
+        &#125;
+        //在方法执行后修改返回值
+        accountInfo.setName(&quot;around&quot;);
+        return accountInfo;
+    &#125;
+</code></pre>
+<p>joinPoint.proceed(); 是实际要执行的方法，即我们 AopServiceImpl.aopHello() 方法，如果你不调用 proceed() 方法就不会执行 aopHello(),这样我们就可以控制到底要不要执行切点处的方法。甚至，我们可以在切点处执行别的方法。</p>
+<h2 id="8-执行顺序"><a href="#8-执行顺序" class="headerlink" title="8. 执行顺序"></a>8. 执行顺序</h2><p>通过上面的一些实例我们可以简单的整理一下这些通知的执行顺序:</p>
+<pre><code>        //@Around
+        try &#123;
+            try &#123;
+                //@Before
+                method.invoke(..);
+            &#125; finally &#123;
+                //@After
+            &#125;
+            //@AfterReturning
+        &#125; catch (Exception e) &#123;
+            //@AfterThrowing
+        &#125;
+</code></pre>
+<p>完整代码见： <a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

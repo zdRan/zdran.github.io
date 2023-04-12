@@ -1,0 +1,393 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Flutter,Text 组件,TextStyle,Shadow">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-19.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Flutter 学习笔记(一) Text 组件</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Flutter 学习笔记(一) Text 组件
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Flutter</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Text 组件</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">TextStyle</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Shadow</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Flutter 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180625.html">Flutter 学习笔记(零) 搭建 Flutter 环境</a></li>
+<li><a href="https://zdran.com/20190214.html">Flutter 学习笔记(一) Text 组件</a></li>
+<li><a href="https://zdran.com/20190215.html">Flutter 学习笔记(二) Container 组件</a></li>
+</ul>
+<h2 id="1-Text-组件简介"><a href="#1-Text-组件简介" class="headerlink" title="1. Text 组件简介"></a>1. Text 组件简介</h2><pre><code>Text 组件显示单个样式的文本字符串。字符串可能会跨越多行，也可能全部显示在同一行上，具体取决于布局约束。
+</code></pre>
+<h2 id="2-Text-属性"><a href="#2-Text-属性" class="headerlink" title="2. Text 属性"></a>2. Text 属性</h2><h3 id="2-1-data-属性"><a href="#2-1-data-属性" class="headerlink" title="2.1 data 属性"></a>2.1 data 属性</h3><pre><code>该 Text 要显示的文本。值为一串字符串。
+</code></pre>
+<h3 id="2-2-textAlign-属性"><a href="#2-2-textAlign-属性" class="headerlink" title="2.2 textAlign 属性"></a>2.2 textAlign 属性</h3><pre><code>文本的对齐方式。可选值有：
+</code></pre>
+<ul>
+<li><p>TextAlign.start</p>
+</li>
+<li><p>TextAlign.end、</p>
+<p>  这两个值与文本对齐的方向有关，如果方向是从左向右的，那么start就是左对齐，end就是右对齐。反之亦然</p>
+</li>
+<li><p>TextAlign.left</p>
+</li>
+<li><p>TextAlign.right</p>
+<p>  这两个值跟文本方向无关，left 是左对齐，right是右对齐</p>
+</li>
+<li><p>TextAlign.center</p>
+<p>  文本居中</p>
+</li>
+<li><p>TextAlign.justify</p>
+<p>  文本两端对齐</p>
+</li>
+</ul>
+<p>PS： 对齐方式可以参考 word 里的对齐方式</p>
+<h3 id="2-3-textDirection"><a href="#2-3-textDirection" class="headerlink" title="2.3 textDirection"></a>2.3 textDirection</h3><pre><code>该文本的对齐方向。
+</code></pre>
+<ul>
+<li><p>TextDirection.ltr</p>
+<p>  如果 textAlign 的属性是 start 则左对齐，end 是右对齐</p>
+</li>
+<li><p>TextDirection.rtl</p>
+<p>  如果 textAlign 的属性是 start 则右对齐，end 是左对齐</p>
+</li>
+</ul>
+<h3 id="2-4-maxLines"><a href="#2-4-maxLines" class="headerlink" title="2.4 maxLines"></a>2.4 maxLines</h3><pre><code>最大行。最多显示的行数
+</code></pre>
+<h3 id="2-5-overflow"><a href="#2-5-overflow" class="headerlink" title="2.5 overflow"></a>2.5 overflow</h3><pre><code>处理溢出的文本方式
+</code></pre>
+<ul>
+<li><p>TextOverflow.ellipsis</p>
+<p>  以 … 显示。 例如： xxx…</p>
+</li>
+<li><p>TextOverflow.clip</p>
+<p>  直接剪切溢出的文本</p>
+</li>
+<li><p>TextOverflow.fade </p>
+<p>  将溢出的文本淡化为透明</p>
+</li>
+</ul>
+<h3 id="2-6-textScaleFactor"><a href="#2-6-textScaleFactor" class="headerlink" title="2.6 textScaleFactor"></a>2.6 textScaleFactor</h3><pre><code>每个逻辑像素的字体像素数
+</code></pre>
+<h2 id="3-Text-Style"><a href="#3-Text-Style" class="headerlink" title="3 Text Style"></a>3 Text Style</h2><pre><code>Text 组件的样式
+</code></pre>
+<h3 id="3-1-background"><a href="#3-1-background" class="headerlink" title="3.1 background"></a>3.1 background</h3><pre><code>设置 Text 的背景。值是一个 Paint 对象。可以设置 Paint 对象的 color属性来设置 Text 的背景色
+</code></pre>
+<h3 id="3-2-color"><a href="#3-2-color" class="headerlink" title="3.2 color"></a>3.2 color</h3><pre><code>设置字体颜色
+</code></pre>
+<h3 id="3-3-decoration"><a href="#3-3-decoration" class="headerlink" title="3.3 decoration"></a>3.3 decoration</h3><pre><code>设置文本装饰，上划线、下划线、中划线等。
+</code></pre>
+<h3 id="3-4-decorationColor"><a href="#3-4-decorationColor" class="headerlink" title="3.4 decorationColor"></a>3.4 decorationColor</h3><pre><code>上划线、下划线、中划线等线条的颜色
+</code></pre>
+<h3 id="3-5-decorationStyle"><a href="#3-5-decorationStyle" class="headerlink" title="3.5 decorationStyle"></a>3.5 decorationStyle</h3><pre><code>文本装饰的样式。虚线、短横线、波浪线等
+</code></pre>
+<ul>
+<li><p>TextDecorationStyle.dashed</p>
+<p>  画一条虚线。例如 ————–</p>
+</li>
+<li><p>TextDecorationStyle.dotted</p>
+<p>  画一条带点的虚线 例如 …………</p>
+</li>
+<li><p>TextDecorationStyle.solid </p>
+<p>  画一条实线。例如 <code> _______________</code></p>
+</li>
+<li><p>TextDecorationStyle.double </p>
+<p>  画两条实线。</p>
+</li>
+<li><p>TextDecorationStyle.wavy</p>
+<p>  画两条波浪线</p>
+</li>
+</ul>
+<h3 id="3-6-fontSize"><a href="#3-6-fontSize" class="headerlink" title="3.6 fontSize"></a>3.6 fontSize</h3><pre><code>字体大小
+</code></pre>
+<h3 id="3-7-fontStyle"><a href="#3-7-fontStyle" class="headerlink" title="3.7 fontStyle"></a>3.7 fontStyle</h3><pre><code>字体样式。斜体和标准样式
+</code></pre>
+<ul>
+<li><p>FontStyle.italic</p>
+<p>  斜体</p>
+</li>
+<li><p>FontStyle.normal</p>
+<p>  标准字体</p>
+</li>
+</ul>
+<h3 id="3-8-fontWeight"><a href="#3-8-fontWeight" class="headerlink" title="3.8 fontWeight"></a>3.8 fontWeight</h3><pre><code>字体粗细
+</code></pre>
+<ul>
+<li><p>FontWeight.w100 - w900</p>
+<p>  FontWeight.w100 最细 FontWeight.w900 最粗</p>
+</li>
+</ul>
+<h3 id="3-9-foreground"><a href="#3-9-foreground" class="headerlink" title="3.9 foreground"></a>3.9 foreground</h3><pre><code>Text 前景色，即字体颜色。值为一个 Paint 对象，类似于 background 属性
+</code></pre>
+<p><strong>PS：这个属性与 color冲突，二者不能共存，必须有一个值为 null。</strong></p>
+<h3 id="3-10-height"><a href="#3-10-height" class="headerlink" title="3.10 height"></a>3.10 height</h3><pre><code>类似于 word 里的行间距。这个值是 行高的倍数。
+如果 值是 1.5 则行间距是 1.5 倍的行高
+</code></pre>
+<h3 id="3-11-letterSpacing"><a href="#3-11-letterSpacing" class="headerlink" title="3.11 letterSpacing"></a>3.11 letterSpacing</h3><pre><code>字母与字母之间的间距。单位是逻辑像素。 
+例如 h  e   l   l   o
+</code></pre>
+<h3 id="3-12-wordSpacing"><a href="#3-12-wordSpacing" class="headerlink" title="3.12 wordSpacing"></a>3.12 wordSpacing</h3><pre><code>单词与单词之间的间距。单位是逻辑像素
+例如 hello      world
+</code></pre>
+<h2 id="4-shadows"><a href="#4-shadows" class="headerlink" title="4 shadows"></a>4 shadows</h2><pre><code>文字阴影。
+PS：这个值的属性是 List&lt;Shadow&gt;。也就是说可以退添加多个阴影
+</code></pre>
+<h3 id="4-1-color"><a href="#4-1-color" class="headerlink" title="4.1 color"></a>4.1 color</h3><pre><code>阴影颜色
+</code></pre>
+<h3 id="4-2-offset"><a href="#4-2-offset" class="headerlink" title="4.2 offset"></a>4.2 offset</h3><pre><code>阴影在 x轴和y轴的偏移量
+</code></pre>
+<h3 id="4-3-blurRadius"><a href="#4-3-blurRadius" class="headerlink" title="4.3 blurRadius"></a>4.3 blurRadius</h3><pre><code>阴影模糊度
+</code></pre>
+<h2 id="5-TextDemo-源码"><a href="#5-TextDemo-源码" class="headerlink" title="5 TextDemo 源码"></a>5 TextDemo 源码</h2><pre><code>import &#39;package:flutter/material.dart&#39;;
+
+void main() =&gt; runApp(TextDemo());
+class TextDemo extends StatelessWidget&#123;
+  
+  @override
+  Widget build(BuildContext context) &#123;
+    var background = Paint();
+    background.color = Color.fromARGB(111, 255, 1, 1);
+    var foreground = Paint();
+    foreground.color =  Color.fromARGB(255, 1, 122, 11);
+
+    var shadowsList = List&lt;Shadow&gt;();
+    shadowsList.add(Shadow(
+      color: Color.fromARGB(111, 255, 1, 1),
+      offset: Offset(1, 20),
+      blurRadius:1));
+    shadowsList.add(Shadow(
+      color: Color.fromARGB(255, 1, 122, 11),
+      offset: Offset(20, 1),
+      blurRadius:10));
+
+    return MaterialApp(
+      title: &#39;Text Demo&#39;,
+      home: Scaffold(
+        body: Center(
+          child: Text(
+            &#39;hello ,text,好好学习,天天向上!好好学习,天天向上!好好学习,天天向上!好好学习,天天向上!好好学习,天天向上&#39;,
+            textAlign: TextAlign.start,
+            textDirection: TextDirection.rtl,
+            maxLines: 2,
+            overflow: TextOverflow.fade ,
+            //textScaleFactor: 1,
+            style: TextStyle(
+              //background: background,
+              //color: Color.fromARGB(255, 1, 122, 11),
+              decoration: TextDecoration.underline,
+              decorationColor: Color.fromRGBO(255, 1, 1, 11),
+              decorationStyle: TextDecorationStyle.wavy ,
+              fontSize: 44,
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.w900,
+              //与color 值冲突
+              foreground: foreground,
+              height: 1.5,
+              letterSpacing: 11,
+              //shadows: shadowsList,
+              wordSpacing: 122
+              ),
+              ),
+              
+        ),
+      ),
+    );
+  &#125;
+
+&#125; 
+</code></pre>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

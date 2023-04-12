@@ -1,0 +1,401 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Spring Boot,Redis,集群">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-6.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(十) Redis集群搭建</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(十) Redis集群搭建
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Redis</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">集群</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h2 id="0-环境说明"><a href="#0-环境说明" class="headerlink" title="0. 环境说明"></a>0. 环境说明</h2><ul>
+<li>服务器 centos 7 64bit</li>
+<li>redis 4.0.11</li>
+</ul>
+<h2 id="1-Redis-源码安装"><a href="#1-Redis-源码安装" class="headerlink" title="1.Redis 源码安装"></a>1.Redis 源码安装</h2><p>创建一个redis源码目录,并转到该目录</p>
+<pre><code>mkidr redis
+cd redis
+</code></pre>
+<p>下载源码并编译。</p>
+<pre><code>wget http://download.redis.io/releases/redis-4.0.11.tar.gz
+tar xzf redis-4.0.11.tar.gz
+cd redis-4.0.11
+make
+</code></pre>
+<p>PS:如果出现下面的结果：</p>
+<pre><code>make[2]: Entering directory `/root/redis/redis-4.0.11/deps/hiredis&#39;
+gcc -std=c99 -pedantic -c -O3 -fPIC  -Wall -W -Wstrict-prototypes -Wwrite-strings -g -ggdb  net.c
+make[2]: gcc: Command not found
+make[2]: *** [net.o] Error 127
+make[2]: Leaving directory `/root/redis/redis-4.0.11/deps/hiredis&#39;
+make[1]: *** [hiredis] Error 2
+make[1]: Leaving directory `/root/redis/redis-4.0.11/deps&#39;
+make: [persist-settings] Error 2 (ignored)
+</code></pre>
+<p>说明没有安装 gcc 编译器。需要安装一下。</p>
+<pre><code>yum install gcc
+</code></pre>
+<p><strong>安装gcc后需要重新解压一份新的Redis。再执行 make</strong></p>
+<p>编译成功的话会显示:</p>
+<pre><code>Hint: It&#39;s a good idea to run &#39;make test&#39; ;)
+
+make[1]: Leaving directory `/root/redis/redis-4.0.11/src&#39;
+</code></pre>
+<p>至此，我们已经获取到了Redis的安装包。src目录下就是一个完整可用的Redis了。</p>
+<h2 id="2-Redis单机部署"><a href="#2-Redis单机部署" class="headerlink" title="2. Redis单机部署"></a>2. Redis单机部署</h2><p>现在开始搭建一个单机的redis集群。主备模式（三主三从）。</p>
+<p>以端口号为名称创建6个文件夹:</p>
+<pre><code>mkdir redis-cluster
+cd redis-cluster
+mkdir -p 9001/data 9002/data 9003/data 9004/data 9005/data 9006/data
+</code></pre>
+<p>把我们之前编译好的redis拷贝一份到 9001 中，并修改 <code>redis.config</code> 文件中的配置信息</p>
+<pre><code>cd 9001
+vim redis.config
+</code></pre>
+<p>主要修改下面几个配置：</p>
+<pre><code>port 9001（每个节点的端口号）
+daemonize yes（开启守护线程）
+bind 192.168.119.131（绑定当前机器 IP,需要注释掉，否则外网无法访问）
+dir ./data（数据文件存放位置）
+pidfile /var/run/redis_9001.pid（pid 9001和port要对应）
+cluster-enabled yes（默认是注释掉的，需要开启启动集群模式）
+cluster-config-file nodes9001.conf（默认是注释掉的，9001和port要对应）
+cluster-node-timeout 15000（默认是注释掉的，超时时间）
+appendonly yes （redis数据持久化）
+</code></pre>
+<p>然后把 9001 下的 redis 依次拷贝到其他5个端口的文件夹下。</p>
+<pre><code>cp -r ./* ./../9001/
+cp -r ./* ./../9002/
+cp -r ./* ./../9003/
+cp -r ./* ./../9004/
+cp -r ./* ./../9005/
+cp -r ./* ./../9006/
+</code></pre>
+<p>依次修改每个端口下的<code>redis.config</code>,把端口改成与文件夹一致。到这一步，我们相当于在本地主机上部署了6个Redis，依次启动每个端口的redis</p>
+<pre><code>cd 9001
+./src/redis-server redis.conf 
+
+... ...(启动其他端口的redis)
+</code></pre>
+<h2 id="3-安装Redis集群所需的工具"><a href="#3-安装Redis集群所需的工具" class="headerlink" title="3. 安装Redis集群所需的工具"></a>3. 安装Redis集群所需的工具</h2><p>由于 Redis 集群需要使用 ruby 命令，所以我们需要安装 ruby 和相关接口。</p>
+<pre><code>yum install ruby
+yum install rubygems
+gem install redis 
+</code></pre>
+<p>在执行 <code>gem install redis </code>的时候出现了下面的错误</p>
+<pre><code>ERROR:  Error installing redis:
+    redis requires Ruby version &gt;= 2.2.2.
+</code></pre>
+<p>意思是我们的 Ruby版本太低了，要升级一下Ruby。</p>
+<p>执行一下：</p>
+<pre><code> curl -L get.rvm.io | bash -s stable
+</code></pre>
+<p>会获取到一个密钥：</p>
+<pre><code>    gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+</code></pre>
+<p>让这个密钥生效一下</p>
+<pre><code> gpg --keyserver hkp://keys.gnupg.net --recv-keys xxx（上一步得到的key）
+
+ curl -sSL https://get.rvm.io | bash -s stable
+ 
+</code></pre>
+<p>source环境，让rvm可用：</p>
+<pre><code>source /etc/profile.d/rvm.sh
+source /usr/local/rvm/scripts/rvm
+</code></pre>
+<p>安装 Ruby 2.3.0</p>
+<pre><code>rvm install 2.3.0
+</code></pre>
+<p>安装Redis接口</p>
+<pre><code> gem install redis 
+</code></pre>
+<p>构建Redis集群</p>
+<pre><code>cd 9001
+
+[root@localhost 9006]# ./src/redis-trib.rb create --replicas 1 127.0.0.1:9001 127.0.0.1:9002 127.0.0.1:9003 127.0.0.1:9004 127.0.0.1:9005 127.0.0.1:9006
+&gt;&gt;&gt; Creating cluster
+&gt;&gt;&gt; Performing hash slots allocation on 6 nodes...
+Using 3 masters:
+127.0.0.1:9001
+127.0.0.1:9002
+127.0.0.1:9003
+Adding replica 127.0.0.1:9005 to 127.0.0.1:9001
+Adding replica 127.0.0.1:9006 to 127.0.0.1:9002
+Adding replica 127.0.0.1:9004 to 127.0.0.1:9003
+
+... ...(省略部分显示结果)
+
+[OK] All nodes agree about slots configuration.
+&gt;&gt;&gt; Check for open slots...
+&gt;&gt;&gt; Check slots coverage...
+[OK] All 16384 slots covered.
+</code></pre>
+<p>这个时候我们的集群已经搭建好了。找一台redis连接上看一下</p>
+<pre><code>./src/redis-cli -c -p 9001
+127.0.0.1:9001&gt; cluster info
+127.0.0.1:9001&gt; cluster nodes
+</code></pre>
+<h2 id="4-外网访问"><a href="#4-外网访问" class="headerlink" title="4. 外网访问"></a>4. 外网访问</h2><p>现在集群是搭建好了，在服务器上测试一下是可以的，如果你要在别的机器上连接发现会发现一直连接失败。这是因为我们的redis集群没有设置密码，而且是保护模式。现在我们对这个集群设置一个密码。</p>
+<p>集群的密码需要单独对每个机器设置，这里以 9001 为例</p>
+<pre><code>cd 9001
+src/redis-cli -c -p 9001 shutdown
+vim redis.conf
+</code></pre>
+<p>修改 requirepass 选项</p>
+<pre><code>requirepass ****** 
+</code></pre>
+<p>重启 redis</p>
+<pre><code>src/redis-server redis.conf
+</code></pre>
+<p>依次修改完其他的端口，外网就能通过密码访问了。</p>
+<p>PS:如果还是不能访问，请检查一下端口是否开放。</p>
+<pre><code>linux 下的开放端口命令。下面的命令会开放 8080端口
+/sbin/iptables -I INPUT -p tcp --dport 8080 -j ACCEPT
+</code></pre>
+<h2 id="5-redis-trib-无法连接"><a href="#5-redis-trib-无法连接" class="headerlink" title="5. redis-trib 无法连接"></a>5. redis-trib 无法连接</h2><p>这个时候如果你在服务器上会发现 <code>redis-trib.sh</code>这个脚本好像没办法连接连接上redis了</p>
+<pre><code>cd 9001
+./src/redis-trib.rb check 127.0.0.1:9001
+[ERR] Sorry, can&#39;t connect to node 127.0.0.1:9001
+</code></pre>
+<p>这个是因为我们的Redis集群配置信息没有更新密码配置，需要手动修改。</p>
+<pre><code>cd /usr/local/rvm/gems/ruby-2.3.0/gems/redis-4.0.2/lib/redis
+vim client.rb
+</code></pre>
+<p>PS: 如果找不到 <code>client.rb</code> 可以用<code>find / -name &#39;client.rb&#39;命令</code>查找一下<br>修改 passord 配置:</p>
+<pre><code>    DEFAULTS = &#123;
+      :url =&gt; lambda &#123; ENV[&quot;REDIS_URL&quot;] &#125;,
+      :scheme =&gt; &quot;redis&quot;,
+      :host =&gt; &quot;127.0.0.1&quot;,
+      :port =&gt; 6379,
+      :path =&gt; nil,
+      :timeout =&gt; 5.0,
+      :password =&gt; &quot;******&quot;,
+      :db =&gt; 0,
+      :driver =&gt; nil,
+      :id =&gt; nil,
+      :tcp_keepalive =&gt; 0,
+      :reconnect_attempts =&gt; 1,
+      :inherit_socket =&gt; false
+    &#125;
+</code></pre>
+<p>再试一下：</p>
+<pre><code>./redis-trib.rb check 127.0.0.1:9001
+</code></pre>
+<p>应该能看到 redis集群的一些信息了</p>
+<h2 id="6-IDEA-的-Iedis-插件无法连接"><a href="#6-IDEA-的-Iedis-插件无法连接" class="headerlink" title="6. IDEA 的 Iedis 插件无法连接"></a>6. IDEA 的 Iedis 插件无法连接</h2><p>最后，遇到了一个问题，我用IDEA 的 Iedis 连接别的redis集群能正常连接，但是连接刚刚搭建的集群就是连接不上。不知道为什么，一直没有解决。</p>
+<p>不过 用 Redis Desktop Manager 是可以连接上的。</p>
+<p>PS:为了安装一个redis 我已经重装了10多次系统了。。。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

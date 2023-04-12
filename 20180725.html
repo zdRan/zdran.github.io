@@ -1,0 +1,508 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Git,Spring Boot,参数传递,RESTful,jQuery,Ajax,PathVariable,RequestParam,RequestBody">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-21.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Spring Boot 学习笔记(六) 整合 RESTful 参数传递</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Spring Boot 学习笔记(六) 整合 RESTful 参数传递
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Git</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Spring Boot</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">参数传递</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RESTful</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">jQuery</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Ajax</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">PathVariable</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RequestParam</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">RequestBody</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning">Spring Boot 学习笔记 源码地址</a></li>
+<li><a href="https://zdran.com/20180628.html">Spring Boot 学习笔记(一) hello world</a></li>
+<li><a href="https://zdran.com/20180629.html">Spring Boot 学习笔记(二) 整合 log4j2</a></li>
+<li><a href="https://zdran.com/20180703.html">Spring Boot 学习笔记(三) 整合 MyBatis + Druid</a></li>
+<li><a href="https://zdran.com/20180706.html">Spring Boot 学习笔记(四) 整合 Druid 监控</a></li>
+<li><a href="https://zdran.com/20180718.html">Spring Boot 学习笔记(五) 整合 静态资源</a></li>
+<li><a href="https://zdran.com/20180725.html">Spring Boot 学习笔记(六) 整合 RESTful 参数传递</a></li>
+<li><a href="https://zdran.com/20180730.html">Spring Boot 学习笔记(七) 整合 Swagger2</a></li>
+<li><a href="https://zdran.com/20180809.html">Spring Boot 学习笔记(八) 整合 Filter</a></li>
+<li><a href="https://zdran.com/20180830.html">Spring Boot 学习笔记(九) 整合 多环境配置</a></li>
+<li><a href="https://zdran.com/20180904.html">Spring Boot 学习笔记(十) Redis集群搭建</a></li>
+<li><a href="https://zdran.com/20180911.html">Spring Boot 学习笔记(十一) 整合 Redis</a></li>
+<li><a href="https://zdran.com/20181016.html">Spring Boot 学习笔记(十二) 整合 定时任务</a></li>
+<li><a href="https://zdran.com/20190418.html">Spring Boot 学习笔记(十三) 整合 AOP</a></li>
+<li><a href="https://zdran.com/20190909.html">Spring Boot 学习笔记(十四) 整合 Guava</a></li>
+</ul>
+<hr>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>前后端菜单参数传递一直是初学时的痛点，不知道参数类型与注解到底怎么样去配合。</p>
+<p>其实整理一下就会发现。前后端参数传递大概有这么几种情况：</p>
+<p>常见参数数据类型：</p>
+<ul>
+<li>基本类型（Stirng，int等）</li>
+<li>引用数据类型（POJO等简单对象）</li>
+<li>复杂的引用数据类型（数组、集合等）</li>
+</ul>
+<p>常见传参方式：</p>
+<ul>
+<li>URL传参</li>
+<li>RequestBody 传参</li>
+</ul>
+<p>组合一下大概有6种常见的场景。</p>
+<h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h2><p>环境说明：</p>
+<ul>
+<li>RESTful 风格传参</li>
+<li>前端js: jQuery.js</li>
+<li>参数格式: json格式</li>
+<li>编码格式：UTF-8</li>
+</ul>
+<p>引入 jQuery, <a target="_blank" rel="noopener" href="https://github.com/jquery/jquery/releases">下载地址</a>，将下载好的jquery.min.js放到<code>resources/static/js</code>下面</p>
+<p>然后在 templates 下面创建一个 <code>parameterPassing.html</code>作为参数传递的测试页面。添加以下代码:</p>
+<pre><code>&lt;head&gt;
+    ....
+    &lt;script src=&quot;/learning/js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<p><strong>别忘了在 PageController 里面添加一个获取 parameterPassing 页面的接口</strong></p>
+<p>再创建一个 ParameterController 用于接收参数的controller。</p>
+<p>这篇文章的所有代码都只在这两个文件中，如果文章中有不太详细的地方，可以下载源码看一下。</p>
+<p><strong>PS: 本来js是需要单独一个文件的，但是为了方便学习，这里就直接写在 html 里了。</strong></p>
+<h2 id="2-GET-方式传递基本类型"><a href="#2-GET-方式传递基本类型" class="headerlink" title="2. GET 方式传递基本类型"></a>2. GET 方式传递基本类型</h2><p>最简单的一种常见，传递一个基本类型到后台。</p>
+<h3 id="2-1-PathVariable-注解"><a href="#2-1-PathVariable-注解" class="headerlink" title="2.1 PathVariable 注解"></a>2.1 PathVariable 注解</h3><p>ParameterController:</p>
+<pre><code>@RestController
+@RequestMapping(&quot;/parameter&quot;)
+public class ParameterController &#123;
+    private Logger logger = LoggerFactory.getLogger(ParameterController.class);
+
+    @GetMapping(&quot;/getString/&#123;str&#125;&quot;)
+    public String getString(@PathVariable(value = &quot;str&quot;) String str)&#123;
+        logger.info(&quot;GET 传参，传递基本类型。str：&#123;&#125;&quot;,str);
+        return &quot;收到参数：&quot; + str;
+    &#125;
+&#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>&lt;body&gt;
+    &lt;h2&gt;测试参数传递&lt;/h2&gt;
+    &lt;button id = &quot;bt1&quot;&gt;get传递String&lt;/button&gt;
+    &lt;input id=&quot;in1&quot; type=&quot;text&quot;&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    $(&quot;#bt1&quot;).click(
+        function () &#123;
+            $.ajax(
+                &#123;
+                    url:&quot;/learning/parameter/getString/&quot;+$(&quot;#in1&quot;).val(),
+                    method:&quot;GET&quot;,
+                    success:function (result) &#123;
+                        alert(result);
+                    &#125;
+                &#125;
+            )
+        &#125;
+    );
+&lt;/script&gt;
+</code></pre>
+<h3 id="2-2-RequestParam-注解"><a href="#2-2-RequestParam-注解" class="headerlink" title="2.2 RequestParam 注解"></a>2.2 RequestParam 注解</h3><p>ParameterController</p>
+<pre><code>    @GetMapping(&quot;/getName&quot;)
+    public String getName(@RequestParam(value = &quot;name&quot;) String name)&#123;
+        logger.info(&quot;GET 传参，传递基本类型。str：&#123;&#125;&quot;,name);
+        return &quot;收到参数：&quot; + name;
+    &#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>    $(&quot;#bt2&quot;).click(
+        function () &#123;
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/getName&quot;,
+                    method: &quot;GET&quot;,
+                    data: &#123;
+                        name: $(&quot;#in2&quot;).val()
+                    &#125;,
+                    success: function (result) &#123;
+                        alert(result);
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+    //拼接url方式
+    $(&quot;#bt3&quot;).click(
+        function () &#123;
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/getName?name=&quot;+$(&quot;#in3&quot;).val(),
+                    method: &quot;GET&quot;,
+                    success: function (result) &#123;
+                        alert(result);
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+</code></pre>
+<p><strong>注意:</strong></p>
+<p>PathVariable 注解的参数是直接拼接在url里的，不是放在data里的。</p>
+<p>RequestParam 注解的参数可以放在data里，也可以拼接url，格式是 <code>?key=value</code></p>
+<p><strong>PS：前后端参数的key一定要一致不然会报一个”Required String parameter ‘nae’ is not present” 的错误</strong></p>
+<h2 id="3-POST-方式传递基本类型"><a href="#3-POST-方式传递基本类型" class="headerlink" title="3. POST 方式传递基本类型"></a>3. POST 方式传递基本类型</h2><p>Post 方式传递基本类型与Get方式基本一样。</p>
+<h3 id="3-1-PathVariable-注解"><a href="#3-1-PathVariable-注解" class="headerlink" title="3.1 PathVariable 注解"></a>3.1 PathVariable 注解</h3><p>ParameterController</p>
+<pre><code>    @PostMapping(&quot;/postString/&#123;str&#125;&quot;)
+    public String postString(@PathVariable(value = &quot;str&quot;) String str)&#123;
+        logger.info(&quot;POST 传参，传递基本类型。str：&#123;&#125;&quot;,str);
+        return &quot;收到参数：&quot; + str;
+    &#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>    $(&quot;#bt4&quot;).click(
+        function () &#123;
+            $.ajax(
+                &#123;
+                    url:&quot;/learning/parameter/postString/&quot;+$(&quot;#in4&quot;).val(),
+                    method:&quot;POST&quot;,
+                    success:function (result) &#123;
+                        alert(result);
+                    &#125;
+                &#125;
+            )
+        &#125;
+    );
+</code></pre>
+<h3 id="3-2-RequestParam-注解"><a href="#3-2-RequestParam-注解" class="headerlink" title="3.2 RequestParam 注解"></a>3.2 RequestParam 注解</h3><p>ParameterController</p>
+<pre><code>    @PostMapping(&quot;/postName&quot;)
+    public String postName(@RequestParam(value = &quot;name&quot;) String name)&#123;
+        logger.info(&quot;POST 传参，传递基本类型。str：&#123;&#125;&quot;,name);
+        return &quot;收到参数：&quot; + name;
+    &#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>    $(&quot;#bt5&quot;).click(
+        function () &#123;
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/postName&quot;,
+                    method: &quot;POST&quot;,
+                    data: &#123;
+                        name: $(&quot;#in5&quot;).val()
+                    &#125;,
+                    success: function (result) &#123;
+                        alert(result);
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+    //拼接url方式
+    $(&quot;#bt6&quot;).click(
+        function () &#123;
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/postName?name=&quot;+$(&quot;#in6&quot;).val(),
+                    method: &quot;POST&quot;,
+                    success: function (result) &#123;
+                        alert(result);
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+</code></pre>
+<p>基本类型的传参方式这几种方式差不多就够用了。如果你使用的是RESTful的风格，建议使用 2.1 的格式。</p>
+<h2 id="4-POST-传递引用类型"><a href="#4-POST-传递引用类型" class="headerlink" title="4. POST 传递引用类型"></a>4. POST 传递引用类型</h2><p>PathVariable 注解不支持引用类型。</p>
+<p>RequestParam 注解也不支持引用类型，有一种做法是将json串以String类型传递。用RequestParam 注解可以，不过需要对参数进行编码。</p>
+<p>所以这里仅介绍下 RequestBody 注解。</p>
+<p>ParameterController</p>
+<pre><code>    @PostMapping(&quot;/postAccount&quot;)
+    public AccountInfo postAccount(@RequestBody AccountInfo accountInfo) &#123;
+        logger.info(&quot;GET 传参，传递基本类型。str：&#123;&#125;&quot;, accountInfo);
+        return accountInfo;
+    &#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>    $(&quot;#bt7&quot;).click(
+        function () &#123;
+            var accountInfo = &#123;
+                accountId: 123,
+                name: $(&quot;#in7&quot;).val(),
+                pwd: &quot;root&quot;,
+                balance: 123
+            &#125;;
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/postAccount&quot;,
+                    method: &quot;POST&quot;,
+                    data: JSON.stringify(accountInfo),
+                    contentType:&quot;application/json&quot;,
+                    success: function (result) &#123;
+                        alert(JSON.stringify(result));
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+</code></pre>
+<h2 id="5-传递数组"><a href="#5-传递数组" class="headerlink" title="5. 传递数组"></a>5. 传递数组</h2><h3 id="5-1-传递基本类型的数组"><a href="#5-1-传递基本类型的数组" class="headerlink" title="5.1 传递基本类型的数组"></a>5.1 传递基本类型的数组</h3><p>ParameterController</p>
+<pre><code>    @PostMapping(&quot;/postNames&quot;)
+    public List&lt;String&gt; postNames(@RequestBody String[] names) &#123;
+        logger.info(&quot;GET 传参，传递基本类型。str：&#123;&#125;&quot;, Arrays.asList(names).toString());
+        return Arrays.asList(names);
+    &#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>    $(&quot;#bt8&quot;).click(
+        function () &#123;
+            var names = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,$(&quot;#in8&quot;).val()];
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/postNames&quot;,
+                    method: &quot;POST&quot;,
+                    data: JSON.stringify(names),
+                    contentType:&quot;application/json&quot;,
+                    success: function (result) &#123;
+                        alert(JSON.stringify(result));
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+</code></pre>
+<h3 id="5-2-传递复杂类型的集合（数组）"><a href="#5-2-传递复杂类型的集合（数组）" class="headerlink" title="5.2 传递复杂类型的集合（数组）"></a>5.2 传递复杂类型的集合（数组）</h3><p>ParameterController</p>
+<pre><code>    @PostMapping(&quot;/postAccountList&quot;)
+    public List&lt;AccountInfo&gt; postAccountList(@RequestBody List&lt;AccountInfo&gt; accounts) &#123;
+        logger.info(&quot;GET 传参，传递基本类型。str：&#123;&#125;&quot;, accounts.toString());
+        return accounts;
+    &#125;
+</code></pre>
+<p>ParameterPassing.html</p>
+<pre><code>    $(&quot;#bt9&quot;).click(
+        function () &#123;
+            var accounts = [];
+
+            var accountInfo1 = &#123;
+                accountId: 123,
+                name: $(&quot;#in9&quot;).val(),
+                pwd: &quot;root&quot;,
+                balance: 123
+            &#125;;
+            accounts.push(accountInfo1);
+            var accountInfo2 = &#123;
+                accountId: 123,
+                name: $(&quot;#in9&quot;).val(),
+                pwd: &quot;root&quot;,
+                balance: 123
+            &#125;;
+            accounts.push(accountInfo2);
+            $.ajax(
+                &#123;
+                    url: &quot;/learning/parameter/postAccountList&quot;,
+                    method: &quot;POST&quot;,
+                    data: JSON.stringify(accounts),
+                    contentType:&quot;application/json&quot;,
+                    success: function (result) &#123;
+                        alert(JSON.stringify(result));
+                    &#125;
+                &#125;
+            );
+        &#125;
+    );
+</code></pre>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>
