@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-1.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-30.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>Hexo + Material + Github 搭建博客</span>
         </v-card-title>
@@ -137,7 +137,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -270,7 +270,23 @@ sitemap:
     path: sitemap.xml
 </code></pre>
 <p>然后提交给百度和 Google，就会被定期检索到了</p>
-<h3 id="8-2-robots-文件"><a href="#8-2-robots-文件" class="headerlink" title="8.2 robots 文件"></a>8.2 robots 文件</h3><p>在 <code>\source</code>中新建文件 robots.txt ,参考以下内容：</p>
+<h3 id="8-2-百度提交URL"><a href="#8-2-百度提交URL" class="headerlink" title="8.2 百度提交URL"></a>8.2 百度提交URL</h3><p>提交百度的URL需要手动处理，可以使用 hexo-baidu-url-submit 工具来处理。</p>
+<p>安装：</p>
+<pre><code>npm install hexo-baidu-url-submit --save
+</code></pre>
+<p>然后在 <code>_config.yml</code>  文件里添加以下配置：</p>
+<pre><code>baidu_url_submit:
+  count: 1 ## 提交最新的一个链接
+  host: www.hui-wang.info ## 在百度站长平台中注册的域名
+  token: your_token ## 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+
+deploy:
+- type: baidu_url_submitter ## 这是新加的
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://hui-wang.info/2016/10/23/Hexo%E6%8F%92%E4%BB%B6%E4%B9%8B%E7%99%BE%E5%BA%A6%E4%B8%BB%E5%8A%A8%E6%8F%90%E4%BA%A4%E9%93%BE%E6%8E%A5/">原文地址</a></p>
+<h3 id="8-3-robots-文件"><a href="#8-3-robots-文件" class="headerlink" title="8.3 robots 文件"></a>8.3 robots 文件</h3><p>在 <code>\source</code>中新建文件 robots.txt ,参考以下内容：</p>
 <pre><code>User-agent: *
 Allow: /
 Allow: /archives/

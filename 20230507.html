@@ -1,0 +1,787 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,Java,ConcurrentHashMap">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 62 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-2.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Java 源码重读系列之 ConcurrentHashMap</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Java 源码重读系列之 ConcurrentHashMap
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Java</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">ConcurrentHashMap</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <p>如果你没有阅读过 <a href="https://zdran.com/20230407.html">Java 源码重读系列之 HashMap</a> 这篇文章的话，建议你先读一下。以下所有内容的前提是你已阅读过以上的文章。</p>
+<p>另外，凡是涉及到多线程、并发的东西从来就没有简单的，所以这次我们很难讲清楚 ConcurrentHashMap 中的所有内容，只能聚焦到以下几个内容</p>
+<ul>
+<li>ConcurrentHashMap 的 get 操作</li>
+<li>ConcurrentHashMap 的 put 操作</li>
+<li>ConcurrentHashMap 的 resize() 操作</li>
+<li>ConcurrentHashMap 是如何保证线程安全的</li>
+</ul>
+<p>如果你想要了解的内容不在以上范围内，那就不用继续阅读了，以免浪费时间~</p>
+<h2 id="0-第一个属性-serialPersistentFields"><a href="#0-第一个属性-serialPersistentFields" class="headerlink" title="0. 第一个属性 serialPersistentFields"></a>0. 第一个属性 serialPersistentFields</h2><p>因为 ConcurrentHashMap 的逻辑比较复杂，所以我们直接从 <code>serialPersistentFields</code> 属性说起，它之前的这些属性等用到的时候我们再看就好了，你只要知道 这个属性之前还有一堆固定的属性就好了。</p>
+<p><code>serialPersistentFields</code> 属性是一个 <code>ObjectStreamField</code> 的数组，而且默认添加了三个元素。</p>
+<pre><code>    private static final ObjectStreamField[] serialPersistentFields = &#123;
+        new ObjectStreamField(&quot;segments&quot;, Segment[].class),
+        new ObjectStreamField(&quot;segmentMask&quot;, Integer.TYPE),
+        new ObjectStreamField(&quot;segmentShift&quot;, Integer.TYPE)
+    &#125;;
+</code></pre>
+<p>我们点到 <code>ObjectStreamField</code> 类中去，它的类头有一段这样的描述：</p>
+<pre><code> * A description of a Serializable field from a Serializable class.  An array
+ * of ObjectStreamFields is used to declare the Serializable fields of a class.
+</code></pre>
+<p>简单翻译一下就是，一个序列化类中可以序列化属性的描述。ObjectStreamFields 数组声明了这个类的可序列化的字段。</p>
+<p>好了，这个类我们看到这就可以了，而且也知道了 ConcurrentHashMap 中 <code>serialPersistentFields</code> 属性的作用。就是声明了一下 ConcurrentHashMap 里有三个 属性可以被序列化。这三个属性分别是<code>segments、segmentMask、segmentShift</code> 。结束~</p>
+<h2 id="1-spread"><a href="#1-spread" class="headerlink" title="1. spread()"></a>1. spread()</h2><p>继续往下是 Node 类的定义，没什么好说的，我们遇到了第一个方法。</p>
+<pre><code>    static final int spread(int h) &#123;
+        return (h ^ (h &gt;&gt;&gt; 16)) &amp; HASH_BITS;
+    &#125;
+</code></pre>
+<p>都是一些位运算。解释一下，这个方法会将 h 和 h 右移 16 位的数值进行异或（^）操作，得到的结果与 HASH_BITS 进行与（&amp;）操作。和 HASH_BITS 进行与（&amp;）操作，作用就是保证返回的结果的最高位一定是 0，也就是说，返回的结果一定是正数。（如果你对位运算没有什么概念的话，也可以不用纠结这个方法，这个方法的作用就是，给一个数，返回另外一个数。）</p>
+<h2 id="2-tabAt-、casTabAt-、setTabAt"><a href="#2-tabAt-、casTabAt-、setTabAt" class="headerlink" title="2. tabAt()、casTabAt()、setTabAt()"></a>2. tabAt()、casTabAt()、setTabAt()</h2><pre><code>    @SuppressWarnings(&quot;unchecked&quot;)
+    static final &lt;K,V&gt; Node&lt;K,V&gt; tabAt(Node&lt;K,V&gt;[] tab, int i) &#123;
+        return (Node&lt;K,V&gt;)U.getObjectVolatile(tab, ((long)i &lt;&lt; ASHIFT) + ABASE);
+    &#125;
+
+    static final &lt;K,V&gt; boolean casTabAt(Node&lt;K,V&gt;[] tab, int i,
+                                        Node&lt;K,V&gt; c, Node&lt;K,V&gt; v) &#123;
+        return U.compareAndSwapObject(tab, ((long)i &lt;&lt; ASHIFT) + ABASE, c, v);
+    &#125;
+
+    static final &lt;K,V&gt; void setTabAt(Node&lt;K,V&gt;[] tab, int i, Node&lt;K,V&gt; v) &#123;
+        U.putObjectVolatile(tab, ((long)i &lt;&lt; ASHIFT) + ABASE, v);
+    &#125;
+</code></pre>
+<p>这几个是其实是 ConcurrentHashMap 的核心操作方法。<code>tabAt()</code> 是获取，<code>casTabAt()</code> 是更新，并且是基于 CAS 方式实现的更新。<code>setTabAt()</code> 是插入。这些实现都使用了大名鼎鼎的 <code>sun.misc.Unsafe</code> 类。</p>
+<p>如果你对这个类不熟悉的话，其实可以简单理解，这个类里的一些方法都是线程的。因为这个类提供的是一些硬件级别的原子操作。简单来说，<code>sun.misc.Unsafe</code> 类提供的方法都是线程安全的。理解到这里就可以了，再深入的内容，就不再本文范围内了。继续往下。</p>
+<h2 id="2-counterCells"><a href="#2-counterCells" class="headerlink" title="2. counterCells"></a>2. counterCells</h2><p>继续往下的话，就看到了 <code>table</code> 和 <code>nextTable</code>，没什么说的，这个就是存储数据的数组了，至于 <code>nextTable</code>，通过注释可以看到，这个变量应该是只在扩容时使用到了，等用到的时候再说。</p>
+<p>继续往下呢就是一些<code>int</code> 类型的值了，通过名字和注释也看不出来什么，直接跳过。等用到的时候再说。继续往下的话我们就看到了一个 <code>CounterCell[]</code> 数组了，点到这个类的定义，可以看到以下代码。</p>
+<pre><code>    @sun.misc.Contended static final class CounterCell &#123;
+        volatile long value;
+        CounterCell(long x) &#123; value = x; &#125;
+    &#125;
+</code></pre>
+<p>好像也没有多复杂，就一个使用了 <code>volatile</code> 标记的 数值。至于 <code>sun.misc.Contended</code> 注解，主要是解决 CPU <strong>伪缓存</strong> 问题的，提高性能和效率使用的，可以先不用关注。</p>
+<p>但是，如果你阅读一下注释的话，就会发现这里面大有文章。涉及到两个非常复杂的东西：<code>LongAdder and Striped64</code>。关于 <code>LongAdder and Striped64</code> 的内容也不在本文范围内，有兴趣的话可以搜一下相关的文章。不了解也没有关系，不影响阅读。我们继续往下看。</p>
+<h2 id="3-keySet、values、entrySet"><a href="#3-keySet、values、entrySet" class="headerlink" title="3. keySet、values、entrySet"></a>3. keySet、values、entrySet</h2><p>再往下就是几个 view 变量了。</p>
+<pre><code>    // views
+    private transient KeySetView&lt;K,V&gt; keySet;
+    private transient ValuesView&lt;K,V&gt; values;
+    private transient EntrySetView&lt;K,V&gt; entrySet;
+</code></pre>
+<p>看名字也应该能猜出来，这些变量应该是跟 HashMap 的 <code>keySet()、values()、entrySet()</code> 几个方法的作用类似。如果你点到它的定义就会看到，这几个类都继承了 <code>CollectionView</code> 这个类。</p>
+<pre><code>abstract static class CollectionView&lt;K,V,E&gt;
+        implements Collection&lt;E&gt;, java.io.Serializable &#123;
+        private static final long serialVersionUID = 7249069246763182397L;
+        final ConcurrentHashMap&lt;K,V&gt; map;
+        CollectionView(ConcurrentHashMap&lt;K,V&gt; map)  &#123; this.map = map; &#125;
+
+        //... ...
+</code></pre>
+<p>只看前面几行就可以了，内部有一个 <code>ConcurrentHashMap</code> 类型的变量，而且 <code>CollectionView</code> 只有一个带有 <code>ConcurrentHashMap</code> 参数的构造方法。盲猜也能猜到，上面的 xxxView 类内部操作的也都是 ConcurrentHashMap 存储的数据。了解这些就可以了，我们继续往下看。</p>
+<h2 id="3-构造方法"><a href="#3-构造方法" class="headerlink" title="3. 构造方法"></a>3. 构造方法</h2><p>第一个是个空构造方法没有什么好说的，先看第二个。</p>
+<pre><code>    public ConcurrentHashMap(int initialCapacity) &#123;
+        if (initialCapacity &lt; 0)
+            throw new IllegalArgumentException();
+        int cap = ((initialCapacity &gt;= (MAXIMUM_CAPACITY &gt;&gt;&gt; 1)) ?
+                   MAXIMUM_CAPACITY :
+                   tableSizeFor(initialCapacity + (initialCapacity &gt;&gt;&gt; 1) + 1));
+        this.sizeCtl = cap;
+    &#125;
+</code></pre>
+<p>通过注释和名称我们应该能够知道，这个构造方法可以初始化 Map 的容量。有意思的是，计算 <code>cap</code> 的方法。不知道你还记不记得 HashMap 的初始容量的构造方法是怎么计算容量的。代码在下面</p>
+<pre><code>this.threshold = tableSizeFor(initialCapacity);
+</code></pre>
+<p>而 ConcurrentHashMap 则是将 initialCapacity 加上了 initialCapacity 的一半又加了 1 作为 <code>tableSizeFor</code> 的参数。其实就是为了解决 HashMap 存在的可能出现两次扩容的问题。</p>
+<p><strong>注意</strong>，这里使用的是 <code>&gt;&gt;&gt;</code>，不是 <code>&gt;&gt;</code>。<code>&gt;&gt;&gt;</code> 的含义是<strong>无符号右移</strong>。它会把最高位表示正负的值也会右移，然后补 0。 所以 <code>&gt;&gt;&gt;</code> 之后，一定是正数。如果 <code>&gt;&gt;&gt;</code> 之前是正数的话，结果跟 <code>&gt;&gt;</code> 一致。如果是负数的话，就会出现一个很奇怪的正数。这是因为最高位表示负数的 1 也跟着右移了。由于代码里已经判断了小于 0 ，所以我们目前先按照除 2 理解即可。</p>
+<p>还有一个点是，从代码来看，ConcurrentHashMap 的最大容量 <strong>好像</strong> 是用 <code>sizeCtl</code> 表示的。但是，如果仅仅是表示最大容量，为什么会定义一个这么奇怪的名字呢？ <code>Ctl</code> 的后缀应该是 <code>control</code> 的简写。具体是怎么控制的呢？</p>
+<p>继续往下，我们先跳过带有 Map 参数的构造方法，因为这个涉及到 <code>putAll()</code> 方法。</p>
+<pre><code>    public ConcurrentHashMap(int initialCapacity, float loadFactor) &#123;
+        this(initialCapacity, loadFactor, 1);
+    &#125;
+
+    public ConcurrentHashMap(int initialCapacity,
+                             float loadFactor, int concurrencyLevel) &#123;
+        if (!(loadFactor &gt; 0.0f) || initialCapacity &lt; 0 || concurrencyLevel &lt;= 0)
+            throw new IllegalArgumentException();
+        if (initialCapacity &lt; concurrencyLevel)   // Use at least as many bins
+            initialCapacity = concurrencyLevel;   // as estimated threads
+        long size = (long)(1.0 + (long)initialCapacity / loadFactor);
+        int cap = (size &gt;= (long)MAXIMUM_CAPACITY) ?
+            MAXIMUM_CAPACITY : tableSizeFor((int)size);
+        this.sizeCtl = cap;
+    &#125;
+</code></pre>
+<p>这两个构造方法其实可以算做一个，我们直接看下面那个复杂的。</p>
+<p>先判断了一下参数的取值，然后更新了一下 <code>initialCapacity</code> 参数，然后根据参数计算 <code>size</code>，考虑到 <code>loadFactor</code> 可能小于 1，导致 int 值越界，所以转成了 long 类型。</p>
+<p>关于 <code>concurrencyLevel</code>，给的注释是：并发更新线程的预估数量。那上面那段判断更新就不难理解了。假如我预估会有 20 个线程同时更新这个初始容量为 15 的 Map，这个时候的初始容量会自动的改为 20 。</p>
+<p>好像没有什么问题？有意思的是， <code>loadFactor</code> 这个参数竟然没有保存！！ 加载因子没有保存，那什么时候触发扩容呢？我们继续往下看。</p>
+<h2 id="4-putAll"><a href="#4-putAll" class="headerlink" title="4. putAll()"></a>4. putAll()</h2><p>回到带有 Map 参数的构造方法。</p>
+<pre><code>    public ConcurrentHashMap(Map&lt;? extends K, ? extends V&gt; m) &#123;
+        this.sizeCtl = DEFAULT_CAPACITY;
+        putAll(m);
+    &#125;
+</code></pre>
+<p>没有什么复杂的，指定了下默认的初始容量（16）就直接 <code>putAll(m);</code> 了。</p>
+<pre><code>    public void putAll(Map&lt;? extends K, ? extends V&gt; m) &#123;
+        tryPresize(m.size());
+        for (Map.Entry&lt;? extends K, ? extends V&gt; e : m.entrySet())
+            putVal(e.getKey(), e.getValue(), false);
+    &#125;
+</code></pre>
+<p>好像也不难，先执行 <code>tryPresize(m.size());</code> 应该是初始扩容， 然后再 for 循环进行 <code>putVal()</code> 操作。</p>
+<h2 id="5-tryPresize"><a href="#5-tryPresize" class="headerlink" title="5. tryPresize()"></a>5. tryPresize()</h2><p>先看下方法名。尝试并行重置容量。里面的 P 应该是 parallel(并行) 的缩写。</p>
+<pre><code>    private final void tryPresize(int size) &#123;
+        int c = (size &gt;= (MAXIMUM_CAPACITY &gt;&gt;&gt; 1)) ? MAXIMUM_CAPACITY :
+            tableSizeFor(size + (size &gt;&gt;&gt; 1) + 1);
+        int sc;
+        while ((sc = sizeCtl) &gt;= 0) &#123;
+            Node&lt;K,V&gt;[] tab = table; int n;
+            if (tab == null || (n = tab.length) == 0) &#123;
+                n = (sc &gt; c) ? sc : c;
+                if (U.compareAndSwapInt(this, SIZECTL, sc, -1)) &#123;
+                    try &#123;
+                        if (table == tab) &#123;
+                            @SuppressWarnings(&quot;unchecked&quot;)
+                            Node&lt;K,V&gt;[] nt = (Node&lt;K,V&gt;[])new Node&lt;?,?&gt;[n];
+                            table = nt;
+                            sc = n - (n &gt;&gt;&gt; 2);
+                        &#125;
+                    &#125; finally &#123;
+                        sizeCtl = sc;
+                    &#125;
+                &#125;
+            &#125;
+            else if (c &lt;= sc || n &gt;= MAXIMUM_CAPACITY)
+                break;
+            else if (tab == table) &#123;
+                int rs = resizeStamp(n);
+                if (sc &lt; 0) &#123;
+                    Node&lt;K,V&gt;[] nt;
+                    if ((sc &gt;&gt;&gt; RESIZE_STAMP_SHIFT) != rs || sc == rs + 1 ||
+                        sc ==   + MAX_RESIZERS || (nt = nextTable) == null ||
+                        transferIndex &lt;= 0)
+                        break;
+                    if (U.compareAndSwapInt(this, SIZECTL, sc, sc + 1))
+                        transfer(tab, nt);
+                &#125;
+                else if (U.compareAndSwapInt(this, SIZECTL, sc,
+                                             (rs &lt;&lt; RESIZE_STAMP_SHIFT) + 2))
+                    transfer(tab, null);
+            &#125;
+        &#125;
+    &#125;
+
+</code></pre>
+<p>首先计算了下变量 c，这个是保存入参 <code>size</code> 个元素时需要的最大容量。</p>
+<p>然后是一个 whlie 循环，因为我们是通过构造方法进来的，所以 <code>sizeCtl</code> 的值现在是默认值 16 ，<code>table</code> 现在是 <code>null</code>。这个时候就进入到了 <code>if</code> 的代码里了。</p>
+<p>在 <code>if</code> 的条件里是判断了 <code>compareAndSwapInt()</code> 的结果。这里需要说一下，<code>compareAndSwapInt</code> 方法是 CAS 的一种实现。这个方法内部做了两件事情，首先是比较 this 这个对象的 SIZECTL 值是否跟 sc 相等，相等的话，把 SIZECTL 的值 改为 -1。而且 Unsafe 类还保证了线程的安全。如果有多个线程同时执行这个方法的话，只会有一个线程成功。不会出现两个线程都比较通过了，然后在赋值的时候产生覆盖的问题。</p>
+<p>好像也不难理解，其实就是把 <code>sizeCtl</code> 值改成了 -1，而且只有一个线程会成功。这里的 <code>sizeCtl</code> 更像是一把锁，哪个线程改成了 -1 ，哪个线程就获取到了锁，那它就可以执行后面的流程了。</p>
+<p>继续，因为上面已经对 <code>tab = table</code> 赋值了，所以下面的判断也能通过。然后，就看到了数组初始化的过程了。直接 <code>new</code> 了一个长度为 n 的 <code>Node[]</code>。并赋值给了 <code>table</code>。如果你往上追一下 n 的赋值，就会知道，现在的 n 正好是 c。就是方法一开始计算的值。</p>
+<p>table 数组都已经初始化了，是不是结束了？并没有。这个时候更新了一下 sc。 <code>&gt;&gt;&gt; 2</code> 相当于除 4，其实就是 sc 现在的值是 n 的 3&#x2F;4 。而且在 <code>finally</code> 块中，更新了 <code>sizeCtl</code>。这个时候 <code>sizeCtl</code> 就不是 -1 了。根据我们之前的理解，这里更新 <code>sizeCtl</code>，应该是在释放锁。</p>
+<p>然后，第一次 <code>while</code> 循环就结束了。再次进入 <code>while</code> 循环，这次 sc 是 n 的 3&#x2F;4 了，上一次循环已经更新了 <code>sizeCtl</code>。</p>
+<p>这次 <code>table</code> 就不等于 <code>null</code> 了。而且根据我们之前的推断，现在的 sc 应该等于 n 的 3&#x2F;4 ，而 n 之前又等于 c。所以， <code>c &lt;= sc</code> 这个条件也不成立。</p>
+<p>而且 <code>n &gt;= MAXIMUM_CAPACITY</code> 这个条件大概率是在扩容到最大的时候才会成立。所以，就走到了最后一个条件分支里了。因为 <code>sc</code> 现在是大于 0 的，所以直接走到了最后一个分支。</p>
+<p><strong>PS: <code>if (sc &lt; 0)</code> 这个分支好像永远不会执行，因为 <code>while</code> 进入的条件要求 <code>sc &gt;= 0</code>，而在判断<code>sc &lt; 0</code> 之前又没有任何地方会把 <code>sc</code> 更新为负数，所以好像一直都不会执行。如果我理解错了，希望有人能解惑一下~</strong></p>
+<h2 id="6-resizeStamp"><a href="#6-resizeStamp" class="headerlink" title="6. resizeStamp()"></a>6. resizeStamp()</h2><p>首先执行了一下 <code>resizeStamp()</code> 方法。这个方法也是一个位运算的方法。你可以直接使用 <code>main()</code> 方法跑一下，会返回一个很难理解的正数。简单说一下这个数是怎么得出来的。</p>
+<pre><code>    static final int resizeStamp(int n) &#123;
+        return Integer.numberOfLeadingZeros(n) | (1 &lt;&lt; (RESIZE_STAMP_BITS - 1));
+    &#125;
+</code></pre>
+<p>首先， <code>numberOfLeadingZeros()</code> 会返回 n 的二进制串中从最左边算起连续的“0”的总个数。然后再跟 1 左移 15 位的值按位或（|）操作。<br>最终得到的就是一个在二进制中，第 16 位为 1 的正数。</p>
+<p>继续回到代码，因为现在已经确定 <code>sc</code> 是 n 的 3&#x2F;4 了(PS：如果这个 3&#x2F;4 不理解，那换成 0.75 是不是会好点 ，好像跟 <code>HashMap</code> 的扩容因子一样，其实 sc 的值就是扩容阈值，这个后面会提到，现在不理解没关系)，所以也是大于 0 的。这里又进行了一次 <code>compareAndSwapInt()</code>。这个时候赋值的是把 rs 左移了 16 位。<br>还记得 <code>resizeStamp()</code> 返回的结果么，第 16 位是 1。所以 rs 右移 16 位之后，最高位就是 1 了，在 int 类型里，二进制的最高位表示正负，1 表示负数。</p>
+<p>所以，这个时候，又把 <code>sizeCtl</code> 更新成负值了。根据我们之前的理解，这里应该还是获取锁的操作。获取到锁之后，一般就是需要操作资源了。但是 table 我们不是已经初始化好了吗？这次又要初始什么呢？</p>
+<p><strong>记住，现在 <code>sizeCtl</code> 是一个负值，并且 <code>sizeCtl = (resizeStamp(n) &lt;&lt; RESIZE_STAMP_SHIFT) + 2)</code> 后面要用到！</strong></p>
+<h2 id="7-transfer"><a href="#7-transfer" class="headerlink" title="7.transfer()"></a>7.<code>transfer()</code></h2><pre><code>        int n = tab.length, stride;
+        if ((stride = (NCPU &gt; 1) ? (n &gt;&gt;&gt; 3) / NCPU : n) &lt; MIN_TRANSFER_STRIDE)
+            stride = MIN_TRANSFER_STRIDE; // subdivide range
+        if (nextTab == null) &#123;            // initiating
+            try &#123;
+                @SuppressWarnings(&quot;unchecked&quot;)
+                Node&lt;K,V&gt;[] nt = (Node&lt;K,V&gt;[])new Node&lt;?,?&gt;[n &lt;&lt; 1];
+                nextTab = nt;
+            &#125; catch (Throwable ex) &#123;      // try to cope with OOME
+                sizeCtl = Integer.MAX_VALUE;
+                return;
+            &#125;
+            nextTable = nextTab;
+            transferIndex = n;
+        &#125;
+
+        //... ...
+</code></pre>
+<p>到这里还是比较好理解的。先初始了一下 <code>stride</code> 和 <code>n</code> 这两个变量。然后，因为我们是初始化进来的，所以 <code>nextTab</code> 一定等于 <code>null</code>。这个时候会初始化 <code>nextTab</code>。在创建数组的时候捕获了一个异常，这个异常出现的唯一情况就是内存不够了，分配不了 2 倍的 n 的数组。这个时候，将 <code>sizeCtl</code> 的值改为了 <code>Integer.MAX_VALUE</code>。然后就结束了。如果没有抛异常，会更新 <code>nextTable</code> 和 <code>transferIndex</code> 的值。</p>
+<p>我们需要回头看下 <code>tryPresize()</code> 方法。如果在抛异常的时候结束，会出现什么情况。根据代码，异常结束后，会进入第三次循环，这次循环会进入第二个分支。因为 <code>c &lt;= sc</code> 一定会成立。这里就会结束循环。</p>
+<p>到这里，我们已经把  <code>tryPresize()</code> 循环里的三个分支都走完了，下面继续看 <code>transfer()</code> 这个方法。</p>
+<p><code>nextTab</code> 初始化之后，我们又看到了一个新的 Node 类:</p>
+<pre><code>    ForwardingNode&lt;K,V&gt; fwd = new ForwardingNode&lt;K,V&gt;(nextTab);
+</code></pre>
+<p>点到这个类的定义里我们会发现，这个类里面只有一个属性 <code>nextTable</code> 和一个 <code>find()</code> 方法。关于 <code>find()</code> 是在获取元素时才能用到，我们先不用关注。目前来看 <code>ForwardingNode</code> 其实就是对 <code>nextTab</code> 的一个封装。然后继续看 <code>transfer()</code> 。</p>
+<p>两个<code>boolean</code> 类型的值，默认一个 true，一个 false。</p>
+<p>下面的代码是一个 <code>for</code> 循环，但是这个循环有差不多 100 多行的代码（如果我在项目里遇到这种代码估计会骂人的~）。我们一点点看，首先是一个<code>while</code> 循环。</p>
+<pre><code>        while (advance) &#123;
+            int nextIndex, nextBound;
+            if (--i &gt;= bound || finishing)
+                advance = false;
+            else if ((nextIndex = transferIndex) &lt;= 0) &#123;
+                i = -1;
+                advance = false;
+            &#125; else if (U.compareAndSwapInt(this, TRANSFERINDEX, nextIndex, 
+                    nextBound = (nextIndex &gt; stride ? nextIndex - stride : 0))) &#123;
+                bound = nextBound;
+                i = nextIndex - 1;
+                advance = false;
+            &#125;
+        &#125;
+</code></pre>
+<p>首先 <code>i = 0, bound = 0</code> ，所以，第一次循环不会进入第一个分支。然后，根据之前 <code>transferIndex = n;</code> 的赋值，也不会进入第二个分支。</p>
+<p>这样就来到了第三个分支。<code>compareAndSwapInt</code> 会更新 <code>transferIndex</code> 的值，如果 CPU 的个数是 1，<code>transferIndex</code> 更新成 0 ，否则更新成 <code>nextIndex - stride </code>。然后更新 <code>bound、i、advance</code> 的值，循环就结束了。</p>
+<p>继续往下，现在 i 的值是 <code>n - 1</code>，所以不会命中 <code>if (i &lt; 0 || i &gt;= n || i + n &gt;= nextn)</code> 条件。</p>
+<p>然后，因我们是初始化时进入的，素以 tab 里的所有元素都是 <code>null</code>，第二个条件就通过了。</p>
+<pre><code>    else if ((f = tabAt(tab, i)) == null)
+        advance = casTabAt(tab, i, null, fwd);
+</code></pre>
+<p>其实就是把 tab 的 i 位置 初始化了一个 fwd 元素。 到这里，第一次 <code>for</code> 循环就结束了。</p>
+<p>第二次循环其实也很简单，首先 <code>advance = false</code> ，不会进入 <code>while</code> 循环，然后就会进入下面的判断</p>
+<pre><code>    else if ((f = tabAt(tab, i)) == null)
+        advance = casTabAt(tab, i, null, fwd);
+    else if ((fh = f.hash) == MOVED)
+        advance = true; // already processed
+</code></pre>
+<p>首先，获取了下 <code>tab[i]</code> 的值，因为上次循环已经赋值过了，现在 <code>f = fwd</code>。然后，有意思的来了，先看下 <code>MOVED</code> 的定义</p>
+<pre><code>    static final int MOVED     = -1; // hash for forwarding nodes
+</code></pre>
+<p>没错，<code>MOVED = -1</code>，按我们正常的理解，一个对象的 hash 值，怎么也不会等于 -1 吧，我们再回头看下 <code>ForwardingNode</code> 这个类</p>
+<pre><code>    static final class ForwardingNode&lt;K,V&gt; extends Node&lt;K,V&gt; &#123;
+        final Node&lt;K,V&gt;[] nextTable;
+        ForwardingNode(Node&lt;K,V&gt;[] tab) &#123;
+            super(MOVED, null, null, null);
+            this.nextTable = tab;
+        &#125;
+        //... ...
+    &#125;
+
+
+    static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
+        final int hash;
+        final K key;
+        volatile V val;
+        volatile Node&lt;K,V&gt; next;
+
+        Node(int hash, K key, V val, Node&lt;K,V&gt; next) &#123;
+            this.hash = hash;
+            this.key = key;
+            this.val = val;
+            this.next = next;
+        &#125;
+        //... ... 
+    &#125;
+</code></pre>
+<p>顺便贴了下父类的代码，主要看构造函数，看到了么? <code>fwd</code> 这个对象在初始化的时候，指定了 hash 值，就是 <code>MOVED</code>。OK，回到之前的循环。</p>
+<p>这次循环就会把 <code>advance</code> 改为 <code>true</code>。第二次循环就结束了。</p>
+<p>经过上面的两次循环之后，我们是其实只是执行了一行代码 <code>tab[n-1] = fwd</code>。现在进入第三次循环，之前 <code>i = n - 1 </code>。现在又执行了一次 <code>if (--i &gt;= bound || finishing)</code>，所以现在 <code>i = n - 2</code> 。但是 <code>bound</code> 可能有两种情况，一种是 <code>bound = n - stride</code>，一种是 <code>bound = 0</code>。我们先假设 <code>bound = n - stride; stride = 16 </code>。所以，第一个条件是成立的，执行 <code>advance = false;</code> ，然后 <code>while</code> 循环结束。</p>
+<p>然后，第一个 <code>if (i &lt; 0 || i &gt;= n || i + n &gt;= nextn)</code> 条件不会成立，又执行到了赋值操作里。这时 <code>tab[n-2] = fwd</code>。第三次循环结束~</p>
+<p>然后第四次循环又会把 <code>advance</code> 改为 <code>true</code>。</p>
+<p>好好回味下~~</p>
+<p>其实，这一顿操作下来就是在执行 <code>tab[i] = fwd</code> 这一行代码。搞了这么多东西，其实就是在支持多线程并发扩容，简单说下过程。</p>
+<p>首先，<code>while</code> 循环会确定当前线程扩容的区间 [ bound,nextIndex )  左开右闭。然后 <code>while</code> 循环下面的代码其实就是在给 <code>tab</code> 和 <code>nextTab</code> 赋值。设想下，如果 <code>while</code> 循环里的 <code>compareAndSwapInt</code> 执行失败，会是什么情况？没错，会空转！结束只有两种情况，一种是 <code>transferIndex = 0</code>。说明已经有其他线程把所有的区间都认领了，另外一种情况是执行 <code>compareAndSwapInt</code>。认领 [ bound,nextIndex ) 的区间，进行扩容。</p>
+<p>其实，你可以直接验证下的，打断点也好，手写也罢，假设<code>n = 1024; NCPU = 4</code>。这时 <code>stride = 32</code>。那么第一个线程会先对 <code>tab[1024-32,1024-1]</code>进行赋值。如果这时有其他线程进来，在 <code>while</code> 循环的时候，就会认领 <code>tab[1024-32-32,1024-32-1]</code> 的区间进行赋值。如果有更多的线程进来的话，就会加快这个过程。这个就是所谓的 <strong>并发扩容</strong> ，也有叫 <strong>辅助扩容</strong> 的。</p>
+<p>然后，我们来看下通过 <code>synchronized</code> 加锁的这段代码。能执行到这里的话只能是 <code>tab[i].hash != MOVED</code>。那就说明这里记录的是一个正常的数据。</p>
+<p>首先判断了下 <code>if (tabAt(tab, i) == f)</code> 没什么说的，肯定成立，不成立就结束了，然后判断了下 <code>if (fh &gt;= 0)</code>。有点奇怪，正常数据的 hash 还能小于 0 ？那我们先看下不成立的情况</p>
+<pre><code> else if (f instanceof TreeBin) 
+</code></pre>
+<p>明白了吧，当发生 hash 冲突时，并且链表已经转成红黑树了，这时 <code>tab[i] = TreeBin</code>，那我们看下 <code>TreeBin</code> 的定义。</p>
+<pre><code>static final class TreeBin&lt;K,V&gt; extends Node&lt;K,V&gt; &#123;
+    TreeBin(TreeNode&lt;K,V&gt; b) &#123;
+        super(TREEBIN, null, null, null);
+        //... ...
+    &#125;
+&#125;
+ static final int TREEBIN   = -2; // hash for roots of trees
+</code></pre>
+<p>真相了，<code>TreeBin</code> 的 hash 值是 -2，就小于 0。后面的代码我们就不说了，其实跟<code>HashMap</code>是一样的，如果当前节点是链表，那就采用高低位链表的形式对 <code>nextTab</code> 赋值，如果是 <code>TreeBin</code> 那就采用红黑树的方式进行赋值。而且，我们对 <code>tab[i]</code> 加了 <code>synchronized</code> 锁，也不会有线程竞争，老老实实赋值就好了。</p>
+<p>最后，<code>transfer</code> 里的代码基本上都看完了，就剩下面这段了</p>
+<pre><code>    if (i &lt; 0 || i &gt;= n || i + n &gt;= nextn) &#123;
+        int sc;
+        if (finishing) &#123;
+            nextTable = null;
+            table = nextTab;
+            sizeCtl = (n &lt;&lt; 1) - (n &gt;&gt;&gt; 1);
+            return;
+        &#125;
+        if (U.compareAndSwapInt(this, SIZECTL, sc = sizeCtl, sc - 1)) &#123;
+            if ((sc - 2) != resizeStamp(n) &lt;&lt; RESIZE_STAMP_SHIFT)
+                return;
+            finishing = advance = true;
+            i = n; // recheck before commit
+        &#125;
+    &#125;
+</code></pre>
+<p>在 <code>while</code> 循环里，有这么一行代码 <code>i = -1;</code> 执行了这个之后，就会进入上面的代码里。其实就是 <code>tab</code> 初始化完成之后，即 <code>nextIndex = 0</code> 的时候，就会执行 <code>i = -1;</code> ，然后就会进入上面的代码了。我们看下上面的代码。</p>
+<p>首先，<code>finishing</code> 现在应该是等于 <code>false</code> 的，直接进入第二个 <code>if</code>。这个也很简单，首先 <code>sc = sizeCtl</code>，赋值，然后通过 CAS 将 <code>sizeCtl</code> 的值改为 <code>sc - 1</code>。还记得 <code>sizeCtl</code> 的值是多少么？？ 我直接粘贴一下 <code>sizeCtl = (resizeStamp(n) &lt;&lt; RESIZE_STAMP_SHIFT) + 2)</code>。是不是跟 <code>if ((sc - 2) != resizeStamp(n) &lt;&lt; RESIZE_STAMP_SHIFT)</code> 这个判断逻辑一致？如果不相等，说明有其他线程修改了<code>sizeCtl</code>，这同时说明有其他线程还在执行扩容的动作，即还在执行 <code>tryPresize()</code> 或者是 <code>transfer()</code> 方法。那么，因为当前线程已经执行完了，所以直接 <code>return;</code> 结束，让其他线程继续执行就好了。</p>
+<p>如果相等，执行 <code>finishing = advance = true; i = n</code>。进入下一次 <code>for</code> 循环。</p>
+<p>一顿判断之后，你会发现，还是会进入到上面的代码，而这时，<code>finishing == true</code> 了！下面的代码就不难理解了吧，更新 <code>table</code> ，相当于使用了新的数组了，而 <code>sizeCtl</code> 也更新了一下。都是位运算，如果你看不明白，可以用 <code>main</code> 方法跑一下。我们假设 <code>n = 1024</code>，那么 <code>table</code> 现在的大小也就是之前 <code>nextTab</code> 的大小，就是2048，然后，我们用 <code>main</code> 跑一下 <code>sizeCtl</code> 的值，不出意外的话应该等于 1536 。如果还看不明白，那么你再计算下 <code>1536 / 2048</code>。结果是 0.75 ，这个数字熟悉吧？ <code>HashMap</code> 的默认加载因子！。没错，<code>sizeCtl</code> 其实就是下次需要扩容的阈值。</p>
+<p>到这里，我们就把 <code>transfer()</code> 方法看完了。然后，我们重点总结下 <code>sizeCtl</code> 这个属性，不得不承认，这个设计非常的巧妙！</p>
+<p>首先，通常情况下 <code>sizeCtl</code> 应该是等于下次的扩容阈值的。但是在扩容期间，有两个状态，一个是 -1，一个是非常大的一个负值。等于 -1 很好理解，相当于是一个锁，哪个线程更新成功，就可以进行数组的初始化动作。那么，就剩最后一种情况了。直接用下面的 <code>main()</code> 方法跑一下</p>
+<pre><code>    public static void main(String[] args) throws IllegalAccessException &#123;
+        int rs = Integer.numberOfLeadingZeros(1024) | (1 &lt;&lt; (16 - 1));
+        int sizeCtl = (rs &lt;&lt; 16) + 2;
+        System.out.println(sizeCtl);
+        System.out.println((sizeCtl&lt;&lt;16)&gt;&gt;16);
+    &#125;
+</code></pre>
+<p>会得到下面的结果</p>
+<pre><code>-2146107390
+2
+</code></pre>
+<p>有意思了，<code>(sizeCtl&lt;&lt;16)&gt;&gt;16</code>，这个操作是先左移 16 位，再右移 16 位，相当于把 <code>sizeCtl</code> 的高 16 位都置为 0 了。得到了一个 2，其实，这个 2 就是说当前有 (2 - 1) 个线程在进行扩容操作。（PS： <code>sizeCtl</code> 注释里有写~）。具体是为什么，我们继续往下看。</p>
+<p><code>transfer()</code> 执行完，就回到了 <code>tryPresize()</code>。然后继续返回就到了 <code>putAll()</code>。继续往下执行就是 <code>putVal()</code> 方法了。</p>
+<h2 id="8-putVal"><a href="#8-putVal" class="headerlink" title="8.putVal()"></a>8.putVal()</h2><pre><code>    final V putVal(K key, V value, boolean onlyIfAbsent) &#123;
+        if (key == null || value == null) throw new NullPointerException();
+        int hash = spread(key.hashCode());
+        int binCount = 0;
+        for (Node&lt;K,V&gt;[] tab = table;;) &#123;
+            Node&lt;K,V&gt; f; int n, i, fh;
+            if (tab == null || (n = tab.length) == 0)
+                tab = initTable();
+            else if ((f = tabAt(tab, i = (n - 1) &amp; hash)) == null) &#123;
+                if (casTabAt(tab, i, null,
+                             new Node&lt;K,V&gt;(hash, key, value, null)))
+                    break;                   // no lock when adding to empty bin
+            &#125;
+            else if ((fh = f.hash) == MOVED)
+                tab = helpTransfer(tab, f);
+        //... ...
+</code></pre>
+<p>首先判断了下 <code>null</code>，然后计算了下 <code>hash</code> 哈希值。就进入 <code>for</code> 循环了。首先是第一个分支。其实就是 <code>tab</code> 还没有初始化的时候会进入这个分支。 </p>
+<h2 id="9-initTable"><a href="#9-initTable" class="headerlink" title="9.initTable()"></a>9.initTable()</h2><pre><code>    private final Node&lt;K,V&gt;[] initTable() &#123;
+        Node&lt;K,V&gt;[] tab; int sc;
+        while ((tab = table) == null || tab.length == 0) &#123;
+            if ((sc = sizeCtl) &lt; 0)
+                Thread.yield(); // lost initialization race; just spin
+            else if (U.compareAndSwapInt(this, SIZECTL, sc, -1)) &#123;
+                try &#123;
+                    if ((tab = table) == null || tab.length == 0) &#123;
+                        int n = (sc &gt; 0) ? sc : DEFAULT_CAPACITY;
+                        @SuppressWarnings(&quot;unchecked&quot;)
+                        Node&lt;K,V&gt;[] nt = (Node&lt;K,V&gt;[])new Node&lt;?,?&gt;[n];
+                        table = tab = nt;
+                        sc = n - (n &gt;&gt;&gt; 2);
+                    &#125;
+                &#125; finally &#123;
+                    sizeCtl = sc;
+                &#125;
+                break;
+            &#125;
+        &#125;
+        return tab;
+    &#125;
+</code></pre>
+<p>好像也没有多少复杂的，因为我们之前已经对 <code>sizeCtl</code> 做了充分的解释，这里如果 <code>sc &lt; 0</code> 的话，说明在扩容或者是初始化中，然后当前线程直接执行了 <code>Thread.yield();</code>，就是放弃 CPU 执行权等待下次分配 CPU 时间片，如果不小于 0 ，并且 <code>tab = null</code> ，那说明现在还没有线程执行扩容，那当前线程就会更新 <code>sizeCtl</code>，然后自己开始执行初始化动作，初始化好后直接返回 <code>tab</code>。</p>
+<p>继续回到 <code>putVal()</code> 方法，如果执行第二个分支，说明 <code>tab[i] == null</code>，这个位置还没有元素，直接通过 <code>casTabAt()</code> 方法进行赋值。如果这个位置有值，并且 <code>(fh = f.hash) == MOVED</code> 说明在扩容或者是在初始化，这个时候当前线程会进行 <strong>辅助扩容</strong>。</p>
+<h2 id="10-helpTransfer"><a href="#10-helpTransfer" class="headerlink" title="10.helpTransfer()"></a>10.helpTransfer()</h2><pre><code>    final Node&lt;K,V&gt;[] helpTransfer(Node&lt;K,V&gt;[] tab, Node&lt;K,V&gt; f) &#123;
+        Node&lt;K,V&gt;[] nextTab; int sc;
+        if (tab != null &amp;&amp; (f instanceof ForwardingNode) &amp;&amp;
+            (nextTab = ((ForwardingNode&lt;K,V&gt;)f).nextTable) != null) &#123;
+            int rs = resizeStamp(tab.length);
+            while (nextTab == nextTable &amp;&amp; table == tab &amp;&amp;
+                   (sc = sizeCtl) &lt; 0) &#123;
+                if ((sc &gt;&gt;&gt; RESIZE_STAMP_SHIFT) != rs || sc == rs + 1 ||
+                    sc == rs + MAX_RESIZERS || transferIndex &lt;= 0)
+                    break;
+                if (U.compareAndSwapInt(this, SIZECTL, sc, sc + 1)) &#123;
+                    transfer(tab, nextTab);
+                    break;
+                &#125;
+            &#125;
+            return nextTab;
+        &#125;
+        return table;
+    &#125;
+</code></pre>
+<p>首先在 <code>if</code> 条件里获取到 <code>nextTab</code> 如果不为 <code>null</code>，就会进入 <code>while</code> 循环，首先 <code>sc &lt; 0</code> 说还在扩容或者是初始化中，<code>while</code> 循环里的第一个分支是不需要辅助扩容或者是已经达到最大的辅助线程数量，或者是已经剩最后一个线程在扩容了，其他的线程都结束了。所以直接 <code>break;</code> 就可以了。</p>
+<p>第二个分支，首先会执行 <code>sizeCtl + 1</code> 的操作，执行成功就会执行 <code>transfer()</code> 方法，这个方法我们之前已经看过了，就不看了，需要注意的是，我们之前说过，<code>sizeCtl</code> 的低 16 位代表目前正在扩容的线程数减一。因为这里新加入一个线程参与扩容，所以对 <code>sizeCtl</code> 进行了加一的操作。如果还有线程进来，那么 <code>sizeCtl</code> 还会加一。这里就解释清楚 <code>sizeCtl</code> 的另外的一个用法了。扩容结束直接 <code>break;</code>。继续回到 <code>putVal()</code>。</p>
+<p>继续下一次 <code>for</code>，如果 <code>tab[i]</code> 还不等于 <code>null</code>，那就说明发生哈希冲突了，并且当前已经不在扩容了。就走到了最后一个分支，使用 <code>synchronized</code> 加锁的这一段代码里，这段代码其实并不复杂，发生冲突之后无非就两种情况，链表或者是红黑树。你可以看下 <code>TreeBin</code> 的构造方法。它的哈希值是 -2。</p>
+<pre><code>    static final int TREEBIN   = -2; // hash for roots of trees
+    //... ...
+
+    TreeBin(TreeNode&lt;K,V&gt; b) &#123;
+        super(TREEBIN, null, null, null);
+
+        //... ... 
+    &#125;
+</code></pre>
+<p>所以才有了 <code>if (fh &gt;= 0) </code> 的判断，如果首节点的哈希值大于 0 ，那一定是链表。</p>
+<p>最后还有一段进行树化的判断操作。</p>
+<pre><code>    static final int TREEIFY_THRESHOLD = 8;
+    //... ...
+
+    if (binCount != 0) &#123;
+        if (binCount &gt;= TREEIFY_THRESHOLD)
+            treeifyBin(tab, i);
+        if (oldVal != null)
+            return oldVal;
+        break;
+    &#125;
+</code></pre>
+<p>链表的节点数超过 8 就会进行树化操作。到这里其实 <code>putVal()</code> 的相关操作基本上已经结束了，就剩最后一个 <code>addCount()</code> 方法了，看名称也知道这个是更新计数器的，盲猜也能猜到应该跟元素数量有关系。不过，好像有点问题啊，你有没有发现，在整个 <code>putVal()</code> 方法里面，好像没有触发扩容的逻辑！！ </p>
+<h2 id="11-addCount"><a href="#11-addCount" class="headerlink" title="11.addCount()"></a>11.addCount()</h2><p>其实这个方法除了操作我们之前见到的 <code>counterCells</code> 属性外，还会判断是否需要进行扩容。因为只有在知道具体的元素数量后，才能判断出是否需要扩容。我们先看这个方法的第一段代码。</p>
+<pre><code>    private final void addCount(long x, int check) &#123;
+        CounterCell[] as; long b, s;
+        if ((as = counterCells) != null ||
+            !U.compareAndSwapLong(this, BASECOUNT, b = baseCount, s = b + x)) &#123;
+            CounterCell a; long v; int m;
+            boolean uncontended = true;
+            if (as == null || (m = as.length - 1) &lt; 0 ||
+                (a = as[ThreadLocalRandom.getProbe() &amp; m]) == null ||
+                !(uncontended =
+                  U.compareAndSwapLong(a, CELLVALUE, v = a.value, v + x))) &#123;
+                fullAddCount(x, uncontended);
+                return;
+            &#125;
+            if (check &lt;= 1)
+                return;
+            s = sumCount();
+        &#125;
+
+        //... ...
+</code></pre>
+<p>首先，我们假设目前是第一次执行这个方法，那么 <code>counterCells == null</code>，然后就会使用 CAS 执行 <code>baseCount = b + x</code>。<strong>失败之后</strong>，就开始执行 <code>fullAddCount()</code> 方法了，因为现在 <code>as == null</code> 是成立的。</p>
+<p><code>fullAddCount()</code> 方法与 <code>Striped64.longAccumulate()</code> 方法基本上是一模一样的，因为之前已经跳过了 <code>Striped64</code>，所以这里也不打算去细看。直接总结下 <code>counterCells</code> 的作用。其实 <code>counterCells</code> 就是在多个线程同时更新 <code>baseCount</code> 失败时记录下新增的元素数量。</p>
+<p>举个例子就明白了，假设 <code>ConcurrentHashMap</code> 初始化完成之后，有 2 个线程，同时执行了 <code>addCount()</code>，那么 <code>baseCount</code> 会更新成 1，<code>counterCells</code> 会初始化为一个大小为 2 的数组，且一个元素是 <code>null</code>，另外一个元素的 <code>counterCells[i].value</code> 值是 1。</p>
+<p>如果这个时候又来了一个线程，会有 3 种情况，</p>
+<ol>
+<li>CAS 更新 <code>baseCount</code> 成功，<code>baseCount = 2</code>。第三个线程结束</li>
+<li>CAS 失败且 <code>counterCells[ThreadLocalRandom.getProbe() &amp; m] == null</code>。继续初始化 <code>counterCells</code> 的另一个为 <code>null</code> 的元素，值为 1。</li>
+<li>CAS 失败且 <code>counterCells[ThreadLocalRandom.getProbe() &amp; m] != null</code>，那么 <code>counterCells[i].value</code> 值更新成 2。</li>
+</ol>
+<p><code>ThreadLocalRandom.getProbe()</code> 方法其实就是取了个随机值。就是说，如果有多个线程同时更新的话，失败的线程会随机的从 <code>counterCells</code> 取一个元素，将新增的数量保存进去。</p>
+<p>其实很简单，能进入到 <code>fullAddCount()</code> 方法的条件只有一种，<code>counterCells == null</code> 并且 CAS 更新 <code>baseCount</code> 失败，这种情况就是有多个线程同时执行了 <code>addCount()</code> 方法，比如，有两线程同时执行 <code>putVal()</code>，那么必然有一个线程在 CAS 更新 <code>baseCount</code> 时会失败，这个时候就进入到 <code>fullAddCount()</code> 方法。这个方法内部就是在操作 <code>counterCells</code> 数组。操作的行为基本上就是下面这几种</p>
+<p>要么是初始化 <code>counterCells</code> 数组</p>
+<pre><code>if (counterCells == as) &#123;
+    CounterCell[] rs = new CounterCell[2];
+    rs[h &amp; 1] = new CounterCell(x);
+    counterCells = rs;
+    init = true;
+&#125;
+</code></pre>
+<p>要么就是初始化 <code>counterCells</code> 数组元素</p>
+<pre><code>    CounterCell r = new CounterCell(x); // Optimistic create
+    if (cellsBusy == 0 &amp;&amp; U.compareAndSwapInt(this, CELLSBUSY, 0, 1)) &#123;
+        boolean created = false;
+        try &#123;               // Recheck under lock
+            CounterCell[] rs; int m, j;
+            if ((rs = counterCells) != null &amp;&amp;
+                    (m = rs.length) &gt; 0 &amp;&amp;
+                    rs[j = (m - 1) &amp; h] == null) &#123;
+                rs[j] = r;
+                created = true;
+            &#125;
+        &#125; finally &#123;
+            cellsBusy = 0;
+        &#125;
+        if (created)
+            break;
+        continue;           // Slot is now non-empty
+    &#125;
+</code></pre>
+<p>要么就是更新 <code>counterCells</code> 数组元素的值</p>
+<pre><code>    else if (U.compareAndSwapLong(a, CELLVALUE, v = a.value, v + x))
+        break;
+</code></pre>
+<p>还有一种操作就是 <strong>扩容</strong> ，对 <code>counterCells</code> 进行扩容。</p>
+<pre><code>    if (cellsBusy == 0 &amp;&amp;
+            U.compareAndSwapInt(this, CELLSBUSY, 0, 1)) &#123;
+        try &#123;
+            if (counterCells == as) &#123;// Expand table unless stale
+                CounterCell[] rs = new CounterCell[n &lt;&lt; 1];
+                for (int i = 0; i &lt; n; ++i)
+                    rs[i] = as[i];
+                counterCells = rs;
+            &#125;
+        &#125; finally &#123;
+            cellsBusy = 0;
+        &#125;
+        collide = false;
+        continue;                   // Retry with expanded table
+    &#125;
+</code></pre>
+<p>在 <code>fullAddCount()</code> 方法里，每次循环都会重新随机取元素 <code>h = ThreadLocalRandom.advanceProbe(h);</code>。如果执行循环了多次，都没有保存成功，说明 <code>counterCells</code> 的容量不够用了，就会触发扩容。从上面的代码里也能看到，<code>counterCells</code> 的扩容非常简单，数组直接翻倍，元素直接赋值到新数组里，位置都没有变。</p>
+<p>继续回到 <code>addCount()</code> 方法，之后的逻辑就是判断了下 <code>check</code> 参数。其实这里的逻辑是，如果有多个线程同时操作，只要没有发生哈希冲突，就不进行扩容检查。你往回翻一下就可以看到 <code>check</code> 参数其实就是 <code>tab[i]</code> 位置的元素数量。</p>
+<p>如果发生了哈希冲突，或者说没有多个线程同时操作（这个时候就进入不了当前的分支，更新 <code>baseCount</code> 不会失败），就会执行 <code>s = sumCount();</code> 这个方法非常简单，就是对 <code>baseCount</code> 和 <code>counterCells</code> 里的数值进行了一下求和，然后就开始执行下面的代码。</p>
+<pre><code>    if (check &gt;= 0) &#123;
+        Node&lt;K,V&gt;[] tab, nt; int n, sc;
+        while (s &gt;= (long)(sc = sizeCtl) &amp;&amp; (tab = table) != null &amp;&amp;
+                (n = tab.length) &lt; MAXIMUM_CAPACITY) &#123;
+            int rs = resizeStamp(n);
+            if (sc &lt; 0) &#123;
+                if ((sc &gt;&gt;&gt; RESIZE_STAMP_SHIFT) != rs || sc == rs + 1 ||
+                        sc == rs + MAX_RESIZERS || (nt = nextTable) == null ||
+                        transferIndex &lt;= 0)
+                    break;
+                if (U.compareAndSwapInt(this, SIZECTL, sc, sc + 1))
+                    transfer(tab, nt);
+            &#125;
+            else if (U.compareAndSwapInt(this, SIZECTL, sc,
+                    (rs &lt;&lt; RESIZE_STAMP_SHIFT) + 2))
+                transfer(tab, null);
+            s = sumCount();
+        &#125;
+    &#125;
+</code></pre>
+<p>首先 <code>while</code> 循环判断了下当前的元素数量是否超过了 <code>sizeCtl</code>，即便是在扩容期间，<code>sizeCtl</code> 小于 0 的时候，也算成立。然后判断了下 <code>tab</code> ，基本上也会成立。直接进入循环内部</p>
+<p>第一个分支 <code>if (sc &lt; 0)</code> 说明已经有线程开始执行扩容动作了，这个时候更新 <code>sizeCtl</code> 的值加一，当前线程参与 <strong>辅助扩容</strong>。</p>
+<p>第二个分支是目前还没有线程进行扩容操作，那么当前线程开始执行扩容，<code>(rs &lt;&lt; RESIZE_STAMP_SHIFT) + 2)</code> 这个数值我们之前已经看到过了，就不再赘述了。</p>
+<p>循环最后重新计算 <code>s</code> ，扩容结束后 <code>s</code> 就不会小于 <code>sizeCtl</code>，方法结束。</p>
+<p>好了，到这里我们基本上就把 <code>ConcurrentHashMap</code> 的 put 操作的逻辑看完了。其实整体上跟 <code>HashMap</code>还是比较类似的，基本上就是把所有对 <code>tab</code> 的操作都使用 <code>Unsafe</code> 包装了一下，解决多线程操作的问题，而发生哈希冲突时也是使用了 <code>synchronized</code> 进行了加锁，解决了多线程操作链表的覆盖问题。比较难的反而是元素数量的问题。因为 <code>ConcurrentHashMap</code> 一定要保证元素保存到 <code>tab</code> 成功后，元素数量一定也要加成功！不能因为元素数量的值更新失败了，再把保存到 <code>tab</code> 里的元素删除掉吧。所以呢  <code>ConcurrentHashMap</code> 就使用 <code>counterCells</code> 数组来保存那些更新 <code>baseCount</code> 失败的数量。</p>
+<h2 id="12-get"><a href="#12-get" class="headerlink" title="12.get()"></a>12.get()</h2><p>下面我们看下 <code>get()</code> 方法</p>
+<pre><code>    public V get(Object key) &#123;
+        Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; e, p; int n, eh; K ek;
+        int h = spread(key.hashCode());
+        if ((tab = table) != null &amp;&amp; (n = tab.length) &gt; 0 &amp;&amp;
+            (e = tabAt(tab, (n - 1) &amp; h)) != null) &#123;
+            if ((eh = e.hash) == h) &#123;
+                if ((ek = e.key) == key || (ek != null &amp;&amp; key.equals(ek)))
+                    return e.val;
+            &#125;
+            else if (eh &lt; 0)
+                return (p = e.find(h, key)) != null ? p.val : null;
+            while ((e = e.next) != null) &#123;
+                if (e.hash == h &amp;&amp;
+                    ((ek = e.key) == key || (ek != null &amp;&amp; key.equals(ek))))
+                    return e.val;
+            &#125;
+        &#125;
+        return null;
+    &#125;
+</code></pre>
+<p>好像也不复杂，第一个分支是一次就从 <code>tab[i]</code> 位置找到了元素，直接返回。最后一个 <code>while</code> 循环是 <code>tab[i]</code> 位置发生了哈希冲突，且当前位置是链表，通过 <code>while</code> 循环遍历寻找。</p>
+<p>重点说一下第二个分支吧 <code>else if (eh &lt; 0)</code> 有两种情况，一种是 <code>tab[i]</code> 位置发生了哈希冲突，且当前位置是红黑树，这时 <code>e</code> 是 <code>TreeBin</code> 类型的，因为涉及到红黑树，我们直接跳过，有兴趣的可以自己研究下。另外一种情况是在扩容期间，当前元素已经转移到新的 <code>nextTable</code> 上了，这时 <code>e</code> 的类型是 <code>ForwardingNode</code> 类型，我们直接看下 <code>ForwardingNode</code> 类的 <code>find()</code> 代码</p>
+<pre><code>    Node&lt;K,V&gt; find(int h, Object k) &#123;
+        // loop to avoid arbitrarily deep recursion on forwarding nodes
+        outer: for (Node&lt;K,V&gt;[] tab = nextTable;;) &#123;
+            Node&lt;K,V&gt; e; int n;
+            if (k == null || tab == null || (n = tab.length) == 0 ||
+                    (e = tabAt(tab, (n - 1) &amp; h)) == null)
+                return null;
+            for (;;) &#123;
+                int eh; K ek;
+                if ((eh = e.hash) == h &amp;&amp;
+                        ((ek = e.key) == k || (ek != null &amp;&amp; k.equals(ek))))
+                    return e;
+                if (eh &lt; 0) &#123;
+                    if (e instanceof ForwardingNode) &#123;
+                        tab = ((ForwardingNode&lt;K,V&gt;)e).nextTable;
+                        continue outer;
+                    &#125;
+                    else
+                        return e.find(h, k);
+                &#125;
+                if ((e = e.next) == null)
+                    return null;
+            &#125;
+        &#125;
+    &#125;
+</code></pre>
+<p>也不复杂，就是直接在 <code>nextTable</code> 找元素，如果 <code>nextTable[i]</code> 位置为 <code>null</code> 直接返回，否则就进入了 <code>for (;;) </code> 循环里，跟之前类似，第一个分支里是直接找到了元素，而 <code>if (eh &lt; 0)</code> 也有两种情况，一个是扩容时转移到新的 <code>nextTable</code>，一个就是红黑树。最后就是链表了。</p>
+<p>好了，到这里基本上所有的内容都结束了，最后还剩一点有意思的东西，就是 <code>Traverser</code> 类，这个类其实实现了在扩容期间，也能使 <code>ConcurrentHashMap</code> 可以高效的（不使用锁）遍历。代码不多，有兴趣的话可以读一下~</p>
+<p>以下是遗留的一些内容，有机会再补吧</p>
+<ul>
+<li><code>sun.misc.Unsafe</code> 类。</li>
+<li><code>LongAdder</code> and <code>Striped64</code> </li>
+<li><code>sun.misc.Contended</code> 注解</li>
+<li><code>TreeBin</code></li>
+</ul>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

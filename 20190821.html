@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-25.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-10.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>Thrift 学习笔记</span>
         </v-card-title>
@@ -135,7 +135,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -249,12 +249,12 @@ Thrift version 0.12.0
 </code></pre>
 <p>IDEA 默认是不支持 Thrift 所以需要安装 <code>Thrift Support</code> 插件。</p>
 <h3 id="3-2-配置"><a href="#3-2-配置" class="headerlink" title="3.2 配置"></a>3.2 配置</h3><p>安装好插件，重启后就能在 <code>File -&gt; new -&gt; Project...</code> 菜单下 看到 Thrift 工程了。</p>
-<p><img src="/images/thrift-001.png" alt="创建项目"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpvz2k29xj31e10u0482.jpg" alt="thrift-001"></p>
 <p>创建完成 Thrift 项目后，还需要配置一下 Thrift 代码生成引擎相关的东西。</p>
 <p>打开菜单 <code>File - &gt; Project Structure... -&gt; Project Settings -&gt; Facets </code>,选择 Thrift</p>
-<p><img src="/images/thrift-002.png" alt="配置 thrift 代码生成引擎"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpvzrqdg1j310y0u0wr2.jpg" alt="thrift-002"></p>
 <p>然后会让你代码输出的位置。</p>
-<p><img src="/images/thrift-003.png" alt="代码输出位置"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpw02wbguj312q0qmn21.jpg" alt="thrift-003"></p>
 <h3 id="3-3-创建-Thrift-文件"><a href="#3-3-创建-Thrift-文件" class="headerlink" title="3.3 创建 Thrift 文件"></a>3.3 创建 Thrift 文件</h3><p>新建 <code>HelloService.thrift</code>,在菜单中可能找不到创建 thrift 文件的菜单，直接新建 File 然后以 thrift 作为文件后缀就可以。</p>
 <p>内容如下：</p>
 <pre><code>namespace java com.zdran.test.thrift
@@ -270,7 +270,7 @@ service ThriftHelloService&#123;
 <p>然后就能在<code>gen-java</code>目录中看到生成后的 java 文件了。</p>
 <p>还有一种办法，就是将 thrift 编译器添加到右键菜单里，直接在 IDEA 里编译。</p>
 <p>打开 <code>Preferences...</code> 菜单，设置好你的 Thrift 的安装目录，然后勾选上下面的这个选项，就可以在 IDEA 里直接编译 thrift 文件了。</p>
-<p><img src="/images/trhift-005.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpw0wcysgj31730u0k0b.jpg" alt="thrift-005"></p>
 <p><strong>注意：thrift 文件 必须要在 src 目录下，或者手动设置的 source 目录（IDEA显示蓝色的文件夹）下才会有 Recompile 菜单</strong></p>
 <p>PS: 搞了半天，最后可以编译了，结果报错：</p>
 <pre><code>Error:Internal error: (java.util.concurrent.ExecutionException) com.intellij.util.xmlb.XmlSerializationException: Cannot deserialize class com.intellij.plugins.thrift.config.ThriftCompilerOptions

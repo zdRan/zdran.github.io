@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-6.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-7.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>Spring Boot 学习笔记(十三) 整合 AOP</span>
         </v-card-title>
@@ -147,7 +147,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -320,8 +320,7 @@ public class AopAspect &#123;
     &#125;
 </code></pre>
 <p>需要注意的是，这个注解的方法是在 After 之后执行的。异常通知不能对返回值做任何操作。</p>
-<p>##7. 环绕通知</p>
-<p>环绕通知相比于上面几个通知是最强大的一个通知。它不仅可以修改参数，修改返回值，还可以决定要不要调用切点处的方法。</p>
+<h2 id="7-环绕通知"><a href="#7-环绕通知" class="headerlink" title="7. 环绕通知"></a>7. 环绕通知</h2><p>环绕通知相比于上面几个通知是最强大的一个通知。它不仅可以修改参数，修改返回值，还可以决定要不要调用切点处的方法。</p>
 <p>需要注意的是，这个环绕通知是在 前置通知之前执行的。</p>
 <pre><code>    /**
      * 环绕通知

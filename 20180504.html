@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-15.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-8.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>Spring Boot 2.0 实现优雅停机</span>
         </v-card-title>
@@ -145,7 +145,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -164,7 +164,8 @@ endpoints.shutdown.enabled=true
 #不需要验证 
 endpoints.shutdown.sensitive=false
 </code></pre>
-<p>启动的时候可以看到下面的日志，就说明成功了<br><img src="/images/%E5%90%AF%E5%8A%A8%E6%97%A5%E5%BF%97.png" alt="启动日志"></p>
+<p>启动的时候可以看到下面的日志，就说明成功了</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpw1poamqj311p0c976l.jpg" alt="启动日志"></p>
 <h3 id="3-优雅停机"><a href="#3-优雅停机" class="headerlink" title="3. 优雅停机"></a>3. 优雅停机</h3><p>发送POST请求 <code>http://localhost:8080/shutdown</code><br>如果响应码是404 可以尝试POST <code>http://localhost:8080/actuator/shutdown</code></p>
 <h2 id="Spring-Boot-2-0"><a href="#Spring-Boot-2-0" class="headerlink" title="Spring Boot 2.0"></a>Spring Boot 2.0</h2><p>如果你使用的spring boot版本是2.x的就会发现，这些POST请求都会出现404的结果。</p>
 <p>下面是Spring Boot 2.0 优雅停机的实现方式。</p>

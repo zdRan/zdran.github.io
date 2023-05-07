@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -133,7 +133,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -165,7 +165,7 @@
 </ul>
 <p>我们以一条记录为例，这条记录一共有两个字段，姓名和余额，第三个字段是自动添加的创建版本号，第四个是删除版本号。</p>
 <p>事务1创建了一条记录，事务2 将进行两次查询，在第一次查询后，事务3更新了这条记录，事务2查询到的仍然是原始数据。更新后的数据与新创建的数据创建版本号均大于 2，所以 在执行 SELECT 时是无法查到的。这样就解决了<strong>不可重复读</strong>和<strong>幻读</strong>问题。</p>
-<p><img src="/./images/20200107-1.png" alt="事务并发"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpx6ggdk3j32cm0mianc.jpg" alt="20200107-1"></p>
 <h2 id="4-数据库行锁"><a href="#4-数据库行锁" class="headerlink" title="4. 数据库行锁"></a>4. 数据库行锁</h2><p>通过 MVCC 虽然解决了不可重复读和幻读的问题，但是读取的数据并不是实时的数据。例如在上面的例子中，事务2 第二次读取的数据并不是最新的数据（事务3更新后的数据，事务4新增的数据都没有读到）。</p>
 <p>在某些场景下，有时候需要读取实时的数据。比如常见的 SELECT FOR UPDATE，事务2 如果第二次执行的是 UPDATE 操作，将会覆盖事务3的更新。这个时候就需要地读取到最新的数据。 </p>
 <p>Innodb 通过对数据行进行加锁，当事务2第一次读取时对数据行加锁，事务3将无法再次进行更新。这样就避免数据覆盖更新的问题。</p>
@@ -201,7 +201,7 @@
 <li>太过保守,任意节点失败都会导致事务失败。没有容错机制。</li>
 </ul>
 <h2 id="8-基于MQ实现的最终一致性"><a href="#8-基于MQ实现的最终一致性" class="headerlink" title="8. 基于MQ实现的最终一致性"></a>8. 基于MQ实现的最终一致性</h2><p>由于舍弃了数据的实时一致性，可以将事务的操作保存到MQ中，然后通过MQ发送到其他节点上。首先在事务开始阶段发送预备消息，然后执行本地事务，本地事务执行成功后，再次发送确认消息，如果确认消息发送失败，MQ则需要定期扫描MQ上的预备消息，回调事务节点，如果事务节点执行失败，则回滚事务消息。如果执行成功，则向其他节点请求执行事务。</p>
-<p><img src="/./images/20200107-2.png" alt="基于MQ的事务最终一致性"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpx6rxw48j30ma0e2dge.jpg" alt="20200107-2"></p>
 <p>基于MQ消息的分布式事务最大的问题是实现难度比较大，目前主流MQ并不支持。</p>
 <h2 id="9-基于本地事件表实现的最终一致性"><a href="#9-基于本地事件表实现的最终一致性" class="headerlink" title="9. 基于本地事件表实现的最终一致性"></a>9. 基于本地事件表实现的最终一致性</h2><p>基于本地事件表的实现是通过在本地保存一份事件表，记录事务需要执行的操作，通过程序向其他节点同步事务的执行，其他节点同样保存事件表。并记录事务的执行状态。</p>
 <p>本地事务执行成功后，将保存事务的操作到事件表。然后将事件表的数据发送到MQ，通过MQ发送到其他数据库实例上，其他数据库实例中事务执行成功后，将结果写入到本地事件表。</p>

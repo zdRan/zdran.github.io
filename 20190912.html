@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-21.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-31.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>JVM 读书笔记(二) 垃圾收集</span>
         </v-card-title>
@@ -135,7 +135,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -238,10 +238,10 @@ objB = null;
 </ul>
 <p>JVM 的垃圾收集算法是使用了分代收集算法，复制算法、标记-整理算法。三种算法都有使用。使用分代收集算法，将 JVM 中的内存分为新生代和老年代，新生代采用复制算法收集，而老年代采用的是标记-整理算法。</p>
 <h3 id="3-1-标记-清除算法"><a href="#3-1-标记-清除算法" class="headerlink" title="3.1 标记-清除算法"></a>3.1 标记-清除算法</h3><p>标记-清除算法分为“标记”和“清除”两个阶段，首先通过可达性分析，标记出所有需要回收的对象，然后统一回收所有被标记的对象。</p>
-<p><img src="/images/%E6%A0%87%E8%AE%B0-%E6%B8%85%E9%99%A4%E7%AE%97%E6%B3%95.png" alt="标记-清除算法"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwx2rcdkj30tq0i2go7.jpg" alt="标记-清除算法"></p>
 <p>标记-清除算法有两个缺陷，一个是效率问题，标记和清除的过程效率都不高，另外一个就是，清除结束后会造成大量的碎片空间。有可能会造成在申请大块内存的时候因为没有足够的连续空间导致再次 GC。</p>
 <h3 id="3-2-复制算法"><a href="#3-2-复制算法" class="headerlink" title="3.2 复制算法"></a>3.2 复制算法</h3><p>为了解决碎片空间的问题，出现了“复制算法”。复制算法的原理是，将内存分成两块，每次申请内存时都使用其中的一块，当内存不够时，将这一块内存中所有存活的复制到另一块上。然后将然后再把已使用的内存整个清理掉。</p>
-<p><img src="/images/%E5%A4%8D%E5%88%B6%E7%AE%97%E6%B3%95.png" alt="复制算法"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwxaovnej30s50hx0uk.jpg" alt="复制算法"></p>
 <p>复制算法解决了空间碎片的问题。但是也带来了新的问题。因为每次在申请内存时，都只能使用一半的内存空间。内存利用率严重不足。</p>
 <p>JVM 中新生代采用的就是复制算法进行的GC。针对内存利用率不足的问题做了一些优化。</p>
 <p>IBM公司的专门研究表明，新生代中的对象 98% 是“朝生夕死”的，意思是说，在新生代中，经过一次 GC 之后能够存活下来的对象仅有 2% 左右。</p>
@@ -249,7 +249,7 @@ objB = null;
 <p>这种内存的划分方式就解决了内存利用率的问题，每次在创建对象时，可用的内存为 90%(80% + 10%) 当前内存容量。</p>
 <h3 id="3-3-标记-整理算法"><a href="#3-3-标记-整理算法" class="headerlink" title="3.3 标记-整理算法"></a>3.3 标记-整理算法</h3><p>复制算法在 GC 之后存活对象较少的情况下效率比较高，但如果存活对象比较多时，会执行较多的复制操作，效率就会下降。而老年代的对象在 GC 之后的存活率就比较高，所以就有人提出了“标记-整理算法”。</p>
 <p>标记-整理算法的“标记”过程与“标记-清除算法”的标记过程一致，但标记之后不会直接清理。而是将所有存活对象都移动到内存的一端。移动结束后直接清理掉剩余部分。</p>
-<p><img src="/images/%E6%A0%87%E8%AE%B0-%E6%95%B4%E7%90%86%E7%AE%97%E6%B3%95.png" alt="标记-整理算法"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwxijvz0j30s00gtgnh.jpg" alt="标记-整理算法"></p>
 <h3 id="3-4-分代收集算法"><a href="#3-4-分代收集算法" class="headerlink" title="3.4 分代收集算法"></a>3.4 分代收集算法</h3><p>分代收集是将内存划分成了新生代和老年代。分配的依据是对象的生存周期，或者说经历过的 GC 次数。对象创建时，一般在新生代申请内存，当经历一次 GC 之后如果对还存活，那么对象的年龄 +1。当年龄超过一定值(默认是 15，可以通过参数 -XX:MaxTenuringThreshold 来设定)后，如果对象还存活，那么该对象会进入老年代。</p>
 <h2 id="4-GC算法实现"><a href="#4-GC算法实现" class="headerlink" title="4. GC算法实现"></a>4. GC算法实现</h2><h3 id="4-1-OopMap"><a href="#4-1-OopMap" class="headerlink" title="4.1 OopMap"></a>4.1 OopMap</h3><p>在进行可达性分析时，我们需要分析内存中所有对象的引用关系，找到不可达的对象，并标记为可回收。而在程序的运行过程中，内存中对象的引用关系是在不断变化的，这就有可能在我们分析可达性的这段时间内，对象的引用关系发生变化。所以，为了准确的分析出对象的引用关系，JVM 不得不停止所有 Java 的执行线程（Sun 将这个过程称之为 “Stop The World”）。即使是在号称（几乎）不会发生 STW 的 CMS 收集器中，在枚举根节点时，也会发生停顿。</p>
 <p>在可达性分析时另外一个问题是，内存中的对象太多，如果要逐个检查对象的引用关系，会非常耗时。为了解决这个问题，在 HotSpot 虚拟机中，使用了一组 OopMap 的数据结构来记录对象内的偏移量上的类型，在 JIT 编译过程也会在特定位置记录下栈和寄存器中哪些位置是对象的引用。在发生 GC 时就可以直接扫描 OopMap 就可以直接得到对象的引用信息了。</p>
@@ -262,7 +262,7 @@ objB = null;
 <p>这种情况下就需要使用“安全区域（Safe Region）”来解决。安全区域是指在一段代码片段之中，引用关系不会发生变化，在这段区域内随时都可以进行 GC。当代码执行到安全区域后，会标识自己进入到了安全区域，这样在进行 GC 时，JVM 就不需要处理这些处于安全区域内的线程了。当线程将要离开安全区域时，会去判断是否已经完成 GC，如果没有完成就中断自己，直到收到可以离开安全区域的信号，才可以继续执行。</p>
 <h2 id="5-垃圾收集器"><a href="#5-垃圾收集器" class="headerlink" title="5. 垃圾收集器"></a>5. 垃圾收集器</h2><p>垃圾收集算法就像是 Java 中的接口一样，而垃圾收集器是接口的具体实现。所以，不同的厂商，不同版本的虚拟机实现的方式都有所不同。甚至是很大的差别。</p>
 <p>下图是常见的 HotSpot 虚拟机中的垃圾收集器。</p>
-<p><img src="/images/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8.png" alt="垃圾收集器"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwxqm7hij30uj0tcgsb.jpg" alt="垃圾收集器"></p>
 <p>其中，新生代有 Serial、ParNew、Parallel Scavenge，老年代包括 CMS、MSC、Parallel old，收集器之间的连线说明两者可以搭配使用。</p>
 <h3 id="5-1-Serial-收集器"><a href="#5-1-Serial-收集器" class="headerlink" title="5.1 Serial 收集器"></a>5.1 Serial 收集器</h3><p>Serial 是最基本，历史最悠久，也是最简单的一个收集器。它是一个单线程的收集器。当它开始进行垃圾回收时，必须暂停其他所有工作线程，直到收集结束。虽然在垃圾回收时会发生“Stop The World”导致用户体验不佳，但是 Serial 收集器还是有优点的，<strong>在单CPU环境下</strong> Serial 收集器由于没有线程操作的开销，只做垃圾收集，所以效率远高于其他收集器。</p>
 <h3 id="5-2-ParNew-收集器"><a href="#5-2-ParNew-收集器" class="headerlink" title="5.2 ParNew 收集器"></a>5.2 ParNew 收集器</h3><p>ParNew 收集器是 Serial 收集器的一个并行版本，与 Serial 的区别在于 STW 期间并行进行垃圾收集。它是大多数 Server 模式下新生代首选的收集器，一个比较重要的原因是，目前只有 ParNew 和 Serial 能与老年代的 CMS 收集器使用。也就是说如果老年代的收集器你选择了 CMS 新生代的收集器就只能从这两者中选择一个。</p>
@@ -288,7 +288,7 @@ objB = null;
 <p>  清除标记的对象，这一步也不需要 STW，GC 线程与用户线程是并行的。</p>
 </li>
 </ul>
-<p><img src="/images/CMS-%E6%94%B6%E9%9B%86%E5%99%A8.png" alt="CMS-收集器"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwy1iv4nj31f50bbwnc.jpg" alt="CMS-收集器"></p>
 <p>CMS 收集器虽然通过并发的技术，降低了用户线程的停顿时间，但是也有一些不足。比如最明显的一个缺点就是，它使用的是”标记-清除算法“，如果你还记得这种算法，就应该知道，它有一个最明显的问题就是会产生大量的内存碎片。往往老年代明明有很大的空间，但是无法找到连续的空间分配对象，不得不提前触发 Full GC。</p>
 <p>为了解决这个问题， CMS 提供了 -XX:+UseCMSCompactAtFullCollection 开关参数（默认开启）用于开启内存碎片的整理过程，遗憾的是，这个整理过程依然需要 STW，内存碎片没有了，但是停顿时间也变长了。JVM 还提供了另外一个参数 -XX:CMSFullGCsBeforeCompaction 这个参数可以设置一个整数值，表示执行多少次 Full GC 后进行一次碎片整理，默认为 0 (表示每次 Full GC 时都会进行碎片整理)。</p>
 <p>由于 CMS 收集器是与用户线程并行的，所以带来的另一个问题就是占用了部分 CPU 的资源，导致应用程序变慢。目前，CMS 默认启动的回收线程数是（CPU数量+3）&#x2F;4，也就是说，如果你的 CPU 个数 小于 4，可能对用户线程影响较大。但是对于大型的 Java 应用程序部署的服务器，动辄十几甚至几十个 CPU 来说，这个问题带来的影响越来越小。</p>
@@ -297,7 +297,7 @@ objB = null;
 <p>如果在 GC 期间，剩余的内存不足以满足用户线程的需要，那么就会发生“Concurrent Mode Failure”失败，这时 JVM 就会临时启用 Serial Old 收集器来做垃圾收集，同时，STW 的停顿时间也会变长。所以，如果 CMSInitiatingOccupancyFraction 参数设置的过高就会触发大量的”Concurrent Mode Failure“出现。</p>
 <h3 id="5-7-G1-收集器"><a href="#5-7-G1-收集器" class="headerlink" title="5.7 G1 收集器"></a>5.7 G1 收集器</h3><p>G1 收集器是面向服务端的一款垃圾收集器。其设计目标是为了取代 CMS 收集器的。G1 收集器有内存整理的过程，所以不会产生内存碎片，而且 STW 的停顿时间更加可控，G1 收集器添加了预测机制，用户可以指定停顿时间。</p>
 <h3 id="5-7-1-Region"><a href="#5-7-1-Region" class="headerlink" title="5.7.1 Region"></a>5.7.1 Region</h3><p>在传统的垃圾收集器中，新生代和老年代的内存是连续的。而在 G1 收集器虽然保留了新生代和老年代，但是他们的内存可以是不连续的。G1 收集器把内存划分为一个个的 Region，新生代和老年代由许多不连续的 Region 组成。</p>
-<p><img src="/images/G1%E5%86%85%E5%AD%98%E5%88%92%E5%88%86.png" alt="G1内存划分"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwyh9x9aj30iu0ak74k.jpg" alt="G1内存划分"></p>
 <center>图片来源:https://tech.meituan.com/2016/09/23/g1.html</center>
 
 <p>可以看到，虽然保留了新生代和老年代的概念，但是二者之间不再是物理隔离了。而是由不同的 Region 构成。在 G1 收集器之前的其他收集器都是在整个新生代，或者老年代范围内进行垃圾收集，G1 收集器则是在 Region 内进行。G1 收集器会维护一个优先列表，根据回收时间，优先回收价值最大的 Region。G1 收集器的内存碎片整理也是在两个不同的 Region 之间通过”复制“算法进行的。</p>
@@ -320,7 +320,7 @@ objB = null;
 <p>  这一阶段首先对各个 Region 进行排序，然后根据设定的停顿时间来定制回收计划。最后进行垃圾回收。</p>
 </li>
 </ul>
-<p><img src="/images/G1%E6%94%B6%E9%9B%86%E5%99%A8.png" alt="G1收集器"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwyvs9svj31hr0cowp5.jpg" alt="G1收集器"></p>
 <h2 id="6-GC-日志"><a href="#6-GC-日志" class="headerlink" title="6. GC 日志"></a>6. GC 日志</h2><p>每一种 GC 收集器都有自己的日志格式，但是 JVM 的设计者为了方便阅读，将收集器的日志维持了一些共性。例如下面这段日志：</p>
 <pre><code>33.125:[GC[DefNew:3324K-＞152K（3712K），0.0025925 secs]3324K-＞152K（11904K），0.0031680 secs]
 100.667:[Full GC[Tenured:0 K-＞210K（10240K），0.0149142secs]4603K-＞210K（19456K），[Perm:2999K-＞2999K（21248K）]，0.0150007 secs][Times:user=0.01 sys=0.00，real=0.02 secs]

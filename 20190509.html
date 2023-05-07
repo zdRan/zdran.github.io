@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-21.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-23.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>设计模式-六大设计原则</span>
         </v-card-title>
@@ -135,7 +135,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -151,9 +151,9 @@
 <h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>谈及设计模式，就不能不提六大设计原则，这六大设计原则就像六颗无限宝石一样强大。所有的设计模式都是为了尽量的实现某个或者某些设计原则。</p>
 <p>通俗一点，设计原则是接口，而设计模式就是具体的实现类。所以我们先看一下这个接口里到底有哪些方法。</p>
 <h2 id="1-单一职责原则-SRP：Single-responsibility-principle"><a href="#1-单一职责原则-SRP：Single-responsibility-principle" class="headerlink" title="1. 单一职责原则(SRP：Single responsibility principle)"></a>1. 单一职责原则(SRP：Single responsibility principle)</h2><p>以我们的 OneMall 商城为例。商城首先得有用户吧，用户要有用户名、密码、余额，这些信息，而且也要有修改用户名、密码、充值、支付这些操作吧。我们看一下用户这个类的设计。</p>
-<p><img src="/./images/2_1_userInfo%E7%B1%BB%E5%9B%BE.png" alt="UserInfo 类图"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpx34udwoj30qp0ifmxm.jpg" alt="2_1_userInfo类图"></p>
 <p>我相信稍微懂点设计的人都能看出这个类的设计有问题，因为把用户的属性和用户的行为放到了个类里面。应该把用户的属性和用户的行为分开，重新设计一下这个类。</p>
-<p><img src="/./images/2_2_userInfo%E7%B1%BB%E5%9B%BE.png" alt="UserInfo 类图2"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpx3byrrmj30rs0jhdgb.jpg" alt="2_2_userInfo类图"></p>
 <p>上面这种把一个类拆分成了两个类就是遵循了 <strong>单一职责原则</strong> 。</p>
 <p>单一职责原则的定义是：</p>
 <p><strong>SRP:There should never be more than one reason for a class to change</strong></p>
@@ -162,7 +162,7 @@
 <p>我们在设计类或者是接口的时候尽量做到职责单一，这样才能使每个类的职责更加清晰。</p>
 <h2 id="2-里式替换原则-Liskov-Substitution-Principle-LSP"><a href="#2-里式替换原则-Liskov-Substitution-Principle-LSP" class="headerlink" title="2. 里式替换原则(Liskov Substitution Principle LSP)"></a>2. 里式替换原则(Liskov Substitution Principle LSP)</h2><p>因为我们对接了不同的商城，每个商城，都有每个商城自己的下单逻辑，但是我们对外提供的下单逻辑只能有一套，所以需要封装一下，这里就遵守出了 <strong>里式替换原则</strong>。</p>
 <p>在一般的 MVC 架构中，我们一般有 Controller、Service层。而 Service 层一般是接口和对应的实现类，类图如下</p>
-<p><img src="/./images/2_3_order%E7%B1%BB%E5%9B%BE.png" alt="Order 类图"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpx3kpudpj30rn0kxjrm.jpg" alt="2_3_order类图"></p>
 <p>我们在下单的时候可以使用接口中的 submitOrder，具体的实现逻辑放在不同的子类里，比如我们可以有 JDSubmitOrderServiceImpl、 TMSubmitOrderServiceImpl 等。</p>
 <p>里式替换原则：</p>
 <pre><code>If for each object o1 of type S there is an object o2 of type T such that for
@@ -238,7 +238,7 @@ Details should depend upon abstracts.
 <p>这么做是为了方便后期扩展，提高程序的可扩展性，想象一下，我们再增加一个 TMSubmitOrderServiceImpl，如果接口中定义的是 JDOrder，那么我们定义的 TMSubmitOrderServiceImpl 就没办法实现了。 而使用 Order 作为参数，就完全可以正常实现。在调用的时候我们可以传入一个 TMOrder 作为参数。</p>
 <p>依赖倒置原则是告诉我们如何设计类的依赖关系，目的是降低类与类之间的耦合，提高系统的稳定性和可扩展性。</p>
 <h2 id="4-接口隔离原则-Interface-Segregation-Principle-ISP"><a href="#4-接口隔离原则-Interface-Segregation-Principle-ISP" class="headerlink" title="4. 接口隔离原则(Interface Segregation Principle ISP)"></a>4. 接口隔离原则(Interface Segregation Principle ISP)</h2><p>假如我们需要设计一个订单相关的接口， OrderService 这个服务可能会提供一些增删改查的接口，提供给管理模块使用，还有一些订单相关的接口，比如下单接口，订单撤销接口，这些接口不应该放到 OrderService 中。而是写在另外一个 Service 中，比如我们上文中的 SubmitOrderService 中。这里就遵守了 <strong>接口隔离原则</strong></p>
-<p><img src="/./images/2_4_order%E7%B1%BB%E5%9B%BE.png" alt="Order 类图"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpx3zbcijj30rl0jzglz.jpg" alt="2_4_order类图"></p>
 <p>OrderManager 不应该依赖下单，相关的接口，所以需要将下单相关的接口”隔离”出来。</p>
 <p>接口隔离原则有两种定义：</p>
 <ul>

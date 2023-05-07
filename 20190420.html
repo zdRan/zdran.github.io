@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-11.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-10.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>Python 爬虫实战(一) 爬取自如网租房信息</span>
         </v-card-title>
@@ -135,7 +135,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -158,9 +158,9 @@
   &lt;span class=&quot;gray-6&quot;&gt;/月(季付)&lt;/span&gt; &lt;/span&gt; 
 </code></pre>
 <p>源码里竟然没有价格信息，然后在审查元素，发现价格信息应该是动态加载的。而且用的还是背景图数字。</p>
-<p><img src="/images/20190420-1.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwt7yng9j30v406j0tg.jpg" alt="20190420-1"></p>
 <p>打开这个图片的连接看一下(<code>http://static8.ziroom.com/phoenix/pc/images/price/81c4fe87c108f9515c4ee4bafff68529s.png</code>)</p>
-<p><img src="/images/20190420-2.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwth21j3j30e9055744.jpg" alt="20190420-2"></p>
 <p>不错，已经找到了价格的初始信息，下面打算提取图片中的数字，然后根据 html 里的偏移量计算出真正的价格。</p>
 <h2 id="2-图片反-OCR-识别"><a href="#2-图片反-OCR-识别" class="headerlink" title="2. 图片反 OCR 识别"></a>2. 图片反 OCR 识别</h2><p>图片信息提取，首先想到的 就是 OCR 识别，而且都是很标准的数字，本来以为难度级别属于 hello world 级别的，但是万万没想到低估了自如网的反爬虫工作</p>
 <p>使用 OCR 识别，一顿操作猛如虎，发现竟然识别不了，直到我把图片转换成纯黑白的，然后才发现了问题。</p>
@@ -171,9 +171,8 @@
     im.show()
 </code></pre>
 <p>发现图片竟然是下面这种镂空的，难怪 OCR 识别不出来</p>
-<p><img src="/images/20190420-3.jpg"></p>
-<p>这就有点尴尬了，看到这种图片首先想到的就是 TensorFlow 搞一波图像识别，不过，一个小小的爬虫而已不至于用这么先进的武器吧（其实是我不会而已！^_-），然后又找了几张这种数字图片，对比之下发现，所有的图片，只要数字相同，镂空的规律是一样的，换句话说，所有图片中的数字 1 都是一种镂空的规律！！！ </p>
-<p>这就有点意思了，首先想到的就是把图片转成矩阵，然后把矩阵和具体的数字做好映射，持久化下来，之后再次请求到图片，拿图片里的矩阵与持久化后的矩阵做对比，这样就能够解析出图片里的数字了。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwtn5tbaj30rw0comxo.jpg" alt="20190420-3"></p>
+<p>这就有点尴尬了，看到这种图片首先想到的就是 TensorFlow 搞一波图像识别，不过，一个小小的爬虫而已不至于用这么先进的武器吧（其实是我不会而已！^_-），然后又找了几张这种数字图片，对比之下发现，所有的图片，只要数字相同，镂空的规律是一样的，换句话说，所有图片中的数字 1 都是一种镂空的规律！！！ 这就有点意思了，首先想到的就是把图片转成矩阵，然后把矩阵和具体的数字做好映射，持久化下来，之后再次请求到图片，拿图片里的矩阵与持久化后的矩阵做对比，这样就能够解析出图片里的数字了。</p>
 <pre><code>def analyze_img():
     url = &#39;http://static8.ziroom.com/phoenix/pc/images/price/9bbd4bf71c11e7c8149485d9f1ec5adbs.png&#39;
     response = requests.get(url)
@@ -195,11 +194,11 @@
 <p>嗯，买迈进了一小步。不太明白为什么这个图片在镂空的时候没有加一些随机的元素。如果说是由于随机之后出现极端的情况导致不容易被人眼识别，但是可以随机出一个或者两个具体的位置，随机的镂空，这样既不会出现不容易被人眼识别的情况，也能很好的防止上面这种爬虫的出现。</p>
 <p>总之，不管自如网是出于什么考虑，背景图片的数字提取是解决了。下面，就需要找一下这张图片是怎么跟房屋信息绑定的。</p>
 <h2 id="3-动态加载的图片"><a href="#3-动态加载的图片" class="headerlink" title="3. 动态加载的图片"></a>3. 动态加载的图片</h2><p>在 F12 的 网络请求里确实找到了这张图片的请求信息，但是发现，图片的名称是随机串。而且同一个房屋信息，每次请求时的图片名称都不一样，这说明，后台是随机生成的这张图片，没有跟房屋绑定。</p>
-<p><img src="/images/20190420-4.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwtvwzucj30uo05rweu.jpg" alt="20190420-4"></p>
 <p>所以需要找一下，这张图片的请求是从什么地方发起的，请求的 URL 又是从什么地方获取的。</p>
 <p>在 F12 里找到了这张图片的请求位置，但是对比 html 源码发现，并没有这个请求，这说明这个元素是通过 js 动态加载的。</p>
-<p><img src="/images/20190420-5.jpg"></p>
-<p><img src="/images/20190420-6.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwu25zoyj30t10a4tb0.jpg" alt="20190420-5"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwu9ygrqj30x50e7mzi.jpg" alt="20190420-6"></p>
 <p>下面就需要找一下，到底是哪个 js 加载的这些信息。重新看了一下，房屋详情页面的源码，发现源码底部，有这样一段 js 的引用。</p>
 <pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
    var ZRCONFIG = &#123;
@@ -262,7 +261,7 @@
 <p>拼接后的最终的 URL 地址是 <code>/detail/info?id=62035032&amp;house_id=60321330</code></p>
 <p>然后拼接上自如网的前缀，就是最终的请求地址，<code>http://www.ziroom.com/detail/info?id=62035032&amp;house_id=60321330</code></p>
 <p>请求一下，终于解决了，价格信息的问题。</p>
-<p><img src="/images/20190420-7.jpg"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwun7cz4j30tz0eugme.jpg" alt="20190420-7"></p>
 <h2 id="4-完整思路及代码"><a href="#4-完整思路及代码" class="headerlink" title="4. 完整思路及代码"></a>4. 完整思路及代码</h2><p>下面的问题就简单了，循环分页，筛选出每页里的房屋详情 URL ，然后根据详情里的信息去请求价格信息，最后可以把房屋信息写到 Excel里。就结束了</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/zdRan/learning/blob/master/python/ziroom/ziroom.py">完整代码在这里</a></p>
 

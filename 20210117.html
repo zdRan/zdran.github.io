@@ -1,0 +1,586 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,MySQL,事务">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 62 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-9.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>面试笔记（三）MySQL事务深入学习</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        面试笔记（三）MySQL事务深入学习
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">MySQL</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">事务</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <p>上一篇文章 <a href="https://zdran.com/20200107.html">面试笔记（一）事务连环炮</a> 中，写了下事务的基本概念。这篇文章中将继续深入学习下 MySQL 事务的 ACID 四个特性的实现原理。</p>
+<h2 id="1-隔离性"><a href="#1-隔离性" class="headerlink" title="1. 隔离性"></a>1. 隔离性</h2><p>事务的隔离性实现是最复杂的，也是最难的，所以 MySQL 对隔离性做了四个级别的实现。事务的隔离性其实是指，两个事务之间的操作在未提交时相关不可见。这跟 Java 多线程里的可见性正好相反。MySQL 通过 MVCC、锁等手段</p>
+<h3 id="1-1-读未提交（Read-uncommitted）"><a href="#1-1-读未提交（Read-uncommitted）" class="headerlink" title="1.1 读未提交（Read uncommitted）"></a>1.1 读未提交（Read uncommitted）</h3><p>这种事务隔离级别下，读到的数据是其他事务没有提交的数据，所以不需要做特殊处理，可以直接读取当前数据即可。</p>
+<h3 id="1-2-读已提交（read-committed）"><a href="#1-2-读已提交（read-committed）" class="headerlink" title="1.2 读已提交（read committed）"></a>1.2 读已提交（read committed）</h3><p>MySQL 通过 <strong>多版本并发控制（MVCC）</strong> 实现了 <strong>一致性非锁定读	** 的能力。当一个事务对某个记录进行操作时，会对该行记录进行加锁，在  RC 级别下，如果另外一个事务要读取当前数据的话，则不会等待锁释放，而是读取行记录的一个快照版本。所以才叫非锁定读。因为读的是快照数据，所以也叫</strong>快照读**。</p>
+<p>下面我们开启两个事务看下 RC 级别下的快照读情况。</p>
+<p>首先修改 事务隔离级别为 RC 级别，并且设置binlog的模式</p>
+<pre><code class="sql">SET session transaction isolation level read committed;
+</code></pre>
+<p>然后开启事务 A</p>
+<pre><code class="sql">begin;
+update my_test set name =&quot;李四&quot; where id = 1;
+</code></pre>
+<p>先不提交，然后我们再打开一个事务B。</p>
+<pre><code class="sql">begin;
+select * from my_test;
+ 
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 张三   |   11 |
++----+--------+------+
+1 row in set (0.00 sec)
+</code></pre>
+<p>然后我们提交一下事务A，发现事务B已经能够读取到最新的数据了。</p>
+<pre><code class="sql">begin;
+select * from my_test;
+ 
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 张三   |   11 |
++----+--------+------+
+1 row in set (0.00 sec)
+
+select * from my_test;
+ 
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+1 row in set (0.00 sec)
+</code></pre>
+<p>也就是说，我们可以直接读取到其他事务锁定的数据，这个就是<strong>非锁定读</strong>。读取到的数据是其他事务提交后的数据，没有提交的数据读取不到。所以隔离级别也叫<strong>读已提交</strong>。事务B两次查询请求的结果不一致的现象也叫<strong>不可重复读</strong>，即同一个事务里两次读取的结果不一致。这个问题在 RR 级别下就会解决。</p>
+<p>整个 SQL 执行过程：</p>
+<table>
+<thead>
+<tr>
+<th align="left">事务A</th>
+<th>事务B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">begin;</td>
+<td></td>
+</tr>
+<tr>
+<td align="left">update my_test set name &#x3D;”李四” where id &#x3D; 1;</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>begin;</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>select * from my_test; <br/>没有读取到更新的数据</td>
+</tr>
+<tr>
+<td align="left">commit;</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"></td>
+<td>select * from my_test; <br/>读取到更新的数据</td>
+</tr>
+</tbody></table>
+<h3 id="1-3-可重复读（repeatable-read）"><a href="#1-3-可重复读（repeatable-read）" class="headerlink" title="1.3 可重复读（repeatable read）"></a>1.3 可重复读（repeatable read）</h3><p>将事务隔离级别调整到 RR 级别。</p>
+<pre><code class="sql">SET session transaction isolation level repeatable read;
+</code></pre>
+<p>在 RR 隔离级别下可以解决<strong>不可重复读</strong>的问题。使用的方法也是<strong>多版本并发控制（MVCC）</strong>。</p>
+<p>首先开启一个 事务 A。执行 读取数据。</p>
+<pre><code class="sql">begin;
+select * from my_test;
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+</code></pre>
+<p>然后开始事务B，执行更新操作，并提交。</p>
+<pre><code class="sql">begin;
+update my_test set name = &quot;李四2&quot; where id = 1;
+commit;
+</code></pre>
+<p>然后事务A再执行读取操作，发现读取的结果没有变化。</p>
+<pre><code class="sql">begin;
+select * from my_test;
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+
+select * from my_test;
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+</code></pre>
+<p>所以是解决了<strong>不可重复读</strong>的问题。同一个事务里，第一次读取和第二次读取的数据是一致的。</p>
+<p>但是如果你使用下面的语句进行查询的话，就会发现会读到最新的数据</p>
+<pre><code class="sql">select * from my_test lock in share mode;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+
+select * from my_test for update;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p>这是因为 MySQL 有两种读取方式。一种被称为<strong>快照读</strong>，一种被称为<strong>当前读</strong>。在 MVCC 中 <code> select * from my_test</code> 就是快照读，读取的是快照数据，而<code>select * from my_test lock in share mode;</code> 和 <code>select * from my_test for update;</code> 是当前读，会读取当前版本的数据。MySQL 通过 MVCC 实现了上面这种能力。</p>
+<h3 id="1-4-多版本并发控制（MVCC）"><a href="#1-4-多版本并发控制（MVCC）" class="headerlink" title="1.4 多版本并发控制（MVCC）"></a>1.4 多版本并发控制（MVCC）</h3><p>在MySQL中建表时，每个表都会有三列隐藏记录，其中和MVCC有关系的有两列。</p>
+<ul>
+<li>记录的创建版本号 （DB_TRX_ID）</li>
+<li>记录的删除版本号（DB_ROLL_PT）</li>
+</ul>
+<p>这两列的值是事务的版本号。而事务的版本号是每开启一个新事务，事务版本号就会递增。每次在事务中进行操作时都会使用这两个值。</p>
+<p>在 RR 级别下：</p>
+<ul>
+<li>select时，读取 DB_TRX_ID 小于等于当前事务版本号，DB_ROLL_PT 为空或者大于当前事务版本号的数据。</li>
+<li>insert时，保存当前事务版本号为 DB_TRX_ID。</li>
+<li>delete时，保存当前事务版本号为 DB_ROLL_PT。</li>
+<li>update时，复制需要更新的行，并将当前事务的版本号保存为复制行的 DB_TRX_ID，并更新原行的 DB_ROLL_PT 为当前事务版本号</li>
+</ul>
+<p>这样就能够保证 RR 级别下的<strong>可重复读</strong>。</p>
+<p>下面我们梳理下 RR 级别的操作对 这两个值的影响。</p>
+<p>假如当前数据库的数据是下面这样：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>DB_TRX_ID</th>
+<th>DB_ROLL_PT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>李四</td>
+<td>11</td>
+<td>1</td>
+<td>NULL</td>
+</tr>
+</tbody></table>
+<p>然后开启事务A 执行查询操作</p>
+<pre><code class="sql">begin; # 事务ID = 2
+select * from my_test;
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+</code></pre>
+<p>根据 MVCC 的要求，<strong>读取 DB_TRX_ID 小于等于当前事务版本号，DB_ROLL_PT 为空或者大于当前事务版本号的数据</strong>。id &#x3D; 1 的行 DB_TRX_ID &#x3D; 1 且 DB_ROLL_PT &#x3D; NULL，所以可以读取到 id &#x3D; 1 的记录。</p>
+<p>然后开启事务 B，执行更新操作，并提交。</p>
+<pre><code>begin; # 事务ID = 3
+update my_test set name = &quot;李四2&quot; where id = 1;
+commit;
+</code></pre>
+<p>更新时会 <strong>复制需要更新的行，并将当前事务的版本号保存为复制行的 DB_TRX_ID，并更新原行的 DB_ROLL_PT 为当前事务版本号</strong>。所以数据库的数据会变成下面这样：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>DB_TRX_ID</th>
+<th>DB_ROLL_PT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>李四</td>
+<td>11</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>李四2</td>
+<td>11</td>
+<td>3</td>
+<td>NULL</td>
+</tr>
+</tbody></table>
+<p>然后事务 A 再执行查询操作。</p>
+<pre><code>begin; # 事务ID = 2
+select * from my_test;
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+
+select * from my_test;
++----+--------+------+
+| id | name   | age  |
++----+--------+------+
+|  1 | 李四   |   11 |
++----+--------+------+
+</code></pre>
+<p>由于第二行数据的 DB_TRX_ID &#x3D; 3 大于当前事务ID，所以读取不到更新的数据。这样就保证了同一个事务里是<strong>可重复读</strong>的。因为读取的是快照数据。而 RC 级别下能够读取到第二行数据，是因为 RC 级别下的 select 操作读取的永远是最新的数据。没有对这两个值进行校验。<strong>快照读</strong>的快照数据就是说的这里的快照。而<strong>MVCC</strong>里的版本，说的就是DB_TRX_ID和DB_ROLL_PT的数值。如果存在多个事务，同一条数据就会存在多个版本号。所以叫多版本。</p>
+<h3 id="1-5-串行化（Serializable）"><a href="#1-5-串行化（Serializable）" class="headerlink" title="1.5 串行化（Serializable）"></a>1.5 串行化（Serializable）</h3><p>所有 SQL 全部进行加锁处理，读加读锁排他锁，写加写排他锁。这样就不会有并发的问题了。但是性能很差。</p>
+<h3 id="1-6-幻读"><a href="#1-6-幻读" class="headerlink" title="1.6 幻读"></a>1.6 幻读</h3><p>网上的大部分资料上都有提到过，MySQL 的 Innodb 引擎需要在 Serializable 隔离级别下才能够解决幻读问题。下面我们在 RR 级别下来试下。</p>
+<p>开启事务A：</p>
+<pre><code class="sql">begin; # 事务ID = 5
+select * from my_test;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p>开启事务B：</p>
+<pre><code class="sql">begin; # 事务ID = 6
+select * from my_test;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p>两个事务里的查询结果是一样的，现在我们在事务ID &#x3D; 3 的事务里插入一条数据,并提交：</p>
+<pre><code class="sql">begin; # 事务ID = 5
+select * from my_test;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+
+insert into my_test value(null,&#39;王五&#39;,1);
+
+commit;
+</code></pre>
+<p>根据<strong>MVCC</strong>的特性，我们先看下数据库的表结构。</p>
+<p>插入数据之前：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>DB_TRX_ID</th>
+<th>DB_ROLL_PT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>李四2</td>
+<td>11</td>
+<td>3</td>
+<td>NULL</td>
+</tr>
+</tbody></table>
+<p>事务会<strong>读取 DB_TRX_ID 小于等于当前事务版本号，DB_ROLL_PT 为空或者大于当前事务版本号的数据</strong>。所以都能读到 id &#x3D; 1 的数据，是没问题的，现在我们插入新的数据：</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>age</th>
+<th>DB_TRX_ID</th>
+<th>DB_ROLL_PT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>李四2</td>
+<td>11</td>
+<td>3</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>王五</td>
+<td>1</td>
+<td>5</td>
+<td>NULL</td>
+</tr>
+</tbody></table>
+<p>由于 id &#x3D; 2 的 DB_TRX_ID &#x3D; 5 小于 这两个事务，所以正常情况下事务 5 和事务 6 都会读取到最新的数据。这种情况就是<strong>幻读</strong>。我们可以说，事务 6 发生了幻读现象。</p>
+<p>但是，我们在事务 6 里执行下查询语句发现并没有出现幻读现象：</p>
+<pre><code class="sql">begin; # 事务ID = 6
+select * from my_test;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+
+select * from my_test;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四2   |   11 |
++----+---------+------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p><strong>可见在MySQL的 RR级 别中，是解决了幻读的读问题的</strong>，上面的 select 是快照读，下面我们再看下当前读的场景。</p>
+<p>首先我们需要插入几条数据。目前的表数据如下：</p>
+<pre><code class="sql">mysql&gt; select * from my_test;
++----+---------+------+
+| id | name    | age  |
++----+---------+------+
+|  1 | 李四    |   11 |
+|  2 | 张三    |   12 |
+|  3 | 王五    |    1 |
++----+---------+------+
+3 rows in set (0.00 sec)
+</code></pre>
+<p>然后我们对 <code>age</code> 字段加一下辅助索引：</p>
+<pre><code class="sql">alter table my_test add index idx_age(age);
+</code></pre>
+<p>然后开启两个事务</p>
+<pre><code class="sql"> beign; # 事务 ID = 7
+ update my_test set age = 10 where age = 11;
+</code></pre>
+<p>执行更新数据但是并不提交，这个时候开启另外一个事务。</p>
+<pre><code class="sql">begin; #事务ID = 8
+insert into my_test value(null,&#39;赵六&#39;,5);
+</code></pre>
+<p>你会发现，事务8 阻塞在这里了。好像事务7对整张表都进行了加锁。我们执行 <code>rollback</code>命令将两个事务进行回滚。再执行下上面的过程。区别是修改下插入数据的 age 的数值。比如说把 5 改成 13，你会发现竟然执行成功了，没有阻塞。这个现象就是 Innodb 的 Next key 锁在起作用。Next key 锁定是 GAP lock （间隙锁）+ record lock （行锁）组合起来的。</p>
+<p>Innodb 首先会将上面的数据分成几段：</p>
+<pre><code>（negative infinity,1]
+（1,11]
+（11,12]
+（12，positive infinity）
+</code></pre>
+<p>事务7会使用 GAP 锁来锁定 (1,11] 这个区间。然后使用行锁锁定 11 这一行，所以你看到的现象就是有些 age 的值是可以插入成功的，因为没有落到 （1,11] 这个区间。需要注意的是。where 条件里的字段一定要有索引，因为没有索引，则这些字段也就没有排序，也就没有区间。除非该事务提交，否则其它事务无法插入任何数据。</p>
+<p>行锁防止别的事务修改或删除，GAP锁防止别的事务新增，行锁和GAP锁结合形成的的Next-Key锁共同解决了RR级别在写数据时的幻读问题。</p>
+<h2 id="2-一致性-amp-原子性"><a href="#2-一致性-amp-原子性" class="headerlink" title="2.一致性&amp;原子性"></a>2.一致性&amp;原子性</h2><p>事务的一致性和原子性是通过 <strong>undo log</strong>实现的。可以通过 undo log 将事务回滚到之前的装。undo log 是一种逻辑日志。当 Innodb 执行回滚时，会对每个 insert 操作执行一次 delete 操作，对于每个 delete 操作执行一次 insert 操作，对于每个 update 操作都会执行一次相反的 update。这样就实现了事务的一致性和原子性。</p>
+<p>此外，undo log 还用于实现 MVCC ，<strong>即 Innodb 中的 MVCC 是通过 undo log 来实现的</strong> 网上的大部分资料都会像上文中一样，用所谓的”隐藏列”来解释MVCC，其实这种解释是一种概念上的说明，Innodb 是通过 undo log 来真正实现的  MVCC。</p>
+<p>由于 insert 操作只对当前事务可见，所以 Innodb 将 undo log 分为了 insert undo log 和 update undo log。其中 insert undo log 格式如下图：</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbmys2f4dj30u010v0yo.jpg" alt="20200117-1" style="zoom:37%;" />
+
+
+
+<ul>
+<li>next：记录了下一个 undo log 的开始位置。</li>
+<li>type_cmpl：undo log 的类型，insert undo log 总为11</li>
+<li>undo no:：事务ID</li>
+<li>table id：对应的表对象</li>
+<li>start：记录的是 undo log 的开始位置</li>
+</ul>
+<p>中间这部分是记录了所有主键的列和值。如果需要 rollback 的话就可以根据这些数据直接定位到具体的行进行操作就可以了。</p>
+<p>update undo log 是记录了delete 和 update 两种操作的 undo log。其格式入下图所示：</p>
+<img src="https://tva1.sinaimg.cn/large/008eGmZEly1gnbnf5z0nxj30ny1cwtlr.jpg" alt="20200117-2" style="zoom:37%;" />
+
+<p>这里的内容比 insert undo log 要多很多。</p>
+<ul>
+<li>DATA_TRX_ID：用于 MVCC</li>
+<li>DATA_ROLL_PTR：用于 MVCC</li>
+<li>update vector：记录的是每个列的修改信息。包括修改前和修改后的值。</li>
+</ul>
+<p>所以，当触发 MVCC 后，读取的数据其实是 undo log 里的数据。回滚的时候也是根据 update vector 里的数据执行的逆过程。</p>
+<h2 id="3-持久性"><a href="#3-持久性" class="headerlink" title="3.持久性"></a>3.持久性</h2><p>数据库的持久性是说事务处理结束后，对数据的修改就是永久的，即便系统故障也不会丢失。所以需要记录事务里的操作。能够在系统故障时恢复数据。这个功能就是通过 <strong>redo log</strong> 实现的。redo log又叫做 **重做日志文件 ** 它由两部分组成一是重做日志缓冲（redo log buffer），是保存在内存里的，所以是易失的。二是重做日志文件（redo log file）是持久化的。与 undo log 不同，redo log 记录的内容不是逻辑日志，而是实际的值。</p>
+<p>为了确保日志缓冲每次都能够持久化到日志文件中，所以每次执行 commit 的时候都会执行一次 fsync 操作，所以尽量不要在for循环内使用事务，这样会导致大量的 fsync 操作。而 fsync 操作的效率取决于磁盘的性能。for循环量大时，有可能会影响业务。尽量使用批量操作，一次 commit。</p>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>

@@ -100,7 +100,7 @@
 	  	</v-btn >
 		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
 			<v-avatar color="success" size="35" >
-				<span class="white--text"> 58 </span>
+				<span class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
 	  </v-card-actions>
@@ -108,7 +108,7 @@
  
 				<div style="width: 55%; margin: 0 auto; text-align:center;">
 					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
-    <v-img height="240" class="white--text align-end" src=/random/material-28.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+    <v-img height="240" class="white--text align-end" src=/random/material-23.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
         <v-card-title style="text-align: left;margin-left: 0.6%;">
             <span>外网访问Ubuntu下的Tomcat</span>
         </v-card-title>
@@ -137,7 +137,7 @@
 	  	</v-btn >
 		<v-btn icon >
 			<v-avatar color="success" size="35" >
-				<span id = "busuanzi_value_page_pv" class="white--text"> 58 </span>
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
 			</v-avatar>
 		</v-btn>
     </v-card-actions>
@@ -152,7 +152,7 @@
 </code></pre>
 <p>将port字段修改为一个开放端口，你也可以改成80，这样在访问时就不用加端口号了，但是要记得开放80端口。这里我没有做修改。</p>
 <p><strong>一定要确保该端口是开放的。</strong></p>
-<h1 id="2-修改tomcat-x2F-conf-x2F-server-xml文件"><a href="#2-修改tomcat-x2F-conf-x2F-server-xml文件" class="headerlink" title="2. 修改tomcat&#x2F;conf&#x2F;server.xml文件"></a>2. 修改tomcat&#x2F;conf&#x2F;server.xml文件</h1><pre><code>  &lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot;&gt;
+<h2 id="2-修改tomcat-x2F-conf-x2F-server-xml文件"><a href="#2-修改tomcat-x2F-conf-x2F-server-xml文件" class="headerlink" title="2. 修改tomcat&#x2F;conf&#x2F;server.xml文件"></a>2. 修改tomcat&#x2F;conf&#x2F;server.xml文件</h2><pre><code>  &lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot;&gt;
 
 
   &lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;
@@ -160,13 +160,13 @@
 </code></pre>
 <p>将localhost改为你的IP地址，ubuntu下可以使用ifconfig </p>
 <p><strong>如果你的IP是路由器分配的话，需要对路由器做转发配置</strong></p>
-<h1 id="3-最重要的一点！"><a href="#3-最重要的一点！" class="headerlink" title="3.最重要的一点！"></a>3.最重要的一点！</h1><p>百度到的大部分答案基本上到上面一步就结束了。如果你也这么幸运的成功了的话，这一步就没必要了。不过我的是没有成功。去stacoverflow上搜了一下。不成功的原因说是因为JVM没有监听IPv4的地址，所以无法访问。所以需要再修改下面两处。</p>
+<h2 id="3-最重要的一点！"><a href="#3-最重要的一点！" class="headerlink" title="3.最重要的一点！"></a>3.最重要的一点！</h2><p>百度到的大部分答案基本上到上面一步就结束了。如果你也这么幸运的成功了的话，这一步就没必要了。不过我的是没有成功。去stacoverflow上搜了一下。不成功的原因说是因为JVM没有监听IPv4的地址，所以无法访问。所以需要再修改下面两处。</p>
 <p>修改tomcat目录下的&#x2F;bin&#x2F;catalina.sh文件和startup.sh。添加下面一句。</p>
 <pre><code>JAVA_OPTS= $JAVA_OPTS -Djava.net.preferIPv4Stack=true -Djava.net.preferIPv4Addresses
 </code></pre>
 <p>我的加上这两句已经可以访问了 </p>
 <p><strong>如果你的服务器系统是windows的话需要修改.bat的这两个文件</strong></p>
-<h1 id="4-如果还是不能访问"><a href="#4-如果还是不能访问" class="headerlink" title="4. 如果还是不能访问"></a>4. 如果还是不能访问</h1><p>如果上面的你都配置好了，而且还不能访问的话，恰好你的服务器系统是Ubuntu的话，可以尝试下面的方法。<br>安装authbind。</p>
+<h2 id="4-如果还是不能访问"><a href="#4-如果还是不能访问" class="headerlink" title="4. 如果还是不能访问"></a>4. 如果还是不能访问</h2><p>如果上面的你都配置好了，而且还不能访问的话，恰好你的服务器系统是Ubuntu的话，可以尝试下面的方法。<br>安装authbind。</p>
 <pre><code>apt-get install authbind
 </code></pre>
 <p>修改&#x2F;etc&#x2F;default&#x2F;tomcat7文件。</p>
@@ -174,7 +174,7 @@
 <pre><code>AUTHBIND=yes
 </code></pre>
 <p>重启后再不能访问的话，就试试你能不能上网，或者是不是用了路由器而且没有做转发配置，或者是端口没有开放。</p>
-<h2 id="阿里云ubuntu镜像80端口无法访问"><a href="#阿里云ubuntu镜像80端口无法访问" class="headerlink" title="阿里云ubuntu镜像80端口无法访问"></a>阿里云ubuntu镜像80端口无法访问</h2><p>阿里云服务器的ubuntu镜像默认情况是只有root用户才能访问1024以下的端口，所以如果这些都配置好了还不能访问的话，建议你用root用户启动tomcat，或者更改端口。再(我)或(不)者(会)添加路由规则将80端口转发到其他端口</p>
+<h2 id="5-阿里云ubuntu镜像80端口无法访问"><a href="#5-阿里云ubuntu镜像80端口无法访问" class="headerlink" title="5.阿里云ubuntu镜像80端口无法访问"></a>5.阿里云ubuntu镜像80端口无法访问</h2><p>阿里云服务器的ubuntu镜像默认情况是只有root用户才能访问1024以下的端口，所以如果这些都配置好了还不能访问的话，建议你用root用户启动tomcat，或者更改端口。再(我)或(不)者(会)添加路由规则将80端口转发到其他端口</p>
 
         </div>
     </v-card-text>
