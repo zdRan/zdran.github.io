@@ -1,0 +1,423 @@
+<html >
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		
+		<link href="https://cdn.bootcdn.net/ajax/libs/vuetify/2.6.12/vuetify.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcdn.net/ajax/libs/vuetify/2.0.4/vuetify.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/styles/rainbow.min.css">
+		<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.7.0/build/highlight.min.js"></script>
+		<link href="https://cdn.bootcdn.net/ajax/libs/MaterialDesign-Webfont/6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+		<link href="/css/three-cards-style.css" rel="stylesheet">
+
+		<meta name="robots" contect= "all">
+		<meta name="description" contect="一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习">
+		<!-- 主页使用 category作为 keywords,文章页使用文章的 keywords -->
+		
+		<meta name="keywords" contect="java,currentEpoch,configEpoch,Redis,选举">
+		 
+		<link rel="icon shortcut" type="image/ico" href=/images/favicon.jpg>
+		<title>
+			U2647's blog
+		</title>
+		<!-- 百度统计 -->
+		
+		<!-- Google Search Console -->
+		
+	<meta name="generator" content="Hexo 6.3.0"></head>
+	<body>
+		<div id="app">
+			<v-app>
+				<!-- 页头 -->
+				<v-card tile elevation="24"  style="width: 80%; margin: 0 auto; text-align:center; background:rgba(0,0,0,0); margin-bottom: 3%;" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+	<v-img height="240" src="" class="white--text align-end" >
+		<v-card-title style="text-align: left; margin-left: 0.3%;">U2647's blog</v-card-title>
+		<v-card-text style="text-align: left;margin-left: 0.3%;" class="white--text">
+			一个热爱学习的 Java 程序员,喜欢 Vue,喜欢深度学习
+		</v-card-text>
+		<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+		<v-card-text style="text-align: left;" class="white--text">
+			
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Dubbo">Dubbo</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Flutter">Flutter</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/SpringBoot">SpringBoot</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Debug">Debug</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Notes">Notes</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Java">Java</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/LeetCode">LeetCode</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Python">Python</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Redis">Redis</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/Android">Android</v-btn>
+					
+					<v-btn text class="white--text" style="text-transform:capitalize;" href="/categories/DesignPattern">DesignPattern</v-btn>
+				
+			
+		</v-card-text>
+	</v-img>
+	<v-divider style="margin-left: 1.3%; margin-right: 1.3%;" class="success lighten-1"></v-divider>
+	<v-card-actions >
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/>
+				<v-icon right>
+					mdi-home-outline
+				</v-icon>
+				首页
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/tags>
+				<v-icon right>
+					mdi-cloud-outline
+				</v-icon>
+				标签云
+			</v-btn>
+		
+			<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;" href=/timeline>
+				<v-icon right>
+					mdi-timeline-text-outline
+				</v-icon>
+				时间轴
+			</v-btn>
+		
+		<v-spacer></v-spacer>
+		<v-btn text x-large class="white--text" style="margin-left: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-icon right>
+			mdi-draw-pen
+			</v-icon>
+			文章总数  
+	  	</v-btn >
+		<v-btn icon style="margin-right: 0.5%;margin-top:0.5%;margin-bottom: 0.5%;">
+			<v-avatar color="success" size="35" >
+				<span class="white--text"> 62 </span>
+			</v-avatar>
+		</v-btn>
+	  </v-card-actions>
+</v-card>
+ 
+				<div style="width: 55%; margin: 0 auto; text-align:center;">
+					<v-card tile max-width="100%" elevation="24" style="margin-bottom: 3%;" >
+    <v-img height="240" class="white--text align-end" src=/random/material-33.jpg gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)">
+        <v-card-title style="text-align: left;margin-left: 0.6%;">
+            <span>Redis 集群内的数据同步</span>
+        </v-card-title>
+    <v-card-text style="text-align: left;margin-left: 0.8%;">
+        Redis 集群内的数据同步
+    </v-card-text>
+    <v-divider class="success lighten-1" style="margin-left:2%; margin-right: 2%;"></v-divider>
+    <v-card-actions style="text-align: left;" class="white--text" style="margin-left:2%; margin-right: 2%;">
+        
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">currentEpoch</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">configEpoch</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">Redis</v-btn>
+            	
+                <v-btn text class="white--text" style="text-transform:capitalize;margin-left:0.5%;">选举</v-btn>
+            
+        
+        <v-spacer></v-spacer>
+		<v-btn text class="white--text" >
+			<v-icon right>
+			mdi-cursor-default-click-outline
+			</v-icon>
+			点击量
+	  	</v-btn >
+		<v-btn icon >
+			<v-avatar color="success" size="35" >
+				<span id = "busuanzi_value_page_pv" class="white--text"> 62 </span>
+			</v-avatar>
+		</v-btn>
+    </v-card-actions>
+    </v-img>    
+    <v-card-text>
+        <div id = "post_container" class="text-justify" style="padding-left: 2%;padding-right: 2%;padding-bottom: 2%">
+            <h2 id="1-Redis-集群的搭建"><a href="#1-Redis-集群的搭建" class="headerlink" title="1. Redis 集群的搭建"></a>1. Redis 集群的搭建</h2><p>Redis 集群包含 server 和 client 两个部分。一个Redis 集群可以包含多个 server，可以包含多个客户端。每个客户端可以连接任意的server，读取写入数据。保存在 Redis 集群中的数据会被分成多份，分散地保存在多个server中，并且每一份数据也会保存多个副本。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwglgrr6j30vs0mg403.jpg" alt="20201219-1"></p>
+<p>在 Redis 集群中，数据会被保存到 server 中，每个 server 都是一个独立的进程，拥有独立的 IP 和端口。也被称为实例，或者叫 节点（Node）。client 通过 IP 和 端口来连接具体的 server ，每一个节点都会有一个全局唯一的 nodeId，它是在集群创建的时候随机生成的，一个节点的Id始终是不变的，但是节点的 IP 和端口是可以改变的。</p>
+<p>每个节点都保存了一份记录集群成员关系的表结构，类似于下面这张表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">IP</th>
+<th align="center">PORT</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">12</td>
+<td align="center">127.0.0.1</td>
+<td align="center">5001</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td align="center">127.0.0.1</td>
+<td align="center">5002</td>
+</tr>
+<tr>
+<td align="center">678</td>
+<td align="center">127.0.0.1</td>
+<td align="center">5003</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+</tbody></table>
+<p>这张表被称为 node table。通过这张表集群中的每个节点，都能够清楚的知道其他节点的地址信息。当添加或者删除一个节点时，只需要将命令发给集群中的任意一个节点，这个节点会修改本地的 node table，并且这个修改，最终会复制到所有节点上。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwgsyo2oj30ua0iwgn1.jpg" alt="20201219-2"></p>
+<p>比如，当前集群包含 node A、node B，现在 client 向 node A 发送命令要将 node C 加入到集群中，那么 node A 首先会更新自己的 node table ，然后将自己的 node table 同步给  node B，同样，node A 也会把自己的 node table 同步给 node C ，这样整个集群里的所有节点的 node table 都是全量的了。但是这个时候 node C 还没有加入到集群中，还涉及到数据同步的问题。</p>
+<h2 id="2-数据的存储"><a href="#2-数据的存储" class="headerlink" title="2. 数据的存储"></a>2. 数据的存储</h2><p>Redis 集群会把数据分成多份，也叫把数据 分片。被分片后的每一份数据称之为 槽（Slot）。Redis 集群将数据分为 16384 份，也就是说，一个 Redis 集群有 16384 个槽位（PS：至于为什么是 16384 后面会说）。每一个槽位都会保存在 Redis 的一个节点中，具体哪个槽位保存在哪个节点中，就形成了一种类似于 Map 的结构。</p>
+<table>
+<thead>
+<tr>
+<th align="center">槽位</th>
+<th align="center">节点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">node A</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">node B</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">node C</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">16383</td>
+<td align="center">node N</td>
+</tr>
+</tbody></table>
+<p>这个 map 被称为 hash slot map ，同样，跟 note table 类似， hash slot map 在每个节点上都会保存一份，redis 集群负责节点间的数据同步。具体哪个 key 保存在哪个 slot 上，Redis 集群采用哈希机制来做拆分。首先，数据的 key 通过 CRC16 算法计算出一个哈希值，然后这个哈希值再对 16383 取余，这个余数就是槽位值。比如，某个 keyA通过计算后，槽位值是3，那么 keyA 将保存在 node B 中，如果槽位是2，则保存在node A 中。当然我们也可以通过命令直接将某个槽位分配给某个节点，比如，我们可以通过命令直接将槽位 1、2 分配给 node B。其实就是通过命令连接某个 node ，修改 hash slot map ，然后该 node 会将更新后的 hash slot map 同步给其他节点。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwh43k3bj30w00lota4.jpg" alt="20201219-3"></p>
+<p>可以通过命令来改变节点的主从状态</p>
+<pre><code>CLUSTER ADDSLOTS slot1 [slot2]：把多个 slot 分配到当前节点
+
+CLUSTER DELSLOTS slot1 [slot2]：把多个 slot 从当前节点删除
+
+CLUSTER SETSLOT solt1 nodeB ：把 slot1 分配给 nodeB
+</code></pre>
+<h2 id="3-主从模式"><a href="#3-主从模式" class="headerlink" title="3. 主从模式"></a>3. 主从模式</h2><p>一个 slot 会被保存多个副本，也就是一个 slot 会被保存到多个节点上， Redis 集群的复制是以节点为单位的，所以一个节点上的所有 slot 都会被复制。</p>
+<p>具体来说，一个节点负责这个节点上所有 slot 的写操作，这个节点被称为 master 节点，而复制这个节点数据的其他节点被称为 slave 节点（从节点）。一个 master 可以有多个 slave ，对于 master 节点上的所有写操作都会被复制到所有的 slave 节点上。所以 master 与 slave 具有相同的数据。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwhb9k1uj315i0lmmz6.jpg" alt="20201219-4"></p>
+<p>master&#x2F;slave 信息的数据会被保存到上文提到的 hash slot map 中，</p>
+<table>
+<thead>
+<tr>
+<th align="center">槽位</th>
+<th align="center">节点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">nodeA，nodeA1(slave),nodeA2(slave)</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">nodeA，nodeA1(slave),nodeA2(slave)</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">nodeB，nodeB1(slave),nodeB2(slave)</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+</tr>
+<tr>
+<td align="center">16383</td>
+<td align="center">nodeN，nodeN1(slave),nodeN2(slave)</td>
+</tr>
+</tbody></table>
+<p>可以通过命令来改变节点的主从状态：</p>
+<pre><code>SLAVEOF NO ONE ：停止 slave 节点的复制行为，并且将这个节点变成 master 节点
+SLAVEOF host port ： 停止 slave 节点的复制行为，丢弃数据，开始从 host 指定的节点上复制信息
+</code></pre>
+<h2 id="4-Configuration"><a href="#4-Configuration" class="headerlink" title="4. Configuration"></a>4. Configuration</h2><p>node table 和 hash slot map 这两个信息被称为 Configuration 在其他的分布式系统中也叫元数据。这两份数据在集群创建的时候被创建出来，并且随着后续集群的变更而变更。变动会发生在一个节点上，并通过 gossip 协议传播到其他节点上，这两个信息在所有节点上都会保存，并且会最终达到一致。</p>
+<h2 id="5-gossip-协议"><a href="#5-gossip-协议" class="headerlink" title="5. gossip 协议"></a>5. gossip 协议</h2><p>gossip 协议是基于流行病传播方式的节点或者进程之间信息交换的协议。Gossip协议基本思想就是：一个节点想要分享一些信息给网络中的其他的一些节点。于是，它周期性的随机选择一些节点，并把信息传递给这些节点。这些收到信息的节点接下来会做同样的事情，即把这些信息传递给其他一些随机选择的节点。一般而言，信息会周期性的传递给N个目标节点，而不只是一个。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwhjnh5qj31240imwg8.jpg" alt="20201219-5"></p>
+<h2 id="6-redis-客户端的读写操作"><a href="#6-redis-客户端的读写操作" class="headerlink" title="6. redis 客户端的读写操作"></a>6. redis 客户端的读写操作</h2><p>当客户端需要从 redis 集群中读取数据，或者向集群中写入数据时，虽然可以连接到任意一个节点，但是，在实际情况中客户端需要先根据 key 计算出具体存放该key 的 slot，然后连接到负责这个 slot 的节点进行操作。这样的话，客户端就需要知道 slot 和 node 的映射关系。也就是 hash slot map。所以客户端连接到服务端后，会缓存一份 hash slot map在本地。方便直接读取。但是需要解决缓存过期的问题。如果客户端读写数据时 server 端返回错误时，说明 hash slot map 发生了变化，这个时候 client 获取最新的 hash slot map，然后再次请求对应的 server。</p>
+<h2 id="7-MOVED-重定向"><a href="#7-MOVED-重定向" class="headerlink" title="7. MOVED 重定向"></a>7. MOVED 重定向</h2><p>hash slot map 会发生变化，这些变化会通过 gossip 协议最终同步到所有的 node 上。但是在同步期间，或者是client 端缓存过期的时候，server 端有可能就会出现收到需要其他节点处理的请求。比如，当服务端正在进行新增节点时，收到了 client的请求。client 缓存的  hash slot map 认为 slot &#x3D;3 需要  node A，但是 node A 已经完成了 slot的重新分配，所以会返回给 client 端 MOVED 错误。在错误的消息中会告诉客户端需要哪个节点处理。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwhr1tozj31aq0tuwgp.jpg" alt="20201219-6"></p>
+<h2 id="8-master选举"><a href="#8-master选举" class="headerlink" title="8. master选举"></a>8. master选举</h2><p>在主从模式下，当 master 节点宕机后，redis 集群会选择一个 slave 成为 master。redis 集群采用了一种类似于 Raft 算法的机制来保证只有一个 slave 成为 master。每个节点都会有叫做 currentEpoch、lastVoteEpoch 的两个值。在集群刚创建时，每个节点的 currentEpoch 都是0。当 slave 节点发现 master 宕机后，会将 currentEpoch 加 1，并向所有的 master节点发送 FAILOVER_AUTH_REQUEST 请求，并携带自己的 currentEpoch， master收到请求后，如果请求中的 currentEpoch 比自己的大，更新自己的 currentEpoch，并返回 FAILOVER_AUTH_ACK 消息给 slave，并且携带自己的 currentEpoch。</p>
+<p>我们以 5 个 master 节点的集群为例说明，master节点分别是 A、B、C、D、E，其中 A 节点有两个 slave 节点 A1、A2，当 A 节点宕机后，A1 给所有的 master 节点发送 FAILOVER_AUTH_REQUEST 并携带自己的 currentEpoch &#x3D; 5，节点 B、C、D 收到请求后将自己的 currentEpoch 更新为 5，并且给 A1 回复 FAILOVER_AUTH_ACK，当再次收到 A2 的请求时，由于当前的 currentEpoch &#x3D; 5，所以不会给 A2 返回 FAILOVER_AUTH_ACK，只有 E 节点，还没有收到 A1 的请求，会给 A2 返回 FAILOVER_AUTH_ACK。最终只有收到 FAILOVER_AUTH_ACK 超过半数的节点才会成为新的 master 。所以 A1 会成为最新的 master。</p>
+<p><img src="https://tva1.sinaimg.cn/large/008eGmZEly1gmpwqxqloaj31ak0iijsy.jpg" alt="20201219-7"></p>
+<p>上面的这种机制已经可以保证了只有一个 slave 会被选为master，但是除此之外，redis 还做了一层优化，那就是 master 回复了一个 FAILOVER_AUTH_ACK 后，不会再给这个 master 下的其他 slave 回复消息。</p>
+<p>对于 master 选举的过程，网上还有另外一种描述。以 master 节点为视角，当 A 节点宕机后，A 节点下的所有 slave 向其他 master 节点发送请求拉票（即发送FAILOVER_AUTH_REQUEST请求）。所有的 master节点进行投票（即回复 FAILOVER_AUTH_ACK消息），当某个 slave 节点收到半数以上的投票后即成为最新的 master 节点。</p>
+<h2 id="9-ConfigEpoch"><a href="#9-ConfigEpoch" class="headerlink" title="9. ConfigEpoch"></a>9. ConfigEpoch</h2><p>failover完成之后，新的 master节点会修改  hash slot map，将相应的 slot 记录的节点改成自己。并且将这次修改广播给其他节点。</p>
+<p>虽然 currentEpoch 和 lastVoteEpoch 已经可以保证一次选举只能有一个节点成为 master，但是如果发生两次 failover ，可能选举出两个不同的 master。由于对   hash slot map 数据的修改，是通过 gossip 协议异步传播的，所以就会造成其他节点收到两份不同的消息。还是以上面的图为例，如果 node A 宕机后，A1 成为了新的 master后，广播完 hash slot map 后，又发生了宕机，这个时候 A2 会成为新的 master。然后再次发送 hash slot map 修改的消息。如果 node C 先收到了A2 的消息，后收到了 A1 的消息，就会出现数据不一致的问题。configEpoch 就是为了解决整问题的。每个节点都会有一个 configEpoch值，这个值保存在 node table 中。类似于下面的表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">IP</th>
+<th align="center">PORT</th>
+<th align="center">configEpoch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">12</td>
+<td align="center">127.0.0.1</td>
+<td align="center">5001</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">33</td>
+<td align="center">127.0.0.1</td>
+<td align="center">5002</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">678</td>
+<td align="center">127.0.0.1</td>
+<td align="center">5003</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">…</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<p>每次 failover 之后，新的 master 会用 currentEpoch 更新 configEpoch， failover 保证两次宕机产生的 currentEpoch 值一定不一样且后一次产生的一定比前一次产生的大。这样就保证了最后一次 failover 的消息会生效。也就是，如果 node C 收到了两份冲突的消息，会以 configEpoch 大的为准。并且最终所有的节点都会更新成最大的 configEpoch 带来的消息。</p>
+<p>savle 的 configEpoch 是其 master 的configEpoch。</p>
+<p>由于 gossip 协议的异步问题，在master选举时有可能会出现，configEpoch会小于当前master的configEpoch，这个时候，其他的 master节点是不能向该节点回复 FAILOVER_AUTH_ACK 消息的。比如， node A 的 configEpoch &#x3D; 3，然后 A 向 A1、A2，分别发送更新消息。然后 A 宕机，如果这个时候 A1 的 configEpoch 还没有更新为 3 则发送的 FAILOVER_AUTH_REQUEST 是不会收到 FAILOVER_AUTH_ACK 消息的。</p>
+<h2 id="10-主从数据同步问题"><a href="#10-主从数据同步问题" class="headerlink" title="10. 主从数据同步问题"></a>10. 主从数据同步问题</h2><p>由于主从节点的数据复制是异步的，所以当发生宕机时，有可能 slave 还没有收到最新的数据。那么这部分写入的的数据就会丢失。 redis 集群做了一个优化。当 slave 发现 master 宕机后，它不会立即开始选举，而是会等待一个时间，这个时间的计算公式是：</p>
+<pre><code>DELAY = 500 milliseconds 
+        + random delay between 0 and 500 milliseconds 
+        + SLAVE_RANK * 1000 milliseconds
+</code></pre>
+<p>这个公式中有三个部分：</p>
+<ul>
+<li>第一部分是固定的 500ms，这个是为了给其他 master 节点充分的时间，让他们也发现这个节点宕机的事件。</li>
+<li>第二部分是一个随机值，这个是为了避免多个 slave 同时开始选举，导致 master 被瓜分，从而本次选举失败的问题。</li>
+<li>第三部分是 slave 的 rank，rank 的值主要取决于 slave 的复制进度，复制的数据越多，则 rank 越小，等待时间也就越短。也就越先开始选举。有更大的可能成为 master。</li>
+</ul>
+<p>但这仅仅是个优化，并不能完全防止数据丢失。</p>
+<h2 id="11-Configuration的实际存储"><a href="#11-Configuration的实际存储" class="headerlink" title="11. Configuration的实际存储"></a>11. Configuration的实际存储</h2><p>在内存中用两个变量来存储 Hash slot map 和 node table。</p>
+<p>myself 变量: 代表当前节点，是 ClusterNode 类型。这个变量中记录了当前节点的 configEpoch、slaves（从节点指针）、slaveof（主节点指针）、slots 数组（节点负责的所有的slot的槽位值）。其中，slots 是一个由 2048 个 byte 组成的 bitmap，总共是 16384（2048 * 8），每个 bit 位代表一个槽位，bit &#x3D; 1 表示这个节点负责该槽位。这个 bitmap 就是  Hash slot map。这也解释了为什么一个集群只能有 16384 个槽位。</p>
+<pre><code>#define CLUSTER_SLOTS 16384
+
+//... ...
+
+typedef struct clusterNode &#123;
+    mstime_t ctime; /* Node object creation time. */
+    char name[CLUSTER_NAMELEN]; /* Node name, hex string, sha1-size */
+    int flags;      /* CLUSTER_NODE_... */
+    uint64_t configEpoch; /* Last configEpoch observed for this node */
+    unsigned char slots[CLUSTER_SLOTS/8]; /* slots handled by this node */
+    int numslots;   /* Number of slots handled by this node */
+    int numslaves;  /* Number of slave nodes, if this is a master */
+    struct clusterNode **slaves; /* pointers to slave nodes */
+    struct clusterNode *slaveof; /* pointer to the master node. Note that it
+    
+&#125; clusterNode;
+</code></pre>
+<p>另外一个变量是cluster:代表了当前集群的状态。这个变量中记录了 currentEpoch、lastVoteEpoch 和 slots 数组。与 clusterNode 里的 slots 数组不同的是，这个 slots 数组是 ClusterNode 类型的。每一个元素都是一个 ClusterNode 指针，也就是说，这里记录了，当前集群里所有 slot 与 node 的对应关系，即 node table。</p>
+<pre><code>#define CLUSTER_SLOTS 16384
+//... ...
+
+
+typedef struct clusterState &#123;
+    clusterNode *myself;  /* This node */
+    uint64_t currentEpoch;
+
+    //... ...
+    clusterNode *slots[CLUSTER_SLOTS];
+    
+    //... ...
+
+    /* The following fields are used by masters to take state on elections. */
+    uint64_t lastVoteEpoch;     /* Epoch of the last vote granted. */
+    
+    //... ... 
+&#125; clusterState;
+</code></pre>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/redis/redis/blob/unstable/src/cluster.h">https://github.com/redis/redis/blob/unstable/src/cluster.h</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Uyw7MjqMW9DR6EInFIo9Wg">拆解Redis Cluster，怎么实现“写安全”这个重要特性？</a></li>
+</ul>
+
+        </div>
+    </v-card-text>
+    <v-divider class="success lighten-1" ></v-divider>
+    <v-card-text>
+        <v-alert style="margin-left:2%; margin-right: 2%;padding-top: 2%;padding-bottom: 2%;" dense text border="left" type="success">
+            版权声明：本博客所有文章除特别声明外，均采用 <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 4.0 </a>许可协议。转载请注明出处！
+        </v-alert>
+    </v-card-text>
+</v-card>
+  
+					<!-- 分页 -->
+					
+				</div>
+				<!-- 页脚 -->
+				<div style="width: 100%; margin-top: 2%; text-align:center;">
+	<v-footer padless style="background:rgba(76,175,80,0.4);">
+    <v-card style="width: 100%; text-align:center;background:rgba(0,0,0,0);" gradient="to top, rgba(0,0,0,.2), rgba(0,0,0,.8)" tile elevation="24" class="white--text text-center">
+      <v-card-actions style="text-align: center;">
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://github.com/zdRan>
+				我的GitHub
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://leetcode.cn/u/u2647>
+				我的LeetCode
+			</v-chip>
+		
+			<v-chip  class="white--text" style="background:rgba(0,0,0,0);" href=https://juejin.cn/user/3896324938793943>
+				我的掘金
+			</v-chip>
+		
+		<v-spacer></v-spacer>
+		<div>
+			<v-list-item two-line>
+				<!-- 很高兴您使用本主题，开发不易，希望您保留一下版权声明，它并不会影响页面效果 ~ -->
+				<v-list-item-content style="text-align: left;display: inline-block;">
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="color: white;"><strong>Hexo</strong></a></v-list-item-subtitle>
+					<v-list-item-subtitle class="white--text">Powered by <a target="_blank" rel="noopener" href="https://github.com/zdRan/three-cards" style="color: white;"><strong>three-cards</strong></a></v-list-item-subtitle>
+				</v-list-item-content>
+			</v-list-item>
+		</div>
+      </v-card-actions>
+      <v-divider class="success lighten-1"></v-divider>
+      <v-card-text class="white--text">
+    	Copyright © 2017 - {{ new Date().getFullYear() }}  <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow noopener" style="color: white;">某ICP备xxxxxxxx号</a>
+      </v-card-text>
+    </v-card>
+  </v-footer>
+</div> 
+			</v-app>			
+		</div>
+        <script>
+        	new Vue({
+            	el: '#app',
+            	vuetify: new Vuetify(),
+          	});
+			//加载代码高亮
+			hljs.highlightAll();
+        </script>
+    </body>
+</html>
